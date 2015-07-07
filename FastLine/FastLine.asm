@@ -1,3 +1,6 @@
+; Game Boy Advance 'Bare Metal' Fast Line Plot Demo by krom (Peter Lemon):
+; Uses Direction Pad To Change Line End Point X/Y Position
+
 format binary as 'gba'
 include 'LIB\FASMARM.INC'
 include 'LIB\LCD.INC'

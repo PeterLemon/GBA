@@ -17,7 +17,7 @@ Using FASMARM open up ROMNAME.asm & click the Run/Compile button.<br />
 You will need to fix the header checksum of the assembled GBA binary.<br />
 I use the util gbafix todo this in windows:<br />
 http://gbadev.org/tools.php?showinfo=76<br />
-I have made a fixrom.bat file todo this easily.<br />
+I have made a fixrom.bat file todo this.<br />
 <br />
 Howto Run:<br />
 I only test with a real GBA using a flash cartridge.<br />

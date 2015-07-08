@@ -15,7 +15,7 @@ Howto Compile:<br />
 All the code compiles into a single binary (ROMNAME.gba) file.<br />
 Using FASMARM open up ROMNAME.asm & click the Run/Compile button.<br />
 You will need to fix the header checksum of the assembled GBA binary.<br />
-I use the util gbafix todo this in Windows:<br />
+I use the util gbafix by DarkFader todo this in Windows:<br />
 http://gbadev.org/tools.php?showinfo=76<br />
 I have also made a fixrom.bat file.<br />
 <br />

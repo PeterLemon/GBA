@@ -1,4 +1,4 @@
-; Game Boy Advance 'Bare Metal' BG Zoom & Rotate Demo by krom (Peter Lemon):
+; Game Boy Advance 'Bare Metal' BG Rotate & Zoom Demo by krom (Peter Lemon):
 ; Direction Pad Changes BG X/Y Position
 ; L/R Buttons Rotate BG Anti-Clockwise/Clockwise
 ; A/B Buttons Zoom BG Out/In
@@ -140,5 +140,4 @@ BGAffineSource: ; Memory Area Used To Set BG Affine Transformations Using BIOS C
 endcopy: ; End Of Program Copy Code
 
 org $80000C0 + (endcopy - start) + (startcode - copycode)
-BG:
-file 'Moogle.bin' ; Include BG GFX Data
+BG: file 'BG.bin' ; Include BG GFX Data (76800 Bytes)

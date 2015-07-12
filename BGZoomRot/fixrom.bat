@@ -1,1 +1,0 @@
-gbafix BGZoomRot.gba

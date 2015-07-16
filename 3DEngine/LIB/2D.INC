@@ -1,6 +1,6 @@
-macro ClearCol color, destination, amount { ; Clear Color (32 Bits For CPU Fixed Copy)
+macro ClearCol col, dest, amount { ; Clear Color (32 Bits For CPU Fixed Copy)
   local .Loop
-  imm32 r0,color ; Source Address
+  imm32 r0,col ; Source Address
   mov r1,r0
   mov r2,r0
   mov r3,r0
@@ -12,7 +12,7 @@ macro ClearCol color, destination, amount { ; Clear Color (32 Bits For CPU Fixed
   mov r9,r0
   mov r10,r0
   mov r11,r0
-  mov r12,destination ; Destination Address
+  mov r12,dest ; Destination Address
   orr r13,r12,amount  ; Clear Amount
   .Loop:
     stmia r12!,{r0-r11\}

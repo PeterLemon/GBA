@@ -107,16 +107,22 @@ macro DrawLine x1, y1, x2, y2, col { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X,
 macro ScanLine x1, y1, x2, y2, side { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X, y2 = Point2Y, side = Left/Right
   local .LoopX, .SkipPixelX, .LoopY, .SkipPixelY, .LineEnd
   imm32 r0,side ; R0 = = Scanline Buffer Offset
-  
+
+  cmp y2,y1 ; IF (Y2 < Y1) Swap Points
+  movlt r1,x1
+  movlt r2,y1
+  movlt x1,x2
+  movlt x2,r1
+  movlt y1,y2
+  movlt y2,r2
+
   subs r1,x2,x1 ; X2 - X1
   rsbmi r1,0 ; Convert R1 (DX) To ABS(DX)
   mvnlt r2,0 ; IF (X2 < X1), R2 (SX) = -1
   movgt r2,1 ; IF (X2 > X1), R2 (SX) =	1
 
-  subs r3,y2,y1 ; Y2 - Y1
-  rsbmi r3,0 ; Convert R3 (DY) To ABS(DY)
-  mvnlt r4,0 ; IF (Y2 < Y1), R4 (SY) = -1
-  movgt r4,1 ; IF (Y2 > Y1), R4 (SY) =	1
+  sub r3,y2,y1 ; Y2 - Y1 ABS(DY)
+  mov r4,1 ; IF (Y2 > Y1), R4 (SY) =  1
 
   cmp r1,r3 ; Compare DX To DY
   movgt y2,r1,lsr 1 ; IF (DX >	DY), Y2 = DX / 2 (X Error)

@@ -17,7 +17,6 @@ include 'LIB\3D.INC'
 SCREEN_X       = 240
 SCREEN_Y       = 160
 BITS_PER_PIXEL = 16
-Z_BUFFER = WRAM
 
 ; Setup 3D
 HALF_SCREEN_X = (SCREEN_X / 2)

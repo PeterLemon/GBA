@@ -10,13 +10,11 @@ macro ClearCol col, dest, amount { ; Clear Color (32 Bits For CPU Fixed Copy)
   mov r7,r0
   mov r8,r0
   mov r9,r0
-  mov r10,r0
-  mov r11,r0
-  mov r12,dest ; Destination Address
-  orr r13,r12,amount  ; Clear Amount
+  mov r10,dest ; Destination Address
+  orr r11,r10,amount  ; Clear Amount
   .Loop:
-    stmia r12!,{r0-r11\}
-    cmp r12,r13
+    stmia r10!,{r0-r9\}
+    cmp r10,r11
     bne .Loop
 }
 

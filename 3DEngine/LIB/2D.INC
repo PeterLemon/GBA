@@ -1,3 +1,15 @@
+macro SwapBuffers src, dest, amount { ; Swap Buffers
+  local .Loop
+  mov r10,src ; Source Address
+  mov r11,dest ; Destination Address
+  orr r12,r11,amount ; Copy Amount
+  .Loop:
+    ldmia r10!,{r0-r9\}
+    stmia r11!,{r0-r9\}
+    cmp r11,r12
+    bne .Loop
+}
+
 macro ClearCol col, dest, amount { ; Clear Color (32 Bits For CPU Fixed Copy)
   local .Loop
   imm32 r0,col ; Source Address
@@ -13,7 +25,7 @@ macro ClearCol col, dest, amount { ; Clear Color (32 Bits For CPU Fixed Copy)
   mov r10,r0
   mov r11,r0
   mov r12,dest ; Destination Address
-  orr r14,r12,amount  ; Clear Amount
+  orr r14,r12,amount ; Copy Amount
   .Loop:
     stmia r12!,{r0-r11\}
     cmp r12,r14
@@ -22,7 +34,7 @@ macro ClearCol col, dest, amount { ; Clear Color (32 Bits For CPU Fixed Copy)
 
 macro DrawPoint x, y, col { ; x = PointX, y = PointY, col = Colour
   local .SkipPixel
-  mov r0,VRAM ; R0 = VRAM Base Pointer
+  mov r0,WRAM ; R0 = WRAM Base Pointer
   mov r1,SCREEN_X ; R1 = ScreenX
 
   cmp x,0 ; Offscreen Cull
@@ -41,7 +53,7 @@ macro DrawPoint x, y, col { ; x = PointX, y = PointY, col = Colour
 
 macro DrawLine x1, y1, x2, y2, col { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X, y2 = Point2Y, col = Colour
   local .LoopX, .SkipPixelX, .LoopY, .SkipPixelY, .LineEnd
-  mov r0,VRAM ; R0 = VRAM Base Pointer
+  mov r0,WRAM ; R0 = WRAM Base Pointer
   mov r1,SCREEN_X ; R1 = ScreenX
   
   subs r2,x2,x1 ; X2 - X1

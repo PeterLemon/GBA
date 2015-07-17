@@ -107,16 +107,16 @@ start:
   str r1,[r0]
 
 Refresh:
-  VBlank
   Control
   XYZRotCalc XRot, YRot, ZRot, SinCos256 ; Combine X,Y,Z Rotation Matrix
-
-  ClearCol $FFFFFFFF, VRAM, 76800 ; Clear Color (32 Bits For CPU Fixed Copy)
+  ClearCol $FFFFFFFF, WRAM, 76800 ; Clear Color (32 Bits For CPU Fixed Copy)
 
   FillQuadCullBack CubeQuad, CubeQuadEnd
   FillTriCullBack PyramidTri, PyramidTriEnd
   Line GrassLine, GrassLineEnd
   Point StarPoint, StarPointEnd
+
+  SwapBuffers WRAM, VRAM, 76800 ; Swap Buffers
 
   b Refresh
 
@@ -138,7 +138,9 @@ LineCache:
 ScanLeft:  dh SCREEN_Y dup 0 ; Left  Hand Scanline X Buffer (Size Of Screen Y)
 ScanRight: dh SCREEN_Y dup 0 ; Right Hand Scanline X Buffer (Size Of Screen Y)
 
-include 'objects.asm' ; Objects Data
 include 'sincos256.asm' ; Matrix Sin & Cos Pre-Calculated Table (256 Rotations)
 
 endcopy: ; End Of Program Copy Code
+
+org $80000C0 + (endcopy - start) + (startcode - copycode)
+include 'objects.asm' ; Objects Data

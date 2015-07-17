@@ -293,7 +293,7 @@ macro FillQuadCullBack start, end { ; Fill Quad Back Face Cull
     cmp r5,SCREEN_Y
     movge r5,SCREEN_Y
 
-    mov r0,VRAM ; R0 = VRAM Base Pointer
+    mov r0,WRAM ; R0 = WRAM Base Pointer
     mov r11,SCREEN_X ; R11 = ScreenX
     ldr r12,[r14],4 ; R12 = Colour
     imm32 r10,ScanLeft ; R10 = Scanline Left Buffer Offset
@@ -305,11 +305,11 @@ macro FillQuadCullBack start, end { ; Fill Quad Back Face Cull
 
       mla r3,r4,r11,r1 ; R3 = (Top * ScreenX) + X
       lsl r3,1 ; R3 *= BPP
-      add r3,r0 ; R3 = VRAM Start Address
+      add r3,r0 ; R3 = WRAM Start Address
 
       cmp r2,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
       sub r2,r1 ; R2 = Scanline Length
-      add r2,r3,r2,lsl 1 ; R2 = VRAM End Address
+      add r2,r3,r2,lsl 1 ; R2 = WRAM End Address
       subge r2,2
       bge .SkipPixel
 
@@ -409,7 +409,7 @@ macro FillQuadCullFront start, end { ; Fill Quad Front Face Cull
     cmp r5,SCREEN_Y
     movge r5,SCREEN_Y
 
-    mov r0,VRAM ; R0 = VRAM Base Pointer
+    mov r0,WRAM ; R0 = WRAM Base Pointer
     mov r11,SCREEN_X ; R11 = ScreenX
     ldr r12,[r14],4 ; R12 = Colour
     imm32 r10,ScanLeft ; R10 = Scanline Left Buffer Offset
@@ -421,11 +421,11 @@ macro FillQuadCullFront start, end { ; Fill Quad Front Face Cull
 
       mla r3,r4,r11,r1 ; R3 = (Top * ScreenX) + X
       lsl r3,1 ; R3 *= BPP
-      add r3,r0 ; R3 = VRAM Start Address
+      add r3,r0 ; R3 = WRAM Start Address
 
       cmp r2,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
       sub r2,r1 ; R2 = Scanline Length
-      add r2,r3,r2,lsl 1 ; R2 = VRAM End Address
+      add r2,r3,r2,lsl 1 ; R2 = WRAM End Address
       subge r2,2
       bge .SkipPixel
 
@@ -619,7 +619,7 @@ macro FillTriCullBack start, end { ; Fill Tri Back Face Cull
     cmp r5,SCREEN_Y
     movge r5,SCREEN_Y
 
-    mov r0,VRAM ; R0 = VRAM Base Pointer
+    mov r0,WRAM ; R0 = WRAM Base Pointer
     mov r11,SCREEN_X ; R11 = ScreenX
     ldr r12,[r14],4 ; R12 = Colour
     imm32 r10,ScanLeft ; R10 = Scanline Left Buffer Offset
@@ -631,11 +631,11 @@ macro FillTriCullBack start, end { ; Fill Tri Back Face Cull
 
       mla r3,r4,r11,r1 ; R3 = (Top * ScreenX) + X
       lsl r3,1 ; R3 *= BPP
-      add r3,r0 ; R3 = VRAM Start Address
+      add r3,r0 ; R3 = WRAM Start Address
 
       cmp r2,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
       sub r2,r1 ; R2 = Scanline Length
-      add r2,r3,r2,lsl 1 ; R2 = VRAM End Address
+      add r2,r3,r2,lsl 1 ; R2 = WRAM End Address
       subge r2,2
       bge .SkipPixel
 
@@ -722,7 +722,7 @@ macro FillTriCullFront start, end { ; Fill Tri Front Face Cull
     cmp r5,SCREEN_Y
     movge r5,SCREEN_Y
 
-    mov r0,VRAM ; R0 = VRAM Base Pointer
+    mov r0,WRAM ; R0 = WRAM Base Pointer
     mov r11,SCREEN_X ; R11 = ScreenX
     ldr r12,[r14],4 ; R12 = Colour
     imm32 r10,ScanLeft ; R10 = Scanline Left Buffer Offset
@@ -734,11 +734,11 @@ macro FillTriCullFront start, end { ; Fill Tri Front Face Cull
 
       mla r3,r4,r11,r1 ; R3 = (Top * ScreenX) + X
       lsl r3,1 ; R3 *= BPP
-      add r3,r0 ; R3 = VRAM Start Address
+      add r3,r0 ; R3 = WRAM Start Address
 
       cmp r2,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
       sub r2,r1 ; R2 = Scanline Length
-      add r2,r3,r2,lsl 1 ; R2 = VRAM End Address
+      add r2,r3,r2,lsl 1 ; R2 = WRAM End Address
       subge r2,2
       bge .SkipPixel
 

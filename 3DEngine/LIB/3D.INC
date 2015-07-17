@@ -305,16 +305,21 @@ macro FillQuadCullBack start, end { ; Fill Quad Back Face Cull
 
       mla r3,r4,r11,r1 ; R3 = (Top * ScreenX) + X
       lsl r3,1 ; R3 *= BPP
+      add r3,r0 ; R3 = VRAM Start Address
+
+      cmp r2,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
+      sub r2,r1 ; R2 = Scanline Length
+      add r2,r3,r2,lsl 1 ; R2 = VRAM End Address
+      subge r2,2
+      bge .SkipPixel
+
+      cmp r1,0 ; IF(X < 0) Skip Pixel
+      addlt r3,4
+      blt .SkipPixel
       .FillLoop:
-	cmp r1,0 ; IF(X < 0) Skip Pixel
-	blt .SkipPixel
-	cmp r1,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
-	bge .SkipPixel
-	strh r12,[r0,r3] ; Store Pixel Colour To Screen
+	strh r12,[r3],2 ; Store Pixel Colour To Screen
 	.SkipPixel:
-	add r1,1
-	cmp r1,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
-	addle r3,2
+	cmp r3,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
 	ble .FillLoop
 
       add r4,1
@@ -416,16 +421,21 @@ macro FillQuadCullFront start, end { ; Fill Quad Front Face Cull
 
       mla r3,r4,r11,r1 ; R3 = (Top * ScreenX) + X
       lsl r3,1 ; R3 *= BPP
+      add r3,r0 ; R3 = VRAM Start Address
+
+      cmp r2,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
+      sub r2,r1 ; R2 = Scanline Length
+      add r2,r3,r2,lsl 1 ; R2 = VRAM End Address
+      subge r2,2
+      bge .SkipPixel
+
+      cmp r1,0 ; IF(X < 0) Skip Pixel
+      addlt r3,4
+      blt .SkipPixel
       .FillLoop:
-	cmp r1,0 ; IF(X < 0) Skip Pixel
-	blt .SkipPixel
-	cmp r1,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
-	bge .SkipPixel
-	strh r12,[r0,r3] ; Store Pixel Colour To Screen
+	strh r12,[r3],2 ; Store Pixel Colour To Screen
 	.SkipPixel:
-	add r1,1
-	cmp r1,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
-	addle r3,2
+	cmp r3,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
 	ble .FillLoop
 
       add r4,1
@@ -621,16 +631,21 @@ macro FillTriCullBack start, end { ; Fill Tri Back Face Cull
 
       mla r3,r4,r11,r1 ; R3 = (Top * ScreenX) + X
       lsl r3,1 ; R3 *= BPP
+      add r3,r0 ; R3 = VRAM Start Address
+
+      cmp r2,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
+      sub r2,r1 ; R2 = Scanline Length
+      add r2,r3,r2,lsl 1 ; R2 = VRAM End Address
+      subge r2,2
+      bge .SkipPixel
+
+      cmp r1,0 ; IF(X < 0) Skip Pixel
+      addlt r3,4
+      blt .SkipPixel
       .FillLoop:
-	cmp r1,0 ; IF(X < 0) Skip Pixel
-	blt .SkipPixel
-	cmp r1,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
-	bge .SkipPixel
-	strh r12,[r0,r3] ; Store Pixel Colour To Screen
+	strh r12,[r3],2 ; Store Pixel Colour To Screen
 	.SkipPixel:
-	add r1,1
-	cmp r1,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
-	addle r3,2
+	cmp r3,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
 	ble .FillLoop
 
       add r4,1
@@ -719,16 +734,21 @@ macro FillTriCullFront start, end { ; Fill Tri Front Face Cull
 
       mla r3,r4,r11,r1 ; R3 = (Top * ScreenX) + X
       lsl r3,1 ; R3 *= BPP
+      add r3,r0 ; R3 = VRAM Start Address
+
+      cmp r2,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
+      sub r2,r1 ; R2 = Scanline Length
+      add r2,r3,r2,lsl 1 ; R2 = VRAM End Address
+      subge r2,2
+      bge .SkipPixel
+
+      cmp r1,0 ; IF(X < 0) Skip Pixel
+      addlt r3,4
+      blt .SkipPixel
       .FillLoop:
-	cmp r1,0 ; IF(X < 0) Skip Pixel
-	blt .SkipPixel
-	cmp r1,SCREEN_X ; IF(X >= ScreenX) Skip Pixel
-	bge .SkipPixel
-	strh r12,[r0,r3] ; Store Pixel Colour To Screen
+	strh r12,[r3],2 ; Store Pixel Colour To Screen
 	.SkipPixel:
-	add r1,1
-	cmp r1,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
-	addle r3,2
+	cmp r3,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
 	ble .FillLoop
 
       add r4,1

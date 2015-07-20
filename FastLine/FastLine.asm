@@ -44,15 +44,15 @@ macro DrawLine X0, Y0, X1, Y1, Colour {
   subs r4,r2,r0 ; Subtract R0 (X0) From R4 (DX) & Compare R4 (DX) To Zero (X1 - X0)
   rsbmi r4,0 ; Convert R4 (DX) To ABS(DX)
   mvnlt r6,0 ; IF (X1 < X0), R6 (SX) = -1
-  movgt r6,1 ; IF (X1 > X0), R6 (SX) =  1
+  movgt r6,1 ; IF (X1 > X0), R6 (SX) =	1
 
   subs r5,r3,r1 ; Subtract R2 (Y0) From R5 (DY) & Compare R5 (DY) To Zero (Y1 - Y0)
   rsbmi r5,0 ; Convert R5 (DY) To ABS(DX)
   mvnlt r7,0 ; IF (Y1 < Y0), R7 (SY) = -1
-  movgt r7,1 ; IF (Y1 > Y0), R7 (SY) =  1
+  movgt r7,1 ; IF (Y1 > Y0), R7 (SY) =	1
 
   cmp r4,r5 ; Compare DX To DY
-  movgt r3,r4,lsr 1 ; IF (DX >  DY), R3 (X Error) = R4 (DX) / 2 (X Error = DX / 2)
+  movgt r3,r4,lsr 1 ; IF (DX >	DY), R3 (X Error) = R4 (DX) / 2 (X Error = DX / 2)
   movle r2,r5,lsr 1 ; IF (DX <= DY), R1 (Y Error) = R5 (DY) / 2 (Y Error = DY / 2)
   ble .LoopY
 
@@ -89,18 +89,25 @@ macro DrawLine X0, Y0, X1, Y1, Colour {
 
 copycode:
   adr r1,startcode
-  mov r2,start
+  mov r2,IWRAM
   imm32 r3,endcopy
   clp:
     ldr r0,[r1],4
     str r0,[r2],4
     cmp r2,r3
     bmi clp
-  mov r2,start
+  imm32 r2,start
   bx r2
 startcode:
   org IWRAM
 
+; Variable Data
+Black: dw $00000000 ; Black Clear Color
+White: dw $0000FFFF ; White Line Color
+LineX: db 239 ; Line X Amount: 239 Pixels Across
+LineY: db 159 ; Line Y Amount: 159 Pixels Down
+
+  align 4
 start:
   mov r0,IO
   mov r1,MODE_3
@@ -116,10 +123,5 @@ loop:
   ldrb r11,[LineY]
   DrawLine 120, 80, r10, r11, White
   b loop
-
-Black: dw $00000000 ; Black Clear Color
-White: dw $0000FFFF ; White Line Color
-LineX: db 239 ; Line X Amount: 239 Pixels Across
-LineY: db 159 ; Line Y Amount: 159 Pixels Down
 
 endcopy: ; End Of Program Copy Code

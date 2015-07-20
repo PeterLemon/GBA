@@ -61,32 +61,32 @@ PyramidTriEnd:
 GrassLine:
   dw  7680, -2560, 0 ; Line 1 Top
   dw  8192,  2560, 0 ; Line 1 Bottom
-  dw $00000000 ; Line 1 Colour
+  dw $0000001F ; Line 1 Colour
 
   dw  8960, -2560, 0 ; Line 2 Top
   dw  8960,  2560, 0 ; Line 2 Bottom
-  dw $00000000 ; Line 2 Colour
+  dw $000003E0 ; Line 2 Colour
 
   dw 10240, -2560, 0 ; Line 3 Top
   dw 10240,  2560, 0 ; Line 3 Bottom
-  dw $00000000 ; Line 3 Colour
+  dw $00007C00 ; Line 3 Colour
 
   dw 11520, -2560, 0 ; Line 4 Top
   dw 11008,  2560, 0 ; Line 4 Bottom
-  dw $00000000 ; Line 4 Colour
+  dw $00003FFF ; Line 4 Colour
 GrassLineEnd:
 
 StarPoint:
-  dw  3840, -12800,  -1280 ; Point 1
-  dw $0000000F ; Point 1 Colour
-  dw -5120, -11520,  -1280 ; Point 2
-  dw $0000000F ; Point 2 Colour
-  dw  3840,  -7680,  -1280 ; Point 3
-  dw $0000000F ; Point 3 Colour
-  dw -5120,  -8960,  -1280 ; Point 4
-  dw $0000000F ; Point 4 Colour
-  dw -3072, -11520,  -1280 ; Point 5
-  dw $0000000F ; Point 5 Colour
-  dw -3072,  -8960,  -1280 ; Point 6
-  dw $0000000F ; Point 6 Colour
+  dw  3840, -12800, 0 ; Point 1
+  dw $0000001F ; Point 1 Colour
+  dw -5120, -11520, 0 ; Point 2
+  dw $000003E0 ; Point 2 Colour
+  dw  3840,  -7680, 0 ; Point 3
+  dw $00007C00 ; Point 3 Colour
+  dw -5120,  -8960, 0 ; Point 4
+  dw $00003FFF ; Point 4 Colour
+  dw -3072, -11520, 0 ; Point 5
+  dw $00000FFF ; Point 5 Colour
+  dw -3072,  -8960, 0 ; Point 6
+  dw $0000F00F ; Point 6 Colour
 StarPointEnd:

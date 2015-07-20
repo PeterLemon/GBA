@@ -1,12 +1,12 @@
 macro SwapBuffers src, dest, amount { ; Swap Buffers
   local .Loop
-  mov r10,src ; Source Address
-  mov r11,dest ; Destination Address
-  orr r12,r11,amount ; Copy Amount
+  mov r12,src ; Source Address
+  mov r13,dest ; Destination Address
+  add r14,r13,amount ; Copy Amount
   .Loop:
-    ldmia r10!,{r0-r9\}
-    stmia r11!,{r0-r9\}
-    cmp r11,r12
+    ldmia r12!,{r0-r11\}
+    stmia r13!,{r0-r11\}
+    cmp r13,r14
     bne .Loop
 }
 
@@ -25,7 +25,30 @@ macro ClearCol col, dest, amount { ; Clear Color (32 Bits For CPU Fixed Copy)
   mov r10,r0
   mov r11,r0
   mov r12,dest ; Destination Address
-  orr r14,r12,amount ; Copy Amount
+  add r14,r12,amount ; Copy Amount
+  .Loop:
+    stmia r12!,{r0-r11\}
+    cmp r12,r14
+    bne .Loop
+}
+
+macro ClearZBuf { ; Clear Z-Buffer (Only Required When Using Z-buffer)
+  local .Loop
+  mov r0,$7FFFFFFF ; Clear Z To Maximum Distance
+  mov r1,r0
+  mov r2,r0
+  mov r3,r0
+  mov r4,r0
+  mov r5,r0
+  mov r6,r0
+  mov r7,r0
+  mov r8,r0
+  mov r9,r0
+  mov r10,r0
+  mov r11,r0
+  mov r12,WRAM ; Destination Address
+  add r12,76800
+  add r14,r12,153600 ; Copy Amount
   .Loop:
     stmia r12!,{r0-r11\}
     cmp r12,r14
@@ -45,9 +68,34 @@ macro DrawPoint x, y, col { ; x = PointX, y = PointY, col = Colour
   bge .SkipPixel
   cmp y,SCREEN_Y
   bge .SkipPixel
-  mla r2,y,r1,x ; R2 = Y * ScreenX + X
+  mla r1,y,r1,x ; R1 = Y * ScreenX + X
+  lsl r1,1 ; R1 *= BPP
+  strh col,[r0,r1] ; Store Pixel To Screen
+  .SkipPixel:
+}
+
+macro DrawPointZBuf x, y, z, col { ; x = PointX, y = PointY, z = PointZ, col = Colour
+  local .SkipPixel
+  mov r0,WRAM ; R0 = WRAM Base Pointer
+  add r1,r0,76800 ; R1 = Z-Buffer Base Pointer
+  mov r2,SCREEN_X ; R1 = ScreenX
+
+  cmp x,0 ; Offscreen Cull
+  blt .SkipPixel
+  cmp y,0
+  blt .SkipPixel
+  cmp x,SCREEN_X
+  bge .SkipPixel
+  cmp y,SCREEN_Y
+  bge .SkipPixel
+  mla r2,y,r2,x ; R2 = Y * ScreenX + X
   lsl r2,1 ; R2 *= BPP
+  lsl r3,r2,1 ; R3 = R2 * BPZ
+  ldr r4,[r1,r3] ; Load Z-Buffer Depth
+  cmp r4,z ; Compare Z-Buffer Depth To Z
+  blt .SkipPixel ; IF (Z-Buffer Depth < Z) Skip Pixel
   strh col,[r0,r2] ; Store Pixel To Screen
+  str z,[r1,r3] ; Store Pixel To Z-Buffer
   .SkipPixel:
 }
 
@@ -55,7 +103,7 @@ macro DrawLine x1, y1, x2, y2, col { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X,
   local .LoopX, .SkipPixelX, .LoopY, .SkipPixelY, .LineEnd
   mov r0,WRAM ; R0 = WRAM Base Pointer
   mov r1,SCREEN_X ; R1 = ScreenX
-  
+
   subs r2,x2,x1 ; X2 - X1
   rsbmi r2,0 ; Convert R2 (DX) To ABS(DX)
   mvnlt r3,0 ; IF (X2 < X1), R3 (SX) = -1
@@ -120,7 +168,7 @@ macro DrawLine x1, y1, x2, y2, col { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X,
 
 macro ScanLine x1, y1, x2, y2, side { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X, y2 = Point2Y, side = Left/Right
   local .LoopX, .SkipPixelX, .LoopY, .SkipPixelY, .LineEnd
-  imm32 r0,side ; R0 = = Scanline Buffer Offset
+  imm32 r0,side ; R0 = Scanline Buffer Offset
 
   cmp y2,y1 ; IF (Y2 < Y1) Swap Points
   movlt r1,x1
@@ -136,7 +184,7 @@ macro ScanLine x1, y1, x2, y2, side { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X
   movgt r2,1 ; IF (X2 > X1), R2 (SX) =	1
 
   sub r3,y2,y1 ; Y2 - Y1 ABS(DY)
-  mov r4,1 ; IF (Y2 > Y1), R4 (SY) =  1
+  mov r4,1 ; IF (Y2 > Y1), R4 (SY) = 1
 
   cmp r1,r3 ; Compare DX To DY
   movgt y2,r1,lsr 1 ; IF (DX >	DY), Y2 = DX / 2 (X Error)

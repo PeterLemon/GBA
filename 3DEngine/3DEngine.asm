@@ -38,9 +38,9 @@ macro Control {
 
   ldr r1,[r0]	 ; Load Y Translation Variable To R1
   IsKeyDown KEY_UP
-  subeq r1,256 ; Translate Screen Up,	In Increments Of 100.0
+  subeq r1,256 ; Translate Screen Up,	In Increments Of 1.0
   IsKeyDown KEY_DOWN
-  addeq r1,256 ; Translate Screen Down, In Decrements Of 100.0
+  addeq r1,256 ; Translate Screen Down, In Decrements Of 1.0
   str r1,[r0],16 ; Store Word To Matrix Parameter Table (Screen Y Translation) & Increment Matrix Address To R0 (Start Of Z Translation)
 
   IsKeyDown KEY_A
@@ -88,46 +88,27 @@ macro Control {
 
 copycode:
   adr r1,startcode
-  mov r2,start
+  mov r2,IWRAM
   imm32 r3,endcopy
   clp:
     ldr r0,[r1],4
     str r0,[r2],4
     cmp r2,r3
     bmi clp
-  mov r2,start
+  imm32 r2,start
   bx r2
 startcode:
   org IWRAM
 
-start:
-  mov r0,IO
-  mov r1,MODE_3
-  orr r1,BG2_ENABLE
-  str r1,[r0]
-
-Refresh:
-  Control
-  XYZRotCalc XRot, YRot, ZRot, SinCos256 ; Combine X,Y,Z Rotation Matrix
-  ClearCol $FFFFFFFF, WRAM, 76800 ; Clear Color (32 Bits For CPU Fixed Copy)
-
-  FillQuadCullBack CubeQuad, CubeQuadEnd
-  FillTriCullBack PyramidTri, PyramidTriEnd
-  Line GrassLine, GrassLineEnd
-  Point StarPoint, StarPointEnd
-
-  SwapBuffers WRAM, VRAM, 76800 ; Swap Buffers
-
-  b Refresh
-
+; Variable Data (IWRAM)
 XRot: dw 0 ; X Rotate Word (0..255) (Jump To Correct X Rotation Pre Calculated Table Memory)
 YRot: dw 0 ; Y Rotate Word (0..255) (Jump To Correct X Rotation Pre Calculated Table Memory)
 ZRot: dw 0 ; Z Rotate Word (0..255) (Jump To Correct X Rotation Pre Calculated Table Memory)
 
 Matrix3D: ; 3D Matrix: Set To Default Identity Matrix (All Numbers Multiplied By 256 For 24.8 Fixed Point Format)
-  dw 256,   0,	 0,	0 ; X = 1.0,	 0.0,	  0.0, X Translation = 0.0
-  dw   0, 256,	 0,	0 ;	0.0, Y = 1.0,	  0.0, Y Translation = 0.0
-  dw   0,   0, 256, 25600 ;	0.0,	 0.0, Z = 1.0, Z Translation = 100.0
+  dw 256, 0, 0, 0 ; X = 1.0, 0.0, 0.0, X Translation = 0.0
+  dw 0, 256, 0, 0 ; 0.0, Y = 1.0, 0.0, Y Translation = 0.0
+  dw 0, 0, 256, 25600 ; 0.0, 0.0, Z = 1.0, Z Translation = 0.0
 
 LineCache:
   dw 0, 0 ; Cache 1st X, Y Point In Line
@@ -140,7 +121,30 @@ ScanRight: dh SCREEN_Y dup 0 ; Right Hand Scanline X Buffer (Size Of Screen Y)
 
 include 'sincos256.asm' ; Matrix Sin & Cos Pre-Calculated Table (256 Rotations)
 
+start:
+  mov r0,IO
+  mov r1,MODE_3
+  orr r1,BG2_ENABLE
+  str r1,[r0]
+
+Refresh:
+  Control
+  XYZRotCalc XRot, YRot, ZRot, SinCos256 ; Combine X,Y,Z Rotation Matrix
+
+  ClearCol $FFFFFFFF, WRAM, 76800 ; Clear Color (32 Bits For CPU Fixed Copy)
+  ClearZBuf ; Clear Z-Buffer (Only Required When Using Z-buffer)
+
+  FillQuadCullBack CubeQuad, CubeQuadEnd
+  FillTriCullBack PyramidTri, PyramidTriEnd
+  Line GrassLine, GrassLineEnd
+  PointZBuf StarPoint, StarPointEnd
+
+  SwapBuffers WRAM, VRAM, 76800 ; Swap Buffers
+
+  b Refresh
+
 endcopy: ; End Of Program Copy Code
 
-org $80000C0 + (endcopy - start) + (startcode - copycode)
+; Static Data (ROM)
+org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
 include 'objects.asm' ; Objects Data

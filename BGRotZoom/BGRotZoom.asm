@@ -18,7 +18,7 @@ times $80000C0-($-0) db 0
 macro Control { ; - Macro to handle all control input
   mov r0,IO ; GBA I/O Base Offset
   ldr r1,[r0,KEYINPUT] ; R1 = Key Input
-  imm32 r0,BGAffineSource ; R0 = Address Of Parameter Table
+  mov r0,BGAffineSource ; R0 = Address Of Parameter Table
 
   ; Move Left & Right
   ldrh r2,[r0,8] ; R2 = X Center
@@ -93,33 +93,17 @@ macro Control { ; - Macro to handle all control input
 
 copycode:
   adr r1,startcode
-  mov r2,start
+  mov r2,IWRAM
   imm32 r3,endcopy
   clp:
     ldr r0,[r1],4
     str r0,[r2],4
     cmp r2,r3
     bmi clp
-  mov r2,start
+  imm32 r2,start
   bx r2
 startcode:
   org IWRAM
-
-start:
-  mov r0,IO
-  mov r1,MODE_3
-  orr r1,BG2_ENABLE
-  str r1,[r0]
-
-  mov r1,0000000001000000b ; Enable Mosaic
-  str r1,[r0,BG2CNT]
-
-  DMA32 BG, VRAM, 19200 ; DMA BG To VRAM
-
-Loop:
-    VBlank  ; Wait Until VBlank
-    Control ; Update BG According To Controls
-    b Loop
 
 ; Variable Data
 BGAffineSource: ; Memory Area Used To Set BG Affine Transformations Using BIOS Call
@@ -137,7 +121,24 @@ BGAffineSource: ; Memory Area Used To Set BG Affine Transformations Using BIOS C
   ; Mosaic Amount
   dh $0000
 
+start:
+  mov r0,IO
+  mov r1,MODE_3
+  orr r1,BG2_ENABLE
+  str r1,[r0]
+
+  mov r1,0000000001000000b ; Enable Mosaic
+  str r1,[r0,BG2CNT]
+
+  DMA32 BG, VRAM, 19200 ; DMA BG To VRAM
+
+Loop:
+    VBlank  ; Wait Until VBlank
+    Control ; Update BG According To Controls
+    b Loop
+
 endcopy: ; End Of Program Copy Code
 
-org $80000C0 + (endcopy - start) + (startcode - copycode)
+; Static Data (ROM)
+org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
 BG: file 'BG.bin' ; Include BG GFX Data (76800 Bytes)

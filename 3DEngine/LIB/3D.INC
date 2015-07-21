@@ -29,10 +29,10 @@ macro Calc2D x, y, z { ; Calculate X,Y 2D
 local .skip, .divXPos, .divYPos, .divXNeg, .divYNeg, .endX, .endY
   ble .skip ; IF (Z <= 0) Skip
 
-  mov r0,x ; Move X To R0 For Bios Division
-  mov r1,z,lsr 8 ; Move Z (Divide By 256) To R1 For Bios Division
-  mov x,0 ; Run Bios Call To Divide (X / Z)
-  cmp r0,0
+  mov r0,x ; R0 = X
+  mov r1,z,lsr 8 ; R1 = Z
+  mov x,0 ; Divide R0 By R1 (X / Z)
+  cmp r0,0 ; IF (X < 0) Negative Divide
   blt .divXNeg
   .divXPos:
   subs r0,r1
@@ -46,10 +46,10 @@ local .skip, .divXPos, .divYPos, .divXNeg, .divYNeg, .endX, .endY
   .endX: ; X = Quotient (2D Screen X)
   add x,HALF_SCREEN_X ; X = X / Z + (ScreenX / 2)
 
-  mov r0,y ; Move Y To R0 For Bios Division
-  mov r1,z,lsr 8 ; Move Z (Divide By 256) To R1 For Bios Division
+  mov r0,y ; R0 = Y
+  mov r1,z,lsr 8 ; R1 = Z
   mov y,0 ; Divide R0 By R1 (Y / Z)
-  cmp r0,0
+  cmp r0,0 ; IF (Y < 0) Negative Divide
   blt .divYNeg
   .divYPos:
   subs r0,r1
@@ -114,174 +114,175 @@ macro ScanLineFront x1, y1, x2, y2 { ; Scan Line Front Face Cull
 macro WireQuad start, end { ; Wire Quad
   local .Loop
   imm32 r14,start ; R14 = Object Start Offset
-  mov r13,IWRAM ; R13 = Line Cache Offset
-  orr r13,LineCache-IWRAM
+  imm32 r13,end ; R13 = Object End Offset
+  mov r12,IWRAM ; R12 = Line Cache Offset
+  orr r12,LineCache-IWRAM
   .Loop:
     LoadXYZ r8, r9, r10 ; R8 = 2D X1, R9 = 2D Y1
-    stmia r13!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
+    stmia r12!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X2, R9 = 2D Y2
-    stmia r13!,{r8-r9\} ; Store X2 & Y2 To 2nd LineCache Address
+    stmia r12!,{r8-r9\} ; Store X2 & Y2 To 2nd LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X3, R9 = 2D Y3
-    stmia r13,{r8-r9\}	; Store X3 & Y3 To 3rd LineCache Address
+    stmia r12,{r8-r9\}	; Store X3 & Y3 To 3rd LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X4, R9 = 2D Y4
-    sub r13,16 ; Load 1st LineCache Address
-    ldmia r13,{r10-r11\} ; Load X1,Y1 To R10,R11
-    ldr r12,[r14],4 ; R12 = Colour
-    DrawLine r10, r11, r8, r9, r12
+    sub r12,16 ; Load 1st LineCache Address
+    ldmia r12,{r10-r11\} ; Load X1,Y1 To R10,R11
+    ldr r7,[r14],4 ; R7 = Colour
+    DrawLine r10, r11, r8, r9, r7
 
-    add r13,16 ; Load 3rd LineCache Address
-    ldmia r13,{r8-r9\} ; Load X3,Y3 To R8,R9
-    DrawLine r10, r11, r8, r9, r12
+    add r12,16 ; Load 3rd LineCache Address
+    ldmia r12,{r8-r9\} ; Load X3,Y3 To R8,R9
+    DrawLine r10, r11, r8, r9, r7
 
-    sub r13,8 ; Load 2nd LineCache Address
-    ldmia r13,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
-    DrawLine r10, r11, r8, r9, r12
+    sub r12,8 ; Load 2nd LineCache Address
+    ldmia r12,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
+    DrawLine r10, r11, r8, r9, r7
 
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r8-r9\} ; Load X1,Y1 To R8,R9
-    DrawLine r10, r11, r8, r9, r12
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r8-r9\} ; Load X1,Y1 To R8,R9
+    DrawLine r10, r11, r8, r9, r7
 
-    imm32 r12,end ; R12 = Object End Offset
-    cmp r14,r12 ; IF (Object Start Offset != Object End Offset) Loop
+    cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
     bne .Loop
 }
 
 macro WireQuadCullBack start, end { ; Wire Quad Back Face Cull
   local .Loop, .SkipPoly
   imm32 r14,start ; R14 = Object Start Offset
-  mov r13,IWRAM ; R13 = Line Cache Offset
-  orr r13,LineCache-IWRAM
+  imm32 r13,end ; R13 = Object End Offset
+  mov r12,IWRAM ; R12 = Line Cache Offset
+  orr r12,LineCache-IWRAM
   .Loop:
     LoadXYZ r8, r9, r10 ; R8 = 2D X1, R9 = 2D Y1
-    stmia r13!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
+    stmia r12!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X2, R9 = 2D Y2
-    stmia r13!,{r8-r9\} ; Store X2 & Y2 To 2nd LineCache Address
+    stmia r12!,{r8-r9\} ; Store X2 & Y2 To 2nd LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X3, R9 = 2D Y3
-    stmia r13,{r8-r9\}	; Store X3 & Y3 To 3rd LineCache Address
+    stmia r12,{r8-r9\}	; Store X3 & Y3 To 3rd LineCache Address
 
-    sub r13,16 ; Load 1st LineCache Address
-    ldmia r13,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
+    sub r12,16 ; Load 1st LineCache Address
+    ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r8, r9 ; Back Face Cull
     addle r14,16 ; IF((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) <= 0 SkipPoly
     ble .SkipPoly
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X4, R9 = 2D Y4
-    ldmia r13,{r10-r11\} ; Load X1,Y1 To R10,R11
-    ldr r12,[r14],4 ; R12 = Colour
-    DrawLine r10, r11, r8, r9, r12
+    ldmia r12,{r10-r11\} ; Load X1,Y1 To R10,R11
+    ldr r7,[r14],4 ; R7 = Colour
+    DrawLine r10, r11, r8, r9, r7
 
-    add r13,16 ; Load 3rd LineCache Address
-    ldmia r13,{r8-r9\} ; Load X3,Y3 To R8,R9
-    DrawLine r10, r11, r8, r9, r12
+    add r12,16 ; Load 3rd LineCache Address
+    ldmia r12,{r8-r9\} ; Load X3,Y3 To R8,R9
+    DrawLine r10, r11, r8, r9, r7
 
-    sub r13,8 ; Load 2nd LineCache Address
-    ldmia r13,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
-    DrawLine r10, r11, r8, r9, r12
+    sub r12,8 ; Load 2nd LineCache Address
+    ldmia r12,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
+    DrawLine r10, r11, r8, r9, r7
 
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r8-r9\} ; Load X1,Y1 To R8,R9
-    DrawLine r10, r11, r8, r9, r12
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r8-r9\} ; Load X1,Y1 To R8,R9
+    DrawLine r10, r11, r8, r9, r7
 
     .SkipPoly:
-    imm32 r12,end ; R12 = Object End Offset
-    cmp r14,r12 ; IF (Object Start Offset != Object End Offset) Loop
+    cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
     bne .Loop
 }
 
 macro WireQuadCullFront start, end { ; Wire Quad Front Face Cull
   local .Loop, .SkipPoly
   imm32 r14,start ; R14 = Object Start Offset
-  mov r13,IWRAM ; R13 = Line Cache Offset
-  orr r13,LineCache-IWRAM
+  imm32 r13,end ; R13 = Object End Offset
+  mov r12,IWRAM ; R12 = Line Cache Offset
+  orr r12,LineCache-IWRAM
   .Loop:
     LoadXYZ r8, r9, r10 ; R8 = 2D X1, R9 = 2D Y1
-    stmia r13!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
+    stmia r12!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X2, R9 = 2D Y2
-    stmia r13!,{r8-r9\} ; Store X2 & Y2 To 2nd LineCache Address
+    stmia r12!,{r8-r9\} ; Store X2 & Y2 To 2nd LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X3, R9 = 2D Y3
-    stmia r13,{r8-r9\}	; Store X3 & Y3 To 3rd LineCache Address
+    stmia r12,{r8-r9\}	; Store X3 & Y3 To 3rd LineCache Address
 
-    sub r13,16 ; Load 1st LineCache Address
-    ldmia r13,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
+    sub r12,16 ; Load 1st LineCache Address
+    ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r8, r9 ; Front Face Cull
     addge r14,16 ; IF((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) >= 0 SkipPoly
     bge .SkipPoly
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X4, R9 = 2D Y4
-    ldmia r13,{r10-r11\} ; Load X1,Y1 To R10,R11
-    ldr r12,[r14],4 ; R12 = Colour
-    DrawLine r10, r11, r8, r9, r12
+    ldmia r12,{r10-r11\} ; Load X1,Y1 To R10,R11
+    ldr r7,[r14],4 ; R7 = Colour
+    DrawLine r10, r11, r8, r9, r7
 
-    add r13,16 ; Load 3rd LineCache Address
-    ldmia r13,{r8-r9\} ; Load X3,Y3 To R8,R9
-    DrawLine r10, r11, r8, r9, r12
+    add r12,16 ; Load 3rd LineCache Address
+    ldmia r12,{r8-r9\} ; Load X3,Y3 To R8,R9
+    DrawLine r10, r11, r8, r9, r7
 
-    sub r13,8 ; Load 2nd LineCache Address
-    ldmia r13,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
-    DrawLine r10, r11, r8, r9, r12
+    sub r12,8 ; Load 2nd LineCache Address
+    ldmia r12,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
+    DrawLine r10, r11, r8, r9, r7
 
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r8-r9\} ; Load X1,Y1 To R8,R9
-    DrawLine r10, r11, r8, r9, r12
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r8-r9\} ; Load X1,Y1 To R8,R9
+    DrawLine r10, r11, r8, r9, r7
 
     .SkipPoly:
-    imm32 r12,end ; R12 = Object End Offset
-    cmp r14,r12 ; IF (Object Start Offset != Object End Offset) Loop
+    cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
     bne .Loop
 }
 
 macro FillQuadCullBack start, end { ; Fill Quad Back Face Cull
   local .Loop, .Fill, .SkipPixel, .FillLoop, .SkipPoly
   imm32 r14,start ; R14 = Object Start Offset
-  mov r13,IWRAM ; R13 = Line Cache Offset
-  orr r13,LineCache-IWRAM
+  imm32 r13,end ; R13 = Object End Offset
+  mov r12,IWRAM ; R12 = Line Cache Offset
+  orr r12,LineCache-IWRAM
   .Loop:
     LoadXYZ r8, r9, r10 ; R8 = 2D X1, R9 = 2D Y1
-    stmia r13!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
+    stmia r12!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X2, R9 = 2D Y2
-    stmia r13!,{r8-r9\} ; Store X2 & Y2 To 2nd LineCache Address
+    stmia r12!,{r8-r9\} ; Store X2 & Y2 To 2nd LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X3, R9 = 2D Y3
-    stmia r13,{r8-r9\}	; Store X3 & Y3 To 3rd LineCache Address
+    stmia r12,{r8-r9\}	; Store X3 & Y3 To 3rd LineCache Address
 
-    sub r13,16 ; Load 1st LineCache Address
-    ldmia r13,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
+    sub r12,16 ; Load 1st LineCache Address
+    ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r8, r9 ; Back Face Cull
     addle r14,16 ; IF((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) <= 0 SkipPoly
     ble .SkipPoly
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X4, R9 = 2D Y4
-    add r13,24 ; Load 4th LineCache Address
-    stmia r13,{r8-r9\} ; Store X4 & Y4 To 4th LineCache Address
+    add r12,24 ; Load 4th LineCache Address
+    stmia r12,{r8-r9\} ; Store X4 & Y4 To 4th LineCache Address
 
-    sub r13,24 ; Load 1st LineCache Address
-    ldmia r13,{r10-r11\} ; Load X1,Y1 To R10,R11
+    sub r12,24 ; Load 1st LineCache Address
+    ldmia r12,{r10-r11\} ; Load X1,Y1 To R10,R11
     ScanLineBack r8, r9, r10, r11
 
-    ldmia r13,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
+    ldmia r12,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
     ScanLineBack r8, r9, r10, r11
 
-    add r13,8 ; Load 2nd LineCache Address
-    ldmia r13,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
+    add r12,8 ; Load 2nd LineCache Address
+    ldmia r12,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
     ScanLineBack r8, r9, r10, r11
 
-    add r13,8 ; Load 3rd LineCache Address
-    ldmia r13,{r8-r11\} ; Load X3,Y3,X4,Y4 To R8,R9,R10,R11
+    add r12,8 ; Load 3rd LineCache Address
+    ldmia r12,{r8-r11\} ; Load X3,Y3,X4,Y4 To R8,R9,R10,R11
     ScanLineBack r8, r9, r10, r11
 
-    sub r13,16 ; Load 1st LineCache Address
-    ldr r0,[r13,4]  ; Load 1st Line Point Y Coordinate From LineCache
-    ldr r1,[r13,12] ; Load 2nd Line Point Y Coordinate From LineCache
-    ldr r2,[r13,20] ; Load 3rd Line Point Y Coordinate From LineCache
-    ldr r3,[r13,28] ; Load 4th Line Point Y Coordinate From LineCache
+    sub r12,16 ; Load 1st LineCache Address
+    ldr r0,[r12,4]  ; Load 1st Line Point Y Coordinate From LineCache
+    ldr r1,[r12,12] ; Load 2nd Line Point Y Coordinate From LineCache
+    ldr r2,[r12,20] ; Load 3rd Line Point Y Coordinate From LineCache
+    ldr r3,[r12,28] ; Load 4th Line Point Y Coordinate From LineCache
     cmp r0,r1
     movle r4,r0 ; IF(Y1 <= Y2) R4 = Y1 (Top)
     movgt r4,r1 ; IF(Y1 >  Y2) R4 = Y2 (Top)
@@ -314,7 +315,7 @@ macro FillQuadCullBack start, end { ; Fill Quad Back Face Cull
 
     mov r0,WRAM ; R0 = WRAM Base Pointer
     mov r11,SCREEN_X ; R11 = ScreenX
-    ldr r12,[r14],4 ; R12 = Colour
+    ldr r7,[r14],4 ; R7 = Colour
     imm32 r10,ScanLeft ; R10 = Scanline Left Buffer Offset
     imm32 r9,ScanRight ; R9 = Scanline Right Buffer Offset
     .Fill:
@@ -336,7 +337,7 @@ macro FillQuadCullBack start, end { ; Fill Quad Back Face Cull
       addlt r3,4
       blt .SkipPixel
       .FillLoop:
-	strh r12,[r3],2 ; Store Pixel Colour To Screen
+	strh r7,[r3],2 ; Store Pixel Colour To Screen
 	.SkipPixel:
 	cmp r3,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
 	ble .FillLoop
@@ -346,56 +347,56 @@ macro FillQuadCullBack start, end { ; Fill Quad Back Face Cull
       ble .Fill
 
     .SkipPoly:
-    imm32 r12,end ; R12 = Object End Offset
-    cmp r14,r12 ; IF (Object Start Offset != Object End Offset) Loop
+    cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
     bne .Loop
 }
 
 macro FillQuadCullFront start, end { ; Fill Quad Front Face Cull
   local .Loop, .Fill, .SkipPixel, .FillLoop, .SkipPoly
   imm32 r14,start ; R14 = Object Start Offset
-  mov r13,IWRAM ; R13 = Line Cache Offset
-  orr r13,LineCache-IWRAM
+  imm32 r13,end ; R13 = Object End Offset
+  mov r12,IWRAM ; R12 = Line Cache Offset
+  orr r12,LineCache-IWRAM
   .Loop:
     LoadXYZ r8, r9, r10 ; R8 = 2D X1, R9 = 2D Y1
-    stmia r13!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
+    stmia r12!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X2, R9 = 2D Y2
-    stmia r13!,{r8-r9\} ; Store X2 & Y2 To 2nd LineCache Address
+    stmia r12!,{r8-r9\} ; Store X2 & Y2 To 2nd LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X3, R9 = 2D Y3
-    stmia r13,{r8-r9\}	; Store X3 & Y3 To 3rd LineCache Address
+    stmia r12,{r8-r9\}	; Store X3 & Y3 To 3rd LineCache Address
 
-    sub r13,16 ; Load 1st LineCache Address
-    ldmia r13,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
+    sub r12,16 ; Load 1st LineCache Address
+    ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r8, r9 ; Front Face Cull
     addge r14,16 ; IF((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) >= 0 SkipPoly
     bge .SkipPoly
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X4, R9 = 2D Y4
-    add r13,24 ; Load 4th LineCache Address
-    stmia r13,{r8-r9\} ; Store X4 & Y4 To 4th LineCache Address
+    add r12,24 ; Load 4th LineCache Address
+    stmia r12,{r8-r9\} ; Store X4 & Y4 To 4th LineCache Address
 
-    sub r13,24 ; Load 1st LineCache Address
-    ldmia r13,{r10-r11\} ; Load X1,Y1 To R10,R11
+    sub r12,24 ; Load 1st LineCache Address
+    ldmia r12,{r10-r11\} ; Load X1,Y1 To R10,R11
     ScanLineFront r8, r9, r10, r11
 
-    ldmia r13,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
+    ldmia r12,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
     ScanLineFront r8, r9, r10, r11
 
-    add r13,8 ; Load 2nd LineCache Address
-    ldmia r13,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
+    add r12,8 ; Load 2nd LineCache Address
+    ldmia r12,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
     ScanLineFront r8, r9, r10, r11
 
-    add r13,8 ; Load 3rd LineCache Address
-    ldmia r13,{r8-r11\} ; Load X3,Y3,X4,Y4 To R8,R9,R10,R11
+    add r12,8 ; Load 3rd LineCache Address
+    ldmia r12,{r8-r11\} ; Load X3,Y3,X4,Y4 To R8,R9,R10,R11
     ScanLineFront r8, r9, r10, r11
 
-    sub r13,16 ; Load 1st LineCache Address
-    ldr r0,[r13,4]  ; Load 1st Line Point Y Coordinate From LineCache
-    ldr r1,[r13,12] ; Load 2nd Line Point Y Coordinate From LineCache
-    ldr r2,[r13,20] ; Load 3rd Line Point Y Coordinate From LineCache
-    ldr r3,[r13,28] ; Load 4th Line Point Y Coordinate From LineCache
+    sub r12,16 ; Load 1st LineCache Address
+    ldr r0,[r12,4]  ; Load 1st Line Point Y Coordinate From LineCache
+    ldr r1,[r12,12] ; Load 2nd Line Point Y Coordinate From LineCache
+    ldr r2,[r12,20] ; Load 3rd Line Point Y Coordinate From LineCache
+    ldr r3,[r12,28] ; Load 4th Line Point Y Coordinate From LineCache
     cmp r0,r1
     movle r4,r0 ; IF(Y1 <= Y2) R4 = Y1 (Top)
     movgt r4,r1 ; IF(Y1 >  Y2) R4 = Y2 (Top)
@@ -428,7 +429,7 @@ macro FillQuadCullFront start, end { ; Fill Quad Front Face Cull
 
     mov r0,WRAM ; R0 = WRAM Base Pointer
     mov r11,SCREEN_X ; R11 = ScreenX
-    ldr r12,[r14],4 ; R12 = Colour
+    ldr r7,[r14],4 ; R7 = Colour
     imm32 r10,ScanLeft ; R10 = Scanline Left Buffer Offset
     imm32 r9,ScanRight ; R9 = Scanline Right Buffer Offset
     .Fill:
@@ -450,7 +451,7 @@ macro FillQuadCullFront start, end { ; Fill Quad Front Face Cull
       addlt r3,4
       blt .SkipPixel
       .FillLoop:
-	strh r12,[r3],2 ; Store Pixel Colour To Screen
+	strh r7,[r3],2 ; Store Pixel Colour To Screen
 	.SkipPixel:
 	cmp r3,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
 	ble .FillLoop
@@ -460,149 +461,149 @@ macro FillQuadCullFront start, end { ; Fill Quad Front Face Cull
       ble .Fill
 
     .SkipPoly:
-    imm32 r12,end ; R12 = Object End Offset
-    cmp r14,r12 ; IF (Object Start Offset != Object End Offset) Loop
+    cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
     bne .Loop
 }
 
 macro WireTri start, end { ; Wire Tri
   local .Loop
   imm32 r14,start ; R14 = Object Start Offset
-  mov r13,IWRAM ; R13 = Line Cache Offset
-  orr r13,LineCache-IWRAM
+  imm32 r13,end ; R13 = Object End Offset
+  mov r12,IWRAM ; R12 = Line Cache Offset
+  orr r12,LineCache-IWRAM
   .Loop:
     LoadXYZ r8, r9, r10 ; R8 = 2D X1, R9 = 2D Y1
-    stmia r13!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
+    stmia r12!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X2, R9 = 2D Y2
-    stmia r13,{r8-r9\}	; Store X2 & Y2 To 2nd LineCache Address
+    stmia r12,{r8-r9\}	; Store X2 & Y2 To 2nd LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X3, R9 = 2D Y3
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13!,{r10-r11\} ; Load X1,Y1 To R10,R11
-    ldr r12,[r14],4 ; R12 = Colour
-    DrawLine r10, r11, r8, r9, r12
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12!,{r10-r11\} ; Load X1,Y1 To R10,R11
+    ldr r7,[r14],4 ; R7 = Colour
+    DrawLine r10, r11, r8, r9, r7
 
-    ldmia r13,{r8-r9\} ; Load X2,Y2 To R8,R9
-    DrawLine r10, r11, r8, r9, r12
+    ldmia r12,{r8-r9\} ; Load X2,Y2 To R8,R9
+    DrawLine r10, r11, r8, r9, r7
 
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
-    DrawLine r10, r11, r8, r9, r12
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
+    DrawLine r10, r11, r8, r9, r7
 
-    imm32 r12,end ; R12 = Object End Offset
-    cmp r14,r12 ; IF (Object Start Offset != Object End Offset) Loop
+    cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
     bne .Loop
 }
 
 macro WireTriCullBack start, end { ; Wire Tri Back Face Cull
   local .Loop, .SkipPoly
   imm32 r14,start ; R14 = Object Start Offset
-  mov r13,IWRAM ; R13 = Line Cache Offset
-  orr r13,LineCache-IWRAM
+  imm32 r13,end ; R13 = Object End Offset
+  mov r12,IWRAM ; R12 = Line Cache Offset
+  orr r12,LineCache-IWRAM
   .Loop:
     LoadXYZ r8, r9, r10 ; R8 = 2D X1, R9 = 2D Y1
-    stmia r13!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
+    stmia r12!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X2, R9 = 2D Y2
-    stmia r13,{r8-r9\}	; Store X2 & Y2 To 2nd LineCache Address
+    stmia r12,{r8-r9\}	; Store X2 & Y2 To 2nd LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X3, R9 = 2D Y3
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r8, r9 ; Back Face Cull
     addle r14,4 ; IF((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) <= 0 SkipPoly
     ble .SkipPoly
 
-    ldmia r13!,{r10-r11\} ; Load X1,Y1 To R10,R11
-    ldr r12,[r14],4 ; R12 = Colour
-    DrawLine r10, r11, r8, r9, r12
+    ldmia r12!,{r10-r11\} ; Load X1,Y1 To R10,R11
+    ldr r7,[r14],4 ; R7 = Colour
+    DrawLine r10, r11, r8, r9, r7
 
-    ldmia r13,{r8-r9\} ; Load X2,Y2 To R8,R9
-    DrawLine r10, r11, r8, r9, r12
+    ldmia r12,{r8-r9\} ; Load X2,Y2 To R8,R9
+    DrawLine r10, r11, r8, r9, r7
 
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
-    DrawLine r10, r11, r8, r9, r12
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
+    DrawLine r10, r11, r8, r9, r7
 
     .SkipPoly:
-    imm32 r12,end ; R12 = Object End Offset
-    cmp r14,r12 ; IF (Object Start Offset != Object End Offset) Loop
+    cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
     bne .Loop
 }
 
 macro WireTriCullFront start, end { ; Wire Tri Front Face Cull
   local .Loop, .SkipPoly
   imm32 r14,start ; R14 = Object Start Offset
-  mov r13,IWRAM ; R13 = Line Cache Offset
-  orr r13,LineCache-IWRAM
+  imm32 r13,end ; R13 = Object End Offset
+  mov r12,IWRAM ; R12 = Line Cache Offset
+  orr r12,LineCache-IWRAM
   .Loop:
     LoadXYZ r8, r9, r10 ; R8 = 2D X1, R9 = 2D Y1
-    stmia r13!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
+    stmia r12!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X2, R9 = 2D Y2
-    stmia r13,{r8-r9\}	; Store X2 & Y2 To 2nd LineCache Address
+    stmia r12,{r8-r9\}	; Store X2 & Y2 To 2nd LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X3, R9 = 2D Y3
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r8, r9 ; Front Face Cull
     addge r14,4 ; IF((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) >= 0 SkipPoly
     bge .SkipPoly
 
-    ldmia r13!,{r10-r11\} ; Load X1,Y1 To R10,R11
-    ldr r12,[r14],4 ; R12 = Colour
-    DrawLine r10, r11, r8, r9, r12
+    ldmia r12!,{r10-r11\} ; Load X1,Y1 To R10,R11
+    ldr r7,[r14],4 ; R7 = Colour
+    DrawLine r10, r11, r8, r9, r7
 
-    ldmia r13,{r8-r9\} ; Load X2,Y2 To R8,R9
-    DrawLine r10, r11, r8, r9, r12
+    ldmia r12,{r8-r9\} ; Load X2,Y2 To R8,R9
+    DrawLine r10, r11, r8, r9, r7
 
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
-    DrawLine r10, r11, r8, r9, r12
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
+    DrawLine r10, r11, r8, r9, r7
 
     .SkipPoly:
-    imm32 r12,end ; R12 = Object End Offset
-    cmp r14,r12 ; IF (Object Start Offset != Object End Offset) Loop
+    cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
     bne .Loop
 }
 
 macro FillTriCullBack start, end { ; Fill Tri Back Face Cull
   local .Loop, .Fill, .SkipPixel, .FillLoop, .SkipPoly
   imm32 r14,start ; R14 = Object Start Offset
-  mov r13,IWRAM ; R13 = Line Cache Offset
-  orr r13,LineCache-IWRAM
+  imm32 r13,end ; R13 = Object End Offset
+  mov r12,IWRAM ; R12 = Line Cache Offset
+  orr r12,LineCache-IWRAM
   .Loop:
     LoadXYZ r8, r9, r10 ; R8 = 2D X1, R9 = 2D Y1
-    stmia r13!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
+    stmia r12!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X2, R9 = 2D Y2
-    stmia r13,{r8-r9\}	; Store X2 & Y2 To 2nd LineCache Address
+    stmia r12,{r8-r9\}	; Store X2 & Y2 To 2nd LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X3, R9 = 2D Y3
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r8, r9 ; Back Face Cull
     addle r14,4 ; IF((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) <= 0 SkipPoly
     ble .SkipPoly
 
-    add r13,16 ; Load 3rd LineCache Address
-    stmia r13,{r8-r9\} ; Store X3 & Y3 To 3rd LineCache Address
+    add r12,16 ; Load 3rd LineCache Address
+    stmia r12,{r8-r9\} ; Store X3 & Y3 To 3rd LineCache Address
 
-    sub r13,16 ; Load 1st LineCache Address
-    ldmia r13!,{r10-r11\} ; Load X1,Y1 To R10,R11
+    sub r12,16 ; Load 1st LineCache Address
+    ldmia r12!,{r10-r11\} ; Load X1,Y1 To R10,R11
     ScanLineBack r8, r9, r10, r11
 
-    ldmia r13,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
+    ldmia r12,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
     ScanLineBack r8, r9, r10, r11
 
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
     ScanLineBack r8, r9, r10, r11
 
-    ldr r0,[r13,4]  ; Load 1st Line Point Y Coordinate From LineCache
-    ldr r1,[r13,12] ; Load 2nd Line Point Y Coordinate From LineCache
-    ldr r2,[r13,20] ; Load 3rd Line Point Y Coordinate From LineCache
+    ldr r0,[r12,4]  ; Load 1st Line Point Y Coordinate From LineCache
+    ldr r1,[r12,12] ; Load 2nd Line Point Y Coordinate From LineCache
+    ldr r2,[r12,20] ; Load 3rd Line Point Y Coordinate From LineCache
 
     cmp r0,r1
     movle r4,r0 ; IF(Y1 <= Y2) R4 = Y1 (Top)
@@ -631,7 +632,7 @@ macro FillTriCullBack start, end { ; Fill Tri Back Face Cull
 
     mov r0,WRAM ; R0 = WRAM Base Pointer
     mov r11,SCREEN_X ; R11 = ScreenX
-    ldr r12,[r14],4 ; R12 = Colour
+    ldr r7,[r14],4 ; R7 = Colour
     imm32 r10,ScanLeft ; R10 = Scanline Left Buffer Offset
     imm32 r9,ScanRight ; R9 = Scanline Right Buffer Offset
     .Fill:
@@ -653,7 +654,7 @@ macro FillTriCullBack start, end { ; Fill Tri Back Face Cull
       addlt r3,4
       blt .SkipPixel
       .FillLoop:
-	strh r12,[r3],2 ; Store Pixel Colour To Screen
+	strh r7,[r3],2 ; Store Pixel Colour To Screen
 	.SkipPixel:
 	cmp r3,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
 	ble .FillLoop
@@ -663,47 +664,47 @@ macro FillTriCullBack start, end { ; Fill Tri Back Face Cull
       ble .Fill
 
     .SkipPoly:
-    imm32 r12,end ; R12 = Object End Offset
-    cmp r14,r12 ; IF (Object Start Offset != Object End Offset) Loop
+    cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
     bne .Loop
 }
 
 macro FillTriCullFront start, end { ; Fill Tri Front Face Cull
   local .Loop, .Fill, .SkipPixel, .FillLoop, .SkipPoly
   imm32 r14,start ; R14 = Object Start Offset
-  mov r13,IWRAM ; R13 = Line Cache Offset
-  orr r13,LineCache-IWRAM
+  imm32 r13,end ; R13 = Object End Offset
+  mov r12,IWRAM ; R12 = Line Cache Offset
+  orr r12,LineCache-IWRAM
   .Loop:
     LoadXYZ r8, r9, r10 ; R8 = 2D X1, R9 = 2D Y1
-    stmia r13!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
+    stmia r12!,{r8-r9\} ; Store X1 & Y1 To 1st LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X2, R9 = 2D Y2
-    stmia r13,{r8-r9\}	; Store X2 & Y2 To 2nd LineCache Address
+    stmia r12,{r8-r9\}	; Store X2 & Y2 To 2nd LineCache Address
 
     LoadXYZ r8, r9, r10 ; R8 = 2D X3, R9 = 2D Y3
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r8, r9 ; Front Face Cull
     addge r14,4 ; IF((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) >= 0 SkipPoly
     bge .SkipPoly
 
-    add r13,16 ; Load 3rd LineCache Address
-    stmia r13,{r8-r9\} ; Store X3 & Y3 To 3rd LineCache Address
+    add r12,16 ; Load 3rd LineCache Address
+    stmia r12,{r8-r9\} ; Store X3 & Y3 To 3rd LineCache Address
 
-    sub r13,16 ; Load 1st LineCache Address
-    ldmia r13!,{r10-r11\} ; Load X1,Y1 To R10,R11
+    sub r12,16 ; Load 1st LineCache Address
+    ldmia r12!,{r10-r11\} ; Load X1,Y1 To R10,R11
     ScanLineFront r8, r9, r10, r11
 
-    ldmia r13,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
+    ldmia r12,{r8-r11\} ; Load X2,Y2,X3,Y3 To R8,R9,R10,R11
     ScanLineFront r8, r9, r10, r11
 
-    sub r13,8 ; Load 1st LineCache Address
-    ldmia r13,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
+    sub r12,8 ; Load 1st LineCache Address
+    ldmia r12,{r8-r11\} ; Load X1,Y1,X2,Y2 To R8,R9,R10,R11
     ScanLineFront r8, r9, r10, r11
 
-    ldr r0,[r13,4]  ; Load 1st Line Point Y Coordinate From LineCache
-    ldr r1,[r13,12] ; Load 2nd Line Point Y Coordinate From LineCache
-    ldr r2,[r13,20] ; Load 3rd Line Point Y Coordinate From LineCache
+    ldr r0,[r12,4]  ; Load 1st Line Point Y Coordinate From LineCache
+    ldr r1,[r12,12] ; Load 2nd Line Point Y Coordinate From LineCache
+    ldr r2,[r12,20] ; Load 3rd Line Point Y Coordinate From LineCache
 
     cmp r0,r1
     movle r4,r0 ; IF(Y1 <= Y2) R4 = Y1 (Top)
@@ -732,7 +733,7 @@ macro FillTriCullFront start, end { ; Fill Tri Front Face Cull
 
     mov r0,WRAM ; R0 = WRAM Base Pointer
     mov r11,SCREEN_X ; R11 = ScreenX
-    ldr r12,[r14],4 ; R12 = Colour
+    ldr r7,[r14],4 ; R7 = Colour
     imm32 r10,ScanLeft ; R10 = Scanline Left Buffer Offset
     imm32 r9,ScanRight ; R9 = Scanline Right Buffer Offset
     .Fill:
@@ -754,7 +755,7 @@ macro FillTriCullFront start, end { ; Fill Tri Front Face Cull
       addlt r3,4
       blt .SkipPixel
       .FillLoop:
-	strh r12,[r3],2 ; Store Pixel Colour To Screen
+	strh r7,[r3],2 ; Store Pixel Colour To Screen
 	.SkipPixel:
 	cmp r3,r2 ; IF(X <= Scanline Right Buffer X) Fill Scanline
 	ble .FillLoop
@@ -764,8 +765,7 @@ macro FillTriCullFront start, end { ; Fill Tri Front Face Cull
       ble .Fill
 
     .SkipPoly:
-    imm32 r12,end ; R12 = Object End Offset
-    cmp r14,r12 ; IF (Object Start Offset != Object End Offset) Loop
+    cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
     bne .Loop
 }
 
@@ -802,6 +802,19 @@ macro Line start, end { ; Line
     LoadXYZ r10, r11, r12 ; R10 = 2D X1, R11 = 2D Y1
     ldr r12,[r14],4 ; R12 = Colour
     DrawLine r8, r9, r10, r11, r12
+    cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
+    bne .Loop
+}
+
+macro LineZBuf start, end { ; Line Z-Buffer
+  local .Loop
+  imm32 r14,start ; R14 = Object Start Offset
+  .Loop:
+    LoadXYZ r8, r9, r10 ; R8 = 2D X1, R9 = 2D Y1, R10 = 3D Z
+    LoadXYZ r11, r12, r13 ; R11 = 2D X1, R12 = 2D Y1, R13 = 3D Z
+    ldr r7,[r14],4 ; R7 = Colour
+    DrawLineZBuf r8, r9, r10, r11, r12, r13, r7
+    imm32 r13,end ; R13 = Object End Offset
     cmp r14,r13 ; IF (Object Start Offset != Object End Offset) Loop
     bne .Loop
 }

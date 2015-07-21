@@ -166,6 +166,107 @@ macro DrawLine x1, y1, x2, y2, col { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X,
   .LineEnd: ; End of Line Drawing
 }
 
+macro DrawLineZBuf x1, y1, z1, x2, y2, z2, col { ; x1 = Point1X, y1 = Point1Y, z1 = Point1Z x2 = Point2X, y2 = Point2Y, z2 = Point2Z, col = Colour
+  local .divZPos, .divZNeg, .endZ, .LoopX, .SkipPixelX, .LoopY, .SkipPixelY, .LineEnd
+  mov r0,WRAM ; R0 = WRAM Base Pointer
+
+  subs r2,x2,x1 ; X2 - X1
+  rsbmi r2,0 ; Convert R2 (DX) To ABS(DX)
+  mvnlt r3,0 ; IF (X2 < X1), R3 (SX) = -1
+  movgt r3,1 ; IF (X2 > X1), R3 (SX) =	1
+
+  subs r4,y2,y1 ; Y2 - Y1
+  rsbmi r4,0 ; Convert R4 (DY) To ABS(DY)
+  mvnlt r5,0 ; IF (Y2 < Y1), R5 (SY) = -1
+  movgt r5,1 ; IF (Y2 > Y1), R5 (SY) =	1
+
+  sub r6,z2,z1 ; R6 = Z2 - Z1 (DZ)
+  add r1,r2,r4 ; R1 = Amount Of Pixel To Draw (DXY)
+  mov z2,0 ; Divide DZ By DXY
+  cmp r6,0 ; IF (DZ < 0) Negative Divide
+  blt .divZNeg
+  .divZPos:
+  subs r6,r1
+  addge z2,1
+  bgt .divZPos
+  b .endZ
+  .divZNeg:
+  adds r6,r1
+  suble z2,1
+  blt .divZNeg
+  .endZ: ; Z2 = Quotient (SZ)
+
+  cmp r2,r4 ; Compare DX To DY
+  movgt y2,r2,lsr 1 ; IF (DX >	DY), Y2 = DX / 2 (X Error)
+  movle x2,r4,lsr 1 ; IF (DX <= DY), X2 = DY / 2 (Y Error)
+  ble .LoopY
+
+  .LoopX:
+    cmp x1,0 ; Offscreen Cull
+    blt .SkipPixelX
+    cmp y1,0
+    blt .SkipPixelX
+    cmp x1,SCREEN_X
+    bge .SkipPixelX
+    cmp y1,SCREEN_Y
+    bge .SkipPixelX
+
+    mov r1,SCREEN_X ; R1 = ScreenX
+    mla r6,y1,r1,x1 ; R6 = Y * ScreenX + X
+    lsl r6,2 ; R6 *= BPZ
+    add r1,r0,76800 ; R1 = Z-Buffer Base Pointer
+    ldr r1,[r1,r6] ; Load Z-Buffer Depth
+    cmp r1,z1 ; Compare Z-Buffer Depth To Z
+    blt .SkipPixelX ; IF (Z-Buffer Depth < Z) Skip Pixel
+    add r1,r0,76800 ; R1 = Z-Buffer Base Pointer
+    str z1,[r1,r6] ; Store Pixel To Z-Buffer
+    lsr r6,1 ; R6 = Y * ScreenX + X * BPP
+    strh col,[r0,r6] ; Store Pixel To Screen
+    .SkipPixelX:
+
+    cmp x1,x2 ; While (X1 != X2)
+    beq .LineEnd ; IF (X1 == X2), Branch To Line End
+    subs y2,r4 ; X Error -= DY
+    addlt y1,r5 ; IF (X Error < 0), Y1 += SY
+    addlt y2,r2 ; IF (X Error < 0), X Error += DX
+    add x1,r3 ; X1 += SX
+    b .LoopX ; Loop Line Drawing
+
+  .LoopY:
+    cmp x1,0 ; Offscreen Cull
+    blt .SkipPixelY
+    cmp y1,0
+    blt .SkipPixelY
+    cmp x1,SCREEN_X
+    bge .SkipPixelY
+    cmp y1,SCREEN_Y
+    bge .SkipPixelY
+
+    mov r1,SCREEN_X ; R1 = ScreenX
+    mla r6,y1,r1,x1 ; R6 = Y * ScreenX + X
+    lsl r6,2 ; R6 *= BPZ
+    add r1,r0,76800 ; R1 = Z-Buffer Base Pointer
+    ldr r1,[r1,r6] ; Load Z-Buffer Depth
+    cmp r1,z1 ; Compare Z-Buffer Depth To Z
+    blt .SkipPixelY ; IF (Z-Buffer Depth < Z) Skip Pixel
+    add r1,r0,76800 ; R1 = Z-Buffer Base Pointer
+    str z1,[r1,r6] ; Store Pixel To Z-Buffer
+    lsr r6,1 ; R6 = Y * ScreenX + X * BPP
+    strh col,[r0,r6] ; Store Pixel To Screen
+    .SkipPixelY:
+
+    cmp y1,y2 ; While (Y1 != Y2)
+    beq .LineEnd ; IF (Y1 == Y2), Branch To Line End
+    subs x2,r2 ; Y Error -= DX
+    addlt x1,r3 ; IF (Y Error < 0), X1 += SX
+    addlt x2,r4 ; IF (Y Error < 0), Y Error += DY
+    add y1,r5 ; Y1 += SY
+    add z1,z2 ; Z1 += SZ
+    b .LoopY ; Loop Line Drawing
+
+  .LineEnd: ; End of Line Drawing
+}
+
 macro ScanLine x1, y1, x2, y2, side { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X, y2 = Point2Y, side = Left/Right
   local .LoopX, .SkipPixelX, .LoopY, .SkipPixelY, .LineEnd
   imm32 r0,side ; R0 = Scanline Buffer Offset

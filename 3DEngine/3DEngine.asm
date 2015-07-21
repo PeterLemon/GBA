@@ -136,7 +136,7 @@ Refresh:
 
   FillQuadCullBack CubeQuad, CubeQuadEnd
   FillTriCullBack PyramidTri, PyramidTriEnd
-  Line GrassLine, GrassLineEnd
+  LineZBuf GrassLine, GrassLineEnd
   PointZBuf StarPoint, StarPointEnd
 
   SwapBuffers WRAM, VRAM, 76800 ; Swap Buffers

@@ -104,15 +104,21 @@ macro DrawLine x1, y1, x2, y2, col { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X,
   mov r0,WRAM ; R0 = WRAM Base Pointer
   mov r1,SCREEN_X ; R1 = ScreenX
 
+  cmp y2,y1 ; IF (Y2 < Y1) Swap Points
+  movlt r2,x1
+  movlt r3,y1
+  movlt x1,x2
+  movlt x2,r2
+  movlt y1,y2
+  movlt y2,r3
+
   subs r2,x2,x1 ; X2 - X1
   rsbmi r2,0 ; Convert R2 (DX) To ABS(DX)
   mvnlt r3,0 ; IF (X2 < X1), R3 (SX) = -1
   movgt r3,1 ; IF (X2 > X1), R3 (SX) =	1
 
-  subs r4,y2,y1 ; Y2 - Y1
-  rsbmi r4,0 ; Convert R4 (DY) To ABS(DY)
-  mvnlt r5,0 ; IF (Y2 < Y1), R5 (SY) = -1
-  movgt r5,1 ; IF (Y2 > Y1), R5 (SY) =	1
+  sub r4,y2,y1 ; Y2 - Y1 ABS(DY)
+  mov r5,1 ; IF (Y2 > Y1), R5 (SY) = 1
 
   cmp r2,r4 ; Compare DX To DY
   movgt y2,r2,lsr 1 ; IF (DX >	DY), Y2 = DX / 2 (X Error)
@@ -170,18 +176,32 @@ macro DrawLineZBuf x1, y1, z1, x2, y2, z2, col { ; x1 = Point1X, y1 = Point1Y, z
   local .divZPos, .divZNeg, .endZ, .LoopX, .SkipPixelX, .LoopY, .SkipPixelY, .LineEnd
   mov r0,WRAM ; R0 = WRAM Base Pointer
 
+  cmp y2,y1 ; IF (Y2 < Y1) Swap Points
+  movlt r1,x1
+  movlt r2,y1
+  movlt r3,z1
+  movlt x1,x2
+  movlt x2,r1
+  movlt y1,y2
+  movlt y2,r2
+  movlt z1,z2
+  movlt z2,r3
+
   subs r2,x2,x1 ; X2 - X1
   rsbmi r2,0 ; Convert R2 (DX) To ABS(DX)
   mvnlt r3,0 ; IF (X2 < X1), R3 (SX) = -1
   movgt r3,1 ; IF (X2 > X1), R3 (SX) =	1
 
-  subs r4,y2,y1 ; Y2 - Y1
-  rsbmi r4,0 ; Convert R4 (DY) To ABS(DY)
-  mvnlt r5,0 ; IF (Y2 < Y1), R5 (SY) = -1
-  movgt r5,1 ; IF (Y2 > Y1), R5 (SY) =	1
+  sub r4,y2,y1 ; Y2 - Y1 ABS(DY)
+  mov r5,1 ; IF (Y2 > Y1), R5 (SY) = 1
 
+  cmp z1,z2 ; IF (Z1 == Z2) SZ = 0
+  moveq z2,0 ; Z2 = 0 (SZ)
+  beq .endZ
   sub r6,z2,z1 ; R6 = Z2 - Z1 (DZ)
-  add r1,r2,r4 ; R1 = Amount Of Pixel To Draw (DXY)
+  adds r1,r2,r4 ; R1 = Amount Of Pixel To Draw (DXY)
+  moveq z2,0 ; IF (DXY == 0) Z2 = 0 (SZ)
+  beq .endZ
   mov z2,0 ; Divide DZ By DXY
   cmp r6,0 ; IF (DZ < 0) Negative Divide
   blt .divZNeg
@@ -298,7 +318,7 @@ macro ScanLine x1, y1, x2, y2, side { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X
     cmp y1,SCREEN_Y
     bge .SkipPixelX
     movs r5,x1
-    mvnlt r5,1
+    mvnlt r5,0
     cmp r5,SCREEN_X
     movge r5,SCREEN_X
     mov r6,y1,lsl 1 ; Shift Pixel X Position To Scanline Buffer Y Position
@@ -319,7 +339,7 @@ macro ScanLine x1, y1, x2, y2, side { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X
     cmp y1,SCREEN_Y
     bge .SkipPixelY
     movs r5,x1
-    mvnlt r5,1
+    mvnlt r5,0
     cmp r5,SCREEN_X
     movge r5,SCREEN_X
     mov r6,y1,lsl 1 ; Shift Pixel X Position To Scanline Buffer Y Position

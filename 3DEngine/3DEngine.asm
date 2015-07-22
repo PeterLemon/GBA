@@ -116,6 +116,12 @@ LineCache:
   dw 0, 0 ; Cache 3rd X, Y Point In Line
   dw 0, 0 ; Cache 4th X, Y Point In Line
 
+LineZBufCache:
+  dw 0, 0, 0 ; Cache 1st X, Y, Z Point In Line
+  dw 0, 0, 0 ; Cache 2nd X, Y, Z Point In Line
+  dw 0, 0, 0 ; Cache 3rd X, Y, Z Point In Line
+  dw 0, 0, 0 ; Cache 4th X, Y, Z Point In Line
+
 ScanLeft:  dh SCREEN_Y dup 0 ; Left  Hand Scanline X Buffer (Size Of Screen Y)
 ScanRight: dh SCREEN_Y dup 0 ; Right Hand Scanline X Buffer (Size Of Screen Y)
 

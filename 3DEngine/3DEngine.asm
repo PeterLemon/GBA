@@ -43,13 +43,6 @@ macro Control {
   addeq r1,256 ; Translate Screen Down, In Decrements Of 1.0
   str r1,[r0],16 ; Store Word To Matrix Parameter Table (Screen Y Translation) & Increment Matrix Address To R0 (Start Of Z Translation)
 
-  ldr r1,[r0]	 ; Load Z Translation Variable To R1
-  IsKeyDown KEY_SELECT
-  subeq r1,256	 ; Translate Screen In,  In Decrements of 1.0 (Zoom In)
-  IsKeyDown KEY_START
-  addeq r1,256	 ; Translate Screen Out, In Increments Of 1.0 (Zoom Out)
-  str r1,[r0]	 ; Store Word To Matrix Parameter Table (Screen Z Translation)
-
   IsKeyDown KEY_A
   imm32eq r0,YRot ; Load Y Rotate Address To R0
   ldreq r1,[r0] ; Load Y Rotate Word To R1
@@ -77,6 +70,20 @@ macro Control {
   subeq r1,1
   andeq r1,255
   streq r1,[r0] ; Store Word To X Rotate
+
+  IsKeyDown KEY_SELECT
+  imm32eq r0,ZRot ; Load Z Rotate Address To R0
+  ldreq r1,[r0] ; Load Z Rotate Word To R1
+  addeq r1,1
+  andeq r1,255
+  streq r1,[r0] ; Store Word To Z Rotate
+
+  IsKeyDown KEY_START
+  imm32eq r0,ZRot ; Load Z Rotate Address To R0
+  ldreq r1,[r0] ; Load Z Rotate Word To R1
+  subeq r1,1
+  andeq r1,255
+  streq r1,[r0] ; Store Word To Z Rotate
 }
 
 copycode:

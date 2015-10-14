@@ -46,9 +46,9 @@ Loop:
       ldrb r6,[r0,r4] ; R6 = Cylinder Map X
 
       add r7,r6,r1 ; R7 = Cylinder Map X + X Offset
-      cmp r7,WIDTH ; IF (R8 >= WIDTH)
+      cmp r7,WIDTH ; IF (R7 >= WIDTH)
       subge r7,WIDTH ; R7 -= WIDTH
-      lsl r7,1 ; R8 *= BPP
+      lsl r7,1 ; R7 *= BPP
       ldrh r8,[r2,r7] ; R8 = Scanline Cyclinder Map Pixel
       strh r8,[r3],2  ; Store Pixel To VRAM
 
@@ -63,8 +63,8 @@ Loop:
 
 
   add r1,1 ; Increment X Offset
-  cmp r1,240 ; IF (X Offset >= WIDTH)
-  subge r1,240 ; X Offset -= WIDTH
+  cmp r1,WIDTH   ; IF (X Offset >= WIDTH)
+  subge r1,WIDTH ; X Offset -= WIDTH
 
   b Loop
 

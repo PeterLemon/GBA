@@ -22,4 +22,4 @@ I have also made a fixrom.bat file.<br />
 Howto Run:<br />
 I only test with a real GBA using a flash cartridge.<br />
 <br />
-You can also use GBA emulators like no$gba & the MESS GBA Driver.
+You can also use GBA emulators like no$gba & the MAME GBA Driver.

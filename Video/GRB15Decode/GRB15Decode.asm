@@ -1,4 +1,5 @@
 ; Game Boy Advance 'Bare Metal' GRB 15-Bit Decode Frame Demo by krom (Peter Lemon):
+
 format binary as 'gba'
 include 'LIB\FASMARM.INC'
 include 'LIB\MEM.INC'

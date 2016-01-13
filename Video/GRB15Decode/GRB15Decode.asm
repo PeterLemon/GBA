@@ -14,7 +14,7 @@ start:
   orr r1,BG2_ENABLE
   str r1,[r0]
 
-decodeGRB:
+GRBDecode:
   mov r0,VRAM ; R0 = VRAM Offset
   imm32 r1,grb ; R1 = G Offset
   add r2,r1,240 * 160 ; R2 = R Offset
@@ -30,7 +30,7 @@ decodeGRB:
   mov r11,1440 ; R11 = 1438
   sub r11,2
 
-  decodeGRBLoop: ; Loop 4x4 Block (16 pixels)
+  GRBLoop: ; Loop 4x4 Block (16 pixels)
     ldrb r6,[r3],1 ; Load B Byte
     mov r12,r6,lsl 10 ; Pack B Pixel
 
@@ -147,7 +147,7 @@ decodeGRB:
     strhne r12,[r0],-r11 ; Store Decoded GRB Pixel Into VRAM
 
     subs r4,1 ; Block Count--
-    bne decodeGRBLoop ; IF (Block Count != 0) Loop GRB Blocks
+    bne GRBLoop ; IF (Block Count != 0) Loop GRB Blocks
 
 Loop:
   b Loop

@@ -1,0 +1,1 @@
+gbafix Touhou-BadApple!.gba

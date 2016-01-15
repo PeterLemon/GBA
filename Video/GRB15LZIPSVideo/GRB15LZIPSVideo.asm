@@ -260,8 +260,7 @@ LoopFrames:
   GRBDecode ; Decode GRB Data To VRAM
   TimerWait TM1CNT, $2A0 ; Wait On Timer 1
 
-  imm32 r1,LZOffset
-  ldr r0,[r1] ; Load Last LZ IPS Frame End Offset
+  ldr r0,[LZOffset] ; Load Last LZ IPS Frame End Offset
   imm32 r1,CYANLOGOSND ; Load Video End Offset
   cmp r0,r1 ; Check Video End Offset
   bne LoopFrames ; Decode Next Frame

@@ -12,7 +12,7 @@ b copycode
 times $80000C0-($-0) db 0
 
 macro RLEDecode { ; Decode RLE Data
-  local .RLELoop, .RLECopy, .RLEDecode, .RLEDecodeByte, .IPSEOF
+  local .RLELoop, .RLECopy, .RLEDecode, .RLEDecodeByte, .RLEEOF
   imm32 r0,WRAM + 19200 + 4 ; R0 = RLE Source Offset + 4
   mov r1,WRAM ; R1 = Destination Address (WRAM Start Offset)
   imm32 r2,WRAM + 19200 ; R2 = Destination End Offset (WRAM End Offset)
@@ -128,7 +128,7 @@ start:
   PlaySoundA Audio, 22050 ; Play Sound Channel A Data
 LoopFrames:
   ldr r0,[LZOffset] ; R0 = LZ Offset
-  imm32 r1,WRAM + 19200 ; R1 = LZ IPS File Output Offset
+  imm32 r1,WRAM + 19200 ; R1 = LZ RLE File Output Offset
   ldr r2,[r0],4 ; R2 = Data Length & Header Info
   lsr r2,8 ; R2 = Data Length
   add r2,r1 ; R2 = Destination End Offset
@@ -171,14 +171,13 @@ LoopFrames:
   subne r0,r1 ; IF (LZ Offset != Multiple Of 4) Add R1 To the LZ Offset
   addne r0,4 ; LZ Offset += 4
 
-  str r0,[LZOffset] ; Store Last LZ IPS Frame End Offset To LZ Offset
+  str r0,[LZOffset] ; Store Last LZ RLE Frame End Offset To LZ Offset
 
   RLEDecode ; Decode RLE Data To WRAM
   I4Decode ; Decode I4 Data To VRAM
   TimerWait TM1CNT, $36 ; Wait On Timer 1
 
-  imm32 r1,LZOffset
-  ldr r0,[r1] ; Load Last LZ IPS Frame End Offset
+  ldr r0,[LZOffset] ; Load Last LZ RLE Frame End Offset
   imm32 r1,Audio ; Load Video End Offset
   cmp r0,r1 ; Check Video End Offset
   bne LoopFrames ; Decode Next Frame

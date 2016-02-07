@@ -189,14 +189,14 @@ macro DrawLineZBuf x1, y1, z1, x2, y2, z2, col { ; x1 = Point1X, y1 = Point1Y, z
   subs r2,x2,x1 ; X2 - X1
   rsbmi r2,0 ; Convert R2 (DX) To ABS(DX)
   mvnlt r3,0 ; IF (X2 < X1), R3 (SX) = -1
+  moveq r3,0
   movgt r3,1 ; IF (X2 > X1), R3 (SX) =	1
 
   sub r4,y2,y1 ; Y2 - Y1 ABS(DY)
 
-  cmp z1,z2 ; IF (Z1 == Z2) SZ = 0
+  subs r5,z2,z1 ; R5 = Z2 - Z1 (DZ)
   moveq z2,0 ; Z2 = 0 (SZ)
   beq .endZ
-  sub r5,z2,z1 ; R5 = Z2 - Z1 (DZ)
   adds r1,r2,r4 ; R1 = Amount Of Pixel To Draw (DXY)
   moveq z2,0 ; IF (DXY == 0) Z2 = 0 (SZ)
   beq .endZ
@@ -248,6 +248,7 @@ macro DrawLineZBuf x1, y1, z1, x2, y2, z2, col { ; x1 = Point1X, y1 = Point1Y, z
     addlt y1,1 ; IF (X Error < 0), Y1 += SY
     addlt y2,r2 ; IF (X Error < 0), X Error += DX
     add x1,r3 ; X1 += SX
+    add z1,z2 ; Z1 += SZ
     b .LoopX ; Loop Line Drawing
 
   .LoopY:

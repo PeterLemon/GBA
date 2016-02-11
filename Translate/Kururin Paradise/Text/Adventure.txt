@@ -1,0 +1,91 @@
+﻿SHIFT-JIS
+
+Ascii
+
+ｾﾚｸﾄへもビる
+To Select Mobile
+$024DAC
+BE	DA	B8	C4	23	CD	D3	C4	DE	D9	00	00	| Original Japanese Hex
+ｾ	ﾚ	ｸ	ﾄ	#	へ	も	ビ	"	る	#	#	| Original Japanese Text
+Q	u	i	t		L	e	v	e	l	#	#	| New English Text
+51	75	69	74	20	4C	65	76	65	6C	00	00	| New English Hex
+
+ｺｰｽをみる
+View Course
+$024DB8
+BA	B0	BD	23	A6	D0	D9	00	| Original Japanese Hex
+ｺ	ｰ	ｽ	#	を	み	る	#	| Original Japanese Text
+S	e	e	 	M	a	p	#	| New English Text
+53	65	65	20	4D	61	70	00	| New English Hex
+
+やりなおす
+Start over / Redo / Retry
+$024DC0
+23	D4	D8	C5	B5	BD	00	00	| Original Japanese Hex
+#	や	り	な	お	す	#	#	| Original Japanese Text
+R	e	t	r	y	#	#	#	| New English Text
+52	65	74	72	79	00	00	00	| New English Hex
+
+つづける
+Continue
+$024DC8
+23	C2	C2	DE	B9	D9	00	00	| Original Japanese Hex
+#	つ	づ	"	け	る	#	#	| Original Japanese Text
+U	n	P	a	u	s	e	#	| New English Text
+55	6E	50	61	75	73	65	00	| New English Hex
+
+ｷﾞﾌﾞｱｯﾌﾟ
+Give Up / Quit
+$024DD0
+B7	DE	CC	DE	B1	AF	CC	DF	00	00	00	00	| Original Japanese Hex
+ｷ	ﾞ	ﾌ	ﾞ	ｱ	ｯ	ﾌ	ﾟ	#	#	#	#	| Original Japanese Text
+G	i	v	e	 	U	p	#	#	#	#	#	| New English Text
+47	69	76	65	20	55	70	00	00	00	00	00	| New English Hex
+
+おてほんをみる
+Looking at the role model
+$024DDC
+23	B5	C3	CE	DD	A6	D0	D9	00	00	00	00	| Original Japanese Hex
+#	お	て	ほ	ん	を	み	る	#	#	#	#	| Original Japanese Text
+S	e	e	 	D	e	m	o	#	#	#	#	| New English Text
+53	65	65	20	44	65	6D	6F	00	00	00	00	| New English Hex
+
+おてほんをやめる
+Quit the role model
+$024DE8
+23	B5	C3	CE	DD	A6	D4	D2	D9	00	00	00	| Original Japanese Hex
+#	お	て	ほ	ん	を	や	め	る	#	#	#	| Original Japanese Text
+Q	u	i	t	 	D	e	m	o	#	#	#	| New English Text
+51	75	69	74	20	44	65	6D	6F	00	00	00	| New English Hex
+
+はじめからみる
+View from the beginning
+$024DF4
+23	CA	BC	DE	D2	B6	D7	D0	D9	00	00	00	| Original Japanese Hex
+#	は	し	"	め	か	ら	み	る	#	#	#	| Original Japanese Text
+S	e	e		A	g	a	i	n	#	#	#	| New English Text
+53	65	65	20	41	67	61	69	6E	00	00	00	| New English Hex
+
+つづきをみる
+View More
+$024E00
+23	C2	C2	DE	B7	A6	D0	D9	00	00	00	00	| Original Japanese Hex
+#	つ	づ	"	き	を	み	る	#	#	#	#	| Original Japanese Text
+S	e	e		M	o	r	e	#	#	#	#	| New English Text
+53	65	65	20	4D	6F	72	65	00	00	00	00	| New English Hex
+
+ﾘﾌﾟﾚｲをやめる
+Quit Replay
+$024E0C
+D8	CC	DF	DA	B2	23	A6	D4	D2	D9	00	00	| Original Japanese Hex
+ﾘ	ﾌ	ﾟ	ﾚ	ｲ	#	を	や	め	る	#	#	| Original Japanese Text
+Q	u	i	t		R	e	p	l	a	y	#	| New English Text
+51	75	69	74	20	52	65	70	6C	61	79	00	| New English Hex
+
+ほぎんする
+Hoginsuru
+$024E18
+23	CE	BF	DE	DD	BD	D9	00	| Original Japanese Hex
+#	ほ	ぎ	"	ん	す	る	#	| Original Japanese Text
+H	o	g	i	n	s	u	#	| New English Text
+48	6F	67	69	6E	73	75	00	| New English Hex

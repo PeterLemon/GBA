@@ -1,0 +1,114 @@
+﻿SHIFT-JIS
+
+Ascii
+
+ﾎﾟｺﾘﾝ
+Pokorin
+$024CE0
+CE	DF	BA	D8	DD	00	00	00	| Original Japanese Hex
+ﾎ	ﾟ	ｺ	ﾘ	ﾝ	#	#	#	| Original Japanese Text
+P	o	k	o	r	i	n	#	| New English Text
+50	6F	6B	6F	72	69	6E	00	| New English Hex
+
+ﾋﾟｶﾘﾝ
+Pikarin
+$024CE8
+CB	DF	B6	D8	DD	00	00	00	| Original Japanese Hex
+ﾋ	ﾟ	ｶ	ﾘ	ﾝ	#	#	#	| Original Japanese Text
+P	i	k	a	r	i	n	#	| New English Text
+50	69	6B	61	72	69	6E	00	| New English Hex
+
+ﾎﾖﾘﾝ
+Hoyorin
+$024CF0
+CE	D6	D8	DD	00	00	00	00	| Original Japanese Hex
+ﾎ	ﾖ	ﾘ	ﾝ	#	#	#	#	| Original Japanese Text
+H	o	y	o	r	i	n	#	| New English Text
+48	6F	79	6F	72	69	6E	00	| New English Hex
+
+ﾌﾜﾘﾝ
+Fuwarin
+$024CF8
+CC	DC	D8	DD	00	00	00	00	| Original Japanese Hex
+ﾌ	ﾜ	ﾘ	ﾝ	#	#	#	#	| Original Japanese Text
+F	u	w	a	r	i	n	#	| New English Text
+46	75	77	61	72	69	6E	00	| New English Hex
+
+ｹﾞｷﾘﾝ
+Gekirin
+$024D00
+B9	DE	B7	D8	DD	00	00	00	| Original Japanese Hex
+ｹ	ﾞ	ｷ	ﾘ	ﾝ	#	#	#	| Original Japanese Text
+G	e	k	i	r	i	n	#	| New English Text
+47	65	6B	69	72	69	6E	00	| New English Hex
+
+ﾁｸﾘﾝ
+Chikurin
+$024D08
+C1	B8	D8	DD	00	00	00	00	| Original Japanese Hex
+ﾁ	ｸ	ﾘ	ﾝ	#	#	#	#	| Original Japanese Text
+C	h	i	k	u	r	i	#	| New English Text
+43	68	69	6B	75	72	69	00	| New English Hex
+
+ﾗﾌﾞﾘﾝ
+Raburin
+$024D10
+D7	CC	DE	D8	DD	00	00	00	| Original Japanese Hex
+ﾗ	ﾌ	ﾞ	ﾘ	ﾝ	#	#	#	| Original Japanese Text
+R	a	b	u	r	i	n	#	| New English Text
+52	61	62	75	72	69	6E	00	| New English Hex
+
+ﾏﾘﾘﾝ
+Maririn
+$024D18
+CF	D8	D8	DD	00	00	00	00	| Original Japanese Hex
+ﾏ	ﾘ	ﾘ	ﾝ	#	#	#	#	| Original Japanese Text
+M	a	r	i	r	i	n	#	| New English Text
+4D	61	72	69	72	69	6E	00	| New English Hex
+
+ｶｸﾘﾝ
+Kakurin
+$024D20
+B6	B8	D8	DD	00	00	00	00	| Original Japanese Hex
+ｶ	ｸ	ﾘ	ﾝ	#	#	#	#	| Original Japanese Text
+K	a	k	u	r	i	n	#	| New English Text
+4B	61	6B	75	72	69	6E	00	| New English Hex
+
+ﾋｮｺﾘﾝ
+Hyokorin
+$024D28
+CB	AE	BA	D8	DD	00	00	00	| Original Japanese Hex
+ﾋ	ｮ	ｺ	ﾘ	ﾝ	#	#	#	| Original Japanese Text
+H	y	o	k	o	r	i	#	| New English Text
+48	79	6F	6B	6F	72	69	00	| New English Hex
+
+
+うさぎ
+Rabbit
+$024D7D
+93	9B	97	DE	00	00	00	00	00	00	| Original Japanese Hex
+う	さ	ぎ	"	#	#	#	#	#	#	| Original Japanese Text
+H	a	r	e	#	#	#	#	#	#	| New English Text
+48	61	72	65	00	00	00	00	00	00	| New English Hex
+先生
+Teacher
+$03C269
+80	81	00	| Original Japanese Hex
+先	生	#	| Original Japanese Text
+.	T	#	| New English Text
+2E	54	00	| New English Hex
+
+ﾏｼﾞｯｸ
+Magic
+$024D87
+CF	BC	DE	AF	B8	00	00	00	00	00	| Original Japanese Hex
+ﾏ	ｼ	ﾞ	ｯ	ｸ	#	#	#	#	#	| Original Japanese Text
+H	a	r	e	#	#	#	#	#	#	| New English Text
+48	61	72	65	00	00	00	00	00	00	| New English Hex
+男爵
+Baron
+$03C26C
+82	83	00	| Original Japanese Hex
+男	爵	#	| Original Japanese Text
+.	P	#	| New English Text
+2E	50	00	| New English Hex

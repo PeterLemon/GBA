@@ -1,0 +1,139 @@
+﻿SHIFT-JIS
+
+Ascii
+
+ﾂｲﾝ･ﾎｯﾊﾟｰ
+Twin Hopper
+$025458
+C2	B2	DD	A5	CE	AF	CA	DF	B0	00	00	00	| Original Japanese Hex
+ﾂ	ｲ	ﾝ	･	ﾎ	ｯ	ﾊ	ﾟ	ｰ	#	#	#	| Original Japanese Text
+T	w	i	n	-	H	o	p	p	e	r	#	| New English Text
+54	77	69	6E	2D	48	6F	70	70	65	72	00	| New English Hex
+
+ｽﾋﾟﾝ･ｼｮｯﾄ
+Spin Shot
+$025464
+BD	CB	DF	DD	A5	BC	AE	AF	C4	00	00	00	| Original Japanese Hex
+ｽ	ﾋ	ﾟ	ﾝ	･	ｼ	ｮ	ｯ	ﾄ	#	#	#	| Original Japanese Text
+S	p	i	n	-	S	h	o	t	#	#	#	| New English Text
+53	70	69	6E	2D	53	68	6F	74	00	00	00	| New English Hex
+
+ﾋﾟｯﾄ･ﾊﾟｯﾄ･ﾚｰｻｰ
+Pit Pat Racer
+$025470
+CB	DF	AF	C4	A5	CA	DF	AF	C4	A5	DA	B0	BB	B0	00	00	| Original Japanese Hex
+ﾋ	ﾟ	ｯ	ﾄ	･	ﾊ	ﾟ	ｯ	ﾄ	･	ﾚ	ｰ	ｻ	ｰ	#	#	| Original Japanese Text
+P	i	t	-	P	a	t		R	a	c	e	r	#	#	#	| New English Text
+50	69	74	2D	50	61	74	20	52	61	63	65	72	00	00	00	| New English Hex
+
+ﾏｸﾞﾈ･ﾏｸﾞﾈ
+Magne Magne
+$025480
+CF	B8	DE	C8	A5	CF	B8	DE	C8	00	00	00	| Original Japanese Hex
+ﾏ	ｸ	ﾞ	ﾈ	･	ﾏ	ｸ	ﾞ	ﾈ	#	#	#	| Original Japanese Text
+M	a	g	n	e	-	M	a	g	n	e	#	| New English Text
+4D	61	67	6E	65	2D	4D	61	67	6E	65	00	| New English Hex
+
+ﾌｫｰﾘﾝ･ﾀﾞｳﾝ
+Alien Down
+$02548C
+CC	AB	B0	D8	DD	A5	C0	DE	B3	DD	00	00	| Original Japanese Hex
+ﾌ	ｫ	ｰ	ﾘ	ﾝ	･	ﾀ	ﾞ	ｳ	ﾝ	#	#	| Original Japanese Text
+A	l	i	e	n	-	D	o	w	n	#	#	| New English Text
+41	6C	69	65	6E	2D	44	6F	77	6E	00	00	| New English Hex
+
+ﾗﾌﾞ･ｱﾀｯｸ
+Love Attack
+$025498
+D7	CC	DE	A5	B1	C0	AF	B8	00	00	00	00	| Original Japanese Hex
+ﾗ	ﾌ	ﾞ	･	ｱ	ﾀ	ｯ	ｸ	#	#	#	#	| Original Japanese Text
+L	o	v	e	-	A	t	t	a	c	k	#	| New English Text
+4C	6F	76	65	2D	41	74	74	61	63	6B	00	| New English Hex
+
+ｸｲｯｸ･ﾌﾘｯﾌﾟ
+Quick Flip
+$0254A4
+B8	B2	AF	B8	A5	CC	D8	AF	CC	DF	00	00	| Original Japanese Hex
+ｸ	ｲ	ｯ	ｸ	･	ﾌ	ﾘ	ｯ	ﾌ	ﾟ	#	#	| Original Japanese Text
+Q	u	i	c	k	-	F	l	i	p	#	#	| New English Text
+51	75	69	63	6B	2D	46	6C	69	70	00	00	| New English Hex
+
+ｲﾝ･ｻﾞ･ｽｶｲ
+In The Sky
+$0254B0
+B2	DD	A5	BB	DE	A5	BD	B6	B2	00	00	00	| Original Japanese Hex
+ｲ	ﾝ	･	ｻ	ﾞ	･	ｽ	ｶ	ｲ	#	#	#	| Original Japanese Text
+I	n		T	h	e		S	k	y	#	#	| New English Text
+49	6E	20	54	68	65	20	53	6B	79	00	00	| New English Hex
+
+ｽﾘｯﾌﾟ･ﾄﾞﾛｯﾌﾟ
+Slip And Drop
+$0254BC
+BD	D8	AF	CC	DF	A5	C4	DE	DB	AF	CC	DF	00	00	00	00	| Original Japanese Hex
+ｽ	ﾘ	ｯ	ﾌ	ﾟ	･	ﾄ	ﾞ	ﾛ	ｯ	ﾌ	ﾟ	#	#	#	#	| Original Japanese Text
+S	l	i	p		A	n	d		D	r	o	p	#	#	#	| New English Text
+53	6C	69	70	20	41	6E	64	20	44	72	6F	70	00	00	00	| New English Hex
+
+ｸﾞﾗｽ･ｶｯﾀｰ
+Glass Cutter
+$0254CC
+B8	DE	D7	BD	A5	B6	AF	C0	B0	00	00	00	| Original Japanese Hex
+ｸ	ﾞ	ﾗ	ｽ	･	ｶ	ｯ	ﾀ	ｰ	#	#	#	| Original Japanese Text
+G	l	a	s	s	-	C	u	t	#	#	#	| New English Text
+47	6C	61	73	73	2D	43	75	74	00	00	00	| New English Hex
+
+ｼﾞﾝﾄﾘｰﾅ
+Quick Treatment (Hair)
+$0254D8
+BC	DE	DD	C4	D8	B0	C5	00	| Original Japanese Hex
+ｼ	ﾞ	ﾝ	ﾄ	ﾘ	ｰ	ﾅ	#	| Original Japanese Text
+G	o	-	H	a	i	r	#	| New English Text
+47	6F	2D	48	61	69	72	00	| New English Hex
+
+ｽﾏｯｼｭ･ﾌｫｰｽ
+Smash Force
+$0254E0
+BD	CF	AF	BC	AD	A5	CC	AB	B0	BD	00	00	| Original Japanese Hex
+ｽ	ﾏ	ｯ	ｼ	ｭ	･	ﾌ	ｫ	ｰ	ｽ	#	#	| Original Japanese Text
+S	m	a	s	h	-	F	o	r	c	e	#	| New English Text
+53	6D	61	73	68	2D	46	6F	72	63	65	00	| New English Hex
+
+ｽｰﾊﾟｰ･ｼﾞｬﾝﾊﾟｰ
+Super Jumper
+$0254EC
+BD	B0	CA	DF	B0	A5	BC	DE	AC	DD	CA	DF	B0	00	00	00	| Original Japanese Hex
+ｽ	ｰ	ﾊ	ﾟ	ｰ	･	ｼ	ﾞ	ｬ	ﾝ	ﾊ	ﾟ	ｰ	#	#	#	| Original Japanese Text
+S	u	p	e	r	-	J	u	m	p	e	r	#	#	#	#	| New English Text
+53	75	70	65	72	2D	4A	75	6D	70	65	72	00	00	00	00	| New English Hex
+
+ｽﾀｰ･ﾗｲﾄ･ﾛﾏﾝｽ
+Star Light Romance
+$0254FC
+BD	C0	B0	A5	D7	B2	C4	A5	DB	CF	DD	BD	00	00	00	00	| Original Japanese Hex
+ｽ	ﾀ	ｰ	･	ﾗ	ｲ	ﾄ	･	ﾛ	ﾏ	ﾝ	ｽ	#	#	#	#	| Original Japanese Text
+S	t	a	r	-	L	i	g	h	t		L	o	v	e	#	| New English Text
+53	74	61	72	2D	4C	69	67	68	74	20	4C	6F	76	65	00	| New English Hex
+
+ｸﾛｽ･ﾌｧｲｱｰ
+Cross Fire
+$02550C
+B8	DB	BD	A5	CC	A7	B2	B1	B0	00	00	00	| Original Japanese Hex
+ｸ	ﾛ	ｽ	･	ﾌ	ｧ	ｲ	ｱ	ｰ	#	#	#	| Original Japanese Text
+C	r	o	s	s	-	F	i	r	e	#	#	| New English Text
+43	72	6F	73	73	2D	46	69	72	65	00	00	| New English Hex
+
+ﾁｭﾁｭ･ﾊﾟﾆｯｸ
+Tutu Panic
+$025518
+C1	AD	C1	AD	A5	CA	DF	C6	AF	B8	00	00	| Original Japanese Hex
+ﾁ	ｭ	ﾁ	ｭ	･	ﾊ	ﾟ	ﾆ	ｯ	ｸ	#	#	| Original Japanese Text
+T	u	t	u	-	P	a	n	i	c	#	#	| New English Text
+54	75	74	75	2D	50	61	6E	69	63	00	00	| New English Hex
+
+おまかせ
+Leaving a decision to someone else (often of a meal to be selected by the chef)
+$025524
+23	B5	CF	B6	BE	00	00	00	| Original Japanese Hex
+#	お	ま	か	せ	#	#	#	| Original Japanese Text
+R	a	n	d	o	m	#	#	| New English Text
+52	61	6E	64	6F	6D	00	00	| New English Hex

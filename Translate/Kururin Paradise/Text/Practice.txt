@@ -1,0 +1,35 @@
+﻿SHIFT-JIS
+
+Ascii
+
+ｴﾘｱ1
+Area 1
+$0253C8
+B4	D8	B1	31	00	00	00	00	| Original Japanese Hex
+ｴ	ﾘ	ｱ	1	#	#	#	#	| Original Japanese Text
+A	r	e	a	1	#	#	#	| New English Text
+41	72	65	61	31	00	00	00	| New English Hex
+
+ｴﾘｱ2
+Area 2
+$0253D0
+B4	D8	B1	32	00	00	00	00	| Original Japanese Hex
+ｴ	ﾘ	ｱ	2	#	#	#	#	| Original Japanese Text
+A	r	e	a	2	#	#	#	| New English Text
+41	72	65	61	32	00	00	00	| New English Hex
+
+ｴﾘｱ3
+Area 3
+$0253D8
+B4	D8	B1	33	00	00	00	00	| Original Japanese Hex
+ｴ	ﾘ	ｱ	3	#	#	#	#	| Original Japanese Text
+A	r	e	a	3	#	#	#	| New English Text
+41	72	65	61	33	00	00	00	| New English Hex
+
+ｴﾘｱ4
+Area 4
+$0253E0
+B4	D8	B1	34	00	00	00	00	| Original Japanese Hex
+ｴ	ﾘ	ｱ	4	#	#	#	#	| Original Japanese Text
+A	r	e	a	4	#	#	#	| New English Text
+41	72	65	61	34	00	00	00	| New English Hex

@@ -1,0 +1,222 @@
+﻿SHIFT-JIS
+
+ＧＢＡをつかって
+Using the GBA
+$0251BC (Line 1)
+82 66	82 61	82 60	82 F0	82 C2	82 A9	82 C1	82 C4	00 00	00 00	| Original Japanese Hex
+ #  Ｇ	 #  Ｂ	 #  Ａ	 #  を	 #  つ	 #  か	 #  っ	 #  て	 #  #	 #  #	| Original Japanese Text
+ #  Ｖ	 #  Ｓ	 #  ．	 #   	 #  Ｍ	 #  ｏ	 #  ｄ	 #  ｅ	 #  #	 #  #	| New English Text
+82 75	82 72	81 44	81 40	82 6C	82 8F	82 84	82 85	00 00	00 00	| New English Hex
+マジックをえんぎできます
+You can perform Magic
+$0251A0 (Line 2)
+83 7D	83 57	83 62	83 4E	82 F0	82 A6	82 F1	82 AC	82 C5	82 AB	82 DC	82 B7	00 00	00 00	| Original Japanese Hex
+ #  マ	 #  ジ	 #  ッ	 #  ク	 #  を	 #  え	 #  ん	 #  ぎ	 #  で	 #  き	 #  ま	 #  す	 #  #	 #  #	| Original Japanese Text
+ #  Ｇ	 #  Ｂ	 #  Ａ	 #   	 #  Ｌ	 #  ｉ	 #  ｎ	 #  ｋ	 #  Ｃ	 #  ａ	 #  ｂ	 #  ｌ	 #  ｅ	 #  #	| New English Text
+82 66	82 61	82 60	81 40	82 6B	82 89	82 8E	82 8B	82 62	82 81	82 82	82 8C	82 85	00 00	| New English Hex
+
+レベルべつのコースといろいろな
+Test your skills in the course of the level
+$0251F0 (Line 1)
+83 8C	83 78	83 8B	82 D7	82 C2	82 CC	83 52	81 5B	83 58	82 C6	82 A2	82 EB	82 A2	82 EB	82 C8	00 00	| Original Japanese Hex
+ #  レ	 #  ベ	 #  ル	 #  べ	 #  つ	 #  の	 #  コ	 #  ー	 #  ス	 #  と	 #  い	 #  ろ	 #  い	 #  ろ	 #  な	 #  #	| Original Japanese Text
+ #  Ｃ	 #  ｈ	 #  ａ	 #  ｌ	 #  ｌ	 #  ｅ	 #  ｎ	 #  ｇ	 #  ｅ	 #   	 #  Ｍ	 #  ｏ	 #  ｄ	 #  ｅ	 #  #	 #  #	| New English Text
+82 62	82 88	82 81	82 8C	82 8C	82 85	82 8E	82 87	82 85	81 40	82 6C	82 8F	82 84	82 85	00 00	00 00	| New English Hex
+ミニゲームでうでだめしします
+Challenge and a variety of mini-games
+$0251D0 (Line 2)
+83 7E	83 6A	83 51	81 5B	83 80	82 C5	82 A4	82 C5	82 BE	82 DF	82 B5	82 B5	82 DC	82 B7	00 00	00 00	| Original Japanese Hex
+ #  ミ	 #  ニ	 #  ゲ	 #  ー	 #  ム	 #  で	 #  う	 #  で	 #  だ	 #  め	 #  し	 #  し	 #  ま	 #  す	 #  #	 #  #	| Original Japanese Text
+ #  Ｔ	 #  ｅ	 #  ｓ	 #  ｔ	 #   	 #  Ｙ	 #  ｏ	 #  ｕ	 #  ｒ	 #   	 #  Ｓ	 #  ｋ	 #  ｉ	 #  ｌ	 #  ｌ	 #  #	| New English Text
+82 73	82 85	82 93	82 94	81 40	82 78	82 8F	82 95	82 92	81 40	82 72	82 8B	82 89	82 8C	82 8C	00 00	| New English Hex
+
+ぼうけんモードのにがてな
+Non-Adventure mode
+$02522C (Line 1)
+82 DA	82 A4	82 AF	82 F1	83 82	81 5B	83 68	82 CC	82 C9	82 AA	82 C4	82 C8	00 00	00 00	| Original Japanese Hex
+ #  ぼ	 #  う	 #  け	 #  ん	 #  モ	 #  ー	 #  ド	 #  の	 #  に	 #  が	 #  て	 #  な	 #  #	 #  #	| Original Japanese Text
+ #  Ｐ	 #  ｒ	 #  ａ	 #  ｃ	 #  ｔ	 #  ｉ	 #  ｃ	 #  ｅ	 #   	 #  Ｍ	 #  ｏ	 #  ｄ	 #  ｅ	 #  #	| New English Text
+82 6F	82 92	82 81	82 83	82 94	82 89	82 83	82 85	81 40	82 6C	82 8F	82 84	82 85	00 00	| New English Hex
+コースをれんしゅうできます
+You can practice the course
+$025210 (Line 2)
+83 52	81 5B	83 58	82 F0	82 EA	82 F1	82 B5	82 E3	82 A4	82 C5	82 AB	82 DC	82 B7	00 00	| Original Japanese Hex
+ #  コ	 #  ー	 #  ス	 #  を	 #  れ	 #  ん	 #  し	 #  ゅ	 #  う	 #  で	 #  き	 #  ま	 #  す	 #  #	| Original Japanese Text
+ #  Ｔ	 #  ｒ	 #  ｙ	 #   	 #  Ｏ	 #  ｕ	 #  ｔ	 #   	 #  Ｌ	 #  ｅ	 #  ｖ	 #  ｅ	 #  ｌ	 #  #	| New English Text
+82 73	82 92	82 99	81 40	82 6E	82 95	82 94	81 40	82 6B	82 85	82 96	82 85	82 8C	00 00	| New English Hex
+
+かぞくをさがして
+Looking for family members
+$025264 (Line 1)
+82 A9	82 BC	82 AD	82 F0	82 B3	82 AA	82 B5	82 C4	00 00	00 00	| Original Japanese Hex
+ #  か	 #  ぞ	 #  く	 #  を	 #  さ	 #  が	 #  し	 #  て	 #  #	 #  #	| Original Japanese Text
+ #  Ａ	 #  ｄ	 #  ｖ	 #  ｅ	 #  ｎ	 #  ｔ	 #  ｕ	 #  ｒ	 #  ｅ	 #  #	| New English Text
+82 60	82 84	82 96	82 85	82 8E	82 94	82 95	82 92	82 85	00 00	| New English Hex
+いろんな国をぼうけんします
+And adventure a lot of country
+$025248 (Line 2)
+82 A2	82 EB	82 F1	82 C8	8D 91	82 F0	82 DA	82 A4	82 AF	82 F1	82 B5	82 DC	82 B7	00 00	| Original Japanese Hex
+ #  い	 #  ろ	 #  ん	 #  な	 #  国	 #  を	 #  ぼ	 #  う	 #  け	 #  ん	 #  し	 #  ま	 #  す	 #  #	| Original Japanese Text
+ #  Ｅ	 #  ｘ	 #  ｐ	 #  ｌ	 #  ｏ	 #  ｒ	 #  ｅ	 #   	 #  Ｗ	 #  ｏ	 #  ｒ	 #  ｌ	 #  ｄ	 #  #	| New English Text
+82 64	82 98	82 90	82 8C	82 8F	82 92	82 85	81 40	82 76	82 8F	82 92	82 8C	82 84	00 00	| New English Hex
+
+コンパクトサイズのヘリリンで
+Compact Size Propeller
+$025278 (Line 1)
+83 52	83 93	83 70	83 4E	83 67	83 54	83 43	83 59	82 CC	83 77	83 8A	83 8A	83 93	82 C5	00 00	00 00	| Original Japanese Hex
+ #  コ	 #  ン	 #  パ	 #  ク	 #  ト	 #  サ	 #  イ	 #  ズ	 #  の	 #  ヘ	 #  リ	 #  リ	 #  ン	 #  で	 #  #	 #  #	| Original Japanese Text
+ #  Ｅ	 #  ａ	 #  ｓ	 #  ｙ	 #   	 #  Ｓ	 #  ｈ	 #  ｏ	 #  ｒ	 #  ｔ	 #   	 #  Ｓ	 #  ｉ	 #  ｚ	 #  ｅ	 #  #	| New English Text
+82 64	82 81	82 93	82 99	81 40	82 72	82 88	82 8F	82 92	82 94	81 40	82 72	82 89	82 9A	82 85	00 00	| New English Hex
+フルサイズのヘリリンで
+Full-size Propeller
+$0252A8 (Line 1)
+83 74	83 8B	83 54	83 43	83 59	82 CC	83 77	83 8A	83 8A	83 93	82 C5	00 00	| Original Japanese Hex
+ #  フ	 #  ル	 #  サ	 #  イ	 #  ズ	 #  の	 #  ヘ	 #  リ	 #  リ	 #  ン	 #  で	 #  #	| Original Japanese Text
+ #  Ｎ	 #  ｏ	 #  ｒ	 #  ｍ	 #  ａ	 #  ｌ	 #   	 #　Ｓ	 #  ｉ	 #  ｚ	 #  ｅ	 #  #	| New English Text
+82 6D	82 8F	82 92	82 8D	82 81	82 8C	81 40	82 72	82 89	82 9A	82 85	00 00	| New English Hex
+ぼうけんします
+And adventure
+$025298 (Line 2)
+82 DA	82 A4	82 AF	82 F1	82 B5	82 DC	82 B7	00 00	| Original Japanese Hex
+ #  ぼ	 #  う	 #  け	 #  ん	 #  し	 #  ま	 #  す	 #  #	| Original Japanese Text
+ #  ＆	 #   	 #  Ｂ	 #  ｅ	 #  ｇ	 #  ｉ	 #  ｎ	 #  #	| New English Text
+81 95	81 40	82 61	82 85	82 87	82 89	82 8E	00 00	| New English Hex
+
+いろんなミニゲームに
+In various mini-games
+$0252C0 (Line 1)
+82 A2	82 EB	82 F1	82 C8	83 7E	83 6A	83 51	81 5B	83 80	82 C9	00 00	00 00	| Original Japanese Hex
+ #  い	 #  ろ	 #  ん	 #  な	 #  ミ	 #  ニ	 #  ゲ	 #  ー	 #  ム	 #  に	 #  #	 #  #	| Original Japanese Text
+ #  Ｍ	 #  ｉ	 #  ｎ	 #  ｉ	 #  －	 #  Ｇ	 #  ａ	 #  ｍ	 #  ｅ	 #  ｓ	 #  #	 #  #	| New English Text
+82 6C	82 89	82 8E	82 89	81 7C	82 66	82 81	82 8D	82 85	82 93	00 00	00 00	| New English Hex
+レベルべつのみじかいコースに
+Another of the short course level
+$0252EC (Line 1)
+83 8C	83 78	83 8B	82 D7	82 C2	82 CC	82 DD	82 B6	82 A9	82 A2	83 52	81 5B	83 58	82 C9	00 00	00 00	| Original Japanese Hex
+ #  レ	 #  ベ	 #  ル	 #  べ	 #  つ	 #  の	 #  み	 #  じ	 #  か	 #  い	 #  コ	 #  ー	 #  ス	 #  に	 #  #	 #  #	| Original Japanese Text
+ #  Ｓ	 #  ｈ	 #  ｏ	 #  ｒ	 #  ｔ	 #   	 #  Ｃ	 #  ｏ	 #  ｕ	 #  ｒ	 #  ｓ	 #  ｅ	 #  ｓ	 #  #	 #  #	 #  #	| New English Text
+82 72	82 88	82 8F	82 92	82 94	81 40	82 62	82 8F	82 95	82 92	82 93	82 85	82 93	00 00	00 00	00 00	| New English Hex
+ちょうせんします
+It will challenge
+$0252D8 (Line 2)
+82 BF	82 E5	82 A4	82 B9	82 F1	82 B5	82 DC	82 B7	00 00	00 00	| Original Japanese Hex
+ #  ち	 #  ょ	 #  う	 #  せ	 #  ん	 #  し	 #  ま	 #  す	 #  #	 #  #	| Original Japanese Text
+ #  Ｃ	 #  ｈ	 #  ａ	 #  ｌ	 #  ｌ	 #  ｅ	 #  ｎ	 #  ｇ	 #  ｅ	 #  #	| New English Text
+82 62	82 88	82 81	82 8C	82 8C	82 85	82 8E	82 87	82 85	00 00	| New English Hex
+
+Ascii
+
+あたらしくはじめる
+I start new
+$02530C
+23	B1	C0	D7	BC	B8	CA	BC	DE	D2	D9	00	| Original Japanese Hex
+#	あ	た	ら	し	く	は	じ	"	め	る	#	| Original Japanese Text
+S	t	a 	r	t		N	e	w	#	#	#	| New English Text
+53	74	61	72	74	20	4E	65	77	00	00	00	| New English Hex
+
+ｺﾝﾊﾟｸﾄ
+Compact
+$025318
+BA	DD	CA	DF	B8	C4	00	00	| Original Japanese Hex
+ｺ	ﾝ	ﾊ	ﾟ	ｸ	ﾄ	#	#	| Original Japanese Text
+E	a	s	y	#	#	#	#	| New English Text
+45	61	73	79	00	00	00	00	| New English Hex
+
+ﾌﾙｻｲｽﾞ
+Full-size
+$025320
+CC	D9	BB	B2	BD	DE	00	00	| Original Japanese Hex
+ﾌ	ﾙ	ｻ	ｲ	ｽ	ﾞ	#	#	| Original Japanese Text
+N	o	r	m	a	l	#	#	| New English Text
+4E	6F	72	6D	61	6C	00	00	| New English Hex
+
+データをサす
+It refers to the data
+$025328
+C3	DE	B0	C0	23	A6	B9	BD	00	| Original Japanese Hex
+デ	"	ー	タ	を	サ	#	す	#	| Original Japanese Text
+D	e	l	e	t	e	# 	# 	#	| New English Text
+44	65	6C	65	74	65	00	00	00	| New English Hex
+
+ひらがな
+Hiragana
+$025340
+23	CB	D7	B6	DE	C5	00	00	| Original Japanese Hex
+#	ひ	ら	が	"	な	#	#	| Original Japanese Text
+A	B	C	D	#	#	#	#	| New English Text
+41	42	43	44	00	00	00	00	| New English Hex
+カタカナ
+Katakana
+$025348
+B6	C0	B6	C5	00	00	00	00	| Original Japanese Hex
+カ	タ	カ	ナ	#	#	#	#	| Original Japanese Text
+a	b	c	d	#	#	#	#	| New English Text
+61	62	63	64	00	00	00	00	| New English Hex
+ABC
+ABC
+$025350
+41	42	43	00	| Original Japanese Hex
+A	B	C	#	| Original Japanese Text
+H	I	R	#	| New English Text
+48	49	52	00	| New English Hex
+abc
+abc
+$025354
+61	62	63	00	| Original Japanese Hex
+a	b	c	#	| Original Japanese Text
+K	A	T	#	| New English Text
+4B	41	54	00	| New English Hex
+
+けってい
+Decision
+$02535C (Line 1)
+23	B9	AF	C3	B2	00	00	00	| Original Japanese Hex
+け	っ	て	い	#	#	#	#	| Original Japanese Text
+E	n	d	#	#	#	#	#	| New English Text
+45	6E	64	00	B2	00	00	00	| New English Hex
+さくじょ
+Delete
+$025364 (Line 2)
+23	BB	B8	BC	DE	AE	00	00	| Original Japanese Hex
+#	さ	く	じ	"	ょ	#	#	| Original Japanese Text
+D	e	l	e	t	e	#	#	| New English Text
+44	65	6C	65	74	65	00	00	| New English Hex
+
+データは、ありません
+Data, there is none
+$02536C
+C3	DE	B0	C0	23	CA	A4	B1	D8	CF	BE	DD	00	| Original Japanese Hex
+デ	"	ー	タ	は	、	あ	り	ま	せ	ん	#	#	| Original Japanese Text
+N	o		S	a	v	e		D	a	t	a	#	| New English Text
+4E	6F	20	53	61	76	65	20	44	61	74	61	00	| New English Hex
+
+ビのデータをサしますか?
+Are you sure you want to delete data?
+$02537C
+23	C4	DE	C9	23	C3	DE	B0	C0	23	A6	B9	BC	CF	BD	B6	3F	00	| Original Japanese Hex
+#	ビ	"	の	#	デ	"	ー	タ	を	サ	#	し	ま	す	か	?	#	| Original Japanese Text
+D	e	l	e	t	e		S	a	v	e		D	a	t	a	?	#	| New English Text
+44	65	6C	65	74	65	20	53	61	76	65	20	44	61	74	61	3F	00	| New English Hex
+
+このデータをサしていいですか?
+Do you this data good to support?
+$025398
+23	BA	C9	23	C3	DE	B0	C0	23	A6	B9	BC	C3	B2	B2	C3	DE	BD	B6	3F	00	00	00	| Original Japanese Hex
+#	こ	の	#	デ	"	ー	タ	を	サ	#	し	て	い	い	で	"	す	か	?	#	#	#	| Original Japanese Text
+D	o		Y	o	u		W	a	n	t		T	o		D	e	l	e	t	e	?	#	| New English Text
+44	6F	20	59	6F	75	20	57	61	6E	74	20	54	6F	20	44	65	6C	65	74	65	3F	00	| New English Hex
+
+はい
+Yes
+$0253B0 (Line 1)
+20	23	CA	B2	00	| Original Japanese Hex
+	#	は	い	#	| Original Japanese Text
+Y	e	s	#	#	| New English Text
+59	65	73	00	00	| New English Hex
+いいえ
+No
+$0253B8 (Line 2)
+23	B2	B2	B4	00	| Original Japanese Hex
+#	い	い	え	#	| Original Japanese Text
+	N	o	#	#	| New English Text
+20	4E	6F	00	00	| New English Hex

@@ -1,0 +1,65 @@
+﻿SHIFT-JIS
+
+いつもしずかな、くるりんむら・・・
+Always quiet, Kururinmura...
+$0A7C08
+82 A2	82 C2	82 E0	82 B5	82 B8	82 A9	82 C8	81 41	82 AD	82 E9	82 E8	82 F1	82 DE	82 E7	81 45	81 45	81 45	00 00	| Original Japanese Hex
+ #  い	 #  つ	 #  も	 #  し	 #  ず	 #  か	 #  な	 #  、	 #  く	 #  る	 #  り	 #  ん	 #  む	 #  ら	 #  ・	 #  ・	 #  ・	 #  #	| Original Japanese Text
+ #  Ｉ	 #  ｔ	 #  ′	 #  ｓ	 #  　	 #  ａ	 #  ｌ	 #  ｗ	 #  ａ	 #  ｙ	 #  ｓ	 #　　	 #  ｑ	 #  ｕ	 #  ｉ	 #  ｅ	 #  ｔ	 #  #	| New English Text
+82 68	82 94	81 8C	82 93	81 40	82 81	82 8C	82 97	82 81	82 99	82 93	81 40	82 91	82 95	82 89	82 85	82 94	00 00	| New English Hex
+
+ところが・・・
+However・・・
+$0A7CEC
+82 C6	82 B1	82 EB	82 AA	81 45	81 45	81 45	00 00	| Original Japanese Hex
+ #  と	 #  こ	 #  ろ	 #  が	 #  ・	 #  ・	 #  ・	 #  #	| Original Japanese Text
+ #  Ｕ	 #  ｎ	 #  ｔ	 #  ｉ	 #  ｌ	 #  ．	 #  ．	 #  #	| New English Text
+82 74	82 8E	82 94	82 89	82 8C	81 44	81 44	00 00	| New English Hex
+
+「マダ魔団」公演　６：００より
+"Mada Magic Orchestra" starts at 6:00
+$0A8828
+81 75	83 7D	83 5F	96 82	92 63	81 76	8C F6	89 89	81 40	82 55	81 46	82 4F	82 4F	82 E6	82 E8	00 00	| Original Japanese Hex
+ #  「	 #  マ	 #  ダ	 #  魔	 #  団	 #  」	 #  公	 #  演	 #  　	 #  ６	 #  ：	 #  ０	 #  ０	 #  よ	 #  り	 #  #	| Original Japanese Text
+ #  Ｓ	 #  ｈ	 #  ｏ	 #  ｗ	 #   	 #  ａ	 #  ｔ	 #   	 #  ６	 #  ：	 #  ０	 #  ０	 #   	 #  Ｐ	 #  Ｍ	 #  #	| New English Text
+82 72	82 88	82 8F	82 97	81 40	82 81	82 94	81 40	82 55	81 46	82 4F	82 4F	81 40	82 6F	82 6C	00 00	| New English Hex
+
+みんなで、みにいこう！
+Everyone, Let's go to learn!
+$0A8B94
+82 DD	82 F1	82 C8	82 C5	81 41	82 DD	82 C9	82 A2	82 B1	82 A4	81 49	00 00	| Original Japanese Hex
+ #  み	 #  ん	 #  な	 #  で	 #  、	 #  み	 #  に	 #  い	 #  こ	 #  う	 #  ！	 #  #	| Original Japanese Text
+ #  Ｌ	 #  ｅ	 #  ｔ	 #  ′	 #  ｓ	 #   	 #  ｓ	 #  ｅ	 #  ｅ	 #  ！	 #  #	 #  #	| New English Text
+82 6B	82 85	82 94	81 8C	82 93	81 40	82 93	82 85	82 85	81 49	00 00	00 00	| New English Hex
+
+おくれた、おくれた！
+Oh-no, I'm late!
+$0A9188
+82 A8	82 AD	82 EA	82 BD	81 41	82 A8	82 AD	82 EA	82 BD	81 49	00 00	| Original Japanese Hex
+ #  お	 #  く	 #  れ	 #  た	 #  、	 #  お	 #  く	 #  れ	 #  た	 #  ！	 #  #	| Original Japanese Text
+ #  Ｉ　  #   	 #  ａ	 #  ｍ	 #   	 #　ｌ	 #  ａ	 #  ｔ	 #  ｅ	 #  ！	 #  #	| New English Text
+82 68	81 40	82 81	82 8D	81 40	82 8C	82 81	82 94	82 85	81 49	00 00	| New English Hex
+
+・・・あれ？
+···Eh?
+$0A97F4
+81 45	81 45	81 45	82 A0	82 EA	81 48	00 00	| Original Japanese Hex
+ #  ・	 #  ・	 #  ・	 #  あ	 #  れ	 #  ？	 #  #	| Original Japanese Text
+ #  ．	 #  ．	 #  ．	 #  Ｅ	 #  ｈ	 #  ？	 #  #	| New English Text
+81 44	81 44	81 44	82 64	82 88	81 48	00 00	| New English Hex
+
+おかしいな～
+That's Funny~
+$0A9948
+82 A8	82 A9	82 B5	82 A2	82 C8	81 60	00 00	| Original Japanese Hex
+ #  お	 #  か	 #  し	 #  い	 #  な	 #  ～	 #  #	| Original Japanese Text
+ #  Ｗ   #  ｅ	 #  ｉ	 #  ｒ	 #  ｄ	 #  ～	 #  #	| New English Text
+82 76	82 85	82 89	82 92	82 84	81 60	00 00	| New English Hex
+
+よし！
+Alright/OK!
+$0A9AB0
+82 E6	82 B5	81 49	00 00	| Original Japanese Hex
+ #  よ	 #  し	 #  ！	 #  #	| Original Japanese Text
+ #  Ｏ	 #  Ｋ	 #  ！	 #  #	| New English Text
+82 6E	82 6A	81 49	00 00	| New English Hex

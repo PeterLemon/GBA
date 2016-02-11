@@ -1,0 +1,1 @@
+bass "Kururin Paradise.asm"

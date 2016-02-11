@@ -1,0 +1,76 @@
+﻿Ascii
+
+Katakana Font
+$0250CC
+CA	CB	CC	CD	CE	AF	AC	AD	AE	20	00	00	| Original Japanese Hex
+ﾊ	ﾋ	ﾌ	ﾍ	ﾎ	ｯ	ｬ	ｭ	ｮ	 	#	# 	| Original Japanese Text
+@	\	+	-	*	/	<	>	 	 	#	#  	| New English Text
+40	5C	2B	2D	2A	2F	3C	3E	20	20	00	00	| New English Hex
+
+$0250D8
+C5	C6	C7	C8	C9	A7	A8	A9	AA	AB	00	00	| Original Japanese Hex
+ﾅ	ﾆ	ﾇ	ﾈ	ﾉ	ｧ	ｨ	ｩ	ｪ	ｫ	#	#	| Original Japanese Text
+!	$	%	&	'	(	)	~	^	=	#	#	| New English Text
+21	24	25	26	27	28	29	7E	5E	3D	00	00	| New English Hex
+
+$0250E4
+C0	C1	C2	C3	C4	DC	A6	DD	DE	DF	00	00	| Original Japanese Hex
+ﾀ	ﾁ	ﾂ	ﾃ	ﾄ	ﾜ	ｦ	ﾝ	ﾞ	ﾟ	#	#	| Original Japanese Text
+0	1	2	3	4	5	6	7	8	9	#	#	| New English Text
+30	31	32	33	34	35	36	37	38	39	00	00	| New English Hex
+
+$0250F0
+BB	BC	BD	BE	BF	D7	D8	D9	DA	DB	00	00	| Original Japanese Hex
+ｻ	ｼ	ｽ	ｾ	ｿ	ﾗ	ﾘ	ﾙ	ﾚ	ﾛ	#	#	| Original Japanese Text
+u	v	w	x	y	z	,	.	;	:	#	#	| New English Text
+75	76	77	78	79	7A	2C	2E	3B	3A	00	00	| New English Hex
+
+$0250FC
+B6	B7	B8	B9	BA	D4	D5	D6	B0	20	00	00	| Original Japanese Hex
+ｶ	ｷ	ｸ	ｹ	ｺ	ﾔ	ﾕ	ﾖ	ｰ	 	#	# 	| Original Japanese Text
+k	l	m	n	o	p	q	r	s	t	#	#	| New English Text
+6B	6C	6D	6E	6F	70	71	72	73	74	00	00	| New English Hex
+
+$025108
+B1	B2	B3	B4	B5	CF	D0	D1	D2	D3	00	00	| Original Japanese Hex
+ｱ	ｲ	ｳ	ｴ	ｵ	ﾏ	ﾐ	ﾑ	ﾒ	ﾓ	#	#	| Original Japanese Text
+a	b	c	d	e	f	g	h	i	j	#	#	| New English Text
+61	62	63	64	65	66	67	68	69	6A	00	00	| New English Hex
+
+
+Hiragana Font
+$025114
+23	CA	CB	CC	CD	CE	AF	AC	AD	AE	20	00	| Original Japanese Hex
+#	は	ひ	ふ	へ	ほ	っ	ャ	ゅ	ょ	 	#	| Original Japanese Text
+#	@	\	+	-	*	/	<	>	 	 	#  	| New English Text
+23	40	5C	2B	2D	2A	2F	3C	3E	20	20	00	| New English Hex
+
+$025120
+23	C5	C6	C7	C8	C9	A7	A8	A9	AA	AB	00	| Original Japanese Hex
+#	な	に	ぬ	ね	の	ぁ	ぃ	ぅ	ぇ	ぉ	#	| Original Japanese Text
+#	!	$	%	&	'	(	)	~	^	=	#	| New English Text
+23	21	24	25	26	27	28	29	7E	5E	3D	00	| New English Hex
+
+$02512C
+23	C0	C1	C2	C3	C4	DC	A6	DD	DE	DF	00	| Original Japanese Hex
+#	た	ち	つ	て	ヒ	わ	を	ん	"	'	#	| Original Japanese Text
+#	0	1	2	3	4	5	6	7	8	9	#	| New English Text
+23	30	31	32	33	34	35	36	37	38	39	00	| New English Hex
+
+$025138
+23	BB	BC	BD	BE	BF	D7	D8	D9	DA	DB	00	| Original Japanese Hex
+#	さ	し	す	せ	き	ら	り	る	れ	ろ	#	| Original Japanese Text
+#	U	V	W	X	Y	Z	,	.	;	:	#	| New English Text
+23	55	56	57	58	59	5A	2C	2E	3B	3A	00	| New English Hex
+
+$025144
+23	B6	B7	B8	B9	BA	D4	D5	D6	B0	20	00	| Original Japanese Hex
+#	か	き	く	け	こ	や	ゆ	よ	ー	 	#	| Original Japanese Text
+#	K	L	M	N	O	P	Q	R	S	T	#	| New English Text
+23	4B	4C	4D	4E	4F	50	51	52	53	54	00	| New English Hex
+
+$025150
+23	B1	B2	B3	B4	B5	CF	D0	D1	D2	D3	00	| Original Japanese Hex
+#	あ	い	う	え	お	ま	み	む	め	も	#	| Original Japanese Text
+#	A	B	C	D	E	F	G	H	I	J	#	| New English Text
+23	41	42	43	44	45	46	47	48	49	4A	00	| New English Hex

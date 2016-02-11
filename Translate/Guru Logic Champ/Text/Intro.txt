@@ -1,0 +1,1127 @@
+﻿SHIFT-JIS
+-----------
+Tutorial 1:
+-----------
+ついに、そのツボを
+Finally, the pot
+$0002C4 (Line 1)
+82 C2	82 A2	82 C9	81 41	82 BB	82 CC	83 63	83 7B	82 F0	04 FF	| Original Japanese Hex
+ #  つ	 #  い	 #  に	 #  、	 #  そ	 #  の	 #  ツ	 #  ボ	 #  を	 # LF	| Original Japanese Text
+ #  Ｏ	 #  ．	 #  Ｋ	 #  ，	 #   	 #  Ｉ	 #  Ｔ	 #  ’	 #  Ｓ	 # LF	| New English Text
+82 6E	81 44	82 6A	81 43	81 40	82 68	82 73	81 66	82 72	04 FF	| New English Hex
+つかうときが
+It is when you use
+$0002D8 (Line 2)
+82 C2	82 A9	82 A4	82 C6	82 AB	82 AA	04 FF	| Original Japanese Hex
+ #  つ	 #  か	 #  う	 #  と	 #  き	 #  が	 # LF	| Original Japanese Text
+ #  Ｌ	 #  Ｅ	 #  Ｓ	 #  Ｓ	 #  Ｏ	 #  Ｎ	 # LF	| New English Text
+82 6B	82 64	82 72	82 72	82 6E	82 6D	04 FF	| New English Hex
+きましたな
+I came
+$0002E6 (Line 3)
+82 AB	82 DC	82 B5	82 BD	82 C8	0F FF	| Original Japanese Hex
+ #  き	 #  ま	 #  し	 #  た	 #  な	 # FF	| Original Japanese Text
+ #  Ｔ	 #  Ｉ	 #  Ｍ	 #  Ｅ	 #  ！	 # FF	| New English Text
+82 73	82 68	82 6C	82 64	81 49	0F FF	| New English Hex
+
+よいですかな？
+Wonder if good?
+$0002F6 (Line 1)
+82 E6	82 A2	82 C5	82 B7	82 A9	82 C8	81 48	04 FF	| Original Japanese Hex
+ #  よ	 #  い	 #  で	 #  す	 #  か	 #  な	 #  ？	 # LF	| Original Japanese Text
+ #  Ｉ	 #   	 #  Ｔ	 #  Ｅ	 #  Ａ	 #  Ｃ	 #  Ｈ	 # LF	| New English Text
+82 68	81 40	82 73	82 64	82 60	82 62	82 67	04 FF	| New English Hex
+これから　はなす
+I speak now
+$00030A (Line 2)
+82 B1	82 EA	82 A9	82 E7	81 40	82 CD	82 C8	82 B7	04 FF	| Original Japanese Hex
+ #  こ	 #  れ	 #  か	 #  ら	 #   	 #  は	 #  な	 #  す	 # LF	| Original Japanese Text
+ #  Ｔ	 #  Ｈ	 #  Ｅ	 #   	 #  Ｇ	 #  Ａ	 #  Ｍ	 #  Ｅ	 # LF	| New English Text
+82 73	82 67	82 64	81 40	82 66	82 60	82 6C	82 64	04 FF	| New English Hex
+せつめいを
+Description
+$00031C (Line 3)
+82 B9	82 C2	82 DF	82 A2	82 F0	0F FF	| Original Japanese Hex
+ #  せ	 #  つ	 #  め	 #  い	 #  を	 # FF	| Original Japanese Text
+ #  Ｒ	 #  Ｕ	 #  Ｌ	 #  Ｅ	 #  Ｓ	 # FF	| New English Text
+82 71	82 74	82 6B	82 64	82 72	0F FF	| New English Hex
+
+よ～く
+Carefully,
+$00032C (Line 1)
+82 E6	81 60	82 AD	04 FF	| Original Japanese Hex
+ #  よ	 #  ～	 #  く	 # LF	| Original Japanese Text
+ #  Ｔ	 #  Ｒ	 #  Ｙ	 # LF	| New English Text
+82 73	82 71	82 78	04 FF	| New English Hex
+きいておくの
+Keep listening
+$000334 (Line 2)
+82 AB	82 A2	82 C4	82 A8	82 AD	82 CC	04 FF	| Original Japanese Hex
+ #  き	 #  い	 #  て	 #  お	 #  く	 #  の	 # LF	| Original Japanese Text
+ #  ＆	 #   	 #  Ｋ	 #  Ｅ	 #  Ｅ	 #  Ｐ	 # LF	| New English Text
+81 95	81 40	82 6A	82 64	82 64	82 6F	04 FF	| New English Hex
+ですぞ
+It is
+$000342 (Line 3)
+82 C5	82 B7	82 BC	0F FF	| Original Japanese Hex
+ #  で	 #  す	 #  ぞ	 # FF	| Original Japanese Text
+ #  Ｕ	 #  Ｐ	 #  ！	 # FF	| New English Text
+82 74	82 6F	81 49	0F FF	| New English Hex
+
+さて、
+Now,
+$000356 (Line 1)
+82 B3	82 C4	81 41	04 FF	| Original Japanese Hex
+ #  さ	 #  て	 #  、	 # LF	| Original Japanese Text
+ #  Ｎ	 #  Ｏ	 #  Ｗ	 # LF	| New English Text
+82 6D	82 6E	82 76	04 FF	| New English Hex
+ゲームのせつめいを
+A description of the game
+$00035E (Line 2)
+83 51	81 5B	83 80	82 CC	82 B9	82 C2	82 DF	82 A2	82 F0	04 FF	| Original Japanese Hex
+ #  ゲ	 #  ー	 #  ム	 #  の	 #  せ	 #  つ	 #  め	 #  い	 #  を	 # LF	| Original Japanese Text
+ #  Ｌ	 #  Ｅ	 #  Ａ	 #  Ｒ	 #  Ｎ	 #   	 #  Ｈ	 #  Ｏ	 #  Ｗ	 # LF	| New English Text
+82 6B	82 64	82 60	82 71	82 6D	81 40	82 67	82 6E	82 76	04 FF	| New English Hex
+しましょうかな
+I can give
+$000372 (Line 3)
+82 B5	82 DC	82 B5	82 E5	82 A4	82 A9	82 C8	0F FF	| Original Japanese Hex
+ #  し	 #  ま	 #  し	 #  ょ	 #  う	 #  か	 #  な	 # FF	| Original Japanese Text
+ #  Ｔ	 #  Ｏ	 #   	 #  Ｐ	 #  Ｌ	 #  Ａ	 #  Ｙ	 # FF	| New English Text
+82 73	82 6E	81 40	82 6F	82 6B	82 60	82 78	0F FF	| New English Hex
+
+”じゅうじキー”で
+With "Cross Key"
+$00038E (Line 1)
+81 68	82 B6	82 E3	82 A4	82 B6	83 4C	81 5B	81 68	82 C5	04 FF	| Original Japanese Hex
+ #  ”	 #  じ	 #  ゅ	 #  う	 #  じ	 #  キ	 #  ー	 #  ”	 #  で	 # LF	| Original Japanese Text
+ #  Ｍ	 #  Ｏ	 #  Ｖ	 #  Ｅ	 #   	 #  Ｌ	 #  Ｅ	 #  Ｆ	 #  Ｔ	 # LF	| New English Text
+82 6C	82 6E	82 75	82 64	81 40	82 6B	82 64	82 65	82 73	04 FF	| New English Hex
+みぎへ　ひだりへ
+Left & Right
+$0003A2 (Line 2)
+82 DD	82 AC	82 D6	81 40	82 D0	82 BE	82 E8	82 D6	04 FF	| Original Japanese Hex
+ #  み	 #  ぎ	 #  へ	 #   	 #  ひ	 #  だ	 #  り	 #  へ	 # LF	| Original Japanese Text
+ #  Ｒ	 #  Ｉ	 #  Ｇ	 #  Ｈ	 #  Ｔ	 #   	 #  Ｏ	 #  Ｎ	 # LF	| New English Text
+82 71	82 68	82 66	82 67	82 73	81 40	82 6E	82 6D	04 FF	| New English Hex
+いどうできます
+You can move
+$0003B4 (Line 3)
+82 A2	82 C7	82 A4	82 C5	82 AB	82 DC	82 B7	0F FF	| Original Japanese Hex
+ #  い	 #  ど	 #  う	 #  で	 #  き	 #  ま	 #  す	 # FF	| Original Japanese Text
+ #  ”	 #  Ｄ	 #  ー	 #  Ｐ	 #  Ａ	 #  Ｄ	 #  ”	 # FF	| New English Text
+81 68	82 63	81 5B	82 6F	82 60	82 63	81 68	0F FF	| New English Hex
+
+”ＬＲボタン”で
+With "LR button"
+$0003D0 (Line 1)
+81 68	82 6B	82 71	83 7B	83 5E	83 93	81 68	82 C5	04 FF	| Original Japanese Hex
+ #  ”	 #  Ｌ	 #  Ｒ	 #  ボ	 #  タ	 #  ン	 #  ”	 #  で	 # LF	| Original Japanese Text
+ #  Ｔ	 #  Ｕ	 #  Ｒ	 #  Ｎ	 #   	 #  Ｔ	 #  Ｈ	 #  Ｅ	 # LF	| New English Text
+82 73	82 74	82 71	82 6D	81 40	82 73	82 67	82 64	04 FF	| New English Hex
+ぐるぐる
+Round and round
+$0003E2 (Line 2)
+82 AE	82 E9	82 AE	82 E9	04 FF	| Original Japanese Hex
+ #  ぐ	 #  る	 #  ぐ	 #  る	 # LF	| Original Japanese Text
+ #  Ａ	 #  Ｒ	 #  Ｅ	 #  Ａ	 # LF	| New English Text
+82 60	82 71	82 64	82 60	04 FF	| New English Hex
+まわります
+You around
+$0003EC (Line 3)
+82 DC	82 ED	82 E8	82 DC	82 B7	0F FF	| Original Japanese Hex
+ #  ま	 #  わ	 #  り	 #  ま	 #  す	 # FF	| Original Japanese Text
+ #  ”	 #  Ｌ	 #  ー	 #  Ｒ	 #  ”	 # FF	| New English Text
+81 68	82 6B	81 5B	82 71	81 68	0F FF	| New English Hex
+
+”Ａボタン”で
+With "A button"
+$000404 (Line 1)
+81 68	82 60	83 7B	83 5E	83 93	81 68	82 C5	04 FF	| Original Japanese Hex
+ #  ”	 #  Ａ	 #  ボ	 #  タ	 #  ン	 #  ”	 #  で	 # LF	| Original Japanese Text
+ #  Ｕ	 #  Ｓ	 #  Ｅ	 #   	 #  ”	 #  Ａ	 #  ”	 # LF	| New English Text
+82 74	82 72	82 64	81 40	81 68	82 60	81 68	04 FF	| New English Hex
+ブロックを
+The block
+$000414 (Line 2)
+83 75	83 8D	83 62	83 4E	82 F0	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  を	 # LF	| Original Japanese Text
+ #  Ｆ	 #  Ｉ	 #  Ｒ	 #  Ｅ	 #  Ｓ	 # LF	| New English Text
+82 65	82 68	82 71	82 64	82 72	04 FF	| New English Hex
+はっしゃ！
+firing!
+$000420 (Line 3)
+82 CD	82 C1	82 B5	82 E1	81 49	0F FF	| Original Japanese Hex
+ #  は	 #  っ	 #  し	 #  ゃ	 #  ！	 # FF	| Original Japanese Text
+ #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 # FF	| New English Text
+82 61	82 6B	82 6E	82 62	82 6A	0F FF	| New English Hex
+
+”Ｂボタン”で
+With "B button"
+$000438 (Line 1)
+81 68	82 61	83 7B	83 5E	83 93	81 68	82 C5	04 FF	| Original Japanese Hex
+ #  ”	 #  Ｂ	 #  ボ	 #  タ	 #  ン	 #  ”	 #  で	 # LF	| Original Japanese Text
+ #  Ｕ	 #  Ｓ	 #  Ｅ	 #   	 #  ”	 #  Ｂ	 #  ”	 # LF	| New English Text
+82 74	82 72	82 64	81 40	81 68	82 61	81 68	04 FF	| New English Hex
+ブロックを
+The block
+$000448 (Line 2)
+83 75	83 8D	83 62	83 4E	82 F0	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  を	 # LF	| Original Japanese Text
+ #  Ｓ	 #  Ｕ	 #  Ｃ	 #  Ｋ	 #  Ｓ	 # LF	| New English Text
+82 72	82 74	82 62	82 6A	82 72	04 FF	| New English Hex
+すいこみます
+Suction you
+$000454 (Line 3)
+82 B7	82 A2	82 B1	82 DD	82 DC	82 B7	0F FF	| Original Japanese Hex
+ #  す	 #  い	 #  こ	 #  み	 #  ま	 #  す	 # FF	| Original Japanese Text
+ #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 #  ！	 # FF	| New English Text
+82 61	82 6B	82 6E	82 62	82 6A	81 49	0F FF	| New English Hex
+
+なにもないところや
+It can not shoot
+$00046E (Line 1)
+82 C8	82 C9	82 E0	82 C8	82 A2	82 C6	82 B1	82 EB	82 E2	04 FF	| Original Japanese Hex
+ #  な	 #  に	 #  も	 #  な	 #  い	 #  と	 #  こ	 #  ろ	 #  や	 # LF	| Original Japanese Text
+ #  Ｃ	 #  Ａ	 #  Ｎ	 #  ’	 #  Ｔ	 #   	 #  Ｈ	 #  Ｉ	 #  Ｔ	 # LF	| New English Text
+82 62	82 60	82 6D	81 66	82 73	81 40	82 67	82 68	82 73	04 FF	| New English Hex
+てまえには
+in front of the
+$000482 (Line 2)
+82 C4	82 DC	82 A6	82 C9	82 CD	04 FF	| Original Japanese Hex
+ #  て	 #  ま	 #  え	 #  に	 #  は	 # LF	| Original Japanese Text
+ #  Ｅ	 #  Ｄ	 #  Ｇ	 #  Ｅ	 #  Ｓ	 # LF	| New English Text
+82 64	82 63	82 66	82 64	82 72	04 FF	| New English Hex
+うてないのです
+nothing place
+$00048E (Line 3)
+82 A4	82 C4	82 C8	82 A2	82 CC	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  う	 #  て	 #  な	 #  い	 #  の	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ｏ	 #  Ｆ	 #   	 #  Ａ	 #  Ｒ	 #  Ｅ	 #  Ａ	 # FF	| New English Text
+82 6E	82 65	81 40	82 60	82 71	82 64	82 60	0F FF	| New English Hex
+
+ブロックの　かずは
+The number of blocks
+$0004AA (Line 1)
+83 75	83 8D	83 62	83 4E	82 CC	81 40	82 A9	82 B8	82 CD	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  の	 #   	 #  か	 #  ず	 #  は	 # LF	| Original Japanese Text
+ #  Ｎ	 #  Ｕ	 #  Ｍ	 #  Ｂ	 #  Ｅ	 #  Ｒ	 #   	 #  Ｏ	 #  Ｆ	 # LF	| New English Text
+82 6D	82 74	82 6C	82 61	82 64	82 71	81 40	82 6E	82 65	04 FF	| New English Hex
+ステージごとに
+For each stage
+$0004BE (Line 2)
+83 58	83 65	81 5B	83 57	82 B2	82 C6	82 C9	04 FF	| Original Japanese Hex
+ #  ス	 #  テ	 #  ー	 #  ジ	 #  ご	 #  と	 #  に	 # LF	| Original Japanese Text
+ #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 #  Ｓ	 #   	 # LF	| New English Text
+82 61	82 6B	82 6E	82 62	82 6A	82 72	81 40	04 FF	| New English Hex
+きまっております
+Are fixed
+$0004CE (Line 3)
+82 AB	82 DC	82 C1	82 C4	82 A8	82 E8	82 DC	82 B7	0F FF	| Original Japanese Hex
+ #  き	 #  ま	 #  っ	 #  て	 #  お	 #  り	 #  ま	 #  す	 # FF	| Original Japanese Text
+ #  Ｉ	 #  Ｓ	 #   	 #  Ｆ	 #  Ｉ	 #  Ｘ	 #  Ｅ	 #  Ｄ	 # FF	| New English Text
+82 68	82 72	81 40	82 65	82 68	82 77	82 64	82 63	0F FF	| New English Hex
+
+ざんねんながら
+Unfortunately
+$0004EC (Line 1)
+82 B4	82 F1	82 CB	82 F1	82 C8	82 AA	82 E7	04 FF	| Original Japanese Hex
+ #  ざ	 #  ん	 #  ね	 #  ん	 #  な	 #  が	 #  ら	 # LF	| Original Japanese Text
+ #  Ｉ	 #  Ｆ	 #   	 #  Ｚ	 #  Ｅ	 #  Ｒ	 #  Ｏ	 # LF	| New English Text
+82 68	82 65	81 40	82 79	82 64	82 71	82 6E	04 FF	| New English Hex
+ブロックがないと
+Without block
+$0004FC (Line 2)
+83 75	83 8D	83 62	83 4E	82 AA	82 C8	82 A2	82 C6	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  が	 #  な	 #  い	 #  と	 # LF	| Original Japanese Text
+ #  Ｎ	 #  Ｏ	 #   	 #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 # LF	| New English Text
+82 6D	82 6E	81 40	82 61	82 6B	82 6E	82 62	82 6A	04 FF	| New English Hex
+うてないのです
+Do not strike
+$00050E (Line 3)
+82 A4	82 C4	82 C8	82 A2	82 CC	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  う	 #  て	 #  な	 #  い	 #  の	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ｔ	 #  Ｏ	 #   	 #  Ｆ	 #  Ｉ	 #  Ｒ	 #  Ｅ	 # FF	| New English Text
+82 73	82 6E	81 40	82 65	82 68	82 71	82 64	0F FF	| New English Hex
+
+せいかいのばしょへ
+The correct answer to the location
+$00052A (Line 1)
+82 B9	82 A2	82 A9	82 A2	82 CC	82 CE	82 B5	82 E5	82 D6	04 FF	| Original Japanese Hex
+ #  せ	 #  い	 #  か	 #  い	 #  の	 #  ば	 #  し	 #  ょ	 #  へ	 # LF	| Original Japanese Text
+ #  Ｆ	 #  Ｉ	 #  Ｌ	 #  Ｌ	 #   	 #  Ｇ	 #  Ａ	 #  Ｐ	 #  Ｓ	 # LF	| New English Text
+82 65	82 68	82 6B	82 6B	81 40	82 66	82 60	82 6F	82 72	04 FF	| New English Hex
+ブロックを
+The block
+$00053E (Line 2)
+83 75	83 8D	83 62	83 4E	82 F0	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  を	 # LF	| Original Japanese Text
+ #  Ｕ	 #  Ｓ	 #  Ｉ	 #  Ｎ	 #  Ｇ	 # LF	| New English Text
+82 74	82 72	82 68	82 6D	82 66	04 FF	| New English Hex
+おいていき…
+Place go...
+$00054A (Line 3)
+82 A8	82 A2	82 C4	82 A2	82 AB	81 63	0F FF	| Original Japanese Hex
+ #  お	 #  い	 #  て	 #  い	 #  き	 #  …	 # FF	| Original Japanese Text
+ #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 #  Ｓ	 # FF	| New English Text
+82 61	82 6B	82 6E	82 62	82 6A	82 72	0F FF	| New English Hex
+
+ひだりの　え　と
+For example on the left
+$000564 (Line 1)
+82 D0	82 BE	82 E8	82 CC	81 40	82 A6	81 40	82 C6	04 FF	| Original Japanese Hex
+ #  ひ	 #  だ	 #  り	 #  の	 #   	 #  え	 #   	 #  と	 # LF	| Original Japanese Text
+ #  Ｕ	 #  Ｓ	 #  Ｅ	 #   	 #  Ｓ	 #  Ｉ	 #  Ｄ	 #  Ｅ	 # LF	| New English Text
+82 74	82 72	82 64	81 40	82 72	82 68	82 63	82 64	04 FF	| New English Hex
+おなじものを
+of the same one
+$000576 (Line 2)
+82 A8	82 C8	82 B6	82 E0	82 CC	82 F0	04 FF	| Original Japanese Hex
+ #  お	 #  な	 #  じ	 #  も	 #  の	 #  を	 # LF	| Original Japanese Text
+ #  Ｈ	 #  Ｉ	 #  Ｔ	 #   	 #  Ｔ	 #  Ｏ	 # LF	| New English Text
+82 67	82 68	82 73	81 40	82 73	82 6E	04 FF	| New English Hex
+つくるのですぞ
+I make
+$000584 (Line 3)
+82 C2	82 AD	82 E9	82 CC	82 C5	82 B7	82 BC	0F FF	| Original Japanese Hex
+ #  つ	 #  く	 #  る	 #  の	 #  で	 #  す	 #  ぞ	 # FF	| Original Japanese Text
+ #  Ｆ	 #  Ｉ	 #  Ｌ	 #  Ｌ	 #   	 #  Ｉ	 #  Ｔ	 # FF	| New English Text
+82 65	82 68	82 6B	82 6B	81 40	82 68	82 73	0F FF	| New English Hex
+
+おおっと、
+Your each,
+$0005A0 (Line 1)
+82 A8	 82 A8	82 C1	82 C6	81 41	04 FF	| Original Japanese Hex
+ #  お	 #  お	 #  っ	 #  と	 #  、	 # LF	| Original Japanese Text
+ #  Ａ	 #  Ｌ	 #  Ｓ	 #  Ｏ	 #  …	 # LF	| New English Text
+82 60	82 6B	82 72	82 6E	81 63	04 FF	| New English Hex
+いいわすれてました
+I forgot to say
+$0005AC (Line 2)
+82 A2	82 A2	82 ED	82 B7	82 EA	82 C4	82 DC	82 B5	82 BD	0F FF	| Original Japanese Hex
+ #  い	 #  い	 #  わ	 #  す	 #  れ	 #  て	 #  ま	 #  し	 #  た	 # FF	| Original Japanese Text
+ #  Ｍ	 #  Ｏ	 #  Ｒ	 #  Ｅ	 #   	 #  Ｉ	 #  Ｎ	 #  Ｆ	 #  Ｏ	 # FF	| New English Text
+82 6C	82 6E	82 71	82 64	81 40	82 68	82 6D	82 65	82 6E	0F FF	| New English Hex
+
+せいかいのばしょに
+To the location of the correct answer
+$0005C4 (Line 1)
+82 B9	82 A2	82 A9	82 A2	82 CC	82 CE	82 B5	82 E5	82 C9	04 FF	| Original Japanese Hex
+ #  せ	 #  い	 #  か	 #  い	 #  の	 #  ば	 #  し	 #  ょ	 #  に	 # LF	| Original Japanese Text
+ #  Ｆ	 #  Ｉ	 #  Ｌ	 #  Ｌ	 #   	 #  Ｂ	 #  Ｌ	 #  Ｕ	 #  Ｅ	 # LF	| New English Text
+82 65	82 68	82 6B	82 6B	81 40	82 61	82 6B	82 74	82 64	04 FF	| New English Hex
+ブロックを　おくと
+When you place the block
+$0005D8 (Line 2)
+83 75	83 8D	83 62	83 4E	82 F0	81 40	82 A8	82 AD	82 C6	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  を	 #   	 #  お	 #  く	 #  と	 # LF	| Original Japanese Text
+ #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 #   	 #  Ｆ	 #  Ｏ	 #  Ｒ	 # LF	| New English Text
+82 61	82 6B	82 6E	82 62	82 6A	81 40	82 65	82 6E	82 71	04 FF	| New English Hex
+あおいろに、
+To blue,
+$0005EC (Line 3)
+82 A0	82 A8	82 A2	82 EB	82 C9	81 41	0F FF	| Original Japanese Hex
+ #  あ	 #  お	 #  い	 #  ろ	 #  に	 #  、	 # FF	| Original Japanese Text
+ #  Ｓ	 #  Ｔ	 #  Ａ	 #  Ｇ	 #  Ｅ	 #  Ｓ	 # FF	| New English Text
+82 72	82 73	82 60	82 66	82 64	82 72	0F FF	| New English Hex
+
+まちがいのばしょに
+The mistake of location
+$0005FE (Line 1)
+82 DC	82 BF	82 AA	82 A2	82 CC	82 CE	82 B5	82 E5	82 C9	04 FF	| Original Japanese Hex
+ #  ま	 #  ち	 #  が	 #  い	 #  の	 #  ば	 #  し	 #  ょ	 #  に	 # LF	| Original Japanese Text
+ #  Ｂ	 #  Ｅ	 #  Ｃ	 #  Ｏ	 #  Ｍ	 #  Ｅ	 #  Ｓ	 #   	 #  Ａ	 # LF	| New English Text
+82 61	82 64	82 62	82 6E	82 6C	82 64	82 72	81 40	82 60	04 FF	| New English Hex
+ブロックを　おくと
+When you place the block
+$000612 (Line 2)
+83 75	83 8D	83 62	83 4E	82 F0	81 40	82 A8	82 AD	82 C6	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  を	 #   	 #  お	 #  く	 #  と	 # LF	| Original Japanese Text
+ #  Ｒ	 #  Ｅ	 #  Ｄ	 #   	 #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 # LF	| New English Text
+82 71	82 64	82 63	81 40	82 61	82 6B	82 6E	82 62	82 6A	04 FF	| New English Hex
+あかいろに、
+To red,
+$000626 (Line 3)
+82 A0	82 A9	82 A2	82 EB	82 C9	81 41	0F FF	| Original Japanese Hex
+ #  あ	 #  か	 #  い	 #  ろ	 #  に	 #  、	 # FF	| Original Japanese Text
+ #  Ｉ	 #  Ｆ	 #   	 #  Ｂ	 #  Ａ	 #  Ｄ	 # FF	| New English Text
+82 68	82 65	81 40	82 61	82 60	82 63	0F FF	| New English Hex
+
+ブロックのいろが
+The color of the blocks
+$000638 (Line 1)
+83 75	83 8D	83 62	83 4E	82 CC	82 A2	82 EB	82 AA	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  の	 #  い	 #  ろ	 #  が	 # LF	| Original Japanese Text
+ #  Ｉ	 #  Ｔ	 #   	 #  Ｓ	 #  Ｈ	 #  Ｏ	 #  Ｗ	 #  Ｓ	 # LF	| New English Text
+82 68	82 73	81 40	82 72	82 67	82 6E	82 76	82 72	04 FF	| New English Hex
+かわるのです
+Will change
+$00064A (Line 2)
+82 A9	82 ED	82 E9	82 CC	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  か	 #  わ	 #  る	 #  の	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ｃ	 #  Ｈ	 #  Ａ	 #  Ｎ	 #  Ｇ	 #  Ｅ	 # FF	| New English Text
+82 62	82 67	82 60	82 6D	82 66	82 64	0F FF	| New English Hex
+
+しっかり、おぼえて
+Firm, remember
+$000664 (Line 1)
+82 B5	82 C1	82 A9	82 E8	81 41	82 A8	82 DA	82 A6	82 C4	04 FF	| Original Japanese Hex
+ #  し	 #  っ	 #  か	 #  り	 #  、	 #  お	 #  ぼ	 #  え	 #  て	 # LF	| Original Japanese Text
+ #  Ｌ	 #  Ｅ	 #  Ａ	 #  Ｒ	 #  Ｎ	 #   	 #  Ｔ	 #  Ｈ	 #  Ｅ	 # LF	| New English Text
+82 6B	82 64	82 60	82 71	82 6D	81 40	82 73	82 67	82 64	04 FF	| New English Hex
+おくのですぞ
+This
+$000678 (Line 2)
+82 A8	82 AD	82 CC	82 C5	82 B7	82 BC	0F FF	| Original Japanese Hex
+ #  お	 #  く	 #  の	 #  で	 #  す	 #  ぞ	 # FF	| Original Japanese Text
+ #  Ｒ	 #  Ｕ	 #  Ｌ	 #  Ｅ	 #  Ｓ	 #  ！	 # FF	| New English Text
+82 71	82 74	82 6B	82 64	82 72	81 49	0F FF	| New English Hex
+
+いじょうで
+Above
+$000692 (Line 1)
+82 A2	82 B6	82 E5	82 A4	82 C5	04 FF	| Original Japanese Hex
+ #  い	 #  じ	 #  ょ	 #  う	 #  で	 # LF	| Original Japanese Text
+ #  Ｔ	 #  Ｈ	 #  Ｏ	 #  Ｓ	 #  Ｅ	 # LF	| New English Text
+82 73	82 67	82 6E	82 72	82 64	04 FF	| New English Hex
+ゲームせつめいを
+Game description
+$00069E (Line 2)
+83 51	81 5B	83 80	82 B9	82 C2	82 DF	82 A2	82 F0	04 FF	| Original Japanese Hex
+ #  ゲ	 #  ー	 #  ム	 #  せ	 #  つ	 #  め	 #  い	 #  を	 # LF	| Original Japanese Text
+ #  Ｗ	 #  Ｅ	 #  Ｒ	 #  Ｅ	 #   	 #  Ｔ	 #  Ｈ	 #  Ｅ	 # LF	| New English Text
+82 76	82 64	82 71	82 64	81 40	82 73	82 67	82 64	04 FF	| New English Hex
+おわります
+Ends
+$0006B0 (Line 3)
+82 A8	82 ED	82 E8	82 DC	82 B7	0F FF	| Original Japanese Hex
+ #  お	 #  わ	 #  り	 #  ま	 #  す	 # FF	| Original Japanese Text
+ #  Ｒ	 #  Ｕ	 #  Ｌ	 #  Ｅ	 #  Ｓ	 # FF	| New English Text
+82 71	82 74	82 6B	82 64	82 72	0F FF	| New English Hex
+
+あとは
+After that
+$0006C0 (Line 1)
+82 A0	82 C6	82 CD	04 FF	| Original Japanese Hex
+ #  あ	 #  と	 #  は	 # LF	| Original Japanese Text
+ #  Ｏ	 #  ．	 #  Ｋ	 # LF	| New English Text
+82 6E	81 44	82 6A	04 FF	| New English Hex
+じっせんで
+In practice
+$0006C8 (Line 2)
+82 B6	82 C1	82 B9	82 F1	82 C5	04 FF	| Original Japanese Hex
+ #  じ	 #  っ	 #  せ	 #  ん	 #  で	 # LF	| Original Japanese Text
+ #  Ｅ	 #  Ｎ	 #  Ｊ	 #  Ｏ	 #  Ｙ	 # LF	| New English Text
+82 64	82 6D	82 69	82 6E	82 78	04 FF	| New English Hex
+おぼえましょう
+Let's remember
+$0006D4 (Line 3)
+82 A8	82 DA	82 A6	82 DC	82 B5	82 E5	82 A4	0F FF	| Original Japanese Hex
+ #  お	 #  ぼ	 #  え	 #  ま	 #  し	 #  ょ	 #  う	 # FF	| Original Japanese Text
+ #  Ｐ	 #  Ｌ	 #  Ａ	 #  Ｙ	 #  Ｉ	 #  Ｎ	 #  Ｇ	 # FF	| New English Text
+82 6F	82 6B	82 60	82 78	82 68	82 6D	82 66	0F FF	| New English Hex
+
+-----------
+Tutorial 2:
+-----------
+こんかいは
+For this time
+$000736 (Line 1)
+82 B1	82 F1	82 A9	82 A2	82 CD	04 FF	| Original Japanese Hex
+ #  こ	 #  ん	 #  か	 #  い	 #  は	 # LF	| Original Japanese Text
+ #  Ａ	 #  Ｂ	 #  Ｏ	 #  Ｕ	 #  Ｔ	 # LF	| New English Text
+82 60	82 61	82 6E	82 74	82 73	04 FF	| New English Hex
+”あな”と
+"hole" and
+$000742 (Line 2)
+81 68	82 A0	82 C8	81 68	82 C6	04 FF	| Original Japanese Hex
+ #  ”	 #  あ	 #  な	 #  ”	 #  と	 # LF	| Original Japanese Text
+ #  Ｈ	 #  Ｏ	 #  Ｌ	 #  Ｅ	 #  ，	 # LF	| New English Text
+82 67	82 6E	82 6B	82 64	81 43	04 FF	| New English Hex
+”ゴムのかべ”
+"Rubber wall"
+$00074E (Line 3)
+81 68	83 53	83 80	82 CC	82 A9	82 D7	81 68	0F FF	| Original Japanese Hex
+ #  ”	 #  ゴ	 #  ム	 #  の	 #  か	 #  べ	 #  ”	 # FF	| Original Japanese Text
+ #  Ｒ	 #  Ｕ	 #  Ｂ	 #  Ｂ	 #  Ｅ	 #  Ｒ	 #  …	 # FF	| New English Text
+82 71	82 74	82 61	82 61	82 64	82 71	81 63	0F FF	| New English Hex
+
+について
+I will
+$000762 (Line 1)
+82 C9	82 C2	82 A2	82 C4	04 FF	| Original Japanese Hex
+ #  に	 #  つ	 #  い	 #  て	 # LF	| Original Japanese Text
+ #  Ｉ	 #  ’	 #  Ｌ	 #  Ｌ	 # LF	| New English Text
+82 68	81 66	82 6B	82 6B	04 FF	| New English Hex
+せつめいするです
+Explain
+$00076C (Line 2)
+82 B9	82 C2	82 DF	82 A2	82 B7	82 E9	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  せ	 #  つ	 #  め	 #  い	 #  す	 #  る	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ｅ	 #  Ｘ	 #  Ｐ	 #  Ｌ	 #  Ａ	 #  Ｉ	 #  Ｎ	 #  …	 # FF	| New English Text
+82 64	82 77	82 6F	82 6B	82 60	82 68	82 6D	81 63	0F FF	| New English Hex
+
+よく　きいて
+Well Listen
+$000782 (Line 1)
+82 E6	82 AD	81 40	82 AB	82 A2	82 C4	04 FF	| Original Japanese Hex
+ #  よ	 #  く	 #   	 #  き	 #  い	 #  て	 # LF	| Original Japanese Text
+ #  Ｐ	 #  Ｌ	 #  Ｅ	 #  Ａ	 #  Ｓ	 #  Ｅ	 # LF	| New English Text
+82 6F	82 6B	82 64	82 60	82 72	82 64	04 FF	| New English Hex
+くれたまえ
+Introduction was me
+$000790 (Line 2)
+82 AD	82 EA	82 BD	82 DC	82 A6	0F FF	| Original Japanese Hex
+ #  く	 #  れ	 #  た	 #  ま	 #  え	 # FF	| Original Japanese Text
+ #  Ｗ	 #  Ａ	 #  Ｔ	 #  Ｃ	 #  Ｈ	 # FF	| New English Text
+82 76	82 60	82 73	82 62	82 67	0F FF	| New English Hex
+
+まずは　ここ
+First here
+$0007A0
+82 DC	82 B8	82 CD	81 40	82 B1	82 B1	0F FF	| Original Japanese Hex
+ #  ま	 #  ず	 #  は	 #   	 #  こ	 #  こ	 # FF	| Original Japanese Text
+ #  Ｓ	 #  Ｃ	 #  Ｒ	 #  Ｅ	 #  Ｅ	 #  Ｎ	 # FF	| New English Text
+82 72	82 62	82 71	82 64	82 64	82 6D	0F FF	| New English Hex
+
+
+こんかいは
+For this time
+$0007BA (Line 1)
+82 B1	82 F1	82 A9	82 A2	82 CD	04 FF	| Original Japanese Hex
+ #  こ	 #  ん	 #  か	 #  い	 #  は	 # LF	| Original Japanese Text
+ #  Ａ	 #  Ｂ	 #  Ｏ	 #  Ｕ	 #  Ｔ	 # LF	| New English Text
+82 60	82 61	82 6E	82 74	82 73	04 FF	| New English Hex
+”あな”と
+"hole" and
+$0007C6 (Line 2)
+81 68	82 A0	82 C8	81 68	82 C6	04 FF	| Original Japanese Hex
+ #  ”	 #  あ	 #  な	 #  ”	 #  と	 # LF	| Original Japanese Text
+ #  Ｈ	 #  Ｏ	 #  Ｌ	 #  Ｅ	 #  ，	 # LF	| New English Text
+82 67	82 6E	82 6B	82 64	81 43	04 FF	| New English Hex
+”ゴムのかべ”
+"Rubber wall"
+$0007D2 (Line 3)
+81 68	83 53	83 80	82 CC	82 A9	82 D7	81 68	0F FF	| Original Japanese Hex
+ #  ”	 #  ゴ	 #  ム	 #  の	 #  か	 #  べ	 #  ”	 # FF	| Original Japanese Text
+ #  Ｒ	 #  Ｕ	 #  Ｂ	 #  Ｂ	 #  Ｅ	 #  Ｒ	 #  …	 # FF	| New English Text
+82 71	82 74	82 61	82 61	82 64	82 71	81 63	0F FF	| New English Hex
+
+について
+I will
+$0007E6 (Line 1)
+82 C9	82 C2	82 A2	82 C4	04 FF	| Original Japanese Hex
+ #  に	 #  つ	 #  い	 #  て	 # LF	| Original Japanese Text
+ #  Ｉ	 #  ’	 #  Ｌ	 #  Ｌ	 # LF	| New English Text
+82 68	81 66	82 6B	82 6B	04 FF	| New English Hex
+せつめいするです
+Explain
+$0007F0 (Line 2)
+82 B9	82 C2	82 DF	82 A2	82 B7	82 E9	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  せ	 #  つ	 #  め	 #  い	 #  す	 #  る	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ｅ	 #  Ｘ	 #  Ｐ	 #  Ｌ	 #  Ａ	 #  Ｉ	 #  Ｎ	 #  …	 # FF	| New English Text
+82 64	82 77	82 6F	82 6B	82 60	82 68	82 6D	81 63	0F FF	| New English Hex
+
+よく　きいて
+Well Listen
+$000806 (Line 1)
+82 E6	82 AD	81 40	82 AB	82 A2	82 C4	04 FF	| Original Japanese Hex
+ #  よ	 #  く	 #   	 #  き	 #  い	 #  て	 # LF	| Original Japanese Text
+ #  Ｐ	 #  Ｌ	 #  Ｅ	 #  Ａ	 #  Ｓ	 #  Ｅ	 # LF	| New English Text
+82 6F	82 6B	82 64	82 60	82 72	82 64	04 FF	| New English Hex
+くれたまえ
+Introduction was me
+$000814 (Line 2)
+82 AD	82 EA	82 BD	82 DC	82 A6	0F FF	| Original Japanese Hex
+ #  く	 #  れ	 #  た	 #  ま	 #  え	 # FF	| Original Japanese Text
+ #  Ｗ	 #  Ａ	 #  Ｔ	 #  Ｃ	 #  Ｈ	 # FF	| New English Text
+82 76	82 60	82 73	82 62	82 67	0F FF	| New English Hex
+
+まずは　ここ
+First here
+$000824
+82 DC	82 B8	82 CD	81 40	82 B1	82 B1	0F FF	| Original Japanese Hex
+ #  ま	 #  ず	 #  は	 #   	 #  こ	 #  こ	 # FF	| Original Japanese Text
+ #  Ｓ	 #  Ｃ	 #  Ｒ	 #  Ｅ	 #  Ｅ	 #  Ｎ	 # FF	| New English Text
+82 72	82 62	82 71	82 64	82 64	82 6D	0F FF	| New English Hex
+
+ここには
+Here
+$00083E (Line 1)
+82 B1	82 B1	82 C9	82 CD	04 FF	| Original Japanese Hex
+ #  こ	 #  こ	 #  に	 #  は	 # LF	| Original Japanese Text
+ #  Ｈ	 #  Ｅ	 #  Ｒ	 #  Ｅ	 # LF	| New English Text
+82 67	82 64	82 71	82 64	04 FF	| New English Hex
+あなが　あいて
+Holes opponent
+$000848 (Line 2)
+82 A0	82 C8	82 AA	81 40	82 A0	82 A2	82 C4	04 FF	| Original Japanese Hex
+ #  あ	 #  な	 #  が	 #   	 #  あ	 #  い	 #  て	 # 7F	| Original Japanese Text
+ #  Ｗ	 #  Ｅ	 #   	 #  Ｈ	 #  Ａ	 #  Ｖ	 #  Ｅ	 #  ?	| New English Text
+82 76	82 64	81 40	82 67	82 60	82 75	82 64	04 FF	| New English Hex
+いるのです
+I have
+$000858 (Line 3)
+82 A2	82 E9	82 CC	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  い	 #  る	 #  の	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ｈ	 #  Ｏ	 #  Ｌ	 #  Ｅ	 #  Ｓ	 # FF	| New English Text
+82 67	82 6E	82 6B	82 64	82 72	0F FF	| New English Hex
+
+だからこのうえには
+So on this
+$000868 (Line 1)
+82 BE	82 A9	82 E7	82 B1	82 CC	82 A4	82 A6	82 C9	82 CD	04 FF	| Original Japanese Hex
+ #  だ	 #  か	 #  ら	 #  こ	 #  の	 #  う	 #  え	 #  に	 #  は	 # LF	| Original Japanese Text
+ #  Ｙ	 #  Ｏ	 #  Ｕ	 #   	 #  Ｃ	 #  Ａ	 #  Ｎ	 #  ’	 #  Ｔ	 # LF	| New English Text
+82 78	82 6E	82 74	81 40	82 62	82 60	82 6D	81 66	82 73	04 FF	| New English Hex
+ブロックが
+Block
+$00087C (Line 2)
+83 75	83 8D	83 62	83 4E	82 AA	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  が	 # LF	| Original Japanese Text
+ #  Ｐ	 #  Ｌ	 #  Ａ	 #  Ｃ	 #  Ｅ	 # LF	| New English Text
+82 6F	82 6B	82 60	82 62	82 64	04 FF	| New English Hex
+おけないのです
+Do not put
+$000888 (Line 3)
+82 A8	82 AF	82 C8	82 A2	82 CC	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  お	 #  け	 #  な	 #  い	 #  の	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ａ	 #   	 #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 # FF	| New English Text
+82 60	81 40	82 61	82 6B	82 6E	82 62	82 6A	0F FF	| New English Hex
+
+でも、
+But,
+$0008A4 (Line 1)
+82 C5	82 E0	81 41	04 FF	| Original Japanese Hex
+ #  で	 #  も	 #  、	 # LF	| Original Japanese Text
+ #  Ｏ	 #  Ｎ	 #   	 # LF	| New English Text
+82 6E	82 6D	81 40	04 FF	| New English Hex
+あなの　うえは
+Top of the hole
+$0008AC (Line 2)
+82 A0	82 C8	82 CC	81 40	82 A4	82 A6	82 CD	0F FF	| Original Japanese Hex
+ #  あ	 #  な	 #  の	 #   	 #  う	 #  え	 #  は	 # FF	| Original Japanese Text
+ #  Ａ	 #   	 #  Ｈ	 #  Ｏ	 #  Ｌ	 #  Ｅ	 #  …	 # FF	| New English Text
+82 60	81 40	82 67	82 6E	82 6B	82 64	81 63	0F FF	| New English Hex
+
+ブロックを
+The block
+$0008C0 (Line 1)
+83 75	83 8D	83 62	83 4E	82 F0	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  を	 # LF	| Original Japanese Text
+ #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 # LF	| New English Text
+82 61	82 6B	82 6E	82 62	82 6A	04 FF	| New English Hex
+とおすことが
+is able to pass
+$0008CC (Line 2)
+82 C6	82 A8	82 B7	82 B1	82 C6	82 AA	04 FF	| Original Japanese Hex
+ #  と	 #  お	 #  す	 #  こ	 #  と	 #  が	 # LF	| Original Japanese Text
+ #  Ｐ	 #  Ａ	 #  Ｓ	 #  Ｓ	 #  Ｅ	 #  Ｓ	 # LF	| New English Text
+82 6F	82 60	82 72	82 72	82 64	82 72	04 FF	| New English Hex
+できるのです
+And
+$0008DA (Line 3)
+82 C5	82 AB	82 E9	82 CC	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  で	 #  き	 #  る	 #  の	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ａ	 #   	 #  Ｈ	 #  Ｏ	 #  Ｌ	 #  Ｅ	 # FF	| New English Text
+82 60	81 40	82 67	82 6E	82 6B	82 64	0F FF	| New English Hex
+
+つぎは
+The following is
+$0008F4 (Line 1)
+82 C2	82 AC	82 CD	04 FF	| Original Japanese Hex
+ #  つ	 #  ぎ	 #  は	 # LF	| Original Japanese Text
+ #  Ｔ	 #  Ｈ	 #  Ｅ	 # LF	| New English Text
+82 73	82 67	82 64	04 FF	| New English Hex
+この　かべ
+This wall
+$0008FC (Line 2)
+82 B1	82 CC	81 40	82 A9	82 D7	0F FF	| Original Japanese Hex
+ #  こ	 #  の	 #   	 #  か	 #  べ	 # FF	| Original Japanese Text
+ #  Ｗ	 #  Ａ	 #  Ｌ	 #  Ｌ	 #  …	 # FF	| New English Text
+82 76	82 60	82 6B	82 6B	81 63	0F FF	| New English Hex
+
+このかべは
+The wall
+$000914 (Line 1)
+82 B1	82 CC	82 A9	82 D7	82 CD	04 FF	| Original Japanese Hex
+ #  こ	 #  の	 #  か	 #  べ	 #  は	 # LF	| Original Japanese Text
+ #  Ｉ	 #  Ｔ	 #   	 #  Ｉ	 #  Ｓ	 # LF	| New English Text
+82 68	82 73	81 40	82 68	82 72	04 FF	| New English Hex
+ゴムで　できている
+Is made of rubber
+$000920 (Line 2)
+83 53	83 80	82 C5	81 40	82 C5	82 AB	82 C4	82 A2	82 E9	04 FF	| Original Japanese Hex
+ #  ゴ	 #  ム	 #  で	 #   	 #  で	 #  き	 #  て	 #  い	 #  る	 # LF	| Original Japanese Text
+ #  Ａ	 #   	 #  Ｒ	 #  Ｕ	 #  Ｂ	 #  Ｂ	 #  Ｅ	 #  Ｒ	 #  Ｙ	 # LF	| New English Text
+82 60	81 40	82 71	82 74	82 61	82 61	82 64	82 71	82 78	04 FF	| New English Hex
+のです
+I
+$000934 (Line 3)
+82 CC	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  の	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ｏ	 #  Ｎ	 #  Ｅ	 # FF	| New English Text
+82 6E	82 6D	82 64	0F FF	| New English Hex
+
+だから　ブロックを
+So the block
+$000940 (Line 1)
+82 BE	82 A9	82 E7	81 40	83 75	83 8D	83 62	83 4E	82 F0	04 FF	| Original Japanese Hex
+ #  だ	 #  か	 #  ら	 #   	 #  ブ	 #  ロ	 #  ッ	 #  ク	 #  を	 # LF	| Original Japanese Text
+ #  Ｔ	 #  Ｈ	 #  Ｅ	 #   	 #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 # LF	| New English Text
+82 73	82 67	82 64	81 40	82 61	82 6B	82 6E	82 62	82 6A	04 FF	| New English Hex
+はねかえして
+Will bounce
+$000954 (Line 2)
+82 CD	82 CB	82 A9	82 A6	82 B5	82 C4	04 FF	| Original Japanese Hex
+ #  は	 #  ね	 #  か	 #  え	 #  し	 #  て	 # LF	| Original Japanese Text
+ #  Ｄ	 #  Ｏ	 #  Ｅ	 #  Ｓ	 #   	 #  Ａ	 # LF	| New English Text
+82 63	82 6E	82 64	82 72	81 40	82 60	04 FF	| New English Hex
+しまうのです
+Away
+$000962 (Line 3)
+82 B5	82 DC	82 A4	82 CC	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  し	 #  ま	 #  う	 #  の	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ｂ	 #  Ｏ	 #  Ｕ	 #  Ｎ	 #  Ｃ	 #  Ｅ	 # FF	| New English Text
+82 61	82 6E	82 74	82 6D	82 62	82 64	0F FF	| New English Hex
+
+どうですか？
+how is it?
+$00097C
+82 C7	82 A4	82 C5	82 B7	82 A9	81 48	0F FF	| Original Japanese Hex
+ #  ど	 #  う	 #  で	 #  す	 #  か	 #  ？	 # FF	| Original Japanese Text
+ #  Ｄ	 #  Ｏ	 #   	 #  Ｙ	 #  Ｏ	 #  Ｕ	 # FF	| New English Text
+82 63	82 6E	81 40	82 78	82 6E	82 74	0F FF	| New English Hex
+
+わかりましたか？
+Do you understand?
+$00098E
+82 ED	82 A9	82 E8	82 DC	82 B5	82 BD	82 A9	81 48	0F FF	| Original Japanese Hex
+ #  わ	 #  か	 #  り	 #  ま	 #  し	 #  た	 #  か	 #  ？	 # FF	| Original Japanese Text
+ #  Ｇ	 #  Ｅ	 #  Ｔ	 #   	 #  Ｉ	 #  Ｔ	 #  ？	 #   	 # FF	| New English Text
+82 66	82 64	82 73	81 40	82 68	82 73	81 48	81 40	0F FF	| New English Hex
+
+まあ、
+Well,
+$0009A4 (Line 1)
+82 DC	82 A0	81 41	04 FF	| Original Japanese Hex
+ #  ま	 #  あ	 #  、	 # LF	| Original Japanese Text
+ #  Ｔ	 #  Ｒ	 #  Ｙ	 # LF	| New English Text
+82 73	82 71	82 78	04 FF	| New English Hex
+やってみれば
+If notice doing
+$0009AC (Line 2)
+82 E2	82 C1	82 C4	82 DD	82 EA	82 CE	04 FF	| Original Japanese Hex
+ #  や	 #  っ	 #  て	 #  み	 #  れ	 #  ば	 # LF	| Original Japanese Text
+ #  Ｉ	 #  Ｔ	 #   	 #  Ｈ	 #  Ｏ	 #  Ｗ	 # LF	| New English Text
+82 68	82 73	81 40	82 67	82 6E	82 76	04 FF	| New English Hex
+わかるでしょう
+You will see
+$0009BA (Line 3)
+82 ED	82 A9	82 E9	82 C5	82 B5	82 E5	82 A4	0F FF	| Original Japanese Hex
+ #  わ	 #  か	 #  る	 #  で	 #  し	 #  ょ	 #  う	 # FF	| Original Japanese Text
+ #  Ｉ	 #   	 #  Ｄ	 #  Ｏ	 #   	 #  Ｉ	 #  Ｔ	 # FF	| New English Text
+82 68	81 40	82 63	82 6E	81 40	82 68	82 73	0F FF	| New English Hex
+
+それでは、
+So/Well,
+$0009CE (Line 1)
+82 BB	82 EA	82 C5	82 CD	81 41	04 FF	| Original Japanese Hex
+ #  そ	 #  れ	 #  で	 #  は	 #  、	 # LF	| Original Japanese Text
+ #  Ｗ	 #  Ｅ	 #  Ｌ	 #  Ｌ	 #  ，	 # LF	| New English Text
+82 76	82 64	82 6B	82 6B	81 43	04 FF	| New English Hex
+ごきげんよう
+Have a nice day
+$0009DA (Line 2)
+82 B2	82 AB	82 B0	82 F1	82 E6	82 A4	0F FF	| Original Japanese Hex
+ #  ご	 #  き	 #  げ	 #  ん	 #  よ	 #  う	 # FF	| Original Japanese Text
+ #  Ｓ	 #  Ｅ	 #  Ｅ	 #   	 #  Ｙ	 #  Ａ	 # FF	| New English Text
+82 72	82 64	82 64	81 40	82 78	82 60	0F FF	| New English Hex
+
+-----------
+Tutorial 3:
+-----------
+それでは　さいごに
+So at the end
+$000A86 (Line 1)
+82 BB	82 EA	82 C5	82 CD	81 40	82 B3	82 A2	82 B2	82 C9	04 FF	| Original Japanese Hex
+ #  そ	 #  れ	 #  で	 #  は	 #   	 #  さ	 #  い	 #  ご	 #  に	 # LF	| Original Japanese Text
+ #  Ｎ	 #  Ｏ	 #  Ｗ	 #   	 #  Ａ	 #  Ｂ	 #  Ｏ	 #  Ｕ	 #  Ｔ	 # LF	| New English Text
+82 6D	82 6E	82 76	81 40	82 60	82 61	82 6E	82 74	82 73	04 FF	| New English Hex
+”おせるかべ”
+"I can press either"
+$000A9A (Line 2)
+81 68	82 A8	82 B9	82 E9	82 A9	82 D7	81 68	04 FF	| Original Japanese Hex
+ #  ”	 #  お	 #  せ	 #  る	 #  か	 #  べ	 #  ”	 # LF	| Original Japanese Text
+ #  ”	 #  Ｐ	 #  Ｒ	 #  Ｅ	 #  Ｓ	 #  Ｓ	 #  ”  	 # LF	| New English Text
+81 68	 82 6F	82 71	82 64	82 72	82 72	81 68	04 FF	| New English Hex
+について
+About
+$000AAA (Line 3)
+82 C9	82 C2	82 A2	82 C4	0F FF	| Original Japanese Hex
+ #  に	 #  つ	 #  い	 #  て	 # FF	| Original Japanese Text
+ #  Ｔ	 #  Ｙ	 #  Ｐ	 #  Ｅ	 # FF	| New English Text
+82 73	82 78	82 6F	82 64	0F FF	| New English Hex
+
+せつめいして
+Explain
+$000AB8 (Line 1)
+82 B9	82 C2	82 DF	82 A2	82 B5	82 C4	04 FF	| Original Japanese Hex
+ #  せ	 #  つ	 #  め	 #  い	 #  し	 #  て	 # LF	| Original Japanese Text
+ #  Ｉ	 #   	 #  Ｗ	 #  Ｉ	 #  Ｌ	 #  Ｌ	 # LF	| New English Text
+82 68	81 40	82 76	82 68	82 6B	82 6B	04 FF	| New English Hex
+おきましょうかな
+Wonder if Let's place
+$000AC6 (Line 2)
+82 A8	82 AB	82 DC	82 B5	82 E5	82 A4	82 A9	82 C8	0F FF	| Original Japanese Hex
+ #  お	 #  き	 #  ま	 #  し	 #  ょ	 #  う	 #  か	 #  な	 # FF	| Original Japanese Text
+ #  Ｅ	 #  Ｘ	 #  Ｐ	 #  Ｌ	 #  Ａ	 #  Ｉ	 #  Ｎ	 #  …	 # FF	| New English Text
+82 64	82 77	82 6F	82 6B	82 60	82 68	82 6D	81 63	0F FF	| New English Hex
+
+これをみるで
+By seeing this
+$000ADC (Line 1)
+82 B1	82 EA	82 F0	82 DD	82 E9	82 C5	04 FF	| Original Japanese Hex
+ #  こ	 #  れ	 #  を	 #  み	 #  る	 #  で	 # LF	| Original Japanese Text
+ #  Ｗ	 #  Ａ	 #  Ｔ	 #  Ｃ	 #  Ｈ	 #   	 # LF	| New English Text
+82 76	82 60	82 73	82 62	82 67	81 40	04 FF	| New English Hex
+あります
+Sometimes
+$000AEA (Line 2)
+82 A0	82 E8	82 DC	82 B7	0F FF	| Original Japanese Hex
+ #  あ	 #  り	 #  ま	 #  す	 # FF	| Original Japanese Text
+ #  Ｔ	 #  Ｈ	 #  Ｉ	 #  Ｓ	 # FF	| New English Text
+82 73	82 67	82 68	82 72	0F FF	| New English Hex
+
+
+それでは　さいごに
+So at the end
+$000B00 (Line 1)
+82 BB	82 EA	82 C5	82 CD	81 40	82 B3	82 A2	82 B2	82 C9	04 FF	| Original Japanese Hex
+ #  そ	 #  れ	 #  で	 #  は	 #   	 #  さ	 #  い	 #  ご	 #  に	 # LF	| Original Japanese Text
+ #  Ｎ	 #  Ｏ	 #  Ｗ	 #   	 #  Ａ	 #  Ｂ	 #  Ｏ	 #  Ｕ	 #  Ｔ	 # LF	| New English Text
+82 6D	82 6E	82 76	81 40	82 60	82 61	82 6E	82 74	82 73	04 FF	| New English Hex
+”おせるかべ”
+"I can press either"
+$000B14 (Line 2)
+81 68	82 A8	82 B9	82 E9	82 A9	82 D7	81 68	04 FF	| Original Japanese Hex
+ #  ”	 #  お	 #  せ	 #  る	 #  か	 #  べ	 #  ”	 # LF	| Original Japanese Text
+ #  ”	 #  Ｐ	 #  Ｒ	 #  Ｅ	 #  Ｓ	 #  Ｓ	 #  ”  	 # LF	| New English Text
+81 68	 82 6F	82 71	82 64	82 72	82 72	81 68	04 FF	| New English Hex
+について
+About
+$000B24 (Line 3)
+82 C9	82 C2	82 A2	82 C4	0F FF	| Original Japanese Hex
+ #  に	 #  つ	 #  い	 #  て	 # FF	| Original Japanese Text
+ #  Ｔ	 #  Ｙ	 #  Ｐ	 #  Ｅ	 # FF	| New English Text
+82 73	82 78	82 6F	82 64	0F FF	| New English Hex
+
+せつめいして
+Explain
+$000B32 (Line 1)
+82 B9	82 C2	82 DF	82 A2	82 B5	82 C4	04 FF	| Original Japanese Hex
+ #  せ	 #  つ	 #  め	 #  い	 #  し	 #  て	 # LF	| Original Japanese Text
+ #  Ｉ	 #   	 #  Ｗ	 #  Ｉ	 #  Ｌ	 #  Ｌ	 # LF	| New English Text
+82 68	81 40	82 76	82 68	82 6B	82 6B	04 FF	| New English Hex
+おきましょうかな
+Wonder if Let's place
+$000B40 (Line 2)
+82 A8	82 AB	82 DC	82 B5	82 E5	82 A4	82 A9	82 C8	0F FF	| Original Japanese Hex
+ #  お	 #  き	 #  ま	 #  し	 #  ょ	 #  う	 #  か	 #  な	 # FF	| Original Japanese Text
+ #  Ｅ	 #  Ｘ	 #  Ｐ	 #  Ｌ	 #  Ａ	 #  Ｉ	 #  Ｎ	 #  …	 # FF	| New English Text
+82 64	82 77	82 6F	82 6B	82 60	82 68	82 6D	81 63	0F FF	| New English Hex
+
+これをみるで
+By seeing this
+$000B56 (Line 1)
+82 B1	82 EA	82 F0	82 DD	82 E9	82 C5	04 FF	| Original Japanese Hex
+ #  こ	 #  れ	 #  を	 #  み	 #  る	 #  で	 # LF	| Original Japanese Text
+ #  Ｗ	 #  Ａ	 #  Ｔ	 #  Ｃ	 #  Ｈ	 #   	 # LF	| New English Text
+82 76	82 60	82 73	82 62	82 67	81 40	04 FF	| New English Hex
+あります
+Sometimes
+$000B64 (Line 2)
+82 A0	82 E8	82 DC	82 B7	0F FF	| Original Japanese Hex
+ #  あ	 #  り	 #  ま	 #  す	 # FF	| Original Japanese Text
+ #  Ｔ	 #  Ｈ	 #  Ｉ	 #  Ｓ	 # FF	| New English Text
+82 73	82 67	82 68	82 72	0F FF	| New English Hex
+
+これが
+This is
+$000B7A (Line 1)
+82 B1	82 EA	82 AA	04 FF	| Original Japanese Hex
+ #  こ	 #  れ	 #  が	 # LF	| Original Japanese Text
+ #  Ｙ	 #  Ｏ	 #  Ｕ	 # LF	| New English Text
+82 78	82 6E	82 74	04 FF	| New English Hex
+おせるかべ
+You can press or
+$000B82 (Line 2)
+82 A8	82 B9	82 E9	82 A9	82 D7	04 FF	| Original Japanese Hex
+ #  お	 #  せ	 #  る	 #  か	 #  べ	 # LF	| Original Japanese Text
+ #  Ｐ	 #  Ｒ	 #  Ｅ	 #  Ｓ	 #  Ｓ	 # LF	| New English Text
+82 6F	82 71	82 64	82 72	82 72	04 FF	| New English Hex
+であります
+Use as a base
+$000B8E (Line 3)
+82 C5	82 A0	82 E8	82 DC	82 B7	0F FF	| Original Japanese Hex
+ #  で	 #  あ	 #  り	 #  ま	 #  す	 # FF	| Original Japanese Text
+ #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 # FF	| New English Text
+82 61	82 6B	82 6E	82 62	82 6A	0F FF	| New English Hex
+
+ブロックを
+The block
+$000B9E (Line 1)
+83 75	83 8D	83 62	83 4E	82 F0	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  を	 # LF	| Original Japanese Text
+ #  Ｓ	 #  Ｈ	 #  Ｏ	 #  Ｏ	 #  Ｔ	 # LF	| New English Text
+82 72	82 67	82 6E	82 6E	82 73	04 FF	| New English Hex
+ぶつけると
+Striking
+$000BAA (Line 2)
+82 D4	82 C2	82 AF	82 E9	82 C6	04 FF	| Original Japanese Hex
+ #  ぶ	 #  つ	 #  け	 #  る	 #  と	 # LF	| Original Japanese Text
+ #  Ｉ	 #  Ｔ	 #   	 #  Ｔ	 #  Ｏ	 # LF	| New English Text
+82 68	82 73	81 40	82 73	82 6E	04 FF	| New English Hex
+おせるのです
+You can press I
+$000BB6 (Line 3)
+82 A8	82 B9	82 E9	82 CC	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  お	 #  せ	 #  る	 #  の	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ｐ	 #  Ｒ	 #  Ｅ	 #  Ｓ	 #  Ｓ	 #  …	 # FF	| New English Text
+82 6F	82 71	82 64	82 72	82 72	81 63	0F FF	| New English Hex
+
+おせるかべが
+You can press or base is
+$000BD0 (Line 1)
+82 A8	82 B9	82 E9	82 A9	82 D7	82 AA	04 FF	| Original Japanese Hex
+ #  お	 #  せ	 #  る	 #  か	 #  べ	 #  が	 # LF	| Original Japanese Text
+ #  Ｓ	 #  Ｅ	 #  Ｅ	 #   	 #  Ｉ	 #  Ｔ	 # LF	| New English Text
+82 72	82 64	82 64	81 40	82 68	82 73	04 FF	| New English Hex
+つながって
+It led to
+$000BDE (Line 2)
+82 C2	82 C8	82 AA	82 C1	82 C4	04 FF	| Original Japanese Hex
+ #  つ	 #  な	 #  が	 #  っ	 #  て	 # LF	| Original Japanese Text
+ #  Ｐ	 #  Ｒ	 #  Ｅ	 #  Ｓ	 #  Ｓ	 # LF	| New English Text
+82 6F	82 71	82 64	82 72	82 72	04 FF	| New English Hex
+いるときに
+When you are
+$000BEA (Line 3)
+82 A2	82 E9	82 C6	82 AB	82 C9	0F FF	| Original Japanese Hex
+ #  い	 #  る	 #  と	 #  き	 #  に	 # FF	| Original Japanese Text
+ #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 # FF	| New English Text
+82 61	82 6B	82 6E	82 62	82 6A	0F FF	| New English Hex
+
+ブロックを
+The block
+$000BFA (Line 1)
+83 75	83 8D	83 62	83 4E	82 F0	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  を	 # LF	| Original Japanese Text
+ #  Ｈ	 #  Ｉ	 #  Ｔ	 #   	 #  Ａ	 # LF	| New English Text
+82 67	82 68	82 73	81 40	82 60	04 FF	| New English Hex
+ぶつけると
+Striking
+$000C06 (Line 2)
+82 D4	82 C2	82 AF	82 E9	82 C6	0F FF	| Original Japanese Hex
+ #  ぶ	 #  つ	 #  け	 #  る	 #  と	 # FF	| Original Japanese Text
+ #  Ｗ	 #  Ａ	 #  Ｌ	 #  Ｌ	 #  …	 # FF	| New English Text
+82 76	82 60	82 6B	82 6B	81 63	0F FF	| New English Hex
+
+つながっている
+linked
+$000C16 (Line 1)
+82 C2	82 C8	82 AA	82 C1	82 C4	82 A2	82 E9	04 FF	| Original Japanese Hex
+ #  つ	 #  な	 #  が	 #  っ	 #  て	 #  い	 #  る	 # LF	| Original Japanese Text
+ #  Ｃ	 #  Ｈ	 #  Ａ	 #  Ｎ	 #  Ｇ	 #  Ｅ	 #  Ｓ	 # LF	| New English Text
+82 62	82 67	82 60	82 6D	82 66	82 64	82 72	04 FF	| New English Hex
+さいごの　かべが
+Last wall
+$000C26 (Line 2)
+82 B3	82 A2	82 B2	82 CC	81 40	82 A9	82 D7	82 AA	04 FF	| Original Japanese Hex
+ #  さ	 #  い	 #  ご	 #  の	 #   	 #  か	 #  べ	 #  が	 # LF	| Original Japanese Text
+ #  Ｗ	 #  Ｈ	 #  Ｏ	 #  Ｌ	 #  Ｅ	 #   	 #  Ｏ	 #  Ｆ	 # LF	| New English Text
+82 76	82 67	82 6E	82 6B	82 64	81 40	82 6E	82 65	04 FF	| New English Hex
+うごくのです
+I move
+$000C38 (Line 3)
+82 A4	82 B2	82 AD	82 CC	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  う	 #  ご	 #  く	 #  の	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ａ	 #   	 #  Ｗ	 #  Ａ	 #  Ｌ	 #  Ｌ	 # FF	| New English Text
+82 60	81 40	82 76	82 60	82 6B	82 6B	0F FF	| New English Hex
+
+おせるかべが
+You can press or base is
+$000C52 (Line 1)
+82 A8	82 B9	82 E9	82 A9	82 D7	82 AA	04 FF	| Original Japanese Hex
+ #  お	 #  せ	 #  る	 #  か	 #  べ	 #  が	 # LF	| Original Japanese Text
+ #  Ｂ	 #  Ｅ	 #  Ｓ	 #  Ｉ	 #  Ｄ	 #  Ｅ	 # LF	| New English Text
+82 61	82 64	82 72	82 68	82 63	82 64	04 FF	| New English Hex
+それいじょう
+Any more
+$000C60 (Line 2)
+82 BB	82 EA	82 A2	82 B6	82 E5	82 A4	04 FF	| Original Japanese Hex
+ #  そ	 #  れ	 #  い	 #  じ	 #  ょ	 #  う	 # LF	| Original Japanese Text
+ #  Ａ	 #   	 #  Ｈ	 #  Ａ	 #  Ｒ	 #  Ｄ	 # LF	| New English Text
+82 61	82 64	82 72	82 68	82 63	82 64	04 FF	| New English Hex
+うごけないときに
+When you can not move
+$000C6E (Line 3)
+82 A4	82 B2	82 AF	82 C8	82 A2	82 C6	82 AB	82 C9	0F FF	| Original Japanese Hex
+ #  う	 #  ご	 #  け	 #  な	 #  い	 #  と	 #  き	 #  に	 # FF	| Original Japanese Text
+ #  Ｗ	 #  Ａ	 #  Ｌ	 #  Ｌ	 #  …	 #   	 #   	 #   	 # FF	| New English Text
+82 76	82 60	82 6B	82 6B	81 63	81 40	81 40	81 40	0F FF	| New English Hex
+
+ブロックを
+The block
+$000C84 (Line 1)
+83 75	83 8D	83 62	83 4E	82 F0	04 FF	| Original Japanese Hex
+ #  ブ	 #  ロ	 #  ッ	 #  ク	 #  を	 # LF	| Original Japanese Text
+ #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 # LF	| New English Text
+82 61	82 6B	82 6E	82 62	82 6A	04 FF	| New English Hex
+ぶつけると、
+Striking,
+$000C90 (Line 2)
+82 D4	82 C2	82 AF	82 E9	82 C6	81 41	0F FF	| Original Japanese Hex
+ #  ぶ	 #  つ	 #  け	 #  る	 #  と	 #  、	 # FF	| Original Japanese Text
+ #  Ｓ	 #  Ｔ	 #  Ｒ	 #  Ｉ	 #  Ｋ	 #  Ｅ	 # FF	| New English Text
+82 72	82 73	82 71	82 68	82 6A	82 64	0F FF	| New English Hex
+
+ぶつけたブロックが
+The hit block
+$000CA2 (Line 1)
+82 D4	82 C2	82 AF	82 BD	83 75	83 8D	83 62	83 4E	82 AA	04 FF	| Original Japanese Hex
+ #  ぶ	 #  つ	 #  け	 #  た	 #  ブ	 #  ロ	 #  ッ	 #  ク	 #  が	 # LF	| Original Japanese Text
+ #  Ｗ	 #  Ｉ	 #  Ｌ	 #  Ｌ	 #   	 #  Ｔ	 #  Ｈ	 #  Ｅ	 #  Ｎ	 # LF	| New English Text
+82 76	82 68	82 6B	82 6B	81 40	82 73	82 67	82 64	82 6D	04 FF	| New English Hex
+はねかえって
+Rebound
+$000CB6 (Line 2)
+82 CD	82 CB	82 A9	82 A6	82 C1	82 C4	04 FF	| Original Japanese Hex
+ #  は	 #  ね	 #  か	 #  え	 #  っ	 #  て	 # LF	| Original Japanese Text
+ #  Ｂ	 #  Ｏ	 #  Ｕ	 #  Ｎ	 #  Ｃ	 #  Ｅ	 # LF	| New English Text
+82 61	82 6E	82 74	82 6D	82 62	82 64	04 FF	| New English Hex
+くるのです
+Will
+$000CC4 (Line 3)
+82 AD	82 E9	82 CC	82 C5	82 B7	0F FF	| Original Japanese Hex
+ #  く	 #  る	 #  の	 #  で	 #  す	 # FF	| Original Japanese Text
+ #  Ｂ	 #  Ａ	 #  Ｃ	 #  Ｋ	 #  …	 # FF	| New English Text
+82 61	82 60	82 62	82 6A	81 63	0F FF	| New English Hex
+
+また、
+Also,
+$000CDC (Line 1)
+82 DC	82 BD	81 41	04 FF	| Original Japanese Hex
+ #  ま	 #  た	 #  、	 # LF	| Original Japanese Text
+ #  Ｓ	 #  Ｅ	 #  Ｅ	 # LF	| New English Text
+82 72	82 64	82 64	04 FF	| New English Hex
+このように
+in this way
+$000CE4 (Line 2)
+82 B1	82 CC	82 E6	82 A4	82 C9	0F FF	| Original Japanese Hex
+ #  こ	 #  の	 #  よ	 #  う	 #  に	 # FF	| Original Japanese Text
+ #  Ｂ	 #  Ｌ	 #  Ｏ	 #  Ｃ	 #  Ｋ	 # FF	| New English Text
+82 61	82 6B	82 6E	82 62	82 6A	0F FF	| New English Hex
+
+おせるかべを
+It is can press wall
+$000CF4 (Line 1)
+82 A8	82 B9	82 E9	82 A9	82 D7	82 F0	04 FF	| Original Japanese Hex
+ #  お	 #  せ	 #  る	 #  か	 #  べ	 #  を	 # LF	| Original Japanese Text
+ #  Ｐ	 #  Ｕ	 #  Ｓ	 #  Ｈ	 #  Ｅ	 #  Ｄ	 # LF	| New English Text
+82 6F	82 74	82 72	82 67	82 64	82 63	04 FF	| New English Hex
+すみに
+To corner
+$000D02 (Line 2)
+82 B7	82 DD	82 C9	04 FF	| Original Japanese Hex
+ #  す	 #  み	 #  に	 # LF	| Original Japanese Text
+ #  Ｉ	 #  Ｎ	 #   	 # LF	| New English Text
+82 68	82 6D	81 40	04 FF	| New English Hex
+いれてしまうと
+When I would put
+$000D0A (Line 3)
+82 A2	82 EA	82 C4	82 B5	82 DC	82 A4	82 C6	0F FF	| Original Japanese Hex
+ #  い	 #  れ	 #  て	 #  し	 #  ま	 #  う	 #  と	 # FF	| Original Japanese Text
+ #  Ｃ	 #  Ｏ	 #  Ｒ	 #  Ｎ	 #  Ｅ	 #  Ｒ	 #  …	 # FF	| New English Text
+82 62	82 6E	82 71	82 6D	82 64	82 71	81 63	0F FF	| New English Hex
+
+それいじょう
+Any more
+$000D26 (Line 1)
+82 BB	82 EA	82 A2	82 B6	82 E5	82 A4	04 FF	| Original Japanese Hex
+ #  そ	 #  れ	 #  い	 #  じ	 #  ょ	 #  う	 # LF	| Original Japanese Text
+ #  Ｃ	 #  Ａ	 #  Ｎ	 #  ’	 #  Ｔ	 #   	 # LF	| New English Text
+82 62	82 60	82 6D	81 66	82 73	81 40	04 FF	| New English Hex
+どこにも
+Anywhere
+$000D34 (Line 2)
+82 C7	82 B1	82 C9	82 E0	04 FF	| Original Japanese Hex
+ #  ど	 #  こ	 #  に	 #  も	 # LF	| Original Japanese Text
+ #  Ｍ	 #  Ｏ	 #  Ｖ	 #  Ｅ	 # LF	| New English Text
+82 6C	82 6E	82 75	82 64	04 FF	| New English Hex
+おせないので、
+Because it does not you,
+$000D3E (Line 3)
+82 A8	82 B9	82 C8	82 A2	82 CC	82 C5	81 41	0F FF	| Original Japanese Hex
+ #  お	 #  せ	 #  な	 #  い	 #  の	 #  で	 #  、	 # FF	| Original Japanese Text
+ #  Ａ	 #  Ｎ	 #  Ｙ	 #  Ｍ	 #  Ｏ	 #  Ｒ	 #  Ｅ	 # FF	| New English Text
+82 60	82 6D	82 78	82 6C	82 6E	82 71	82 64	0F FF	| New English Hex
+
+ちゅういを
+Note
+$000D52 (Line 1)
+82 BF	82 E3	82 A4	82 A2	82 F0	04 FF	| Original Japanese Hex
+ #  ち	 #  ゅ	 #  う	 #  い	 #  を	 # LF	| Original Japanese Text
+ #  Ｔ	 #  Ａ	 #  Ｋ	 #  Ｅ	 #   	 # LF	| New English Text
+82 73	82 60	82 6A	82 64	81 40	04 FF	| New English Hex
+するであります
+You are to
+$000D5E (Line 2)
+82 B7	82 E9	82 C5	82 A0	82 E8	82 DC	82 B7	0F FF	| Original Japanese Hex
+ #  す	 #  る	 #  で	 #  あ	 #  り	 #  ま	 #  す	 # FF	| Original Japanese Text
+ #  Ｎ	 #  Ｏ	 #  Ｔ	 #  Ｅ	 #  …	 #   	 #   	 # FF	| New English Text
+82 6D	82 6E	82 73	82 64	81 63	81 40	81 40	0F FF	| New English Hex
+
+いじょう、
+Abnormal,
+$000D7A (Line 1)
+82 A2	82 B6	82 E5	82 A4	81 41	04 FF	| Original Japanese Hex
+ #  い	 #  じ	 #  ょ	 #  う	 #  、	 # LF	| Original Japanese Text
+ #  Ｅ	 #  Ｎ	 #  Ｄ	 #   	 #   	 # LF	| New English Text
+82 64	82 6D	82 63	81 40	81 40	04 FF	| New English Hex
+おせるかべの
+You can press or base of
+$000D86 (Line 2)
+82 A8	82 B9	82 E9	82 A9	82 D7	82 CC	04 FF	| Original Japanese Hex
+ #  お	 #  せ	 #  る	 #  か	 #  べ	 #  の	 # LF	| Original Japanese Text
+ #  Ｏ	 #  Ｆ	 #   	 #  Ｔ	 #  Ｈ	 #  Ｅ	 # LF	| New English Text
+82 6E	82 65	81 40	82 73	82 67	82 64	04 FF	| New English Hex
+せつめいでした
+It was described
+$000D94 (Line 3)
+82 B9	82 C2	82 DF	82 A2	82 C5	82 B5	82 BD	0F FF	| Original Japanese Hex
+ #  せ	 #  つ	 #  め	 #  い	 #  で	 #  し	 #  た	 # FF	| Original Japanese Text
+ #  Ｌ	 #  Ｅ	 #  Ｓ	 #  Ｓ	 #  Ｏ	 #  Ｎ	 #  Ｓ	 # FF	| New English Text
+82 6B	82 64	82 72	82 72	82 6E	82 6D	82 72	0F FF	| New English Hex
+
+それでは
+So
+$000DA8 (Line 1)
+82 BB	82 EA	82 C5	82 CD	04 FF	| Original Japanese Hex
+ #  そ	 #  れ	 #  で	 #  は	 # LF	| Original Japanese Text
+ #  Ｓ	 #  Ｏ	 #   	 #  Ｉ	 # LF	| New English Text
+82 72	82 6E	81 40	82 68	04 FF	| New English Hex
+けんとうを
+Hope for
+$000DB2 (Line 2)
+82 AF	82 F1	82 C6	82 A4	82 F0	04 FF	| Original Japanese Hex
+ #  け	 #  ん	 #  と	 #  う	 #  を	 # LF	| Original Japanese Text
+ #  Ｗ	 #  Ｉ	 #  Ｓ	 #  Ｈ	 #   	 # LF	| New English Text
+82 76	82 68	82 72	82 67	81 40	04 FF	| New English Hex
+いのるであります
+good luck
+$000DBE (Line 3)
+82 A2	82 CC	82 E9	82 C5	82 A0	82 E8	82 DC	82 B7	0F FF	| Original Japanese Hex
+ #  い	 #  の	 #  る	 #  で	 #  あ	 #  り	 #  ま	 #  す	 # FF	| Original Japanese Text
+ #  Ｙ	 #  Ｏ	 #  Ｕ	 #   	 #  Ｌ	 #  Ｕ	 #  Ｃ	 #  Ｋ	 # FF	| New English Text
+82 78	82 6E	82 74	81 40	82 6B	82 74	82 62	82 6A	0F FF	| New English Hex

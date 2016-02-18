@@ -1,3 +1,5 @@
+; GBA 'Bare Metal' Nintendo Game Boy Emulator by krom (Peter Lemon):
+
 format binary as 'gba'
 include 'LIB\FASMARM.INC'
 include 'LIB\LCD.INC'
@@ -83,6 +85,12 @@ MEM_MAP: ; Memory Map = $10000 Bytes
 endcopy:
 org $80000C0 + (endcopy - start) + (startcode - copycode)
 GB_BIOS: file 'DMG_ROM.bin' ; Include Game Boy DMG BIOS ROM 
+
+;GB_CART: file 'ROMS\Soukoban (J).gb'
+;GB_CART: file 'ROMS\Tetris (W) (V1.1) [!].gb'
+;GB_CART: file 'ROMS\Alleyway (W) [!].gb'
+;GB_CART: file 'ROMS\Renju Club (J) [S].gb'
+;GB_CART: file 'ROMS\Hon Shougi (J) [S].gb'
 
 ;GB_CART: file 'ROMS\HelloWorld.gb'
 

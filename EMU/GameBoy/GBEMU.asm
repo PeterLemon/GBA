@@ -70,6 +70,7 @@ Refresh: ; Refresh At 60 Hz
   include 'VIDEO.asm' ; Run Video
   b Refresh
 
+align 256
 CPU_INST:
   include 'CPU.asm' ; CPU Instruction Table
 

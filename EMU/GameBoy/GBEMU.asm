@@ -58,7 +58,7 @@ Refresh: ; Refresh At 60 Hz
 
   CPU_EMU:
     ldrb r5,[r10,r4] ; R5 = CPU Instruction
-    add r5,r9,r5,lsl 8 ; R5 = CPU Instruction Table Opcode
+    add r5,r9,r5,lsl 7 ; R5 = CPU Instruction Table Opcode
     add r4,1 ; PC_REG++
     mov lr,pc
     bx r5
@@ -70,7 +70,7 @@ Refresh: ; Refresh At 60 Hz
   include 'VIDEO.asm' ; Run Video
   b Refresh
 
-align 256
+align 128
 CPU_INST:
   include 'CPU.asm' ; CPU Instruction Table
 

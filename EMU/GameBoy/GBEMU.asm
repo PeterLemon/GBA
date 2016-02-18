@@ -49,7 +49,6 @@ mov sp,0 ; SP = 16-Bit Register SP (Stack Pointer)
 DMA32 GB_CART, MEM_MAP, 8192 ; Copy 32768 Bytes Cartridge ROM To Memory Map
 DMA32 GB_BIOS, MEM_MAP, 64   ; Copy 256 Bytes BIOS ROM To Memory Map
 
-;mov r8,0 ; Debug Instruction Count
 Refresh: ; Refresh At 60 Hz
   mov r12,0 ; R12 = Reset QCycles
   imm16 r11,$4444 ; 4194304 Hz / 60 Hz = 69905 CPU Cycles / 4 = 17476 Quad Cycles

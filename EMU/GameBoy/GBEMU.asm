@@ -14,6 +14,8 @@ H_FLAG = $20 ; F Register Bit 5 Half Carry Flag
 N_FLAG = $40 ; F Register Bit 6 Negative Flag
 Z_FLAG = $80 ; F Register Bit 7 Zero Flag
 
+MEM_MAP = WRAM ; Memory Map = $10000 Bytes
+
 org $8000000
 b copycode
 times $80000C0-($-0) db 0
@@ -30,7 +32,7 @@ copycode:
   mov r2,start
   bx r2
 startcode:
-org WRAM
+org IWRAM
 
 start:
 mov r0,IO
@@ -49,15 +51,15 @@ mov sp,0 ; SP = 16-Bit Register SP (Stack Pointer)
 DMA32 GB_CART, MEM_MAP, 8192 ; Copy 32768 Bytes Cartridge ROM To Memory Map
 DMA32 GB_BIOS, MEM_MAP, 64   ; Copy 256 Bytes BIOS ROM To Memory Map
 
+imm32 r9,CPU_INST ; R9 = CPU Instruction Table
+mov r10,MEM_MAP ; R10 = MEM_MAP
+imm16 r11,$4444 ; R11 = Quad Cycles Refresh Rate (4194304 Hz / 60 Hz = 69905 CPU Cycles / 4 = 17476 Quad Cycles)
+
 Refresh: ; Refresh At 60 Hz
   mov r12,0 ; R12 = Reset QCycles
-  imm16 r11,$4444 ; 4194304 Hz / 60 Hz = 69905 CPU Cycles / 4 = 17476 Quad Cycles
-  imm32 r10,MEM_MAP ; R10 = MEM_MAP
-  imm32 r9,CPU_INST ; R9 = CPU Instruction Table
-
   CPU_EMU:
     ldrb r5,[r10,r4] ; R5 = CPU Instruction
-    add r5,r9,r5,lsl 7 ; R5 = CPU Instruction Table Opcode
+    ldr r5,[r9,r5,lsl 2] ; R5 = CPU Instruction Table Opcode
     add r4,1 ; PC_REG++
     mov lr,pc
     bx r5
@@ -69,10 +71,6 @@ Refresh: ; Refresh At 60 Hz
   include 'VIDEO.asm' ; Run Video
   b Refresh
 
-align 128
-CPU_INST:
-  include 'CPU.asm' ; CPU Instruction Table
-
 LCDQCycles: dw 0 ; LCD Quad Cycle Count
 DIVQCycles: dw 0 ; Divider Register Quad Cycle Count
 OldQCycles: dw 0 ; Previous Quad Cycle Count
@@ -80,9 +78,12 @@ OldMode: dw 0 ; Previous LCD STAT Mode
 OldTAC_REG: dw 4 ; Previous TAC_REG (4096Hz)
 TimerQCycles: dw 0 ; Timer Quad Cycles
 IME_FLAG: dw 0 ; (IME) Interrupt Master Enable Flag (0 = Disable Interrupts, 1 = Enable Interrupts, Enabled In IE Register)
-MEM_MAP: ; Memory Map = $10000 Bytes
+
+CPU_INST:
+  include 'CPU.asm' ; CPU Instruction Table
 
 endcopy:
+
 org $80000C0 + (endcopy - start) + (startcode - copycode)
 GB_BIOS: file 'DMG_ROM.bin' ; Include Game Boy DMG BIOS ROM 
 

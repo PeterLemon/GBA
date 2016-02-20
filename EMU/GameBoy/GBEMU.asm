@@ -62,7 +62,7 @@ Refresh: ; Refresh At 60 Hz
     ldr r5,[r9,r5,lsl 2] ; R5 = CPU Instruction Table Opcode
     add r4,1 ; PC_REG++
     mov lr,pc
-    bx r5
+    bx r5 ; Run CPU Instruction
 
     include 'IOPORT.asm' ; Run IO Port
     cmp r12,r11 ; Compare Quad Cycles Counter
@@ -86,6 +86,12 @@ endcopy:
 
 org $80000C0 + (endcopy - start) + (startcode - copycode)
 GB_BIOS: file 'DMG_ROM.bin' ; Include Game Boy DMG BIOS ROM 
+
+;GB_CART: file 'ROMS\Soukoban (J).gb'
+;GB_CART: file 'ROMS\Tetris (W) (V1.1) [!].gb'
+;GB_CART: file 'ROMS\Alleyway (W) [!].gb'
+;GB_CART: file 'ROMS\Renju Club (J) [S].gb'
+;GB_CART: file 'ROMS\Hon Shougi (J) [S].gb'
 
 ;GB_CART: file 'ROMS\HelloWorld.gb'
 

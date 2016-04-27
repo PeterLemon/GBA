@@ -69,7 +69,7 @@ macro PlaySoundA Source, Frequency {
   imm32 r12,Source
   str r12,[r11,DMA1SAD] ; Sound A Sample Source To DMA1 Source Address
   imm16 r12,SOUNDA_FIFO_RESET or SOUNDA_LEFT or SOUNDA_RIGHT or SOUNDA_VOL_100
-  strh r12,[r11,SOUNDCNT_H] ; Sound A FIFO Reset, Right & Left Enable
+  strh r12,[r11,SOUNDCNT_H] ; Sound A FIFO Reset, Sound A Timer 0, Right & Left Enable, 100% Volume
   mov r12,SOUND_ENABLE
   strb r12,[r11,SOUNDCNT_X] ; PSG/FIFO Master Enable
   orr r12,r11,FIFO_A
@@ -79,7 +79,7 @@ macro PlaySoundA Source, Frequency {
   mov r12,TM_ENABLE ; Timer 0 Enable, Sound Frequency
   orr r12,(65536 - (16777216 / Frequency)) and $FF
   orr r12,(65536 - (16777216 / Frequency)) and $FF00
-  str r12,[r11,TM0CNT] ; Play Sound
+  str r12,[r11,TM0CNT] ; Play Sound A
 }
 
 macro PlaySoundB Source, Frequency {
@@ -87,7 +87,7 @@ macro PlaySoundB Source, Frequency {
   imm32 r12,Source
   str r12,[r11,DMA2SAD] ; Sound B Sample Source To DMA2 Source Address
   imm16 r12,SOUNDB_FIFO_RESET or SOUNDB_TM1 or SOUNDB_LEFT or SOUNDB_RIGHT or SOUNDB_VOL_100 or SOUNDA_LEFT or SOUNDA_RIGHT or SOUNDA_VOL_100
-  strh r12,[r11,SOUNDCNT_H] ; Sound B FIFO Reset, Sound B Timer 1, Right & Left Enable
+  strh r12,[r11,SOUNDCNT_H] ; Sound B FIFO Reset, Sound B Timer 1, Right & Left Enable, 100% Volume
   mov r12,SOUND_ENABLE
   strb r12,[r11,SOUNDCNT_X] ; PSG/FIFO Master Enable
   orr r12,r11,FIFO_B
@@ -97,7 +97,31 @@ macro PlaySoundB Source, Frequency {
   mov r12,TM_ENABLE ; Timer 1 Enable, Sound Frequency
   orr r12,(65536 - (16777216 / Frequency)) and $FF
   orr r12,(65536 - (16777216 / Frequency)) and $FF00
-  str r12,[r11,TM1CNT] ; Play Sound
+  str r12,[r11,TM1CNT] ; Play Sound B
+}
+
+macro PlaySoundAB SourceA, SourceB, Frequency {
+  mov r11,IO ; GBA I/O Base Offset
+  imm32 r12,SourceA
+  str r12,[r11,DMA1SAD] ; Sound A Sample Source To DMA1 Source Address
+  imm32 r12,SourceB
+  str r12,[r11,DMA2SAD] ; Sound B Sample Source To DMA2 Source Address
+  imm16 r12,SOUNDB_FIFO_RESET or SOUNDA_FIFO_RESET or SOUNDB_TM1 or SOUNDB_RIGHT or SOUNDA_LEFT or SOUNDB_VOL_100 or SOUNDA_VOL_100
+  strh r12,[r11,SOUNDCNT_H] ; Sound A/B FIFO Reset, Sound B Timer 1, Sound A Timer 0, Right & Left Enable, 100% Volume
+  mov r12,SOUND_ENABLE
+  strb r12,[r11,SOUNDCNT_X] ; PSG/FIFO Master Enable
+  orr r12,r11,FIFO_A
+  str r12,[r11,DMA1DAD] ; Sound A FIFO To DMA1 Destination Address
+  orr r12,r11,FIFO_B
+  str r12,[r11,DMA2DAD] ; Sound B FIFO To DMA2 Destination Address
+  imm32 r12,DMA_ENABLE or DMA_32 or DMA_SPECIAL or DMA_REPEAT or DMA_DST_FIXED
+  str r12,[r11,DMA1CNT] ; DMA1 Control
+  str r12,[r11,DMA2CNT] ; DMA2 Control
+  mov r12,TM_ENABLE ; Timer 0/1 Enable, Sound Frequency
+  orr r12,(65536 - (16777216 / Frequency)) and $FF
+  orr r12,(65536 - (16777216 / Frequency)) and $FF00
+  str r12,[r11,TM0CNT] ; Play Sound A
+  str r12,[r11,TM1CNT] ; Play Sound B
 }
 
 macro PlayLZSoundA Source, Destination, Frequency {
@@ -108,7 +132,7 @@ macro PlayLZSoundA Source, Destination, Frequency {
   imm32 r12,Destination
   str r12,[r11,DMA1SAD] ; Sound A Sample Source To DMA1 Source Address
   imm16 r12,SOUNDA_FIFO_RESET or SOUNDA_LEFT or SOUNDA_RIGHT or SOUNDA_VOL_100
-  strh r12,[r11,SOUNDCNT_H] ; Sound A FIFO Reset, Right & Left Enable
+  strh r12,[r11,SOUNDCNT_H] ; Sound A FIFO Reset, Sound A Timer 0, Right & Left Enable, 100% Volume
   mov r12,SOUND_ENABLE
   strb r12,[r11,SOUNDCNT_X] ; PSG/FIFO Master Enable
   orr r12,r11,FIFO_A
@@ -118,7 +142,7 @@ macro PlayLZSoundA Source, Destination, Frequency {
   mov r12,TM_ENABLE * 65536 ; Timer 0 Enable, Sound Frequency
   orr r12,(65536 - (16777216 / Frequency)) and $FF
   orr r12,(65536 - (16777216 / Frequency)) and $FF00
-  str r12,[r11,TM0CNT] ; Play Sound
+  str r12,[r11,TM0CNT] ; Play Sound A
 }
 
 macro PlayLZSoundB Source, Destination, Frequency {
@@ -129,7 +153,7 @@ macro PlayLZSoundB Source, Destination, Frequency {
   imm32 r12,Destination
   str r12,[r11,DMA2SAD] ; Sound B Sample Source To DMA2 Source Address
   imm16 r12,SOUNDB_FIFO_RESET or SOUNDB_TM1 or SOUNDB_LEFT or SOUNDB_RIGHT or SOUNDB_VOL_100 or SOUNDA_LEFT or SOUNDA_RIGHT or SOUNDA_VOL_100
-  strh r12,[r11,SOUNDCNT_H] ; Sound B FIFO Reset, Sound B Timer 1, Right & Left Enable
+  strh r12,[r11,SOUNDCNT_H] ; Sound B FIFO Reset, Sound B Timer 1, Right & Left Enable, 100% Volume
   mov r12,SOUND_ENABLE
   strb r12,[r11,SOUNDCNT_X] ; PSG/FIFO Master Enable
   orr r12,r11,FIFO_B
@@ -139,17 +163,24 @@ macro PlayLZSoundB Source, Destination, Frequency {
   mov r12,TM_ENABLE * 65536 ; Timer 1 Enable, Sound Frequency
   orr r12,(65536 - (16777216 / Frequency)) and $FF
   orr r12,(65536 - (16777216 / Frequency)) and $FF00
-  str r12,[r11,TM1CNT] ; Play Sound
+  str r12,[r11,TM1CNT] ; Play Sound B
 }
 
 macro StopSoundA {
   mov r11,IO ; GBA I/O Base Offset
   mov r12,DMA_DISABLE
-  str r12,[r11,DMA1CNT] ; Stops Sound
+  str r12,[r11,DMA1CNT] ; Stop Sound A
 }
 
 macro StopSoundB {
   mov r11,IO ; GBA I/O Base Offset
   mov r12,DMA_DISABLE
-  str r12,[r11,DMA2CNT] ; Stops Sound
+  str r12,[r11,DMA2CNT] ; Stop Sound B
+}
+
+macro StopSoundAB {
+  mov r11,IO ; GBA I/O Base Offset
+  mov r12,DMA_DISABLE
+  str r12,[r11,DMA1CNT] ; Stop Sound A
+  str r12,[r11,DMA2CNT] ; Stop Sound B
 }

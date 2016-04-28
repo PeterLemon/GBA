@@ -74,7 +74,7 @@ start:
       bne S1Filter2 ; IF (Filter Number != 1) GOTO Sample 1 Filter 2
       add r3,r4 ; Filter 1: New Sample += Old Sample + (-Old Sample SAR 4)
       asr r11,r4,4 ; R11 = Old Sample SAR 4
-      rsb r11,r11,0 ; R11 = -Old Sample SAR 4
+      neg r11 ; R11 = -Old Sample SAR 4
       add r3,r11 ; New Sample = Filter 1
       b S1FilterEnd
 
@@ -83,7 +83,7 @@ start:
       bne S1Filter3 ; IF (Filter Number != 2) GOTO Sample 1 Filter 3
       add r3,r4,lsl 1 ; Filter 2: New Sample += (Old Sample SHL 1) + ((-Old Sample * 3) SAR 5) - Older Sample + (Older Sample SAR 4)
       add r11,r4,r4,lsl 1 ; R11 = Old Sample * 3
-      rsb r11,r11,0 ; R11 = -Old Sample * 3
+      neg r11 ; R11 = -Old Sample * 3
       add r3,r11,asr 5 ; New Sample += (-Old Sample * 3) SAR 5
       sub r3,r5 ; New Sample -= Older Sample
       add r3,r5,asr 4 ; New Sample = Filter 2
@@ -91,7 +91,7 @@ start:
 
       S1Filter3: ; Sample 1 Filter 3
       add r3,r4,lsl 1 ; Filter 3: New Sample += (Old Sample SHL 1) + ((-Old Sample * 13) SAR 6) - Older Sample + ((Older Sample * 3) SAR 4)
-      rsb r11,r4,0 ; R11 = -Old Sample
+      neg r11,r4 ; R11 = -Old Sample
       mov r12,13 ; R12 = 13
       mul r11,r12 ; R11 = -Old Sample * 13
       add r3,r11,asr 6 ; New Sample += (-Old Sample * 13) SAR 6
@@ -117,7 +117,7 @@ start:
       bne S2Filter2 ; IF (Filter Number != 1) GOTO Sample 2 Filter 2
       add r3,r4 ; Filter 1: New Sample += Old Sample + (-Old Sample SAR 4)
       asr r11,r4,4 ; R11 = Old Sample SAR 4
-      rsb r11,r11,0 ; R11 = -Old Sample SAR 4
+      neg r11 ; R11 = -Old Sample SAR 4
       add r3,r11 ; New Sample = Filter 1
       b S2FilterEnd
 
@@ -126,7 +126,7 @@ start:
       bne S2Filter3 ; IF (Filter Number != 2) GOTO Sample 2 Filter 3
       add r3,r4,lsl 1 ; Filter 2: New Sample += (Old Sample SHL 1) + ((-Old Sample * 3) SAR 5) - Older Sample + (Older Sample SAR 4)
       add r11,r4,r4,lsl 1 ; R11 = Old Sample * 3
-      rsb r11,r11,0 ; R11 = -Old Sample * 3
+      neg r11 ; R11 = -Old Sample * 3
       add r3,r11,asr 5 ; New Sample += (-Old Sample * 3) SAR 5
       sub r3,r5 ; New Sample -= Older Sample
       add r3,r5,asr 4 ; New Sample = Filter 2
@@ -134,7 +134,7 @@ start:
 
       S2Filter3: ; Sample 2 Filter 3
       add r3,r4,lsl 1 ; Filter 3: New Sample += (Old Sample SHL 1) + ((-Old Sample * 13) SAR 6) - Older Sample + ((Older Sample * 3) SAR 4)
-      rsb r11,r4,0 ; R11 = -Old Sample
+      neg r11,r4 ; R11 = -Old Sample
       mov r12,13 ; R12 = 13
       mul r11,r12 ; R11 = -Old Sample * 13
       add r3,r11,asr 6 ; New Sample += (-Old Sample * 13) SAR 6

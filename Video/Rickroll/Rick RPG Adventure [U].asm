@@ -338,7 +338,7 @@ start:
   imm32 r0,video ; R0 = LZ Compressed Data Offset
   str r0,[LZOffset] ; Store LZ Compressed Data Offset Into LZ Offset
 
-  PlaySoundA audio, 8000 ; Play Sound Channel A Data
+  PlaySoundA audio, 8078 ; Play Sound Channel A Data
 LoopFrames:
   ldr r0,[LZOffset] ; R0 = LZ Offset
   add r0,4 ; LZ Offset += 4
@@ -386,7 +386,7 @@ LoopFrames:
   str r0,[LZOffset] ; Store Last LZ GRB Frame End Offset To LZ Offset
 
   GRBDecode ; Decode GRB Data
-  TimerWait TM1CNT, $80 ; Wait On Timer 1
+  TimerWait TM1CNT, $7F ; Wait On Timer 1
 
   imm32 r1,LZOffset
   ldr r0,[r1] ; Load Last LZ IPS Frame End Offset

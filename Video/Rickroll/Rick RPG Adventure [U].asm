@@ -340,6 +340,12 @@ start:
 
   PlaySoundA audio, 8078 ; Play Sound Channel A Data
 LoopFrames:
+  ; Start Timer
+  mov r11,IO ; GBA I/O Base Offset
+  orr r11,TM1CNT ; Timer Control Register
+  mov r12,TM_ENABLE or TM_FREQ_1024 ; Timer Enable, Frequency/1024
+  str r12,[r11] ; Start Timer
+
   ldr r0,[LZOffset] ; R0 = LZ Offset
   add r0,4 ; LZ Offset += 4
   mov r1,WRAM ; R1 = LZ GRB File Output Offset
@@ -385,8 +391,18 @@ LoopFrames:
 
   str r0,[LZOffset] ; Store Last LZ GRB Frame End Offset To LZ Offset
 
+  ; Wait For Timer
+  mov r11,IO ; GBA I/O Base Offset
+  orr r11,TM1CNT ; Timer Control Register
+  imm16 r10,$248 ; R10 = Time
+  WaitTimer:
+    ldrh r12,[r11] ; Current Timer Position
+    cmp r12,r10 ; Compare Time
+    blt WaitTimer
+  mov r12,TM_DISABLE
+  str r12,[r11] ; Reset Timer Control
+
   GRBDecode ; Decode GRB Data
-  TimerWait TM1CNT, $7F ; Wait On Timer 1
 
   imm32 r1,LZOffset
   ldr r0,[r1] ; Load Last LZ IPS Frame End Offset

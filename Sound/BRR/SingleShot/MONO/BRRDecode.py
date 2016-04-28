@@ -42,21 +42,21 @@ while i < len(brrfile):
         if filternumber == 3: new += (old << 1) + ((-old * 13) >> 6) - older + ((older * 3) >> 4)
         older = old
         old = new
-        decoded.append(new)
+        decoded.append(new >> 8)
         new = sample2 # Filter 0
         if filternumber == 1: new += old + (-old >> 4)
         if filternumber == 2: new += (old << 1) + ((-old * 3)  >> 5) - older + (older >> 4)
         if filternumber == 3: new += (old << 1) + ((-old * 13) >> 6) - older + ((older * 3) >> 4)
         older = old
         old = new
-        decoded.append(new)
+        decoded.append(new >> 8)
 
         s += 1 # Increment Sample Byte Count
         i += 1 # Increment Byte Count
 
     i += 1 # Increment Byte Count For Next Block
     
-print ("Decoded Samples = %d (%d Bytes)" % (len(decoded), (len(decoded) * 2)))
+print ("Decoded Samples = %d (%d Bytes)" % (len(decoded), (len(decoded))))
 
 with open('out.bin', 'wb') as f:
-    for b in decoded: f.write(struct.pack('h', b))
+    for b in decoded: f.write(struct.pack('b', b))

@@ -394,7 +394,7 @@ LoopFrames:
   ; Wait For Timer
   mov r11,IO ; GBA I/O Base Offset
   orr r11,TM1CNT ; Timer Control Register
-  imm16 r10,$248 ; R10 = Time
+  imm16 r10,$240 ; R10 = Time
   WaitTimer:
     ldrh r12,[r11] ; Current Timer Position
     cmp r12,r10 ; Compare Time

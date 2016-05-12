@@ -48,7 +48,7 @@ macro Control { ; - Macro to handle all control input
   strh r2,[r0,14] ; Store Zoom To Parameter Table (Y Scale Factor)
 
   ; Rotate On L & R
-  ldrh r2,[r0,16] ; R2 = Mosaic Variable
+  ldrh r2,[r0,16] ; R2 = Rotation Variable
   ands r3,r1,#KEY_L ; Test L Button
   addeq r2,r2,$0200 ; IF (L Pressed) Rotate += 512 (Anti-Clockwise)
   ands r3,r1,#KEY_R ; Test R Button

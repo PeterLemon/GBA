@@ -98,7 +98,7 @@ start:
   mov r2,$40	; R2 = Attribute 2 (Tile number 64)
   str r2,[r1]	; Store Attribute 2 To OAM
 
-  DMA32 SpritesPAL, OBJPAL, 29 ; DMA OBJ Palette To Color Mem
+  DMA32 SpritesPAL, OBJPAL, 16 ; DMA OBJ Palette To Color Mem
   DMA32 SpritesCHR, CHARMEM, 768 ; DMA OBJ Bitmap Data To VRAM
 
 Loop:
@@ -192,4 +192,4 @@ endcopy: ; End Of Program Copy Code
 ; Static Data (ROM)
 org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
 SpritesCHR: file 'Sprites.bin' ; Include Sprite Bitmap Data (3072 Bytes)
-SpritesPAL: file 'Sprites.pal' ; Include Sprite Pallete (58 Bytes)
+SpritesPAL: file 'Sprites.pal' ; Include Sprite Pallete (64 Bytes)

@@ -98,7 +98,7 @@ start:
   mov r2,0	; R2 = Attribute 2 (Tile number 0)
   str r2,[r1]	; Store Attribute 2 To OAM
 
-  DMA32 CarPAL, OBJPAL, 32 ; DMA OBJ Palette To Color Mem
+  DMA32 CarPAL, OBJPAL, 16 ; DMA OBJ Palette To Color Mem
   DMA32 CarCHR, CHARMEM, 1024 ; DMA OBJ Bitmap Data To VRAM
 
   mov r0,IO

@@ -1,38 +1,39 @@
 ; OBJ
-ROTATION_FLAG    =     $100
-SIZE_DOUBLE      =     $200
-MODE_NORMAL      =       $0
-MODE_TRANSPARENT =     $400 ; OAM OBJ Attribute 0 - OBJ Mode Semi-Transparent (Bit 10-11)
-MODE_WINDOWED    =     $800
-MOSAIC           =    $1000
-COLOR_16         =       $0
-COLOR_256        =    $2000 ; OAM OBJ Attribute 0 - 256 Colors / 1 Palette    (Bit 13)
-SQUARE           =       $0 ; OAM OBJ Attribute 0 - OBJ Shape Square          (Bit 14-15)
-TALL             =    $8000 ; OAM OBJ Attribute 0 - OBJ Shape Tall            (Bit 14-15)
-WIDE             =    $4000 ; OAM OBJ Attribute 0 - OBJ Shape Wide            (Bit 14-15)
+ROTATION_FLAG    =  $100
+SIZE_DOUBLE      =  $200
+MODE_NORMAL      =    $0
+MODE_TRANSPARENT =  $400 ; OAM OBJ Attribute 0 - OBJ Mode Semi-Transparent (Bit 10-11)
+MODE_WINDOWED    =  $800
+MOSAIC           = $1000
+COLOR_16         =    $0
+COLOR_256        = $2000 ; OAM OBJ Attribute 0 - 256 Colors / 1 Palette    (Bit 13)
+SQUARE           =    $0 ; OAM OBJ Attribute 0 - OBJ Shape Square          (Bit 14-15)
+TALL             = $8000 ; OAM OBJ Attribute 0 - OBJ Shape Tall            (Bit 14-15)
+WIDE             = $4000 ; OAM OBJ Attribute 0 - OBJ Shape Wide            (Bit 14-15)
 
-HORIZONTAL_FLIP  =    $1000 ; OAM OBJ Attribute 1 - Horizontal Flip           (Bit 12)
-VERTICAL_FLIP    =    $2000 ; OAM OBJ Attribute 1 - Vertical Flip             (Bit 13)
-SIZE_8           =       $0 ; OAM OBJ Attribute 1 - OBJ Size 8                (Bit 14-15)
-SIZE_16          =    $4000 ; OAM OBJ Attribute 1 - OBJ Size 16               (Bit 14-15)
-SIZE_32          =    $8000 ; OAM OBJ Attribute 1 - OBJ Size 32               (Bit 14-15)
-SIZE_64          =    $C000 ; OAM OBJ Attribute 1 - OBJ Size 64               (Bit 14-15)
+HORIZONTAL_FLIP  = $1000 ; OAM OBJ Attribute 1 - Horizontal Flip           (Bit 12)
+VERTICAL_FLIP    = $2000 ; OAM OBJ Attribute 1 - Vertical Flip             (Bit 13)
+SIZE_8           =    $0 ; OAM OBJ Attribute 1 - OBJ Size 8                (Bit 14-15)
+SIZE_16          = $4000 ; OAM OBJ Attribute 1 - OBJ Size 16               (Bit 14-15)
+SIZE_32          = $8000 ; OAM OBJ Attribute 1 - OBJ Size 32               (Bit 14-15)
+SIZE_64          = $C000 ; OAM OBJ Attribute 1 - OBJ Size 64               (Bit 14-15)
 
-PALETTE_1        =    $1000 ; OAM OBJ Attribute 2 - Palette Number 1          (Bit 12-15)
-PALETTE_2        =    $2000 ; OAM OBJ Attribute 2 - Palette Number 2          (Bit 12-15)
-PALETTE_3        =    $3000 ; OAM OBJ Attribute 2 - Palette Number 3          (Bit 12-15)
-PALETTE_4        =    $4000 ; OAM OBJ Attribute 2 - Palette Number 4          (Bit 12-15)
-PALETTE_5        =    $5000 ; OAM OBJ Attribute 2 - Palette Number 5          (Bit 12-15)
-PALETTE_6        =    $6000 ; OAM OBJ Attribute 2 - Palette Number 6          (Bit 12-15)
-PALETTE_7        =    $7000 ; OAM OBJ Attribute 2 - Palette Number 7          (Bit 12-15)
-PALETTE_8        =    $8000 ; OAM OBJ Attribute 2 - Palette Number 8          (Bit 12-15)
-PALETTE_9        =    $9000 ; OAM OBJ Attribute 2 - Palette Number 9          (Bit 12-15)
-PALETTE_10       =    $A000 ; OAM OBJ Attribute 2 - Palette Number 10         (Bit 12-15)
-PALETTE_11       =    $B000 ; OAM OBJ Attribute 2 - Palette Number 11         (Bit 12-15)
-PALETTE_12       =    $C000 ; OAM OBJ Attribute 2 - Palette Number 12         (Bit 12-15)
-PALETTE_13       =    $D000 ; OAM OBJ Attribute 2 - Palette Number 13         (Bit 12-15)
-PALETTE_14       =    $E000 ; OAM OBJ Attribute 2 - Palette Number 14         (Bit 12-15)
-PALETTE_15       =    $F000 ; OAM OBJ Attribute 2 - Palette Number 15         (Bit 12-15)
+PALETTE_0        = $0000 ; OAM OBJ Attribute 2 - Palette Number 0          (Bit 12-15)
+PALETTE_1        = $1000 ; OAM OBJ Attribute 2 - Palette Number 1          (Bit 12-15)
+PALETTE_2        = $2000 ; OAM OBJ Attribute 2 - Palette Number 2          (Bit 12-15)
+PALETTE_3        = $3000 ; OAM OBJ Attribute 2 - Palette Number 3          (Bit 12-15)
+PALETTE_4        = $4000 ; OAM OBJ Attribute 2 - Palette Number 4          (Bit 12-15)
+PALETTE_5        = $5000 ; OAM OBJ Attribute 2 - Palette Number 5          (Bit 12-15)
+PALETTE_6        = $6000 ; OAM OBJ Attribute 2 - Palette Number 6          (Bit 12-15)
+PALETTE_7        = $7000 ; OAM OBJ Attribute 2 - Palette Number 7          (Bit 12-15)
+PALETTE_8        = $8000 ; OAM OBJ Attribute 2 - Palette Number 8          (Bit 12-15)
+PALETTE_9        = $9000 ; OAM OBJ Attribute 2 - Palette Number 9          (Bit 12-15)
+PALETTE_10       = $A000 ; OAM OBJ Attribute 2 - Palette Number 10         (Bit 12-15)
+PALETTE_11       = $B000 ; OAM OBJ Attribute 2 - Palette Number 11         (Bit 12-15)
+PALETTE_12       = $C000 ; OAM OBJ Attribute 2 - Palette Number 12         (Bit 12-15)
+PALETTE_13       = $D000 ; OAM OBJ Attribute 2 - Palette Number 13         (Bit 12-15)
+PALETTE_14       = $E000 ; OAM OBJ Attribute 2 - Palette Number 14         (Bit 12-15)
+PALETTE_15       = $F000 ; OAM OBJ Attribute 2 - Palette Number 15         (Bit 12-15)
 
 macro InitOBJ {
   mov r10,OAM

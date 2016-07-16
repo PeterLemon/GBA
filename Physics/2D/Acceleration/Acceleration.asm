@@ -95,7 +95,7 @@ start:
   mov r1,OAM ; R1 = OAM ($7000000)
   imm32 r2,(SQUARE+COLOR_256+48+ROTATION_FLAG)+((SIZE_64+88) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
-  mov r2,0	; R2 = Attribute 2 (Tile number 0)
+  mov r2,0	; R2 = Attribute 2 (Tile Number 0)
   str r2,[r1]	; Store Attribute 2 To OAM
 
   DMA32 CarPAL, OBJPAL, 16 ; DMA OBJ Palette To Color Mem

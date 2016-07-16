@@ -85,21 +85,22 @@ start:
   mov r2,VPAL ; Load BG Palette Address
   strh r1,[r2] ; Store BG Color To BG Palette
 
-  ; Cannon OBJ
+  ; Cannon Sprite
   mov r1,OAM ; R1 = OAM ($7000000)
-  imm32 r2,(TALL+COLOR_256+16+SIZE_DOUBLE+ROTATION_FLAG)+((SIZE_64+88) * 65536) ; R2 = Attributes 0 & 1
+  imm32 r2,(TALL+COLOR_16+16+SIZE_DOUBLE+ROTATION_FLAG)+((SIZE_64+88) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
   mov r2,0	; R2 = Attribute 2 (Tile Number 0)
   str r2,[r1],4 ; Store Attribute 2 To OAM
 
-  ; Bullet OBJ
-  imm32 r2,(SQUARE+COLOR_256+64+ROTATION_FLAG)+((SIZE_32+104) * 65536) ; R2 = Attributes 0 & 1
+  ; Bullet Sprite
+  imm32 r2,(SQUARE+COLOR_16+64+ROTATION_FLAG)+((SIZE_32+104) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
-  mov r2,$40	; R2 = Attribute 2 (Tile Number 64)
+  mov r2,$20	; R2 = Attribute 2 (Tile Number 32)
+  orr r2,PALETTE_1 ; Attribute 2 |= Palette 1
   str r2,[r1]	; Store Attribute 2 To OAM
 
-  DMA32 SpritesPAL, OBJPAL, 16 ; DMA OBJ Palette To Color Mem
-  DMA32 SpritesCHR, CHARMEM, 768 ; DMA OBJ Bitmap Data To VRAM
+  DMA32 SpritePAL, OBJPAL, 16 ; DMA OBJ Palette To Color Mem
+  DMA32 SpriteIMG, CHARMEM, 384 ; DMA OBJ Image Data To VRAM
 
 Loop:
     VBlank  ; Wait Until VBlank
@@ -180,7 +181,7 @@ Loop:
       SetOBJXY:
 	mov r0,OAM ; R1 = OAM ($7000000)
 	add r0,8 ; Bullet OBJ
-	imm32 r3,(SQUARE+COLOR_256+ROTATION_FLAG)+((SIZE_32) * 65536) ; R3 = Attributes 0 & 1
+	imm32 r3,(SQUARE+COLOR_16+ROTATION_FLAG)+((SIZE_32) * 65536) ; R3 = Attributes 0 & 1
 	orr r1,r3 ; Attributes 0 & 1 += Bullet X
 	orr r1,r2 ; Attributes 0 & 1 += Bullet Y
 	str r1,[r0] ; Store Attributes 0 & 1
@@ -191,5 +192,9 @@ endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
 org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
-SpritesCHR: file 'Sprites.bin' ; Include Sprite Bitmap Data (3072 Bytes)
-SpritesPAL: file 'Sprites.pal' ; Include Sprite Pallete (64 Bytes)
+SpriteIMG: ; Include Sprite Image Data (1536 Bytes)
+  file 'Cannon.img' ; Include Sprite Image Data (1024 Bytes)
+  file 'Bullet.img' ; Include Sprite Image Data (512 Bytes)
+SpritePAL: ; Include Sprite Pallete (64 Bytes)
+  file 'Cannon.pal' ; Include Sprite Pallete (32 Bytes)
+  file 'Bullet.pal' ; Include Sprite Pallete (32 Bytes)

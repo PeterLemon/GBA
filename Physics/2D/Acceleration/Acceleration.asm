@@ -91,7 +91,7 @@ start:
   mov r2,VPAL ; Load BG Palette Address
   strh r1,[r2] ; Store BG Color To BG Palette
 
-  ; Car OBJ
+  ; Car Sprite
   mov r1,OAM ; R1 = OAM ($7000000)
   imm32 r2,(SQUARE+COLOR_256+48+ROTATION_FLAG)+((SIZE_64+88) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
@@ -99,7 +99,7 @@ start:
   str r2,[r1]	; Store Attribute 2 To OAM
 
   DMA32 CarPAL, OBJPAL, 16 ; DMA OBJ Palette To Color Mem
-  DMA32 CarCHR, CHARMEM, 1024 ; DMA OBJ Bitmap Data To VRAM
+  DMA32 CarIMG, CHARMEM, 1024 ; DMA OBJ Image Data To VRAM
 
   mov r0,IO
   imm32 r1,MODE_0+BG2_ENABLE+OBJ_ENABLE+OBJ_MAP_1D
@@ -160,5 +160,5 @@ endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
 org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
-CarCHR: file 'Car.bin' ; Include Sprite Bitmap Data (4096 Bytes)
+CarIMG: file 'Car.img' ; Include Sprite Image Data (4096 Bytes)
 CarPAL: file 'Car.pal' ; Include Sprite Pallete (64 Bytes)

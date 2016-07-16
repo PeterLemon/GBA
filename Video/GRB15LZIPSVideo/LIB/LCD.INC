@@ -133,7 +133,7 @@ macro BGOAMWhiteFade {
 
 macro OAMAlpha {
   mov r11,IO ; GBA I/O Base Offset
-  adr r12,OBJTARG1ST or BG2TARG2ND ; Load r12 with values BG2 1st Target Pixel (2) and Alpah Blending (6-7)
+  adr r12,OBJTARG1ST or BG2TARG2ND ; Load r12 with values BG2 1st Target Pixel (2) and Alpha Blending (6-7)
   strh r12,[r11,BLDCNT] ; Set Blending Control
 }
 

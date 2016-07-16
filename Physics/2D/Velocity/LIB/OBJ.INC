@@ -1,11 +1,12 @@
-; OBJ
-ROTATION_FLAG    =  $100
-SIZE_DOUBLE      =  $200
-MODE_NORMAL      =    $0
+; OBJ/Sprite
+ROTATION_FLAG    =  $100 ; OAM OBJ Attribute 0 - OBJ Rotation/Scaling Flag (Bit 8)
+SIZE_DOUBLE      =  $200 ; OAM OBJ Attribute 0 - OBJ Double-Size Flag      (Bit 9)
+OBJ_DISABLE      =  $200 ; OAM OBJ Attribute 0 - OBJ Disable Flag          (Bit 9)
+MODE_NORMAL      =    $0 ; OAM OBJ Attribute 0 - OBJ Mode Normal           (Bit 10-11)
 MODE_TRANSPARENT =  $400 ; OAM OBJ Attribute 0 - OBJ Mode Semi-Transparent (Bit 10-11)
-MODE_WINDOWED    =  $800
-MOSAIC           = $1000
-COLOR_16         =    $0
+MODE_WINDOWED    =  $800 ; OAM OBJ Attribute 0 - OBJ Mode Windowed         (Bit 10-11)
+MOSAIC           = $1000 ; OAM OBJ Attribute 0 - OBJ Mosaic Enable Flag    (Bit 12)
+COLOR_16         =    $0 ; OAM OBJ Attribute 0 - 16 Colors / 16 Palettes   (Bit 13)
 COLOR_256        = $2000 ; OAM OBJ Attribute 0 - 256 Colors / 1 Palette    (Bit 13)
 SQUARE           =    $0 ; OAM OBJ Attribute 0 - OBJ Shape Square          (Bit 14-15)
 TALL             = $8000 ; OAM OBJ Attribute 0 - OBJ Shape Tall            (Bit 14-15)
@@ -18,7 +19,7 @@ SIZE_16          = $4000 ; OAM OBJ Attribute 1 - OBJ Size 16               (Bit 
 SIZE_32          = $8000 ; OAM OBJ Attribute 1 - OBJ Size 32               (Bit 14-15)
 SIZE_64          = $C000 ; OAM OBJ Attribute 1 - OBJ Size 64               (Bit 14-15)
 
-PALETTE_0        = $0000 ; OAM OBJ Attribute 2 - Palette Number 0          (Bit 12-15)
+PALETTE_0        =    $0 ; OAM OBJ Attribute 2 - Palette Number 0          (Bit 12-15)
 PALETTE_1        = $1000 ; OAM OBJ Attribute 2 - Palette Number 1          (Bit 12-15)
 PALETTE_2        = $2000 ; OAM OBJ Attribute 2 - Palette Number 2          (Bit 12-15)
 PALETTE_3        = $3000 ; OAM OBJ Attribute 2 - Palette Number 3          (Bit 12-15)

@@ -1,4 +1,4 @@
-; Game Boy Advance 'Bare Metal' BG Rotate & Zoom Demo by krom (Peter Lemon):
+; Game Boy Advance 'Bare Metal' BG Mode 2 Rotate & Zoom Demo by krom (Peter Lemon):
 ; Direction Pad Changes BG X/Y Position
 ; L/R Buttons Rotate BG Anti-Clockwise/Clockwise
 ; A/B Buttons Zoom BG Out/In
@@ -69,9 +69,9 @@ macro Control { ; - Macro to handle all control input
   ; Reset IF Select Pressed
   ands r2,r1,#KEY_SELECT ; Test Select Button
   bne ControlResetEnd ; IF (Select Not Pressed) Skip To ControlResetEnd
-  mov r2,$00007800 ; R2 = Default Screen Center X
+  mov r2,$00020000 ; R2 = Default Screen Center X
   str r2,[r0,0] ; Store Screen Center X To Parameter Table
-  mov r2,$00005000 ; R2 = Default Screen Center Y
+  mov r2,$00020000 ; R2 = Default Screen Center Y
   str r2,[r0,4] ; Store Screen Center Y To Parameter Table
   mov r2,$0078 ; R2 = Default Screen X Of Center
   strh r2,[r0,8] ; Store Screen X Of Center To Parameter Table
@@ -108,8 +108,8 @@ startcode:
 ; Variable Data
 BGAffineSource: ; Memory Area Used To Set BG Affine Transformations Using BIOS Call
   ; Center Of Rotation In Original Image (Last 8-Bits Fractional)
-  dw $00007800 ; X
-  dw $00005000 ; Y
+  dw $00020000 ; X
+  dw $00020000 ; Y
   ; Center Of Rotation On Screen
   dh $0078 ; X
   dh $0050 ; Y
@@ -123,14 +123,16 @@ BGAffineSource: ; Memory Area Used To Set BG Affine Transformations Using BIOS C
 
 start:
   mov r0,IO
-  mov r1,MODE_3
+  mov r1,MODE_2
   orr r1,BG2_ENABLE
   str r1,[r0]
 
-  mov r1,0000000001000000b ; Enable Mosaic
+  imm16 r1,1100100001000000b ; BG Tile Offset = 0, Enable Mosaic, BG Map Offset = 16384, Map Size = 128x128 Tiles
   str r1,[r0,BG2CNT]
 
-  DMA32 BG, VRAM, 19200 ; DMA BG To VRAM
+  DMA32 BGPAL, VPAL, 16 ; DMA BG Palette To Color Mem
+  DMA32 BGIMG, VRAM, 2736 ; DMA BG Image To VRAM
+  DMA32 BGMAP, VRAM+16384, 4096 ; DMA BG Map To VRAM
 
 Loop:
     VBlank  ; Wait Until VBlank
@@ -141,4 +143,6 @@ endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
 org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
-BG: file 'BG.bin' ; Include BG GFX Data (76800 Bytes)
+BGIMG: file 'BG.img' ; Include BG Image Data (10944 Bytes)
+BGMAP: file 'BG.map' ; Include BG Map Data (16384 Bytes)
+BGPAL: file 'BG.pal' ; Include BG Palette Data (64 Bytes)

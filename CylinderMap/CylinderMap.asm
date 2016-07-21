@@ -3,7 +3,6 @@ format binary as 'gba'
 include 'LIB\FASMARM.INC'
 include 'LIB\LCD.INC'
 include 'LIB\MEM.INC'
-include 'LIB\KEYPAD.INC'
 include 'LIB\DMA.INC'
 org $8000000
 b copycode
@@ -63,7 +62,7 @@ Loop:
 
 
   add r1,1 ; Increment X Offset
-  cmp r1,WIDTH   ; IF (X Offset >= WIDTH)
+  cmp r1,WIDTH	 ; IF (X Offset >= WIDTH)
   subge r1,WIDTH ; X Offset -= WIDTH
 
   b Loop

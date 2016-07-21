@@ -14,34 +14,32 @@ org $8000000
 b copycode
 times $80000C0-($-0) db 0
 
-macro Control { ; - Macro to handle all control input
-  mov r0,IO ; GBA I/O Base Offset
-  ldr r1,[r0,KEYINPUT] ; R1 = Key Input
+macro Control { ; Macro To Handle Control Input
   mov r0,OBJAffineSource ; R0 = Address Of Parameter Table
+  mov r1,IO ; R1 = GBA I/O Base Offset
+  ldr r2,[r1,KEYINPUT] ; R2 = Key Input
 
   ; Accelerate Car With A
-  ands r2,r1,#KEY_A ; Test A Button
-  imm32eq r2,CarSpeed ; R2 = Car Speed Of Velocity Address
-  ldreq r3,[r2] ; R3 = Car Speed Of Velocity
-  ldreq r4,[r2,4] ; R4 = Car Acceleration Amount
+  tst r2,KEY_A ; Test A Button
+  ldreq r3,[r0,16] ; R3 = Car Speed Of Velocity
+  ldreq r4,[r0,20] ; R4 = Car Acceleration Amount
   addeq r3,r4 ; Car Speed Of Velocity += Car Acceleration Amount
-  streq r3,[r2] ; Store Car Speed Of Velocity
+  streq r3,[r0,16] ; Store Car Speed Of Velocity
 
   ; Deccelerate Car With B
-  ands r2,r1,#KEY_B ; Test B Button
-  imm32eq r2,CarSpeed ; R2 = Car Speed Of Velocity Address
-  ldreq r3,[r2] ; R3 = Car Speed Of Velocity
-  ldreq r4,[r2,4] ; R4 = Car Acceleration Amount
+  tst r2,KEY_B ; Test B Button
+  ldreq r3,[r0,16] ; R3 = Car Speed Of Velocity
+  ldreq r4,[r0,20] ; R4 = Car Acceleration Amount
   subeq r3,r4 ; Car Speed Of Velocity -= Car Acceleration Amount
-  streq r3,[r2] ; Store Car Speed Of Velocity
+  streq r3,[r0,16] ; Store Car Speed Of Velocity
 
   ; Rotate On Left & Right
-  ldrh r2,[r0,4] ; R2 = Rotation Variable
-  ands r3,r1,#KEY_LEFT ; Test Left Button
-  addeq r2,r2,$0200 ; IF (L Pressed) Rotate += 512 (Anti-Clockwise)
-  ands r3,r1,#KEY_RIGHT ; Test Right Button
-  subeq r2,r2,$0200 ; IF (R Pressed) Rotate -= 512 (Clockwise)
-  strh r2,[r0,4] ; Store Rotate To Parameter Table (Rotation)
+  ldrh r3,[r0,4] ; R3 = Rotation Variable
+  tst r2,KEY_LEFT ; Test Left Button
+  addeq r3,512 ; IF (L Pressed) Rotate += 512 (Anti-Clockwise)
+  tst r2,KEY_RIGHT ; Test Right Button
+  subeq r3,512 ; IF (R Pressed) Rotate -= 512 (Clockwise)
+  strh r3,[r0,4] ; Store Rotate To Parameter Table (Rotation)
 
   imm32 r1,PA_0 ; Update OBJ Parameters
   mov r2,1 ; (BIOS Call Requires R0 To Point To Parameter Table)

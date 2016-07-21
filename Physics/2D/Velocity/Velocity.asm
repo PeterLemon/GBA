@@ -13,24 +13,23 @@ org $8000000
 b copycode
 times $80000C0-($-0) db 0
 
-macro Control { ; - Macro to handle all control input
-  mov r0,IO ; GBA I/O Base Offset
-  ldr r1,[r0,KEYINPUT] ; R1 = Key Input
+macro Control { ; Macro To Handle Control Input
   mov r0,OBJAffineSource ; R0 = Address Of Parameter Table
+  mov r1,IO ; R1 = GBA I/O Base Offset
+  ldr r2,[r1,KEYINPUT] ; R2 = Key Input
 
   ; Fire Bullet On B
-  ands r2,r1,#KEY_B ; Test B Button
-  imm32eq r2,FireFlag
+  tst r2,KEY_B ; Test B Button
   moveq r3,1 ; Set Fire Flag To 1 (Fired)
-  strbeq r3,[r2] ; Store Fire Flag
+  strbeq r3,[r0,6] ; Store Fire Flag
 
   ; Rotate On L & R
-  ldrh r2,[r0,4] ; R2 = Rotation Variable
-  ands r3,r1,#KEY_L ; Test L Button
-  addeq r2,r2,$0100 ; IF (L Pressed) Rotate += 256 (Anti-Clockwise)
-  ands r3,r1,#KEY_R ; Test R Button
-  subeq r2,r2,$0100 ; IF (R Pressed) Rotate -= 256 (Clockwise)
-  strh r2,[r0,4] ; Store Rotate To Parameter Table (Rotation)
+  ldrh r3,[r0,4] ; R3 = Rotation Variable
+  tst r2,KEY_L ; Test L Button
+  addeq r3,256 ; IF (L Pressed) Rotate += 256 (Anti-Clockwise)
+  tst r2,KEY_R ; Test R Button
+  subeq r3,256 ; IF (R Pressed) Rotate -= 256 (Clockwise)
+  strh r3,[r0,4] ; Store Rotate To Parameter Table (Rotation)
 
   imm32 r1,PA_0 ; Update OBJ Parameters
   mov r2,1 ; (BIOS Call Requires R0 To Point To Parameter Table)

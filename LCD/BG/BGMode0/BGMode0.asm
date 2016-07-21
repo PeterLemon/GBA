@@ -15,45 +15,45 @@ org $8000000
 b copycode
 times $80000C0-($-0) db 0
 
-macro Control { ; Macro to handle all control input
-  mov r0,IO ; R0 = GBA I/O Base Offset
-  ldr r1,[r0,KEYINPUT] ; R1 = Key Input
-  mov r2,BGSource ; R2 = Address Of Parameter Table
+macro Control { ; Macro To Handle Control Input
+  mov r0,BGSource ; R0 = Address Of Parameter Table
+  mov r1,IO ; R1 = GBA I/O Base Offset
+  ldr r2,[r1,KEYINPUT] ; R2 = Key Input
 
   ; Move Left & Right
-  ldrh r3,[r2,0] ; R3 = X Offset
-  tst r1,KEY_RIGHT ; Test Right Direction Pad Button
+  ldrh r3,[r0,0] ; R3 = X Offset
+  tst r2,KEY_RIGHT ; Test Right Direction Pad Button
   addeq r3,1 ; IF (Right Pressed) X Offset ++
-  tst r1,KEY_LEFT ; Test Left Direction Pad Button
+  tst r2,KEY_LEFT ; Test Left Direction Pad Button
   subeq r3,1 ; IF (Left Pressed) X Offset --
-  strh r3,[r0,BG2HOFS] ; Store X Offset To BG2 X-Offset Register
-  strh r3,[r2,0] ; Stores X Offset To Parameter Table
+  strh r3,[r1,BG2HOFS] ; Store X Offset To BG2 X-Offset Register
+  strh r3,[r0,0] ; Stores X Offset To Parameter Table
 
   ; Move Up & Down
-  ldrh r3,[r2,2] ; R3 = Y Offset
-  tst r1,KEY_DOWN ; Test Down Direction Pad Button
+  ldrh r3,[r0,2] ; R3 = Y Offset
+  tst r2,KEY_DOWN ; Test Down Direction Pad Button
   addeq r3,1 ; IF (Down Pressed) Y Offset ++
-  tst r1,KEY_UP ; Test Up Direction Pad Button
+  tst r2,KEY_UP ; Test Up Direction Pad Button
   subeq r3,1 ; IF (Up Pressed) Y Offset --
-  strh r3,[r0,BG2VOFS] ; Store Y Offset To BG2 Y-Offset Register
-  strh r3,[r2,2] ; Stores Y Offset To Parameter Table
+  strh r3,[r1,BG2VOFS] ; Store Y Offset To BG2 Y-Offset Register
+  strh r3,[r0,2] ; Stores Y Offset To Parameter Table
 
   ; Mosaic Level Increased IF Start Pressed
-  ldrh r3,[r2,4] ; R3 = Mosaic Variable
-  tst r1,KEY_START ; Test Start Button
+  ldrh r3,[r0,4] ; R3 = Mosaic Variable
+  tst r2,KEY_START ; Test Start Button
   addeq r3,17 ; IF (Start Pressed) Mosaic += 17 (X & Y Size At Same Time)
-  cmp r3,$FF ; IF (Mosaic > 255) (255 = Full X & Y Mosaic Resolution)
+  cmp r3,255 ; IF (Mosaic > 255) (255 = Full X & Y Mosaic Resolution)
   movgt r3,0 ; Mosaic = 0 (Mosaic Reset)
-  strh r3,[r0,MOSAIC] ; Store Mosaic Amount To Mosaic Register
-  strh r3,[r2,4] ; Store Mosaic Amount To Parameter Table
+  strh r3,[r1,MOSAIC] ; Store Mosaic Amount To Mosaic Register
+  strh r3,[r0,4] ; Store Mosaic Amount To Parameter Table
 
   ; Reset IF Select Pressed
-  tst r1,KEY_SELECT ; Test Select Button
+  tst r2,KEY_SELECT ; Test Select Button
   bne ControlResetEnd ; IF (Select Not Pressed) Skip To ControlResetEnd
   mov r3,$0000 ; R3 = Default Screen X/Y Offset & Mosaic Amount
-  strh r3,[r2,0] ; Store Default Screen X Offset To Parameter Table
-  strh r3,[r2,2] ; Store Default Screen Y Offset To Parameter Table
-  strh r3,[r2,4] ; Store Default Mosaic To Parameter Table
+  strh r3,[r0,0] ; Store Default Screen X Offset To Parameter Table
+  strh r3,[r0,2] ; Store Default Screen Y Offset To Parameter Table
+  strh r3,[r0,4] ; Store Default Mosaic To Parameter Table
   ControlResetEnd:
 }
 

@@ -313,4 +313,4 @@ endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
 org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
-BG: file 'BG.bin' ; Include BG GFX Data (76800 Bytes)
+BG: file 'BG.img' ; Include BG Image Data (76800 Bytes)

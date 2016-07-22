@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Dont run away Javascript may take a while...</title>
+<style>
+html,body
+{
+height: 100%;
+width: 100%;
+overflow-x: hidden;
+overflow-y: auto;
+}
+
+div
+{
+	font-size: 4em;
+}
+
+div.outputtable
+{
+	float: left;
+}
+
+</style>
+
+<script language="JavaScript" type="text/javascript">
+function updateWave()
+{
+	points = document.getElementById('points').value;
+	shift = document.getElementById('shift').value;
+	if (shift)
+	{
+			multiplier = 1 << shift;
+	}
+
+	if (parseInt(points) == 0)
+	{
+		return;
+	}
+
+	if (parseInt(multiplier) == 0)
+	{
+		return;
+	}
+
+	twoPI = Math.PI * 2;
+	sineTable = '<table border="1">';
+	for(i = 0; i < points; i++)
+	{
+		sinval = Math.sin((twoPI / points) * i) * multiplier;
+		sineTable = sineTable + '<tr><td>' + Math.round(sinval) + '</td></tr>\n';
+	}
+	sineTable = sineTable + '</table>';
+	var outputDiv = document.getElementById('output');
+	outputDiv.innerHTML = sineTable;
+
+	sineTable = '<textarea rows="' + points + '" >\n';
+
+	for(i = 0; i < points; i++)
+	{
+		sinval = Math.sin((twoPI / points) * i) * multiplier;
+		cosval = Math.cos((twoPI / points) * i) * multiplier;
+		sineTable = sineTable + 'dh ' + -Math.round(sinval) + ", " + -Math.round(cosval) + '\n';
+	}
+	sineTable = sineTable + '</textarea>';
+	var outputDiv = document.getElementById('javaoutput');
+	outputDiv.innerHTML = sineTable;
+}
+</script>
+
+</head>
+<body id="body" style="margin: 0px; background-color: white; font-size: 4px" onload="updateWave()">
+<div class="text">
+<h1>Sine Cosine Generator</h1>
+
+Points<input type="text" id="points" name="points" value="10" onchange="updateWave()" />
+
+Shift<input type="text" id="shift" name="shift" value="1" onchange="updateWave()" />
+
+
+</div>
+<div id="output" class="outputtable"></div>
+<div id="javaoutput" class="outputtable">a test</div>
+
+</body></html>

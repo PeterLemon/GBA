@@ -1,5 +1,5 @@
 ; Game Boy Advance 'Bare Metal' Physics Gravity Demo by krom (Peter Lemon):
-; Left/Right Buttons Turn Car Anti-Clockwise/Clockwise
+; Left/Right Buttons Rotate Ship Anti-Clockwise/Clockwise
 ; A Button Thrust Ship OBJ
 
 format binary as 'gba'

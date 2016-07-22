@@ -68,7 +68,7 @@ BulletX:
 BulletY:
   dw 64*65536 ; Bullet Y = 64 (Fixed Point 16.16)
 BulletSpeed:
-  dw 1024 ; Bullet Speed Of Velocity
+  dw 2048 ; Bullet Speed Of Velocity
 
 include 'sincos256.asm' ; Sin & Cos Pre-Calculated Table (256 Rotations)
 
@@ -128,10 +128,10 @@ Loop:
       ; Load X & Y Scale (Cosine Of The Angle)
       imm32 r0,SinCos256 ; Load Sin & Cos Pre-Calculated Table (COS Position)
       lsr r3,8 ; Angle Of Rotation >>= 8
-      lsl r3,2 ; Angle Of Rotation <<= 2
-      ldrsh r5,[r0,r3] ; R5 = X Scale COS(Angle)
-      add r0,2 ; SIN Position
-      ldrsh r6,[r0,r3] ; R6 = Y Scale SIN(Angle)
+      lsl r3,1 ; Angle Of Rotation <<= 1
+      ldrsb r5,[r0,r3] ; R5 = X Scale COS(Angle)
+      add r0,1 ; SIN Position
+      ldrsb r6,[r0,r3] ; R6 = Y Scale SIN(Angle)
 
       ; Load X & Y Velocity (Speed * Scale)
       mul r5,r4 ; R5 = X Velocity (Speed Of Velocity * X Scale)

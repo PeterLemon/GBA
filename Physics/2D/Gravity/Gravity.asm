@@ -28,10 +28,10 @@ macro Control { ; Macro To Handle Control Input
   ; Load X & Y Scale (Cosine Of The Angle)
   imm32 r4,SinCos256 ; Load Sin & Cos Pre-Calculated Table (COS Position)
   lsr r3,8 ; Angle Of Rotation >>= 8
-  lsl r3,2 ; Angle Of Rotation <<= 2
-  ldrsh r5,[r4,r3] ; R5 = X Scale COS(Angle)
-  add r4,2 ; SIN Position
-  ldrsh r6,[r4,r3] ; R6 = Y Scale SIN(Angle)
+  lsl r3,1 ; Angle Of Rotation <<= 1
+  ldrsb r5,[r4,r3] ; R5 = X Scale COS(Angle)
+  add r4,1 ; SIN Position
+  ldrsb r6,[r4,r3] ; R6 = Y Scale SIN(Angle)
 
   ; Load Speed Of Velocity
   ldr r3,[r0,24] ; R3 = Speed Of Velocity
@@ -97,7 +97,7 @@ ShipXVelocity:
 ShipYVelocity:
   dw 0 ; Ship Y Velocity
 ShipSpeed:
-  dw 20 ; Ship Speed Of Velocity
+  dw 40 ; Ship Speed Of Velocity
 Gravity:
   dw 2048 ; Gravity
 

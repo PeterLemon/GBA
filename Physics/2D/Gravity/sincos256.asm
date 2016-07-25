@@ -1,4 +1,4 @@
-SinCos256: ; 256 Rotations (Cos, -Sin, Sin, -Cos)
+SinCos256: ; 256 Rotations (Cos, Sin)
 db 0, -128
 db -3, -128
 db -6, -128

@@ -1,5 +1,4 @@
 DIVLUT: ; Division LUT 160 * (65536 / 1..160) (Last 8-Bits Fractional)
-dh 65535 ; lu_div Scanline 1
 dh 32768 ; lu_div Scanline 2
 dh 21845 ; lu_div Scanline 3
 dh 16384 ; lu_div Scanline 4
@@ -159,3 +158,4 @@ dh 417 ; lu_div Scanline 157
 dh 415 ; lu_div Scanline 158
 dh 412 ; lu_div Scanline 159
 dh 410 ; lu_div Scanline 160
+dh 65535 ; lu_div Scanline 1

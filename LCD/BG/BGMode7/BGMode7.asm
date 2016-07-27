@@ -1,4 +1,4 @@
-; Game Boy Advance 'Bare Metal' BG Mode 7 H-Blank DMA Demo by krom (Peter Lemon):
+; Game Boy Advance 'Bare Metal' BG Mode 7 H-Blank Interrupt Demo by krom (Peter Lemon):
 ; Special Thanks To Cearn For The Tonc Mode7 Tutorials
 ; Direction Pad Changes BG Mode7 X/Z Position
 ; A/B Buttons Changes BG Mode7 Y Position (Height)
@@ -11,17 +11,86 @@ include 'LIB\LCD.INC'
 include 'LIB\MEM.INC'
 include 'LIB\KEYPAD.INC'
 include 'LIB\DMA.INC'
+include 'LIB\INTERRUPT.INC'
 org $8000000
 b copycode
 times $80000C0-($-0) db 0
 
-macro MODE7Calc { ; Macro To Calculate Mode7 Scanline (R12 = Scanline)
-  local .WaitScanline
+copycode:
+  adr r1,startcode
+  mov r2,IWRAM
+  imm32 r3,endcopy
+  clp:
+    ldr r0,[r1],4
+    str r0,[r2],4
+    cmp r2,r3
+    bmi clp
+  imm32 r2,start
+  bx r2
+startcode:
+  org IWRAM
+
+; Variable Data
+M7_D:
+ dw 128
+
+cam_pos_x:
+ dw 10 * 256 ; Camera Position X, .8f
+cam_pos_y:
+ dw 80 * 256 ; Camera Position Y, .8f
+cam_pos_z:
+ dw 512 * 256 ; Camera Position Z, .8f
+
+g_cosf:
+ dh 0 * 256 ; cos(phi), .8f
+g_sinf:
+ dh 1 * 256 ; sin(phi), .8f
+
+r_angle:
+ dw 0 ; Angle Of Rotation
+
+include 'DIVLUT.asm' ; Include Division LUT
+
+include 'sincos256.asm' ; Sin & Cos Pre-Calculated Table (256 Rotations)
+
+align 4
+start:
+  mov r0,IO
+  mov r1,MODE_2
+  orr r1,BG2_ENABLE
+  str r1,[r0]
+
+  imm16 r1,1100100000000000b ; BG Tile Offset = 0, BG Map Offset = 16384, Map Size = 128x128 Tiles
+  str r1,[r0,BG2CNT]
+
+  DMA32 BGPAL, VPAL, 16 ; DMA BG Palette To Color Mem
+  DMA32 BGIMG, VRAM, 2736 ; DMA BG Image To VRAM
+  DMA32 BGMAP, VRAM+16384, 4096 ; DMA BG Map To VRAM
+
+  ; Interrupt Service Routine (ISR)
+  imm32 r1,MODE7CalcHBL ; R1 = H-Blank Interrupt Routine (ISR)
+  imm32 r2,ISR ; R2 = ISR Address ($03007FFC)
+  str r1,[r2] ; Store H-Blank Interrupt Routine Offset To ISR Address
+
+  mov r1,00010000b ; R1 = H-Blank IRQ
+  strb r1,[r0,DISPSTAT] ; Set DISPSTAT To Fire H-Blank Interrupt ($4000004)
+  mov r1,00000010b ; R1 = H-Blank IRQ
+  mov r2,IE ; R2 = IE
+  strh r1,[r0,r2] ; Set IE To Catch H-Blank Interrupt ($4000200)
+  mov r1,1 ; R1 = 1
+  mov r2,IME ; R2 = IME
+  strh r1,[r0,r2] ; Set IME To Enable Interrupt ($4000208)
+
+MODE7Loop: ; Label To Loop Mode 7 Scanlines
+  b MODE7Loop
+
+MODE7CalcHBL: ; Calculate Mode7 Scanline (H-Blank Routine)
   mov r0,IO ; R0 = GBA I/O Base Offset
-  .WaitScanline: ; Label loop to wait the correct amount of scanlines
-    ldrh r1,[r0,VCOUNT] ; R1 = Current LCD Scanline Position
-    cmp r1,r12 ; Compare To Scanline
-    bne .WaitScanline ; IF (Scanline != Amount) Wait Scanline
+  ldrh r12,[r0,VCOUNT] ; R12 = Current LCD Scanline Position
+
+  cmp r12,160 ; Compare VCOUNT To 160 (V-Blank)
+  beq ControlHBL ; IF (VCOUNT = 160) Run Control H-Blank Routine
+  bgt NoInterrupt ; IF (VCOUNT > 160) No Interrupt
 
   ; --- Type C ---
   ; (Offset * Zoom) * Rotation
@@ -88,10 +157,13 @@ macro MODE7Calc { ; Macro To Calculate Mode7 Scanline (R12 = Scanline)
   sub r9,r5
   sub r9,r4
   str r9,[r0,BG2Y] ; Store REG_BG2Y
-}
 
-macro Control { ; Macro To Handle Control Input
-  mov r0,IO ; R0 = GBA I/O Base Offset
+  mov r1,2 ; R1 = H-Blank
+  imm16 r2,IF_ACK ; R2 = IF_ACK
+  strh r1,[r0,r2] ; Set IF_ACK To Acknowledge H-Blank Interrupt ($4000202)
+  bx lr ; Return From Interrupt Routine
+
+ControlHBL: ; Control Input (H-Blank Routine)
   ldr r1,[r0,KEYINPUT] ; R1 = Key Input
   mov r2,M7_D ; R2 = Address Of Parameter Table
 
@@ -140,84 +212,19 @@ macro Control { ; Macro To Handle Control Input
   and r3,$FF ; R3 &= $FF
   strb r3,[r2,20] ; Store Rotation Angle Variable
 
-  imm32 r0,SinCos256 ; R0 = Sin & Cos Pre-Calculated Table
+  imm32 r1,SinCos256 ; R1 = Sin & Cos Pre-Calculated Table
   lsl r3,2 ; R3 *= 4 (Get To Correct Address In Sin & Cos)
-  ldrsh r4,[r0,r3] ; R4 = COS
+  ldrsh r4,[r1,r3] ; R4 = COS
   strh r4,[r2,16] ; Store COS
   add r3,2 ; R3 += 2
-  ldrsh r4,[r0,r3] ; R4 = SIN
+  ldrsh r4,[r1,r3] ; R4 = SIN
   strh r4,[r2,18] ; Store SIN
-}
 
-copycode:
-  adr r1,startcode
-  mov r2,IWRAM
-  imm32 r3,endcopy
-  clp:
-    ldr r0,[r1],4
-    str r0,[r2],4
-    cmp r2,r3
-    bmi clp
-  imm32 r2,start
-  bx r2
-startcode:
-  org IWRAM
-
-; Variable Data
-M7_D:
- dw 128
-
-cam_pos_x:
- dw 10 * 256 ; Camera Position X, .8f
-cam_pos_y:
- dw 80 * 256 ; Camera Position Y, .8f
-cam_pos_z:
- dw 512 * 256 ; Camera Position Z, .8f
-
-g_cosf:
- dh 0 * 256 ; cos(phi), .8f
-g_sinf:
- dh 1 * 256 ; sin(phi), .8f
-
-r_angle:
- dw 0 ; Angle Of Rotation
-
-include 'DIVLUT.asm' ; Include Division LUT
-
-include 'sincos256.asm' ; Sin & Cos Pre-Calculated Table (256 Rotations)
-
-MODE7Count: ; Mode7 Count (0-160)
-  db $00 ; Set To zero
-
-align 4
-start:
-  mov r0,IO
-  mov r1,MODE_2
-  orr r1,BG2_ENABLE
-  str r1,[r0]
-
-  imm16 r1,1100100000000000b ; BG Tile Offset = 0, BG Map Offset = 16384, Map Size = 128x128 Tiles
-  str r1,[r0,BG2CNT]
-
-  DMA32 BGPAL, VPAL, 16 ; DMA BG Palette To Color Mem
-  DMA32 BGIMG, VRAM, 2736 ; DMA BG Image To VRAM
-  DMA32 BGMAP, VRAM+16384, 4096 ; DMA BG Map To VRAM
-
-MODE7Loop: ; Label To Loop Mode 7 Scanlines
-  imm32 r11,MODE7Count ; R11 = Mode7 Count
-  ldrb r12,[r11] ; R12 = Mode7 Count
-  MODE7Calc ; Run Mode7 Calculation
-  add r12,1 ; R12++
-  strb r12,[r11] ; Store Mode7 Count
-  cmp r12,161 ; Compares Mode7 Count To 161 (Bottom Of Screen)
-  bne MODE7Loop ; IF (Mode7 Count != 161) Mode7 Loop
-
-  mov r12,0 ; R12 = 0 (Reset Mode7 Count)
-  strb r12,[r11] ; Store Mode7 Count
-
-  Control ; Update Mode7 BG According To Controls
-
-  b MODE7Loop
+NoInterrupt:
+  mov r1,2 ; R1 = H-Blank
+  imm16 r2,IF_ACK ; R2 = IF_ACK
+  strh r1,[r0,r2] ; Set IF_ACK To Acknowledge H-Blank Interrupt ($4000202)
+  bx lr ; Return From Interrupt Routine
 
 endcopy: ; End Of Program Copy Code
 

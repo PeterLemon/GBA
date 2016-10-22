@@ -171,7 +171,7 @@ macro DrawLine x1, y1, x2, y2, col { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X,
   .LineEnd: ; End of Line Drawing
 }
 
-macro DrawLineZBuf x1, y1, z1, x2, y2, z2, col { ; x1 = Point1X, y1 = Point1Y, z1 = Point1Z x2 = Point2X, y2 = Point2Y, z2 = Point2Z, col = Colour
+macro DrawLineZBuf x1, y1, z1, x2, y2, z2, col { ; x1 = Point1X, y1 = Point1Y, z1 = Point1Z, x2 = Point2X, y2 = Point2Y, z2 = Point2Z, col = Colour
   local .divZPos, .divZNeg, .endZ, .LoopX, .SkipPixelX, .LoopY, .SkipPixelY, .LineEnd
   mov r0,WRAM ; R0 = WRAM Base Pointer
 

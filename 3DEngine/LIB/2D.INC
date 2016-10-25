@@ -120,8 +120,8 @@ macro DrawLine x1, y1, x2, y2, col { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X,
   sub r4,y2,y1 ; Y2 - Y1 ABS(DY)
 
   cmp r2,r4 ; Compare DX To DY
-  movgt y2,r2,lsr 1 ; IF (DX >	DY), Y2 = DX / 2 (X Error)
-  movle x2,r4,lsr 1 ; IF (DX <= DY), X2 = DY / 2 (Y Error)
+  lsrgt y2,r2,1 ; IF (DX > DY), Y2 = DX / 2 (X Error)
+  lsrle x2,r4,1 ; IF (DX <= DY), X2 = DY / 2 (Y Error)
   ble .LoopY
 
   .LoopX:
@@ -215,8 +215,8 @@ macro DrawLineZBuf x1, y1, z1, x2, y2, z2, col { ; x1 = Point1X, y1 = Point1Y, z
   .endZ: ; Z2 = Quotient (SZ)
 
   cmp r2,r4 ; Compare DX To DY
-  movgt y2,r2,lsr 1 ; IF (DX >	DY), Y2 = DX / 2 (X Error)
-  movle x2,r4,lsr 1 ; IF (DX <= DY), X2 = DY / 2 (Y Error)
+  lsrgt y2,r2,1 ; IF (DX >	DY), Y2 = DX / 2 (X Error)
+  lsrle x2,r4,1 ; IF (DX <= DY), X2 = DY / 2 (Y Error)
   ble .LoopY
 
   .LoopX:
@@ -306,8 +306,8 @@ macro ScanLine x1, y1, x2, y2, side { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X
   sub r3,y2,y1 ; Y2 - Y1 ABS(DY)
 
   cmp r1,r3 ; Compare DX To DY
-  movgt y2,r1,lsr 1 ; IF (DX >	DY), Y2 = DX / 2 (X Error)
-  movle x2,r3,lsr 1 ; IF (DX <= DY), X2 = DY / 2 (Y Error)
+  lsrgt y2,r1,1 ; IF (DX > DY), Y2 = DX / 2 (X Error)
+  lsrle x2,r3,1 ; IF (DX <= DY), X2 = DY / 2 (Y Error)
   ble .LoopY
 
   .LoopX:
@@ -319,7 +319,7 @@ macro ScanLine x1, y1, x2, y2, side { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X
     mvnlt r4,0
     cmp r4,SCREEN_X
     movge r4,SCREEN_X
-    mov r5,y1,lsl 1 ; Shift Pixel X Position To Scanline Buffer Y Position
+    lsl r5,y1,1 ; Shift Pixel X Position To Scanline Buffer Y Position
     strh r4,[r0,r5] ; Store Pixel X Position To Scanline Buffer Y Position
     .SkipPixelX:
 
@@ -340,7 +340,7 @@ macro ScanLine x1, y1, x2, y2, side { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X
     mvnlt r4,0
     cmp r4,SCREEN_X
     movge r4,SCREEN_X
-    mov r5,y1,lsl 1 ; Shift Pixel X Position To Scanline Buffer Y Position
+    lsl r5,y1,1 ; Shift Pixel X Position To Scanline Buffer Y Position
     strh r4,[r0,r5] ; Store Pixel X Position To Scanline Buffer Y Position
     .SkipPixelY:
 

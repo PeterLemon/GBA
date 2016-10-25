@@ -116,6 +116,7 @@ macro DrawLine x1, y1, x2, y2, col { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X,
   rsbmi r2,0 ; Convert R2 (DX) To ABS(DX)
   mvnlt r3,0 ; IF (X2 < X1), R3 (SX) = -1
   movgt r3,1 ; IF (X2 > X1), R3 (SX) =	1
+  moveq r3,0 ; IF (X2 == X1), R3 (SX) = 0
 
   sub r4,y2,y1 ; Y2 - Y1 ABS(DY)
 
@@ -189,8 +190,8 @@ macro DrawLineZBuf x1, y1, z1, x2, y2, z2, col { ; x1 = Point1X, y1 = Point1Y, z
   subs r2,x2,x1 ; X2 - X1
   rsbmi r2,0 ; Convert R2 (DX) To ABS(DX)
   mvnlt r3,0 ; IF (X2 < X1), R3 (SX) = -1
-  moveq r3,0
   movgt r3,1 ; IF (X2 > X1), R3 (SX) =	1
+  moveq r3,0 ; IF (X2 == X1), R3 (SX) = 0
 
   sub r4,y2,y1 ; Y2 - Y1 ABS(DY)
 
@@ -302,6 +303,7 @@ macro ScanLine x1, y1, x2, y2, side { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X
   rsbmi r1,0 ; Convert R1 (DX) To ABS(DX)
   mvnlt r2,0 ; IF (X2 < X1), R2 (SX) = -1
   movgt r2,1 ; IF (X2 > X1), R2 (SX) =	1
+  moveq r2,0 ; IF (X2 == X1), R2 (SX) = 0
 
   sub r3,y2,y1 ; Y2 - Y1 ABS(DY)
 

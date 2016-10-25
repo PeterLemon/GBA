@@ -108,7 +108,7 @@ ZRot: dw 0 ; Z Rotate Word (0..255) (Jump To Correct X Rotation Pre Calculated T
 Matrix3D: ; 3D Matrix: Set To Default Identity Matrix (All Numbers Multiplied By 256 For 24.8 Fixed Point Format)
   dw 256, 0, 0, 0 ; X = 1.0, 0.0, 0.0, X Translation = 0.0
   dw 0, 256, 0, 0 ; 0.0, Y = 1.0, 0.0, Y Translation = 0.0
-  dw 0, 0, 256, 25600 ; 0.0, 0.0, Z = 1.0, Z Translation = 0.0
+  dw 0, 0, 256, 25600 ; 0.0, 0.0, Z = 1.0, Z Translation = 100.0
 
 LineCache:
   dw 0, 0, 0 ; Cache 1st X, Y, Z Point In Line

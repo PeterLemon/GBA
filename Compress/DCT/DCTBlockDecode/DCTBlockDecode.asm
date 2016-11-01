@@ -73,69 +73,69 @@ Loop:
   b Loop
 
 DCT: ; Discrete Cosine Transform (DCT) 8x8 Result Matrix
-;dh 700,0,0,0,0,0,0,0 ; We Apply The IDCT To A Matrix, Only Containing A DC Value Of 700.
-;dh 0,0,0,0,0,0,0,0   ; It Will Produce A Grey Colored Square.
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
+  ;dh 700,0,0,0,0,0,0,0 ; We Apply The IDCT To A Matrix, Only Containing A DC Value Of 700.
+  ;dh 0,0,0,0,0,0,0,0   ; It Will Produce A Grey Colored Square.
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
 
-;dh 700,100,0,0,0,0,0,0 ; Now Let's Add An AC Value Of 100, At The 1st Position.
-;dh 0,0,0,0,0,0,0,0	; It Will Produce A Bar Diagram With A Curve Like A Half Cosine Line.
-;dh 0,0,0,0,0,0,0,0	; It Is Said It Has A Frequency Of 1 In X-Direction.
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
+  ;dh 700,100,0,0,0,0,0,0 ; Now Let's Add An AC Value Of 100, At The 1st Position.
+  ;dh 0,0,0,0,0,0,0,0     ; It Will Produce A Bar Diagram With A Curve Like A Half Cosine Line.
+  ;dh 0,0,0,0,0,0,0,0     ; It Is Said It Has A Frequency Of 1 In X-Direction.
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
 
-;dh 700,0,100,0,0,0,0,0 ; What Happens If We Place The AC Value Of 100 At The Next Position?
-;dh 0,0,0,0,0,0,0,0	; The Shape Of The Bar Diagram Shows A Cosine Line, Too.
-;dh 0,0,0,0,0,0,0,0	; But Now We See A Full Period.
-;dh 0,0,0,0,0,0,0,0	; The Frequency Is Twice As High As In The Previous Example.
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
+  ;dh 700,0,100,0,0,0,0,0 ; What Happens If We Place The AC Value Of 100 At The Next Position?
+  ;dh 0,0,0,0,0,0,0,0     ; The Shape Of The Bar Diagram Shows A Cosine Line, Too.
+  ;dh 0,0,0,0,0,0,0,0     ; But Now We See A Full Period.
+  ;dh 0,0,0,0,0,0,0,0     ; The Frequency Is Twice As High As In The Previous Example.
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
 
-;dh 700,100,100,0,0,0,0,0 ; But What Happens If We Place Both AC Values?
-;dh 0,0,0,0,0,0,0,0	  ; The Shape Of The Bar Diagram Is A Mix Of Both The 1st & 2nd Cosines.
-;dh 0,0,0,0,0,0,0,0	  ; The Resulting AC Value Is Simply An Addition Of The Cosine Lines.
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
+  ;dh 700,100,100,0,0,0,0,0 ; But What Happens If We Place Both AC Values?
+  ;dh 0,0,0,0,0,0,0,0       ; The Shape Of The Bar Diagram Is A Mix Of Both The 1st & 2nd Cosines.
+  ;dh 0,0,0,0,0,0,0,0       ; The Resulting AC Value Is Simply An Addition Of The Cosine Lines.
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
 
-;dh 700,100,100,0,0,0,0,0 ; Now Let's Add An AC Value At The Other Direction.
-;dh 200,0,0,0,0,0,0,0	  ; Now The Values Vary In Y Direction, Too. The Principle Is:
-;dh 0,0,0,0,0,0,0,0	  ; The Higher The Index Of The AC Value The Greater The Frequency Is.
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
-;dh 0,0,0,0,0,0,0,0
+  ;dh 700,100,100,0,0,0,0,0 ; Now Let's Add An AC Value At The Other Direction.
+  ;dh 200,0,0,0,0,0,0,0     ; Now The Values Vary In Y Direction, Too. The Principle Is:
+  ;dh 0,0,0,0,0,0,0,0       ; The Higher The Index Of The AC Value The Greater The Frequency Is.
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
+  ;dh 0,0,0,0,0,0,0,0
 
-dh 950,0,0,0,0,0,0,0 ; Placing An AC Value At The Opposite Side Of The DC Value.
-dh 0,0,0,0,0,0,0,0   ; The Highest Possible Frequency Of 8 Is Applied In Both X- & Y- Direction.
-dh 0,0,0,0,0,0,0,0   ; Because Of The High Frequency The Neighbouring Values Differ Numerously.
-dh 0,0,0,0,0,0,0,0   ; The Picture Shows A Checker-Like Appearance.
-dh 0,0,0,0,0,0,0,0
-dh 0,0,0,0,0,0,0,0
-dh 0,0,0,0,0,0,0,0
-dh 0,0,0,0,0,0,0,500
+  dh 950,0,0,0,0,0,0,0 ; Placing An AC Value At The Opposite Side Of The DC Value.
+  dh 0,0,0,0,0,0,0,0   ; The Highest Possible Frequency Of 8 Is Applied In Both X- & Y- Direction.
+  dh 0,0,0,0,0,0,0,0   ; Because Of The High Frequency The Neighbouring Values Differ Numerously.
+  dh 0,0,0,0,0,0,0,0   ; The Picture Shows A Checker-Like Appearance.
+  dh 0,0,0,0,0,0,0,0
+  dh 0,0,0,0,0,0,0,0
+  dh 0,0,0,0,0,0,0,0
+  dh 0,0,0,0,0,0,0,500
 
 CLUT: ; C Look Up Table (/2 Applied) (.16)
-dh 23170,32768,32768,32768,32768,32768,32768,32768
+  dh 23170,32768,32768,32768,32768,32768,32768,32768
 
 COSLUT: ; COS Look Up Table (S.16)
-dw 65536,65536,65536,65536,65536,65536,65536,65536
-dw 64277,54491,36410,12785,-12785,-36410,-54491,-64277
-dw 60547,25080,-25080,-60547,-60547,-25080,25080,60547
-dw 54491,-12785,-64277,-36410,36410,64277,12785,-54491
-dw 46341,-46341,-46341,46341,46341,-46341,-46341,46341
-dw 36410,-64277,12785,54491,-54491,-12785,64277,-36410
-dw 25080,-60547,60547,-25080,-25080,60547,-60547,25080
-dw 12785,-36410,54491,-64277,64277,-54491,36410,-12785
+  dw 65536,65536,65536,65536,65536,65536,65536,65536
+  dw 64277,54491,36410,12785,-12785,-36410,-54491,-64277
+  dw 60547,25080,-25080,-60547,-60547,-25080,25080,60547
+  dw 54491,-12785,-64277,-36410,36410,64277,12785,-54491
+  dw 46341,-46341,-46341,46341,46341,-46341,-46341,46341
+  dw 36410,-64277,12785,54491,-54491,-12785,64277,-36410
+  dw 25080,-60547,60547,-25080,-25080,60547,-60547,25080
+  dw 12785,-36410,54491,-64277,64277,-54491,36410,-12785

@@ -83,14 +83,14 @@ Start:
   LoopY: ; While Y
     mov r3,8 ; R3 = X
     LoopX: ; While X
-      ldrsh r4,[r0],2 ; R2 = IDCT Block Pixel
+      ldrsh r4,[r0],2 ; R4 = IDCT Block Pixel
       cmp r4,0 ; Compare Pixel To 0
       movlt r4,0 ; IF (Pixel < 0) Pixel = 0
       cmp r4,255 ; Compare Pixel To 255
       movgt r4,255 ; IF (Pixel > 255) Pixel = 255
-      lsr r4,3 ; R2 = 5-Bit Pixel
+      lsr r4,3 ; R4 = 5-Bit Pixel
       orr r4,r4,lsl 5
-      orr r4,r4,lsl 5 ; R2 = 15-BIT RGB Pixel
+      orr r4,r4,lsl 5 ; R4 = 15-BIT RGB Pixel
       strh r4,[r1],2 ; Store Pixel To VRAM
 
       subs r3,1 ; X--

@@ -15,7 +15,7 @@ Start:
   mov r12,WRAM ; R12 = DCT
   add r12,128
 
-  mov r0,63 ; R0 = 63
+  mov r0,64 ; R0 = 64
 
   ; DCT Block Decode (Inverse Quantization)
   QLoop:

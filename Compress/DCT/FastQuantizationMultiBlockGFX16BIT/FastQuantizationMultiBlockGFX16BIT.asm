@@ -21,7 +21,7 @@ Start:
   imm32 r11,DCTQBLOCKS ; R11 = DCTQ Blocks
   mov r12,WRAM ; R12 = DCT/IDCT
 
-  mov r0,(320/8)*(240/8) ; R0 = Block Count
+  mov r0,(240/8)*(160/8) ; R0 = Block Count
   QBlockLoop:
     mov r1,64 ; R1 = 64
 
@@ -252,7 +252,7 @@ Start:
   add r13,128 ; DCT/IDCT += 128
 
   mov r0,WRAM ; R0 = WRAM
-  add r0,(320*240)*2 ; R0 = WRAM End Offset
+  add r0,(240*160)*2 ; R0 = WRAM End Offset
   cmp r13,r0 ; Compare DCT/IDCT To WRAM End Offset
   bne LoopIDCT ; IF (DCT/IDCT != WRAM End Offset) Loop IDCT
 

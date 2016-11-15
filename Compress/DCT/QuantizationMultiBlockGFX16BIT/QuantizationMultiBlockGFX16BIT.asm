@@ -33,7 +33,7 @@ Start:
   ; DCT Block Decode (Inverse Quantization)
   QLoop:
     ldrb r1,[r10],1 ; R1 = Q, Q++
-    ldrsh r2,[r7],2 ; R2 = DCTQ, DCTQ++
+    ldrsh r2,[r7],2 ; R2 = DCTQ, DCTQ += 2
     mul r1,r2 ; R1 = DCTQ * Q
     strh r1,[r12],2 ; DCT = R1, DCT += 2
     subs r0,1 ; R0--

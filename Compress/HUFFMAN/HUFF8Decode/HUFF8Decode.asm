@@ -32,7 +32,7 @@ Start:
       cmp r1,r2 ; IF(Destination Address == Destination End Offset) H8End
       beq H8End
 
-      cmp r5,0 ; IF(Node Bit Shifter == 0) H8Loop
+      cmp r5,0 ; IF(Node Bit Shifter == 0) H8ChunkLoop
       beq H8ChunkLoop
 
       ldrb r6,[r0,r9] ; R6 = Next Node

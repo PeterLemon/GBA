@@ -32,7 +32,7 @@ macro Control {
 }
 
 macro DrawLine X0, Y0, X1, Y1, Colour {
-  local .LoopX, .SkipPixelX, .LoopY, .SkipPixelY, .LineEnd
+  local .LoopX, .LoopY, .LineEnd
   mov r0,X0 ; Moves X0 To R0 (X0)
   mov r1,Y0 ; Moves Y0 To R1 (Y0)
   mov r2,X1 ; Moves X1 To R2 (X1)
@@ -60,12 +60,11 @@ macro DrawLine X0, Y0, X1, Y1, Colour {
     mla r11,r1,r8,r0 ; Multiplies R2 (Y0) By R8 (Screen Width) To R2 (Y Byte Position), Add R8 To R0 (X0) To R11 (XY Byte Position)
     lsl r11,1 ; Double R11 (XY Byte Position) To R11 (XY Half Word Position)
     strh r9,[r10,r11] ; Store R9 (Colour) To R10 (VRAM Base Pointer) Added To R11 (XY VRAM Position)
-    .SkipPixelX:
 
     cmp r0,r2 ; While (X0 != X1)
     beq .LineEnd ; IF (X0 == X1), Branch To Line End
     subs r3,r5	; Subtract R5 (DY) From R3 (X Error) & Compare R3 (X Error) To Zero (X Error -= DY)
-    addlt r1,r7 ; IF (X Error < 0), Add R7 (SY) To R2 (Y0) (Y0 += SY)
+    addlt r1,r7 ; IF (X Error < 0), Add R7 (SY) To R1 (Y0) (Y0 += SY)
     addlt r3,r4 ; IF (X Error < 0), Add R4 (DX) To R3 (X Error) (X Error += DX)
     add r0,r6 ; Add R6 (SX) To R0 (X0) (X0 += SX)
     b .LoopX ; Loop Line Drawing
@@ -74,14 +73,13 @@ macro DrawLine X0, Y0, X1, Y1, Colour {
     mla r11,r1,r8,r0 ; Multiplies R2 (Y0) By R8 (Screen Width) To R2 (Y Byte Position), Add R8 To R0 (X0) To R11 (XY Byte Position)
     lsl r11,1 ; Double R11 (XY Byte Position) To R11 (XY Half Word Position)
     strh r9,[r10,r11] ; Store R9 (Colour) To R10 (VRAM Base Pointer) Added To R11 (XY VRAM Position)
-    .SkipPixelY:
 
     cmp r1,r3 ; While (Y0 != Y1)
     beq .LineEnd ; IF (Y0 == Y1), Branch To Line End
     subs r2,r4	; Subtract R4 (DX) From R1 (Y Error) & Compare R1 (Y Error) To Zero
     addlt r0,r6 ; IF (Y Error < 0), Add R6 (SX) To R0 (X0) (X0 += SX)
-    addlt r2,r5 ; IF (Y Error < 0), Add R5 (DY) To R1 (Y Error) (Y Error += DY)
-    add r1,r7 ; Add R7 (SY) To R2 (Y0) (Y0 += SY)
+    addlt r2,r5 ; IF (Y Error < 0), Add R5 (DY) To R2 (Y Error) (Y Error += DY)
+    add r1,r7 ; Add R7 (SY) To R1 (Y0) (Y0 += SY)
     b .LoopY ; Loop Line Drawing
 
   .LineEnd: ; End of Line Drawing

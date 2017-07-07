@@ -3647,9 +3647,8 @@ HEXCB2D:
   bx lr
 HEXCB2E:
   ; $2E SRA   (HL)             Shift 8-Bit Value From Address In HL Right, Into Carry Flag (MSB Does Not Change)
-  ldrb r5,[r10,r3]
-  mov r6,r5
-  mov r5,r5,lsr 1
+  ldrb r6,[r10,r3]
+  mov r5,r6,lsr 1
   tst r6,$1
   orrne r0,C_FLAG              ; IF (MEM_MAP[HL_REG] & 1) C Flag Set (Old Bit 0)
   biceq r0,C_FLAG              ; ELSE C Flag Reset (Old Bit 0)

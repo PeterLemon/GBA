@@ -1074,7 +1074,7 @@ HEX75:
   add r12,2                    ; QCycles += 2
   bx lr
 HEX76:
-  ; $76 HEXALT                   Power Down CPU Until An Interrupt Occurs
+  ; $76 HALT                   Power Down CPU Until An Interrupt Occurs
   mov r5,1                     ; IME_FLAG = 1
   strb r5,[r9,IME_FLAG - CPU_INST]
   mov r5,$1F                   ; IF_REG = $1F (Set All Interrupts On)

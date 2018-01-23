@@ -1169,7 +1169,7 @@ macro XZRotCalc xrot, zrot, precalc { ; Return XZ Rotation
   ldmia r2,{r5-r8\} ; Load ZC,-ZS,ZS,-ZC To R5,R6,R7,R8
   ldmia r1,{r2-r4\} ; Load XC,-XS,XS To R2,R3,R4
 
-  str r5,[r12]   ; Store R5 (ZC) To Matrix3D 1st Word
+  str r5,[r12] ; Store R5 (ZC) To Matrix3D 1st Word
   str r7,[r12,4] ; Store R7 (ZS) To Matrix3D 2nd Word
   mul r0,r2,r6 ; Load (XC * -ZS) To R0
   asr r0,8 ; Divide R0 By 256
@@ -1235,7 +1235,7 @@ macro XYZRotCalc xrot, yrot, zrot, precalc { ; Return XYZ Rotation
 
   mul r0,r2,r6 ; Load (XC * YC) To R0
   asr r0,8 ; Divide R0 By 256
-  mul r0,r9     ; Load (XC * YC * ZC) To R0
+  mul r0,r9 ; Load (XC * YC * ZC) To R0
   asr r0,8 ; Divide R0 By 256
   mul r1,r4,r11 ; Load (XS * ZS) To R1
   sub r0,r1,asr 8
@@ -1255,7 +1255,7 @@ macro XYZRotCalc xrot, yrot, zrot, precalc { ; Return XYZ Rotation
 
   mul r0,r3,r6 ; Load (-XS * YC) To R0
   asr r0,8 ; Divide R0 By 256
-  mul r0,r9     ; Load (-XS * YC * ZC) To R0
+  mul r0,r9 ; Load (-XS * YC * ZC) To R0
   asr r0,8 ; Divide R0 By 256
   mul r1,r2,r11 ; Load (XC * ZS) To R1
   sub r0,r1,asr 8

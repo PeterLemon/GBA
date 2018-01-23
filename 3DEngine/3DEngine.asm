@@ -36,7 +36,7 @@ macro Control {
   addeq r1,256 ; Translate Screen Right Using Increments Of 1.0
   str r1,[r0],16 ; Store Word To Matrix Parameter Table (Screen X Translation) & Increment Matrix Address To R0 (Start Of Y Translation)
 
-  ldr r1,[r0]    ; Load Y Translation Variable To R1
+  ldr r1,[r0] ; Load Y Translation Variable To R1
   IsKeyDown KEY_UP
   subeq r1,256 ; Translate Screen Up,   In Increments Of 1.0
   IsKeyDown KEY_DOWN

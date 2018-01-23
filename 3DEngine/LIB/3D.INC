@@ -67,20 +67,15 @@ local .skip, .divXPos, .divYPos, .divXNeg, .divYNeg, .endX, .endY
 }
 
 macro CullFace x1, y1, x2, y2, x3, y3 { ; Cull Face Calculation
-  mul r4,x1,y2 ; R4 = (X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)
-  mul r5,x2,y1
-  sub r4,r5
+  sub r4,x3,x1 ; R4 = HDX (X3 - X1)
+  sub r5,y2,y1 ; R5 = MDY (Y2 - Y1)
+  mul r4,r5 ; R4 = HDX * MDY
 
-  mul r5,x2,y3
-  mul r6,x3,y2
-  sub r5,r6
+  sub r5,y3,y1 ; R5 = HDY (Y3 - Y1)
+  sub r6,x2,x1 ; R6 = MDX (X2 - X1)
+  mul r5,r6 ; R5 = HDY * MDX
 
-  mul r6,x3,y1
-  mul r7,x1,y3
-  sub r6,r7
-
-  add r4,r5
-  adds r4,r6 ; Compare To Zero
+  subs r4,r5 ; R4 = R (HDX * MDY) - (HDY * MDX) Compare To Zero
 }
 
 macro ScanLineSide x1, y1, x2, y2 { ; Scan Line Side
@@ -194,8 +189,8 @@ macro WireQuadCullBack start, end { ; Wire Quad Back Face Cull
     sub r12,16 ; Load 1st LineCache Address
     ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r9, r10 ; Back Face Cull
-    addle r14,16 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) <= 0 SkipPoly
-    ble .SkipPoly
+    addge r14,16 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) >= 0 SkipPoly
+    bge .SkipPoly
 
     add r12,24 ; Load 4th LineCache Address
     LoadXYZ r9, r10, r11 ; R9 = 2D X4, R10 = 2D Y4
@@ -242,8 +237,8 @@ macro WireQuadCullBackZBuf start, end { ; Wire Quad Back Face Cull Z-Buffer
     add r4,12 ; Load 2nd LineCache Address
     ldmia r4,{r2-r3\} ; Load X2,Y2 To R2,R3
     CullFace r0, r1, r2, r3, r10, r11 ; Back Face Cull
-    addle r14,16 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) <= 0 SkipPoly
-    ble .SkipPoly
+    addge r14,16 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) >= 0 SkipPoly
+    bge .SkipPoly
 
     LoadXYZ r10, r11, r12 ; R10 = 2D X4, R11 = 2D Y4, R12 = 3D Z4
     stmia r13,{r10-r12\}  ; Store X4 & Y4 & Z4 To 4th LineCache Address
@@ -289,8 +284,8 @@ macro WireQuadCullFront start, end { ; Wire Quad Front Face Cull
     sub r12,16 ; Load 1st LineCache Address
     ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r9, r10 ; Front Face Cull
-    addge r14,16 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) >= 0 SkipPoly
-    bge .SkipPoly
+    addle r14,16 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) <= 0 SkipPoly
+    ble .SkipPoly
 
     add r12,24 ; Load 4th LineCache Address
     LoadXYZ r9, r10, r11 ; R9 = 2D X4, R10 = 2D Y4
@@ -337,8 +332,8 @@ macro WireQuadCullFrontZBuf start, end { ; Wire Quad Front Face Cull Z-Buffer
     add r4,12 ; Load 2nd LineCache Address
     ldmia r4,{r2-r3\} ; Load X2,Y2 To R2,R3
     CullFace r0, r1, r2, r3, r10, r11 ; Front Face Cull
-    addge r14,16 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) >= 0 SkipPoly
-    bge .SkipPoly
+    addle r14,16 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) <= 0 SkipPoly
+    ble .SkipPoly
 
     LoadXYZ r10, r11, r12 ; R10 = 2D X4, R11 = 2D Y4, R12 = 3D Z4
     stmia r13,{r10-r12\}  ; Store X4 & Y4 & Z4 To 4th LineCache Address
@@ -384,8 +379,8 @@ macro FillQuadCullBack start, end { ; Fill Quad Back Face Cull
     sub r12,16 ; Load 1st LineCache Address
     ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r9, r10 ; Back Face Cull
-    addle r14,16 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) <= 0 SkipPoly
-    ble .SkipPoly
+    addge r14,16 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) >= 0 SkipPoly
+    bge .SkipPoly
 
     LoadXYZ r9, r10, r11 ; R9 = 2D X4, R10 = 2D Y4
     add r12,24 ; Load 4th LineCache Address
@@ -464,10 +459,10 @@ macro FillQuadCullBack start, end { ; Fill Quad Back Face Cull
       addlt r3,2
       blt .SkipPixel
       .FillLoop:
-	strh r6,[r3],2 ; Store Pixel Colour To Screen
-	.SkipPixel:
-	cmp r3,r2 ; IF (X <= Scanline Right Buffer X) Fill Scanline
-	ble .FillLoop
+        strh r6,[r3],2 ; Store Pixel Colour To Screen
+        .SkipPixel:
+        cmp r3,r2 ; IF (X <= Scanline Right Buffer X) Fill Scanline
+        ble .FillLoop
 
       add r4,1
       cmp r4,r5 ; IF (Top <= Bottom) Fill
@@ -497,8 +492,8 @@ macro FillQuadCullFront start, end { ; Fill Quad Front Face Cull
     sub r12,16 ; Load 1st LineCache Address
     ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r9, r10 ; Front Face Cull
-    addge r14,16 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) >= 0 SkipPoly
-    bge .SkipPoly
+    addle r14,16 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) <= 0 SkipPoly
+    ble .SkipPoly
 
     LoadXYZ r9, r10, r11 ; R9 = 2D X4, R10 = 2D Y4
     add r12,24 ; Load 4th LineCache Address
@@ -577,10 +572,10 @@ macro FillQuadCullFront start, end { ; Fill Quad Front Face Cull
       addlt r3,2
       blt .SkipPixel
       .FillLoop:
-	strh r6,[r3],2 ; Store Pixel Colour To Screen
-	.SkipPixel:
-	cmp r3,r2 ; IF (X <= Scanline Right Buffer X) Fill Scanline
-	ble .FillLoop
+        strh r6,[r3],2 ; Store Pixel Colour To Screen
+        .SkipPixel:
+        cmp r3,r2 ; IF (X <= Scanline Right Buffer X) Fill Scanline
+        ble .FillLoop
 
       add r4,1
       cmp r4,r5 ; IF (Top <= Bottom) Fill
@@ -674,8 +669,8 @@ macro WireTriCullBack start, end { ; Wire Tri Back Face Cull
     sub r12,16 ; Load 1st LineCache Address
     ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r9, r10 ; Back Face Cull
-    addle r14,4 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) <= 0 SkipPoly
-    ble .SkipPoly
+    addge r14,4 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) >= 0 SkipPoly
+    bge .SkipPoly
 
     ldmia r12!,{r7-r8\} ; Load X1,Y1 To R7,R8
     ldr r6,[r14],4 ; R6 = Colour
@@ -713,8 +708,8 @@ macro WireTriCullBackZBuf start, end { ; Wire Tri Back Face Cull Z-Buffer
     add r4,r13,12 ; Load 2nd LineCache Address
     ldmia r4,{r2-r3\} ; Load X2,Y2 To R2,R3
     CullFace r0, r1, r2, r3, r10, r11 ; Back Face Cull
-    addle r14,4 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) <= 0 SkipPoly
-    ble .SkipPoly
+    addge r14,4 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) >= 0 SkipPoly
+    bge .SkipPoly
 
     ldmia r13!,{r7-r9\} ; Load X1,Y1,Z1 To R7,R8,R9
     ldr r6,[r14],4 ; R6 = Colour
@@ -752,8 +747,8 @@ macro WireTriCullFront start, end { ; Wire Tri Front Face Cull
     sub r12,16 ; Load 1st LineCache Address
     ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r9, r10 ; Front Face Cull
-    addge r14,4 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) >= 0 SkipPoly
-    bge .SkipPoly
+    addle r14,4 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) <= 0 SkipPoly
+    ble .SkipPoly
 
     ldmia r12!,{r7-r8\} ; Load X1,Y1 To R7,R8
     ldr r6,[r14],4 ; R6 = Colour
@@ -791,8 +786,8 @@ macro WireTriCullFrontZBuf start, end { ; Wire Tri Front Face Cull Z-Buffer
     add r4,r13,12 ; Load 2nd LineCache Address
     ldmia r4,{r2-r3\} ; Load X2,Y2 To R2,R3
     CullFace r0, r1, r2, r3, r10, r11 ; Front Face Cull
-    addge r14,4 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) >= 0 SkipPoly
-    bge .SkipPoly
+    addle r14,4 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) <= 0 SkipPoly
+    ble .SkipPoly
 
     ldmia r13!,{r7-r9\} ; Load X1,Y1,Z1 To R7,R8,R9
     ldr r6,[r14],4 ; R6 = Colour
@@ -828,8 +823,8 @@ macro FillTriCullBack start, end { ; Fill Tri Back Face Cull
     sub r12,8 ; Load 1st LineCache Address
     ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r9, r10 ; Back Face Cull
-    addle r14,4 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) <= 0 SkipPoly
-    ble .SkipPoly
+    addge r14,4 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) >= 0 SkipPoly
+    bge .SkipPoly
 
     add r12,16 ; Load 3rd LineCache Address
     stmia r12,{r9-r10\} ; Store X3 & Y3 To 3rd LineCache Address
@@ -897,10 +892,10 @@ macro FillTriCullBack start, end { ; Fill Tri Back Face Cull
       addlt r3,2
       blt .SkipPixel
       .FillLoop:
-	strh r6,[r3],2 ; Store Pixel Colour To Screen
-	.SkipPixel:
-	cmp r3,r2 ; IF (X <= Scanline Right Buffer X) Fill Scanline
-	ble .FillLoop
+        strh r6,[r3],2 ; Store Pixel Colour To Screen
+        .SkipPixel:
+        cmp r3,r2 ; IF (X <= Scanline Right Buffer X) Fill Scanline
+        ble .FillLoop
 
       add r4,1
       cmp r4,r5 ; IF (Top <= Bottom) Fill
@@ -928,8 +923,8 @@ macro FillTriCullFront start, end { ; Fill Tri Front Face Cull
     sub r12,8 ; Load 1st LineCache Address
     ldmia r12,{r0-r3\} ; Load X1,Y1,X2,Y2 To R0,R1,R2,R3
     CullFace r0, r1, r2, r3, r9, r10 ; Front Face Cull
-    addge r14,4 ; IF ((X1*Y2 - X2*Y1) + (X2*Y3 - X3*Y2) + (X3*Y1 - X1*Y3)) >= 0 SkipPoly
-    bge .SkipPoly
+    addle r14,4 ; IF ((X3-X1 * Y2-Y1) - (Y3-Y1 * X2-X1)) <= 0 SkipPoly
+    ble .SkipPoly
 
     add r12,16 ; Load 3rd LineCache Address
     stmia r12,{r9-r10\} ; Store X3 & Y3 To 3rd LineCache Address
@@ -997,10 +992,10 @@ macro FillTriCullFront start, end { ; Fill Tri Front Face Cull
       addlt r3,2
       blt .SkipPixel
       .FillLoop:
-	strh r6,[r3],2 ; Store Pixel Colour To Screen
-	.SkipPixel:
-	cmp r3,r2 ; IF (X <= Scanline Right Buffer X) Fill Scanline
-	ble .FillLoop
+        strh r6,[r3],2 ; Store Pixel Colour To Screen
+        .SkipPixel:
+        cmp r3,r2 ; IF (X <= Scanline Right Buffer X) Fill Scanline
+        ble .FillLoop
 
       add r4,1
       cmp r4,r5 ; IF (Top <= Bottom) Fill
@@ -1100,8 +1095,8 @@ macro XRotCalc xrot, precalc { ; Return X Rotation
   add r0,r1,r0,lsl 4 ; Add X Rotate Matrix Offset To R0 (* 16)
   ldmia r0,{r1-r3\} ; Load XC,-XS,XS To R1,R2,R3
 
-  str r1,[r12,20] ; Store R1  (XC) To Matrix3D	6th Word
-  str r2,[r12,24] ; Store R2 (-XS) To Matrix3D	7th Word
+  str r1,[r12,20] ; Store R1  (XC) To Matrix3D  6th Word
+  str r2,[r12,24] ; Store R2 (-XS) To Matrix3D  7th Word
   str r3,[r12,36] ; Store R3  (XS) To Matrix3D 10th Word
   str r1,[r12,40] ; Store R1  (XC) To Matrix3D 11th Word
 }
@@ -1113,9 +1108,9 @@ macro YRotCalc yrot, precalc { ; Return Y Rotation
   add r0,r1,r0,lsl 4 ; Add Y Rotate Matrix Offset To R0 (* 16)
   ldmia r0,{r1-r3\} ; Load YC,-YS,YS To R1,R2,R3
 
-  str r1,[r12]	  ; Store R1  (YC) To Matrix3D	1st Word
-  str r3,[r12,8]  ; Store R3  (YS) To Matrix3D	3rd Word
-  str r2,[r12,32] ; Store R2 (-YS) To Matrix3D	9th Word
+  str r1,[r12]    ; Store R1  (YC) To Matrix3D  1st Word
+  str r3,[r12,8]  ; Store R3  (YS) To Matrix3D  3rd Word
+  str r2,[r12,32] ; Store R2 (-YS) To Matrix3D  9th Word
   str r1,[r12,40] ; Store R1  (YC) To Matrix3D 11th Word
 }
 
@@ -1126,7 +1121,7 @@ macro ZRotCalc zrot, precalc { ; Return Z Rotation
   add r0,r1,r0,lsl 4 ; Add Z Rotate Matrix Offset To R0 (* 16)
   ldmia r0,{r1-r3\} ; Load ZC,-ZS,ZS To R1,R2,R3
 
-  str r1,[r12]	  ; Store R1  (ZC) To Matrix3D 1st Word
+  str r1,[r12]    ; Store R1  (ZC) To Matrix3D 1st Word
   str r2,[r12,4]  ; Store R2 (-ZS) To Matrix3D 2nd Word
   str r3,[r12,16] ; Store R3  (ZS) To Matrix3D 5th Word
   str r1,[r12,20] ; Store R1  (ZC) To Matrix3D 6th Word
@@ -1174,7 +1169,7 @@ macro XZRotCalc xrot, zrot, precalc { ; Return XZ Rotation
   ldmia r2,{r5-r8\} ; Load ZC,-ZS,ZS,-ZC To R5,R6,R7,R8
   ldmia r1,{r2-r4\} ; Load XC,-XS,XS To R2,R3,R4
 
-  str r5,[r12]	 ; Store R5 (ZC) To Matrix3D 1st Word
+  str r5,[r12]   ; Store R5 (ZC) To Matrix3D 1st Word
   str r7,[r12,4] ; Store R7 (ZS) To Matrix3D 2nd Word
   mul r0,r2,r6 ; Load (XC * -ZS) To R0
   asr r0,8 ; Divide R0 By 256
@@ -1240,7 +1235,7 @@ macro XYZRotCalc xrot, yrot, zrot, precalc { ; Return XYZ Rotation
 
   mul r0,r2,r6 ; Load (XC * YC) To R0
   asr r0,8 ; Divide R0 By 256
-  mul r0,r9	; Load (XC * YC * ZC) To R0
+  mul r0,r9     ; Load (XC * YC * ZC) To R0
   asr r0,8 ; Divide R0 By 256
   mul r1,r4,r11 ; Load (XS * ZS) To R1
   sub r0,r1,asr 8
@@ -1260,7 +1255,7 @@ macro XYZRotCalc xrot, yrot, zrot, precalc { ; Return XYZ Rotation
 
   mul r0,r3,r6 ; Load (-XS * YC) To R0
   asr r0,8 ; Divide R0 By 256
-  mul r0,r9	; Load (-XS * YC * ZC) To R0
+  mul r0,r9     ; Load (-XS * YC * ZC) To R0
   asr r0,8 ; Divide R0 By 256
   mul r1,r2,r11 ; Load (XC * ZS) To R1
   sub r0,r1,asr 8

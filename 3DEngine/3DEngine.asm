@@ -1,4 +1,4 @@
-; Game Boy Advance 'Bare Metal' BG Rotate & Zoom Demo by krom (Peter Lemon):
+; Game Boy Advance 'Bare Metal' 3D Engine Demo by krom (Peter Lemon):
 ; Direction Pad Changes Translation X/Y Position
 ; L/R Buttons X Rotate
 ; A/B Buttons Y Rotate
@@ -28,6 +28,7 @@ times $80000C0-($-0) db 0
 
 macro Control {
   imm32 r0,Matrix3D+12 ; Load Matrix Translation Address To R0 (Starts Of X Translation)
+  ;imm32 r0,Matrix3D+12+16 ; Load Matrix Translation Address To R0 (Starts Of X Translation)
 
   ldr r1,[r0] ; Load X Translation Variable To R1
   IsKeyDown KEY_LEFT
@@ -139,6 +140,9 @@ Refresh:
   LineZBuf GrassLine, GrassLineEnd
   PointZBuf StarPoint, StarPointEnd
 
+;  PointZBuf MoonPoint, MoonPointEnd
+;  PointZBuf EarthPoint, EarthPointEnd
+
   SwapBuffers WRAM, VRAM, 76800 ; Swap Buffers
 
   b Refresh
@@ -147,4 +151,10 @@ endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
 org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
+include 'ReciprocalLUT.asm' ; Reciprocal LUT
 include 'objects.asm' ; Objects Data
+;include 'GBAMoon0.5PExport.asm' ; Objects Data
+;include 'GBAMoon1PExport.asm' ; Objects Data
+;include 'GBAMoon2PExport.asm' ; Objects Data
+;include 'GBAMoon4PExport.asm' ; Objects Data
+;include 'GBAEarth4PExport.asm' ; Objects Data

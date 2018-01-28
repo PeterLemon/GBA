@@ -26,41 +26,18 @@ macro Calc3D x, y, z, xcalc, ycalc, zcalc { ; Calculate X,Y,Z 3D
 }
 
 macro Calc2D x, y, z { ; Calculate X,Y 2D
-local .skip, .divXPos, .divYPos, .divXNeg, .divYNeg, .endX, .endY
+local .skip
   ble .skip ; IF (Z <= 0) Skip
 
-  lsr z,8 ; Z /= 256
+  asr z,8 ; Z /= 256
+  lsl z,2 ; Z *= 4
+  imm32 r0,ReciprocalLUT ; R0 = Reciprical LUT
+  ldr r0,[r0,z]
 
-  mov r0,x ; R0 = X
-  mov x,0 ; Divide R0 By Z (X / Z)
-  cmp r0,0 ; IF (X < 0) Negative Divide
-  blt .divXNeg
-  .divXPos:
-  subs r0,z
-  addge x,1
-  bgt .divXPos
-  b .endX
-  .divXNeg:
-  adds r0,z
-  suble x,1
-  blt .divXNeg
-  .endX: ; X = Quotient (2D Screen X)
+  smull r1,x,x,r0
   add x,HALF_SCREEN_X ; X = X / Z + (ScreenX / 2)
 
-  mov r0,y ; R0 = Y
-  mov y,0 ; Divide R0 By Z (Y / Z)
-  cmp r0,0 ; IF (Y < 0) Negative Divide
-  blt .divYNeg
-  .divYPos:
-  subs r0,z
-  addge y,1
-  bgt .divYPos
-  b .endY
-  .divYNeg:
-  adds r0,z
-  suble y,1
-  blt .divYNeg
-  .endY: ; Y = Quotient (2D Screen Y)
+  smull r1,y,y,r0
   add y,HALF_SCREEN_Y ; Y = Y / Z + (ScreenY / 2)
 
   .skip:

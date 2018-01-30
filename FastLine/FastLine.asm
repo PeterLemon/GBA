@@ -59,7 +59,7 @@ macro DrawLine x1, y1, x2, y2, color { ; Draw Line: Line Point X1, Line Point Y1
   movgt r2,2 ; IF (X2 > X1), R2 = 2 (SX)
 
   subs r1,y2,y1 ; R1 = DY (Y2 - Y1), Compare DY With Zero
-  rsbmi r1,0 ; R1 = ABS(DX)
+  rsbmi r1,0 ; R1 = ABS(DY)
   movlt r3,0 ; IF (Y2 < Y1) R3 = -480 (SY)
   sublt r3,480
   movgt r3,480 ; IF (Y2 > Y1) R3 = 480 (SY)

@@ -61,7 +61,7 @@ macro DrawLine x1, y1, x2, y2, color { ; Draw Line: Line Point X1, Line Point Y1
   movlt y1,y2
   movlt y2,r1
 
-  subs r0,x2,x1 ; R0 = DX (X2 - X1), Compare DX With Zero
+  subs r0,x2,x1 ; R0 = DX (X2 - X1), Compare DX To Zero
   rsbmi r0,0 ; R0 = ABS(DX)
   mvnlt r1,1 ; IF (X2 < X1), R1 = -2 (SX)
   movgt r1,2 ; IF (X2 > X1), R1 = 2 (SX)
@@ -80,27 +80,35 @@ macro DrawLine x1, y1, x2, y2, color { ; Draw Line: Line Point X1, Line Point Y1
 
   cmp r0,r2 ; Compare DX To DY
   lsrgt x2,r0,1 ; IF (DX >  DY) X2 = DX / 2 (X Error)
-  lsrle y2,r2,1 ; IF (DX <= DY) Y2 = DY / 2 (Y Error)
+  movgt y2,r0 ; IF (DX >  DY) Y2 = DX (X Count)
+  lsrle x2,r2,1 ; IF (DX <= DY) X2 = DY / 2 (Y Error)
+  movle y2,r2 ; IF (DX <= DY) Y2 = DY (Y Count)
   ble .LoopY
 
   .LoopX:
     strh color,[x1] ; Store Color To Point Start
-    cmp x1,y1 ; Compare Point Start To Point End
-    beq .LineEnd ; IF (Point Start == Point End) Line End
+    subs y2,1 ; X Count--, Compare X Count To Zero
+    blt .LineEnd ; IF (X Count < 0) Line End
+    strh color,[y1] ; Store Color To Point End
     subs x2,r2 ; X Error -= DY, Compare X Error To Zero
     addlt x1,480 ; IF (X Error < 0) Point Start += SY
+    sublt y1,480 ; IF (X Error < 0) Point End -= SY
     addlt x2,r0 ; IF (X Error < 0) X Error += DX
     add x1,r1 ; Point Start += SX
+    sub y1,r1 ; Point End -= SX
     b .LoopX ; Loop Line Drawing
 
   .LoopY:
     strh color,[x1] ; Store Color To Point Start
-    cmp x1,y1 ; Compare Point Start To Point End
-    beq .LineEnd ; IF (Point Start == Point End) Line End
-    subs y2,r0  ; Y Error -= DX, Compare Y Error To Zero
+    subs y2,1 ; Y Count--, Compare Y Count To Zero
+    blt .LineEnd ; IF (Y Count < 0) Line End
+    strh color,[y1] ; Store Color To Point End
+    subs x2,r0  ; Y Error -= DX, Compare Y Error To Zero
     addlt x1,r1 ; IF (Y Error < 0) Point Start += SX
-    addlt y2,r2 ; IF (Y Error < 0) Y Error += DY
+    sublt y1,r1 ; IF (Y Error < 0) Point End -= SX
+    addlt x2,r2 ; IF (Y Error < 0) Y Error += DY
     add x1,480 ; Point Start += SY
+    sub y1,480 ; Point End -= SY
     b .LoopY ; Loop Line Drawing
 
   .LineEnd: ; End of Line Drawing

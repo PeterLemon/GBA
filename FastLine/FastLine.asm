@@ -90,6 +90,8 @@ macro DrawLine x1, y1, x2, y2, color { ; Draw Line: Line Point X1, Line Point Y1
     subs y2,1 ; X Count--, Compare X Count To Zero
     blt .LineEnd ; IF (X Count < 0) Line End
     strh color,[y1] ; Store Color To Point End
+    subs y2,1 ; X Count--, Compare X Count To Zero
+    blt .LineEnd ; IF (X Count < 0) Line End
     subs x2,r2 ; X Error -= DY, Compare X Error To Zero
     addlt x1,480 ; IF (X Error < 0) Point Start += SY
     sublt y1,480 ; IF (X Error < 0) Point End -= SY
@@ -103,6 +105,8 @@ macro DrawLine x1, y1, x2, y2, color { ; Draw Line: Line Point X1, Line Point Y1
     subs y2,1 ; Y Count--, Compare Y Count To Zero
     blt .LineEnd ; IF (Y Count < 0) Line End
     strh color,[y1] ; Store Color To Point End
+    subs y2,1 ; Y Count--, Compare Y Count To Zero
+    blt .LineEnd ; IF (Y Count < 0) Line End
     subs x2,r0  ; Y Error -= DX, Compare Y Error To Zero
     addlt x1,r1 ; IF (Y Error < 0) Point Start += SX
     sublt y1,r1 ; IF (Y Error < 0) Point End -= SX

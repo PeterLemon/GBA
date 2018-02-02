@@ -53,28 +53,23 @@ macro Control {
 macro DrawLine x1, y1, x2, y2, color { ; Draw Line: Line Point X1, Line Point Y1, Line Point X2, Line Point Y2, Line Color
   local .LoopX, .LoopY, .LineEnd
 
-  cmp y2,y1 ; IF (Y2 < Y1) Swap Points
-  movlt r0,x1
-  movlt r1,y1
-  movlt x1,x2
-  movlt x2,r0
-  movlt y1,y2
-  movlt y2,r1
-
   subs r0,x2,x1 ; R0 = DX (X2 - X1), Compare DX To Zero
   rsbmi r0,0 ; R0 = ABS(DX)
-  mvnlt r1,1 ; IF (X2 < X1), R1 = -2 (SX)
   movgt r1,2 ; IF (X2 > X1), R1 = 2 (SX)
+  mvnlt r1,1 ; IF (X2 < X1), R1 = -2 (SX)
 
-  sub r2,y2,y1 ; R2 = ABS(DY) (Y2 - Y1), SY = 480
+  subs r2,y2,y1 ; R2 = ABS(DY) (Y2 - Y1), Compare DY To Zero
+  rsbmi r2,0 ; R2 = ABS(DY)
+  mov   r3,480 ; IF (Y2 > Y1), R3 = 480 (SY)
+  rsblt r3,0   ; IF (Y2 < Y1), R3 = -480 (SY)
 
-  mov r3,240 ; R3 = 240 (Screen Width)
+  mov r4,240 ; R4 = 240 (Screen Width)
 
-  mla x1,y1,r3,x1 ; X1 = (Y1 * Screen Width) + X1
+  mla x1,y1,r4,x1 ; X1 = (Y1 * Screen Width) + X1
   lsl x1,1 ; X1 <<= 1
   add x1,VRAM ; X1 = Point Start
 
-  mla y1,y2,r3,x2 ; Y1 = (Y2 * Screen Width) + X2
+  mla y1,y2,r4,x2 ; Y1 = (Y2 * Screen Width) + X2
   lsl y1,1 ; Y1 <<= 1
   add y1,VRAM ; Y1 = Point End
 
@@ -86,33 +81,29 @@ macro DrawLine x1, y1, x2, y2, color { ; Draw Line: Line Point X1, Line Point Y1
   ble .LoopY
 
   .LoopX:
-    strh color,[x1] ; Store Color To Point Start
+    strh color,[x1],r1 ; Store Color To Point Start, Point Start += SX
     subs y2,1 ; X Count--, Compare X Count To Zero
     blt .LineEnd ; IF (X Count < 0) Line End
-    strh color,[y1] ; Store Color To Point End
+    strh color,[y1],-r1 ; Store Color To Point End, Point End -= SX
     subs y2,1 ; X Count--, Compare X Count To Zero
     blt .LineEnd ; IF (X Count < 0) Line End
     subs x2,r2 ; X Error -= DY, Compare X Error To Zero
-    addlt x1,480 ; IF (X Error < 0) Point Start += SY
-    sublt y1,480 ; IF (X Error < 0) Point End -= SY
+    addlt x1,r3 ; IF (X Error < 0) Point Start += SY
+    sublt y1,r3 ; IF (X Error < 0) Point End -= SY
     addlt x2,r0 ; IF (X Error < 0) X Error += DX
-    add x1,r1 ; Point Start += SX
-    sub y1,r1 ; Point End -= SX
     b .LoopX ; Loop Line Drawing
 
   .LoopY:
-    strh color,[x1] ; Store Color To Point Start
+    strh color,[x1],r3 ; Store Color To Point Start, Point Start += SY
     subs y2,1 ; Y Count--, Compare Y Count To Zero
     blt .LineEnd ; IF (Y Count < 0) Line End
-    strh color,[y1] ; Store Color To Point End
+    strh color,[y1],-r3 ; Store Color To Point End, Point End -= SY
     subs y2,1 ; Y Count--, Compare Y Count To Zero
     blt .LineEnd ; IF (Y Count < 0) Line End
     subs x2,r0  ; Y Error -= DX, Compare Y Error To Zero
     addlt x1,r1 ; IF (Y Error < 0) Point Start += SX
     sublt y1,r1 ; IF (Y Error < 0) Point End -= SX
     addlt x2,r2 ; IF (Y Error < 0) Y Error += DY
-    add x1,480 ; Point Start += SY
-    sub y1,480 ; Point End -= SY
     b .LoopY ; Loop Line Drawing
 
   .LineEnd: ; End of Line Drawing

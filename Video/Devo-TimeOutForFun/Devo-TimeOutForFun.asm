@@ -1,4 +1,5 @@
-; GBA 'Bare Metal' GRB 12-Bit LZ Compressed Video Decode Demo by krom (Peter Lemon):
+; GBA 'Bare Metal' GRB 12-Bit LZSS DIFF RLE Video Decode 240x160 Demo by krom (Peter Lemon):
+
 format binary as 'gba'
 include 'LIB\FASMARM.INC'
 include 'LIB\MEM.INC'
@@ -9,6 +10,49 @@ include 'LIB\TIMER.INC'
 org $8000000
 b copycode
 times $80000C0-($-0) db 0
+
+macro RLEDecode { ; Decode RLE DIFF Data
+  local .RLELoop, .RLECopy, .RLEDecode, .RLEDecodeByte, .RLEEOF
+  imm32 r0,WRAM + 25200 + 4 ; R0 = RLE Source Offset + 4
+  mov r1,WRAM ; R1 = Destination Address (WRAM Start Offset)
+  imm32 r2,WRAM + 25200 ; R2 = Destination End Offset (WRAM End Offset)
+
+  .RLELoop:
+    cmp r1,r2 ; Compare Destination Address To Destination End Offset
+    beq .RLEEOF ; IF (Destination Address == Destination End Offset) RLEEOF
+
+    ldrb r3,[r0],1 ; R3 = RLE Flag Data (Bit 0..6 = Expanded Data Length: Uncompressed N-1, Compressed N-3, Bit 7 = Flag: 0 = Uncompressed, 1 = Compressed)
+    ands r4,r3,10000000b ; R4 = RLE Flag
+    and r3,01111111b ; R3 = Expanded Data Length
+    add r3,1 ; Expanded Data Length++
+    bne .RLEDecode ; IF (BlockType != 0) RLE Decode Bytes
+
+    .RLECopy: ; ELSE Copy Uncompressed Bytes
+      ldrsb r4,[r0],1 ; R4 = Difference Signed Byte, RLE Offset++
+      ldrsb r5,[r1] ; R5 = Source Data Byte
+      add r5,r4 ; Add Signed Byte (R4) To Data Byte (R5)
+      strb r5,[r1],1 ; Store Uncompressed Byte To Destination, Destination Address++
+      subs r3,1 ; Expanded Data Length--
+      bne .RLECopy ; IF (Expanded Data Length != 0) RLECopy
+      b .RLELoop
+
+    .RLEDecode:
+      add r3,2 ; Expanded Data Length += 2
+      ldrsb r4,[r0],1 ; R4 = Difference Signed Byte, RLE Offset++
+      cmp r4,0 ; Compare Difference Signed Byte To 0
+      bne .RLEDecodeByte ; IF (Difference Signed Byte != 0) RLEDecodeByte
+      add r1,r3 ; ELSE Skip RLEDecodeByte, Add Expanded Data Length (R3) To WRAM Offset
+      b .RLELoop
+
+      .RLEDecodeByte:
+        ldrsb r5,[r1] ; R5 = Source Data Byte
+        add r5,r4 ; Add Signed Byte (R4) To Data Byte (R5)
+        strb r5,[r1],1 ; Store Uncompressed Byte To Destination, Destination Address++
+        subs r3,1 ; Expanded Data Length--
+        bne .RLEDecodeByte ; IF (Expanded Data Length != 0) RLEDecodeByte
+        b .RLELoop
+    .RLEEOF:
+}
 
 macro GRBDecode { ; Decode GRB Frame
   local .GRBLoop
@@ -335,10 +379,10 @@ start:
   orr r1,BG2_ENABLE
   str r1,[r0]
 
-  imm32 r0,video ; R0 = LZ Compressed Data Offset
+  imm32 r0,VIDEO ; R0 = LZ Compressed Data Offset
   str r0,[LZOffset] ; Store LZ Compressed Data Offset Into LZ Offset
 
-  PlaySoundA audio, 44100 ; Play Sound Channel A Data
+  PlaySoundA SOUND, 44100 ; Play Sound Channel A Data
 LoopFrames:
   ; Start Timer
   mov r11,IO ; GBA I/O Base Offset
@@ -347,9 +391,10 @@ LoopFrames:
   str r12,[r11] ; Start Timer
 
   ldr r0,[LZOffset] ; R0 = LZ Offset
-  add r0,4 ; LZ Offset += 4
-  mov r1,WRAM ; R1 = LZ GRB File Output Offset
-  imm32 r2,WRAM + 25200 ; R2 = Destination End Offset
+  imm32 r1,WRAM + 25200 ; R1 = Destination Offset
+  ldr r2,[r0],4 ; R2 = Data Length & Header Info
+  lsr r2,8 ; R2 = Data Length
+  add r2,r1 ; R2 = Destination End Offset
   LZLoop:
     ldrb r3,[r0],1 ; R3 = Flag Data For Next 8 Blocks (0 = Uncompressed Byte, 1 = Compressed Bytes)
     mov r4,10000000b ; R4 = Flag Data Block Type Shifter
@@ -366,22 +411,22 @@ LoopFrames:
       b LZBlockLoop
 
       LZDecode:
-	ldrb r5,[r0],1 ; R5 = Number Of Bytes To Copy & Disp MSB's
-	ldrb r6,[r0],1 ; R6 = Disp LSB's
-	add r6,r5,lsl 8
-	lsr r5,4 ; R5 = Number Of Bytes To Copy (Minus 3)
-	add r5,3 ; R5 = Number Of Bytes To Copy
-	mov r7,$1000
-	sub r7,1 ; R7 = $FFF
-	and r6,r7 ; R6 = Disp
-	add r6,1 ; R6 = Disp + 1
-	rsb r6,r1 ; R6 = Destination - Disp - 1
-	LZCopy:
-	  ldrb r7,[r6],1 ; R7 = Byte To Copy
-	  strb r7,[r1],1 ; Store Byte To WRAM
-	  subs r5,1 ; Number Of Bytes To Copy -= 1
-	  bne LZCopy ; IF (Number Of Bytes To Copy != 0) LZ Copy Bytes
-	  b LZBlockLoop
+        ldrb r5,[r0],1 ; R5 = Number Of Bytes To Copy & Disp MSB's
+        ldrb r6,[r0],1 ; R6 = Disp LSB's
+        add r6,r5,lsl 8
+        lsr r5,4 ; R5 = Number Of Bytes To Copy (Minus 3)
+        add r5,3 ; R5 = Number Of Bytes To Copy
+        mov r7,$1000
+        sub r7,1 ; R7 = $FFF
+        and r6,r7 ; R6 = Disp
+        add r6,1 ; R6 = Disp + 1
+        rsb r6,r1 ; R6 = Destination - Disp - 1
+        LZCopy:
+          ldrb r7,[r6],1 ; R7 = Byte To Copy
+          strb r7,[r1],1 ; Store Byte To WRAM
+          subs r5,1 ; Number Of Bytes To Copy -= 1
+          bne LZCopy ; IF (Number Of Bytes To Copy != 0) LZ Copy Bytes
+          b LZBlockLoop
     LZEnd:
 
   ; Skip Zero's At End Of LZ Compressed File
@@ -389,12 +434,22 @@ LoopFrames:
   subne r0,r1 ; IF (LZ Offset != Multiple Of 4) Add R1 To the LZ Offset
   addne r0,4 ; LZ Offset += 4
 
-  str r0,[LZOffset] ; Store Last LZ GRB Frame End Offset To LZ Offset
+  str r0,[LZOffset] ; Store Last LZ Frame End Offset To LZ Offset
+
+
+  ; Skip Zero's At End Of LZ Compressed File
+  ands r1,r0,3 ; Compare LZ Offset To A Multiple Of 4
+  subne r0,r1 ; IF (LZ Offset != Multiple Of 4) Add R1 To the LZ Offset
+  addne r0,4 ; LZ Offset += 4
+
+  str r0,[LZOffset] ; Store Last LZ IPS Frame End Offset To LZ Offset
+
+  RLEDecode ; Decode IPS Data To WRAM
 
   ; Wait For Timer
   mov r11,IO ; GBA I/O Base Offset
   orr r11,TM1CNT ; Timer Control Register
-  imm16 r10,$240 ; R10 = Time
+  imm16 r10,$231 ; R10 = Time
   WaitTimer:
     ldrh r12,[r11] ; Current Timer Position
     cmp r12,r10 ; Compare Time
@@ -402,11 +457,10 @@ LoopFrames:
   mov r12,TM_DISABLE
   str r12,[r11] ; Reset Timer Control
 
-  GRBDecode ; Decode GRB Data
+  GRBDecode ; Decode GRB Data To VRAM
 
-  imm32 r1,LZOffset
-  ldr r0,[r1] ; Load Last LZ IPS Frame End Offset
-  imm32 r1,audio ; Load Video End Offset
+  ldr r0,[LZOffset] ; Load Last LZ IPS Frame End Offset
+  imm32 r1,SOUND ; Load Video End Offset
   cmp r0,r1 ; Check Video End Offset
   bne LoopFrames ; Decode Next Frame
   StopSoundA ; Stop Sound Channel A
@@ -419,7 +473,9 @@ endcopy:
 
 org $80000C0 + (endcopy - start) + (startcode - copycode)
 align 4
-video:
+VIDEO:
 file 'video.lz'
-audio:
+SOUND:
 file 'audio.snd'
+
+rept $20000 {db 00}

@@ -379,6 +379,15 @@ start:
   orr r1,BG2_ENABLE
   str r1,[r0]
 
+  ; Clear GRB Frame
+  mov r0,WRAM
+  imm16 r1,6300/4
+  mov r2,0
+  ClearGRB:
+    str r2,[r0],4
+    subs r1,1
+    bne ClearGRB
+
   ; Zoom 120x80 Screen To Fill Full Screen (200%)
   imm32 r0,BGAffineSource ; R0 = Address Of Parameter Table
   mov r1,IO ; GBA I/O Base Offset

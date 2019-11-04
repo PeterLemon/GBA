@@ -379,6 +379,15 @@ start:
   orr r1,BG2_ENABLE
   str r1,[r0]
 
+  ; Clear GRB Frame
+  mov r0,WRAM
+  imm16 r1,25200/4
+  mov r2,0
+  ClearGRB:
+    str r2,[r0],4
+    subs r1,1
+    bne ClearGRB
+
   imm32 r0,VIDEO ; R0 = LZ Compressed Data Offset
   str r0,[LZOffset] ; Store LZ Compressed Data Offset Into LZ Offset
 

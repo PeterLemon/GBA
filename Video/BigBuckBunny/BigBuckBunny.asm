@@ -458,10 +458,14 @@ LoopFrames:
   mov r11,IO ; GBA I/O Base Offset
   orr r11,TM1CNT ; Timer Control Register
   imm16 r10,$3C4 ; R10 = Time
+  ldr r12,[TimerOverflow]
+  sub r10,r12
   WaitTimer:
     ldrh r12,[r11] ; Current Timer Position
     cmp r12,r10 ; Compare Time
     blt WaitTimer
+  sub r12,r10
+  str r12,[TimerOverflow]
   mov r12,TM_DISABLE
   str r12,[r11] ; Reset Timer Control
 
@@ -475,6 +479,8 @@ LoopFrames:
   b start ; Restart Video
 
 LZOffset: ; LZ ROM End Of File Offset
+dw 0
+TimerOverflow: ; Timer Overflow
 dw 0
 
 endcopy:

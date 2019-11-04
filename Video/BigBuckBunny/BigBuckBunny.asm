@@ -1,4 +1,4 @@
-; GBA 'Bare Metal' GRB 12-Bit LZSS DIFF RLE Video Decode 120x80 Demo by krom (Peter Lemon):
+; GBA 'Bare Metal' GRB 12-Bit LZSS DIFF RLE Video Decode 120x80 30FPS Demo by krom (Peter Lemon):
 
 format binary as 'gba'
 include 'LIB\FASMARM.INC'
@@ -398,7 +398,7 @@ start:
   imm32 r0,VIDEO ; R0 = LZ Compressed Data Offset
   str r0,[LZOffset] ; Store LZ Compressed Data Offset Into LZ Offset
 
-  PlaySoundA SOUND, 22050 ; Play Sound Channel A Data
+  PlaySoundA SOUND, 8600 ; Play Sound Channel A Data
 LoopFrames:
   ; Start Timer
   mov r11,IO ; GBA I/O Base Offset
@@ -457,7 +457,7 @@ LoopFrames:
   ; Wait For Timer
   mov r11,IO ; GBA I/O Base Offset
   orr r11,TM1CNT ; Timer Control Register
-  imm16 r10,$3C4 ; R10 = Time
+  imm16 r10,$1A2 ; R10 = Time
   ldr r12,[TimerOverflow]
   sub r10,r12
   WaitTimer:
@@ -506,5 +506,3 @@ VIDEO:
 file 'video.lz'
 SOUND:
 file 'audio.snd'
-
-rept $20000 {db 00}

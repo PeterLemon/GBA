@@ -445,7 +445,6 @@ LoopFrames:
 
   str r0,[LZOffset] ; Store Last LZ Frame End Offset To LZ Offset
 
-
   ; Skip Zero's At End Of LZ Compressed File
   ands r1,r0,3 ; Compare LZ Offset To A Multiple Of 4
   subne r0,r1 ; IF (LZ Offset != Multiple Of 4) Add R1 To the LZ Offset
@@ -458,11 +457,15 @@ LoopFrames:
   ; Wait For Timer
   mov r11,IO ; GBA I/O Base Offset
   orr r11,TM1CNT ; Timer Control Register
-  imm16 r10,$231 ; R10 = Time
+  imm16 r10,$240 ; R10 = Time
+  ldr r12,[TimerOverflow]
+  sub r10,r12
   WaitTimer:
     ldrh r12,[r11] ; Current Timer Position
     cmp r12,r10 ; Compare Time
     blt WaitTimer
+  sub r12,r10
+  str r12,[TimerOverflow]
   mov r12,TM_DISABLE
   str r12,[r11] ; Reset Timer Control
 
@@ -476,6 +479,8 @@ LoopFrames:
   b start ; Restart Video
 
 LZOffset: ; LZ ROM End Of File Offset
+dw 0
+TimerOverflow: ; Timer Overflow
 dw 0
 
 endcopy:

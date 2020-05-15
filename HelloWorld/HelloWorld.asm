@@ -50,10 +50,14 @@ start:
   imm16 r1,0000001000000000b ; BG Tile Offset = 0, Tiles 4BPP, BG Map Offset = 4096, Map Size = 32x32 Tiles
   str r1,[r0,BG0CNT]
 
-  DMA32 WHITEPAL, VPAL, 1    ; DMA BG Font White Palette To Color Mem
-  DMA32 REDPAL, VPAL+32, 1   ; DMA BG Font Red   Palette To Color Mem
-  DMA32 GREENPAL, VPAL+64, 1 ; DMA BG Font Green Palette To Color Mem
-  DMA32 FONTIMG, VRAM, 1024  ; DMA BG Font Image To VRAM
+  mov r0,VPAL        ; Load Color Mem Address
+  imm32 r1,$7FFF7C00 ; Load  BG Font White Palette & Blue BG Color Zero
+  str r1,[r0],32     ; Store BG Font Palette To Color Mem, Increment Color Mem Address To Next 4BPP Palette
+  imm32 r1,$001F0000 ; Load  BG Font Red Palette
+  str r1,[r0],32     ; Store BG Font Palette To Color Mem, Increment Color Mem Address To Next 4BPP Palette
+  imm32 r1,$03E00000 ; Load  BG Font Green Palette
+  str r1,[r0],32     ; Store BG Font Palette To Color Mem, Increment Color Mem Address To Next 4BPP Palette
+  DMA32 FONTIMG, VRAM, 1024 ; DMA BG 4BPP 8x8 Tile Font Character Data To VRAM
 
   PrintString TEXT, 4496, 13, 0 ; Print String: String Address, VRAM Destination, String Length, Palette Number
   PrintString TEXT, 4610, 13, 1 ; Print String: String Address, VRAM Destination, String Length, Palette Number
@@ -66,8 +70,5 @@ endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
 org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
-WHITEPAL: dh $7C00, $7FFF   ; Include BG Font White Palette
-REDPAL:   dh $7C00, $001F   ; Include BG Font Red   Palette
-GREENPAL  dh $7C00, $03E0   ; Include BG Font Green Palette
 FONTIMG: file 'Font8x8.img' ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
 TEXT: db "Hello, World!"    ; Include BG Map Text Data (13 Bytes)

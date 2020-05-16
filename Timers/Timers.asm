@@ -9,12 +9,12 @@ include 'LIB\TIMER.INC'
 
 macro PrintString Source, Destination, Length, Palette { ; Print String: Source Address, VRAM Destination, String Length, Palette Number
   local .LoopChar
-  imm32 r0,Source       ; Source Address
-  mov r1,VRAM           ; Video RAM
-  imm32 r2,Destination  ; Destination Address
-  add r1,r2             ; Video RAM += Destination Address
-  mov r2,Length         ; String Length
-  mov r3,(Palette*4096) ; Palette Number << 12
+  imm32 r0,Source      ; Source Address
+  mov r1,VRAM          ; Video RAM
+  imm32 r2,Destination ; Destination Address
+  add r1,r2            ; Video RAM += Destination Address
+  mov r2,Length        ; String Length
+  mov r3,Palette*4096  ; Palette Number << 12
   .LoopChar:
     ldrb r4,[r0],1 ; Load Character, Increment String Source Address
     orr r4,r3      ; OR Palette Number
@@ -25,15 +25,15 @@ macro PrintString Source, Destination, Length, Palette { ; Print String: Source 
 
 macro PrintValue Source, Destination, Length, Palette { ; Print Value: Source Address, VRAM Destination, Value Length, Palette Number
   local .LoopChar
-  imm32 r0,Source       ; Source Address
-  mov r1,VRAM           ; Video RAM
-  imm32 r2,Destination  ; Destination Address
-  add r1,r2             ; Video RAM += Destination Address
-  mov r2,Length-1       ; Value Length - 1
-  mov r3,(Palette*4096) ; Palette Number << 12
-  mov r4,"$"            ; Load Character
-  orr r4,r3             ; OR Palette Number
-  strh r4,[r1],2        ; Store Character To Map Data, Increment VRAM Destination Address
+  imm32 r0,Source      ; Source Address
+  mov r1,VRAM          ; Video RAM
+  imm32 r2,Destination ; Destination Address
+  add r1,r2            ; Video RAM += Destination Address
+  mov r2,Length-1      ; Value Length - 1
+  mov r3,Palette*4096  ; Palette Number << 12
+  mov r4,"$"           ; Load Character
+  orr r4,r3            ; OR Palette Number
+  strh r4,[r1],2       ; Store Character To Map Data, Increment VRAM Destination Address
   .LoopChar:
     ldrb r4,[r0,r2] ; Load Character
     lsr r5,r4,4     ; Hi Nibble
@@ -42,14 +42,12 @@ macro PrintValue Source, Destination, Length, Palette { ; Print Value: Source Ad
     addgt r5,$37    ; IF(Hi Nibble > 9)  Hi Nibble += ASCII Letter
     orr r5,r3       ; OR Palette Number
     strh r5,[r1],2  ; Store Character To Map Data, Increment VRAM Destination Address
-
     and r4,$F       ; Lo Nibble
     cmp r4,9        ; Compare Lo Nibble To 9
     addle r4,$30    ; IF(Lo Nibble <= 9) Lo Nibble += ASCII Number
     addgt r4,$37    ; IF(Lo Nibble > 9)  Lo Nibble += ASCII Letter
     orr r4,r3       ; OR Palette Number
     strh r4,[r1],2  ; Store Character To Map Data, Increment VRAM Destination Address
-
     subs r2,1       ; Decrement Value Length, Compare Value Length To Zero
     bge .LoopChar   ; IF(Value Length >= 0) Loop Character
 }

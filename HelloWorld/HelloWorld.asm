@@ -6,20 +6,20 @@ include 'LIB\LCD.INC'
 include 'LIB\MEM.INC'
 include 'LIB\DMA.INC'
 
-macro PrintString String, Destination, Length, Palette { ; Print String: String Address, VRAM Destination, String Length, Palette Number
-  local .LoopString
-  imm32 r0,String       ; String Source Address
+macro PrintString Source, Destination, Length, Palette { ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  local .LoopChar
+  imm32 r0,Source       ; Source Address
   mov r1,VRAM           ; Video RAM
   imm32 r2,Destination  ; Destination Address
   add r1,r2             ; Video RAM += Destination Address
   mov r2,Length         ; String Length
   mov r3,(Palette*4096) ; Palette Number << 12
-  .LoopString:
-    ldrb r4,[r0],1  ; Load String Character, Increment String Source Address
-    orr r4,r3       ; OR Palette Number
-    strh r4,[r1],2  ; Store String To Map Data, Increment VRAM Destination Address
-    subs r2,1       ; Decrement String Length, Compare String Length To Zero
-    bne .LoopString ; IF(String Length != 0) Loop String
+  .LoopChar:
+    ldrb r4,[r0],1 ; Load Character, Increment String Source Address
+    orr r4,r3      ; OR Palette Number
+    strh r4,[r1],2 ; Store Character To Map Data, Increment VRAM Destination Address
+    subs r2,1      ; Decrement String Length, Compare String Length To Zero
+    bne .LoopChar  ; IF(String Length != 0) Loop Character
 }
 
 org $8000000
@@ -59,9 +59,9 @@ start:
   str r1,[r0],32     ; Store BG Font Palette To Color Mem, Increment Color Mem Address To Next 4BPP Palette
   DMA32 FONTIMG, VRAM, 1024 ; DMA BG 4BPP 8x8 Tile Font Character Data To VRAM
 
-  PrintString TEXT, 4496, 13, 0 ; Print String: String Address, VRAM Destination, String Length, Palette Number
-  PrintString TEXT, 4610, 13, 1 ; Print String: String Address, VRAM Destination, String Length, Palette Number
-  PrintString TEXT, 4766, 13, 2 ; Print String: String Address, VRAM Destination, String Length, Palette Number
+  PrintString TEXT, 4496, 13, 0 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  PrintString TEXT, 4610, 13, 1 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  PrintString TEXT, 4766, 13, 2 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
 
 Loop:
     b Loop

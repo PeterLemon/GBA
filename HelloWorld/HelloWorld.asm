@@ -8,12 +8,12 @@ include 'LIB\DMA.INC'
 
 macro PrintString Source, Destination, Length, Palette { ; Print String: Source Address, VRAM Destination, String Length, Palette Number
   local .LoopChar
-  imm32 r0,Source       ; Source Address
-  mov r1,VRAM           ; Video RAM
-  imm32 r2,Destination  ; Destination Address
-  add r1,r2             ; Video RAM += Destination Address
-  mov r2,Length         ; String Length
-  mov r3,(Palette*4096) ; Palette Number << 12
+  imm32 r0,Source      ; Source Address
+  mov r1,VRAM          ; Video RAM
+  imm32 r2,Destination ; Destination Address
+  add r1,r2            ; Video RAM += Destination Address
+  mov r2,Length        ; String Length
+  mov r3,Palette*4096  ; Palette Number << 12
   .LoopChar:
     ldrb r4,[r0],1 ; Load Character, Increment String Source Address
     orr r4,r3      ; OR Palette Number

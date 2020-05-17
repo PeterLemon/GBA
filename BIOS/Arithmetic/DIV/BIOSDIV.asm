@@ -72,7 +72,7 @@ startcode:
 
 align 4
 start:
-  mov r0,00011100b ; Clear Palette, VRAM OAM
+  mov r0,00011100b ; Clear Palette, VRAM, OAM
   swi $010000      ; BIOS Function
 
   mov r0,IO

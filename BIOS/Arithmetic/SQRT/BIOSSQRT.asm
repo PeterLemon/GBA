@@ -9,47 +9,47 @@ include 'LIB\TIMER.INC'
 
 macro PrintString Source, Destination, Length, Palette { ; Print String: Source Address, VRAM Destination, String Length, Palette Number
   local .LoopChar
-  imm32 r9,Source       ; Source Address
-  mov r10,VRAM          ; Video RAM
-  imm32 r11,Destination ; Destination Address
-  add r10,r11           ; Video RAM += Destination Address
-  mov r11,Length        ; String Length
-  mov r12,Palette*4096  ; Palette Number << 12
-  .LoopChar:
-    ldrb r13,[r9],1  ; Load Character, Increment String Source Address
-    orr r13,r12      ; OR Palette Number
-    strh r13,[r10],2 ; Store Character To Map Data, Increment VRAM Destination Address
-    subs r11,1       ; Decrement String Length, Compare String Length To Zero
-    bne .LoopChar    ; IF(String Length != 0) Loop Character
-}
-
-macro PrintValue Source, Destination, Length, Palette { ; Print Value: Source Address, VRAM Destination, Value Length, Palette Number
-  local .LoopChar
   imm32 r8,Source       ; Source Address
   mov r9,VRAM           ; Video RAM
   imm32 r10,Destination ; Destination Address
   add r9,r10            ; Video RAM += Destination Address
-  mov r10,Length-1      ; Value Length - 1
+  mov r10,Length        ; String Length
   mov r11,Palette*4096  ; Palette Number << 12
-  mov r12,"$"           ; Load Character
-  orr r12,r11           ; OR Palette Number
-  strh r12,[r9],2       ; Store Character To Map Data, Increment VRAM Destination Address
   .LoopChar:
-    ldrb r12,[r8,r10] ; Load Character
-    lsr r13,r12,4     ; Hi Nibble
-    cmp r13,9         ; Compare Hi Nibble To 9
-    addle r13,$30     ; IF(Hi Nibble <= 9) Hi Nibble += ASCII Number
-    addgt r13,$37     ; IF(Hi Nibble > 9)  Hi Nibble += ASCII Letter
-    orr r13,r11       ; OR Palette Number
-    strh r13,[r9],2   ; Store Character To Map Data, Increment VRAM Destination Address
-    and r12,$F        ; Lo Nibble
-    cmp r12,9         ; Compare Lo Nibble To 9
-    addle r12,$30     ; IF(Lo Nibble <= 9) Lo Nibble += ASCII Number
-    addgt r12,$37     ; IF(Lo Nibble > 9)  Lo Nibble += ASCII Letter
-    orr r12,r11       ; OR Palette Number
-    strh r12,[r9],2   ; Store Character To Map Data, Increment VRAM Destination Address
-    subs r10,1        ; Decrement Value Length, Compare Value Length To Zero
-    bge .LoopChar     ; IF(Value Length >= 0) Loop Character
+    ldrb r12,[r8],1 ; Load Character, Increment String Source Address
+    orr r12,r11     ; OR Palette Number
+    strh r12,[r9],2 ; Store Character To Map Data, Increment VRAM Destination Address
+    subs r10,1      ; Decrement String Length, Compare String Length To Zero
+    bne .LoopChar   ; IF(String Length != 0) Loop Character
+}
+
+macro PrintValue Source, Destination, Length, Palette { ; Print Value: Source Address, VRAM Destination, Value Length, Palette Number
+  local .LoopChar
+  imm32 r7,Source      ; Source Address
+  mov r8,VRAM          ; Video RAM
+  imm32 r9,Destination ; Destination Address
+  add r8,r9            ; Video RAM += Destination Address
+  mov r9,Length-1      ; Value Length - 1
+  mov r10,Palette*4096 ; Palette Number << 12
+  mov r11,"$"          ; Load Character
+  orr r11,r10          ; OR Palette Number
+  strh r11,[r8],2      ; Store Character To Map Data, Increment VRAM Destination Address
+  .LoopChar:
+    ldrb r11,[r7,r9] ; Load Character
+    lsr r12,r11,4    ; Hi Nibble
+    cmp r12,9        ; Compare Hi Nibble To 9
+    addle r12,$30    ; IF(Hi Nibble <= 9) Hi Nibble += ASCII Number
+    addgt r12,$37    ; IF(Hi Nibble > 9)  Hi Nibble += ASCII Letter
+    orr r12,r10      ; OR Palette Number
+    strh r12,[r8],2  ; Store Character To Map Data, Increment VRAM Destination Address
+    and r11,$F       ; Lo Nibble
+    cmp r11,9        ; Compare Lo Nibble To 9
+    addle r11,$30    ; IF(Lo Nibble <= 9) Lo Nibble += ASCII Number
+    addgt r11,$37    ; IF(Lo Nibble > 9)  Lo Nibble += ASCII Letter
+    orr r11,r10      ; OR Palette Number
+    strh r11,[r8],2  ; Store Character To Map Data, Increment VRAM Destination Address
+    subs r9,1        ; Decrement Value Length, Compare Value Length To Zero
+    bge .LoopChar    ; IF(Value Length >= 0) Loop Character
 }
 
 org $8000000

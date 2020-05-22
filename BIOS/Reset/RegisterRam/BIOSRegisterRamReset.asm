@@ -124,7 +124,7 @@ TIMERVRAM:  dw 0
 endcopyIWRAMEND: ; End Of Program Copy Code
 
 
-org startcodeIWRAMEND + (endcopyIWRAMEND - (IWRAM+$7E00))
+org startcodeIWRAMEND + (endcopyIWRAMEND - startIWRAMEND)
 startcode:
   org IWRAM
 
@@ -471,7 +471,7 @@ TIMER: dw 0
 endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
-org startcode + (endcopy - IWRAM)
+org startcode + (endcopy - start)
 FONTIMG: file 'Font8x8.img'      ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
 TitleTEXT:       db "GBA BIOS Reset Functions"       ; Include BG Map Text Data (24 Bytes)
 LineBreakTEXT:   db "------------------------------" ; Include BG Map Text Data (30 Bytes)

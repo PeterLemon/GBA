@@ -57,20 +57,19 @@ b copycode
 times $80000C0-($-0) db 0
 
 copycode:
-  adr r1,startcode
-  mov r2,IWRAM
-  imm32 r3,endcopy
+  adr r0,startcode
+  mov r1,IWRAM
+  imm32 r2,endcopy
   clp:
-    ldr r0,[r1],4
-    str r0,[r2],4
-    cmp r2,r3
+    ldr r3,[r0],4
+    str r3,[r1],4
+    cmp r1,r2
     bmi clp
-  imm32 r2,start
-  bx r2
+  imm32 r0,start
+  bx r0
 startcode:
   org IWRAM
 
-align 4
 start:
   mov r0,00011100b ; Clear Palette, VRAM, OAM
   swi $010000      ; BIOS Function
@@ -238,7 +237,7 @@ TIMER: dw 0
 endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
-org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
+org startcode + (endcopy - IWRAM)
 FONTIMG: file 'Font8x8.img'      ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
 TitleTEXT:     db "GBA BIOS Arithmetic Functions"  ; Include BG Map Text Data (29 Bytes)
 LineBreakTEXT: db "------------------------------" ; Include BG Map Text Data (30 Bytes)

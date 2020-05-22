@@ -17,16 +17,16 @@ b copycode
 times $80000C0-($-0) db 0
 
 copycode:
-  adr r1,startcode
-  mov r2,IWRAM
-  imm32 r3,endcopy
+  adr r0,startcode
+  mov r1,IWRAM
+  imm32 r2,endcopy
   clp:
-    ldr r0,[r1],4
-    str r0,[r2],4
-    cmp r2,r3
+    ldr r3,[r0],4
+    str r3,[r1],4
+    cmp r1,r2
     bmi clp
-  imm32 r2,start
-  bx r2
+  imm32 r0,start
+  bx r0
 startcode:
   org IWRAM
 
@@ -229,7 +229,7 @@ NoInterrupt:
 endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
-org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
+org startcode + (endcopy - IWRAM)
 BGIMG: file 'BG.img' ; Include BG Image Data (10944 Bytes)
 BGMAP: file 'BG.map' ; Include BG Map Data (16384 Bytes)
 BGPAL: file 'BG.pal' ; Include BG Palette Data (64 Bytes)

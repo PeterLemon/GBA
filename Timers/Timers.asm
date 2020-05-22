@@ -123,7 +123,7 @@ Loop:
 endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
-org startcode + (endcopy - IWRAM)
+org startcode + (endcopy - start)
 FONTIMG: file 'Font8x8.img'      ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
 TitleTEXT: db "GBA Timers Test:" ; Include BG Map Text Data (16 Bytes)
 Timer0TEXT: db "Timer0 Frequency/1   =" ; Include BG Map Text Data (22 Bytes)

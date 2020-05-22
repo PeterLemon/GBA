@@ -1,0 +1,1 @@
+gbafix BIOSRegisterRamReset.gba

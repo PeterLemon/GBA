@@ -395,7 +395,7 @@ start:
   TestENDG:
 
 
-  imm32 r0,10000000b ; Reset SOUND Registers
+  imm32 r0,10000000b ; Reset OTHER Registers
 
   PrintString InputTEXT, 5188, 5, 0 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
   PrintString R0TEXT, 5200, 4, 0 ; Print String: Source Address, VRAM Destination, String Length, Palette Number

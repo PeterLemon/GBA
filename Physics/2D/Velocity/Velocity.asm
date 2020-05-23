@@ -38,16 +38,16 @@ macro Control { ; Macro To Handle Control Input
 }
 
 copycode:
-  adr r1,startcode
-  mov r2,IWRAM
-  imm32 r3,endcopy
+  adr r0,startcode
+  mov r1,IWRAM
+  imm32 r2,endcopy
   clp:
-    ldr r0,[r1],4
-    str r0,[r2],4
-    cmp r2,r3
+    ldr r3,[r0],4
+    str r3,[r1],4
+    cmp r1,r2
     bmi clp
-  imm32 r2,start
-  bx r2
+  imm32 r0,start
+  bx r0
 startcode:
   org IWRAM
 
@@ -190,7 +190,7 @@ Loop:
 endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
-org $80000C0 + (endcopy - IWRAM) + (startcode - copycode)
+org startcode + (endcopy - IWRAM)
 SpriteIMG: ; Include Sprite Image Data (1536 Bytes)
   file 'Cannon.img' ; Include Sprite Image Data (1024 Bytes)
   file 'Bullet.img' ; Include Sprite Image Data (512 Bytes)

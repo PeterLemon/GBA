@@ -965,16 +965,16 @@ macro UPLEFTRIGHTBOUNDIPS IPSFrame, Audio, AudioHz, AudioVBLoop, Up, Left, Right
 }
 
 copycode:
-  adr r1,startcode
-  mov r2,start
-  imm32 r3,endcopy
+  adr r0,startcode
+  mov r1,IWRAM
+  imm32 r2,endcopy
   clp:
-    ldr r0,[r1],4
-    str r0,[r2],4
-    cmp r2,r3
+    ldr r3,[r0],4
+    str r3,[r1],4
+    cmp r1,r2
     bmi clp
-  mov r2,start
-  bx r2
+  imm32 r0,start
+  bx r0
 startcode:
 org IWRAM
 
@@ -1285,7 +1285,7 @@ db 0
 
 endcopy:
 
-org $80000C0 + (endcopy - start) + (startcode - copycode)
+org startcode + (endcopy - start)
 align 4
 POINTERPAL:
 file 'DATA\POINTER.pal'

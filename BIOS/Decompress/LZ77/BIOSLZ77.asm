@@ -251,7 +251,7 @@ TIMER: dw 0
 
 DATAWRAM: file 'DATAWRAM.lz' ; Include LZ WRAM Data (805 Bytes)
 align 4
-DATAVRAM: file 'DATAVRAM.lz' ; Include LZ WRAM Data (807 Bytes)
+DATAVRAM: file 'DATAVRAM.lz' ; Include LZ VRAM Data (807 Bytes)
 align 4
 
 endcopy: ; End Of Program Copy Code

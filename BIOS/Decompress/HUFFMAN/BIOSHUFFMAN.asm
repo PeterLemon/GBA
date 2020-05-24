@@ -249,8 +249,8 @@ Loop:
 VALUE: dw 0
 TIMER: dw 0
 
-DATASIZE4: file 'DATASIZE4.huff' ; Include LZ WRAM Data (1032 Bytes)
-DATASIZE8: file 'DATASIZE8.huff' ; Include LZ WRAM Data (788 Bytes)
+DATASIZE4: file 'DATASIZE4.huff' ; Include Huffman 4-Bit Data (1032 Bytes)
+DATASIZE8: file 'DATASIZE8.huff' ; Include Huffman 8-bit Data (788 Bytes)
 
 endcopy: ; End Of Program Copy Code
 

@@ -433,7 +433,7 @@ BITDestWidth:
   db 2    ; Destination Unit Bit Width (1,2,4,8,16,32)
   dw 0    ; Data Offset (Bit 0..30), Zero Data Flag (Bit 31)
 
-DATA2BPP: file 'DATA2BPP.bin' ; Include 1BPP Data (2048 Bytes)
+DATA2BPP: file 'DATA2BPP.bin' ; Include 2BPP Data (2048 Bytes)
 
 endcopy: ; End Of Program Copy Code
 

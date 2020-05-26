@@ -99,7 +99,7 @@ start:
 
   PrintString TitleTEXT, 4096, 30, 4 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
   PrintString LineBreakTEXT, 4160, 30, 1 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
-  PrintString CPUSet16TEXT, 4224, 25, 5 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  PrintString CPUSetTEXT, 4224, 25, 5 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
 
   imm32 r0,COPYDATA  ; Source Address
   mov r1,WRAM        ; Destination Address
@@ -388,7 +388,7 @@ org startcode + (endcopy - start)
 FONTIMG: file 'Font8x8.img'      ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
 TitleTEXT:     db "GBA BIOS Memory Copy Functions" ; Include BG Map Text Data (30 Bytes)
 LineBreakTEXT: db "------------------------------" ; Include BG Map Text Data (30 Bytes)
-CPUSet16TEXT:  db "CPUSET $0B (Memory copy):"      ; Include BG Map Text Data (25 Bytes)
+CPUSetTEXT:    db "CPUSET $0B (Memory copy):"      ; Include BG Map Text Data (25 Bytes)
 
 InputTEXT:     db "INPUT"    ; Include BG Map Text Data (5 Bytes)
 OutputTEXT:    db "OUTPUT"   ; Include BG Map Text Data (6 Bytes)

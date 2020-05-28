@@ -1,0 +1,1 @@
+gbafix BIOSOBJAFFINESET.gba

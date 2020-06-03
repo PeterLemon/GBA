@@ -136,6 +136,80 @@ start:
 
 
   PrintString LineBreakTEXT, 4416, 30, 1 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  PrintString SoundDriverVSyncOffTEXT, 4480, 24, 5 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+
+  PrintString TestTEXT, 4530, 4, 3 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  PrintString LineBreakTEXT, 4594, 4, 0 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+
+  mov r10,IO ; GBA I/O Base Offset
+  orr r11,r10,TM0CNT             ; Timer 0 Control Register
+  mov r12,TM_ENABLE or TM_FREQ_1 ; Timer 0 Enable, Frequency/1
+  str r12,[r11]                  ; Start Timer 0
+
+  swi $280000 ; BIOS Function
+
+  ldr r10,[r11] ; Load  Timer 0 Value
+  imm32 r9,TIMER
+  str r10,[r9]  ; Store Timer 0 Value
+  mov r12,TM_DISABLE
+  str r12,[r11] ; Reset Timer 0 Control
+
+  PrintString OutputTEXT, 4610, 6, 0 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  PrintString TimerTEXT, 4624, 8, 0 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  PrintValue TIMER, 4642, 2, 2 ; Print Value: Source Address, VRAM Destination, Value Length, Palette Number
+
+  imm32 r9,TIMER ; Load Result
+  ldr r4,[r9]
+  lsl r4,16
+  lsr r4,16
+  imm16 r9,$0051 ; Load Test Check
+  cmp r4,r9      ; Compare Result
+  bne TestFAILB  ; IF(Check != Result) FAIL, ELSE PASS
+  PrintString PassTEXT, 4658, 4, 2 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  b TestENDB
+  TestFAILB:
+    PrintString FailTEXT, 4658, 4, 1 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  TestENDB:
+
+
+  PrintString LineBreakTEXT, 4672, 30, 1 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  PrintString SoundDriverVSyncOnTEXT, 4736, 23, 5 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+
+  PrintString TestTEXT, 4786, 4, 3 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  PrintString LineBreakTEXT, 4850, 4, 0 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+
+  mov r10,IO ; GBA I/O Base Offset
+  orr r11,r10,TM0CNT             ; Timer 0 Control Register
+  mov r12,TM_ENABLE or TM_FREQ_1 ; Timer 0 Enable, Frequency/1
+  str r12,[r11]                  ; Start Timer 0
+
+  swi $290000 ; BIOS Function
+
+  ldr r10,[r11] ; Load  Timer 0 Value
+  imm32 r9,TIMER
+  str r10,[r9]  ; Store Timer 0 Value
+  mov r12,TM_DISABLE
+  str r12,[r11] ; Reset Timer 0 Control
+
+  PrintString OutputTEXT, 4866, 6, 0 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  PrintString TimerTEXT, 4880, 8, 0 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  PrintValue TIMER, 4898, 2, 2 ; Print Value: Source Address, VRAM Destination, Value Length, Palette Number
+
+  imm32 r9,TIMER ; Load Result
+  ldr r4,[r9]
+  lsl r4,16
+  lsr r4,16
+  imm16 r9,$003C ; Load Test Check
+  cmp r4,r9      ; Compare Result
+  bne TestFAILC  ; IF(Check != Result) FAIL, ELSE PASS
+  PrintString PassTEXT, 4914, 4, 2 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  b TestENDC
+  TestFAILC:
+    PrintString FailTEXT, 4914, 4, 1 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
+  TestENDC:
+
+
+  PrintString LineBreakTEXT, 4928, 30, 1 ; Print String: Source Address, VRAM Destination, String Length, Palette Number
 
 Loop:
   b Loop
@@ -147,9 +221,11 @@ endcopy: ; End Of Program Copy Code
 ; Static Data (ROM)
 org startcode + (endcopy - start)
 FONTIMG: file 'Font8x8.img'      ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
-TitleTEXT:            db "GBA BIOS Sound Functions"       ; Include BG Map Text Data (24 Bytes)
-LineBreakTEXT:        db "------------------------------" ; Include BG Map Text Data (30 Bytes)
-SoundDriverVSyncTEXT: db "SoundDriverVSync $1D:"          ; Include BG Map Text Data (21 Bytes)
+TitleTEXT:               db "GBA BIOS Sound Functions"       ; Include BG Map Text Data (24 Bytes)
+LineBreakTEXT:           db "------------------------------" ; Include BG Map Text Data (30 Bytes)
+SoundDriverVSyncTEXT:    db "SoundDriverVSync $1D:"          ; Include BG Map Text Data (21 Bytes)
+SoundDriverVSyncOffTEXT: db "SoundDriverVSyncOFF $28:"       ; Include BG Map Text Data (24 Bytes)
+SoundDriverVSyncOnTEXT:  db "SoundDriverVSyncON $29:"        ; Include BG Map Text Data (23 Bytes)
 
 OutputTEXT: db "OUTPUT"   ; Include BG Map Text Data (6 Bytes)
 TimerTEXT:  db "TIMER0 =" ; Include BG Map Text Data (8 Bytes)

@@ -1,3 +1,6 @@
+;================
+; FASMARM Macros
+;================
 macro imm16 reg,immediate {
   mov reg,(immediate) and $FF
   orr reg,(immediate) and $FF00

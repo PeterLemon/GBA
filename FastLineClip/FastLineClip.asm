@@ -3,19 +3,17 @@
 ; Uses Direction Pad To Change Line End Point X/Y Position
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\MEM.INC'
-include 'LIB\KEYPAD.INC'
-include 'LIB\DMA.INC'
+org $8000000
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_KEYPAD.INC' ; Include GBA Keypad Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 ; Setup Frame Buffer
 SCREEN_X = 240
 SCREEN_Y = 160
-
-org $8000000
-b copycode
-times $80000C0-($-0) db 0
 
 macro Control {
   ldr r0,[LineX1] ; R0 = Line Point X1
@@ -371,5 +369,5 @@ loop:
 endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
-org startcode + (endcopy - start)
+org startcode + (endcopy - IWRAM)
 include 'ReciprocalLUT.asm' ; Reciprocal LUT

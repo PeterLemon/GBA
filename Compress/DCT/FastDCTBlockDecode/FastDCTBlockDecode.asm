@@ -2,11 +2,10 @@
 ; 1. Decode DCT Block To WRAM
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\MEM.INC'
 org $8000000
-b Start
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 Start:
   ; Copy DCT To WRAM (128 Bytes)
@@ -232,7 +231,7 @@ Loop:
 
 DCT: ; Discrete Cosine Transform (DCT) 8x8 Result Matrix
   ;dh 700,0,0,0,0,0,0,0 ; We Apply The IDCT To A Matrix, Only Containing A DC Value Of 700.
-  ;dh 0,0,0,0,0,0,0,0	; It Will Produce A Grey Colored Square.
+  ;dh 0,0,0,0,0,0,0,0   ; It Will Produce A Grey Colored Square.
   ;dh 0,0,0,0,0,0,0,0
   ;dh 0,0,0,0,0,0,0,0
   ;dh 0,0,0,0,0,0,0,0
@@ -241,8 +240,8 @@ DCT: ; Discrete Cosine Transform (DCT) 8x8 Result Matrix
   ;dh 0,0,0,0,0,0,0,0
 
   ;dh 700,100,0,0,0,0,0,0 ; Now Let's Add An AC Value Of 100, At The 1st Position.
-  ;dh 0,0,0,0,0,0,0,0	  ; It Will Produce A Bar Diagram With A Curve Like A Half Cosine Line.
-  ;dh 0,0,0,0,0,0,0,0	  ; It Is Said It Has A Frequency Of 1 In X-Direction.
+  ;dh 0,0,0,0,0,0,0,0     ; It Will Produce A Bar Diagram With A Curve Like A Half Cosine Line.
+  ;dh 0,0,0,0,0,0,0,0     ; It Is Said It Has A Frequency Of 1 In X-Direction.
   ;dh 0,0,0,0,0,0,0,0
   ;dh 0,0,0,0,0,0,0,0
   ;dh 0,0,0,0,0,0,0,0
@@ -250,17 +249,17 @@ DCT: ; Discrete Cosine Transform (DCT) 8x8 Result Matrix
   ;dh 0,0,0,0,0,0,0,0
 
   ;dh 700,0,100,0,0,0,0,0 ; What Happens If We Place The AC Value Of 100 At The Next Position?
-  ;dh 0,0,0,0,0,0,0,0	  ; The Shape Of The Bar Diagram Shows A Cosine Line, Too.
-  ;dh 0,0,0,0,0,0,0,0	  ; But Now We See A Full Period.
-  ;dh 0,0,0,0,0,0,0,0	  ; The Frequency Is Twice As High As In The Previous Example.
+  ;dh 0,0,0,0,0,0,0,0     ; The Shape Of The Bar Diagram Shows A Cosine Line, Too.
+  ;dh 0,0,0,0,0,0,0,0     ; But Now We See A Full Period.
+  ;dh 0,0,0,0,0,0,0,0     ; The Frequency Is Twice As High As In The Previous Example.
   ;dh 0,0,0,0,0,0,0,0
   ;dh 0,0,0,0,0,0,0,0
   ;dh 0,0,0,0,0,0,0,0
   ;dh 0,0,0,0,0,0,0,0
 
   ;dh 700,100,100,0,0,0,0,0 ; But What Happens If We Place Both AC Values?
-  ;dh 0,0,0,0,0,0,0,0	    ; The Shape Of The Bar Diagram Is A Mix Of Both The 1st & 2nd Cosines.
-  ;dh 0,0,0,0,0,0,0,0	    ; The Resulting AC Value Is Simply An Addition Of The Cosine Lines.
+  ;dh 0,0,0,0,0,0,0,0       ; The Shape Of The Bar Diagram Is A Mix Of Both The 1st & 2nd Cosines.
+  ;dh 0,0,0,0,0,0,0,0       ; The Resulting AC Value Is Simply An Addition Of The Cosine Lines.
   ;dh 0,0,0,0,0,0,0,0
   ;dh 0,0,0,0,0,0,0,0
   ;dh 0,0,0,0,0,0,0,0
@@ -269,7 +268,7 @@ DCT: ; Discrete Cosine Transform (DCT) 8x8 Result Matrix
 
   ;dh 700,100,100,0,0,0,0,0 ; Now Let's Add An AC Value At The Other Direction.
   ;dh 200,0,0,0,0,0,0,0     ; Now The Values Vary In Y Direction, Too. The Principle Is:
-  ;dh 0,0,0,0,0,0,0,0	    ; The Higher The Index Of The AC Value The Greater The Frequency Is.
+  ;dh 0,0,0,0,0,0,0,0       ; The Higher The Index Of The AC Value The Greater The Frequency Is.
   ;dh 0,0,0,0,0,0,0,0
   ;dh 0,0,0,0,0,0,0,0
   ;dh 0,0,0,0,0,0,0,0

@@ -1,1 +1,0 @@
-gbafix BIOSSoundBias.gba

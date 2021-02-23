@@ -1,1 +1,0 @@
-gbafix QuantizationMultiBlockGFX8BIT.gba

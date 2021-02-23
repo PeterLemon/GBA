@@ -1,13 +1,16 @@
+;===========
+; GBA Timer
+;===========
 ; Timer Registers
 TM0CNT = $100 ; $4000100: Timer 0 Counter/Reload/Control
 TM1CNT = $104 ; $4000104: Timer 1 Counter/Reload/Control
 TM2CNT = $108 ; $4000108: Timer 2 Counter/Reload/Control
 TM3CNT = $10C ; $400010C: Timer 3 Counter/Reload/Control
 
-TM_FREQ_1    =  $00000 ; TMXCNT_H: Prescaler Selection F/1    (Bit 0-1)
-TM_FREQ_64   =  $10000 ; TMXCNT_H: Prescaler Selection F/64   (Bit 0-1)
-TM_FREQ_256  =  $20000 ; TMXCNT_H: Prescaler Selection F/256  (Bit 0-1)
-TM_FREQ_1024 =  $30000 ; TMXCNT_H: Prescaler Selection F/1024 (Bit 0-1)
+TM_FREQ_1    =  $00000 ; TMXCNT_H: Prescaler Selection F/1    (Bit 0..1)
+TM_FREQ_64   =  $10000 ; TMXCNT_H: Prescaler Selection F/64   (Bit 0..1)
+TM_FREQ_256  =  $20000 ; TMXCNT_H: Prescaler Selection F/256  (Bit 0..1)
+TM_FREQ_1024 =  $30000 ; TMXCNT_H: Prescaler Selection F/1024 (Bit 0..1)
 TM_ENABLE    = $800000 ; TMXCNT_H: Timer Start                (Bit 7)
 TM_DISABLE   =      $0 ; TMXCNT_H: Timer Stop                 (Bit 7)
 

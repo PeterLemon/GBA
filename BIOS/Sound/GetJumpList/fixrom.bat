@@ -1,1 +1,0 @@
-gbafix BIOSSoundGetJumpList.gba

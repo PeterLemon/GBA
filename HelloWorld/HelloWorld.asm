@@ -1,10 +1,12 @@
 ; Game Boy Advance 'Bare Metal' "Hello, World!" Text Printing demo by krom (Peter Lemon):
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\MEM.INC'
-include 'LIB\DMA.INC'
+org $8000000
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 macro PrintString Source, Destination, Length, Palette { ; Print String: Source Address, VRAM Destination, String Length, Palette Number
   local .LoopChar
@@ -21,10 +23,6 @@ macro PrintString Source, Destination, Length, Palette { ; Print String: Source 
     subs r2,1      ; Decrement String Length, Compare String Length To Zero
     bne .LoopChar  ; IF(String Length != 0) Loop Character
 }
-
-org $8000000
-b copycode
-times $80000C0-($-0) db 0
 
 copycode:
   adr r0,startcode

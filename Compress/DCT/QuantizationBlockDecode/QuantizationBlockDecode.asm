@@ -3,11 +3,10 @@
 ; 2. Decode DCT Block To WRAM
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\MEM.INC'
 org $8000000
-b Start
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 Start:
   imm32 r10,Q ; R10 = Q
@@ -41,42 +40,42 @@ Start:
       mov r10,WRAM ; R10 = DCT
       add r10,128
       IDCTV: ; While (V < 8)
-	mov r3,0 ; R3 = U
-	IDCTU: ; While (U < 8)
-	  ; IDCT[Y*8 + X] += DCT[V*8 + U]
-	  ldrsh r4,[r10],2 ; R4 = DCT[V*8 + U]
-	  ; * C[U]
-	  lsl r5,r3,1 ; R5 = U Offset
-	  ldrh r5,[r11,r5] ; R5 = C[U]
-	  mul r4,r5 ; R4 *= C[U]
-	  asr r4,16 ; Shift S.16
-	  ; * C[V]
-	  lsl r5,r2,1 ; R5 = V Offset
-	  ldrh r5,[r11,r5] ; R5 = C[V]
-	  mul r4,r5 ; R4 *= C[V]
-	  asr r4,16 ; Shift S.16
-	  ; * COS[U*8 + X]
-	  add r5,r1,r3,lsl 3 ; R5 = U*8 + X
-	  lsl r5,2 ; R5 = U*8 + X Offset
-	  ldr r5,[r12,r5] ; R5 = COS[U*8 + X]
-	  mul r4,r5 ; R4 *= COS[U*8 + X]
-	  asr r4,16 ; Shift S.16
-	  ; * COS[V*8 + Y]
-	  add r5,r0,r2,lsl 3 ; R5 = V*8 + Y
-	  lsl r5,2 ; R5 = V*8 + Y Offset
-	  ldr r5,[r12,r5] ; R5 = COS[V*8 + Y]
-	  mul r4,r5 ; R4 *= COS[V*8 + Y]
-	  asr r4,16 ; Shift S.16
+        mov r3,0 ; R3 = U
+        IDCTU: ; While (U < 8)
+          ; IDCT[Y*8 + X] += DCT[V*8 + U]
+          ldrsh r4,[r10],2 ; R4 = DCT[V*8 + U]
+          ; * C[U]
+          lsl r5,r3,1 ; R5 = U Offset
+          ldrh r5,[r11,r5] ; R5 = C[U]
+          mul r4,r5 ; R4 *= C[U]
+          asr r4,16 ; Shift S.16
+          ; * C[V]
+          lsl r5,r2,1 ; R5 = V Offset
+          ldrh r5,[r11,r5] ; R5 = C[V]
+          mul r4,r5 ; R4 *= C[V]
+          asr r4,16 ; Shift S.16
+          ; * COS[U*8 + X]
+          add r5,r1,r3,lsl 3 ; R5 = U*8 + X
+          lsl r5,2 ; R5 = U*8 + X Offset
+          ldr r5,[r12,r5] ; R5 = COS[U*8 + X]
+          mul r4,r5 ; R4 *= COS[U*8 + X]
+          asr r4,16 ; Shift S.16
+          ; * COS[V*8 + Y]
+          add r5,r0,r2,lsl 3 ; R5 = V*8 + Y
+          lsl r5,2 ; R5 = V*8 + Y Offset
+          ldr r5,[r12,r5] ; R5 = COS[V*8 + Y]
+          mul r4,r5 ; R4 *= COS[V*8 + Y]
+          asr r4,16 ; Shift S.16
 
-	  add r6,r4 ; IDCT += R4
+          add r6,r4 ; IDCT += R4
 
-	  add r3,1 ; U++
-	  cmp r3,8 ; Compare U To 8
-	  blt IDCTU ; IF (U < 8) IDCTU
+          add r3,1 ; U++
+          cmp r3,8 ; Compare U To 8
+          blt IDCTU ; IF (U < 8) IDCTU
 
-	add r2,1 ; V++
-	cmp r2,8 ; Compare V To 8
-	blt IDCTV ; IF (V < 8) IDCTV
+        add r2,1 ; V++
+        cmp r2,8 ; Compare V To 8
+        blt IDCTV ; IF (V < 8) IDCTV
 
       strh r6,[r9],2 ; IDCT[Y*8 + X] = IDCT
 

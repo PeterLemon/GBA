@@ -1,12 +1,11 @@
 ; Game Boy Advance 'Bare Metal' Cylinder Mapping Demo by krom (Peter Lemon):
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\MEM.INC'
-include 'LIB\DMA.INC'
 org $8000000
-b copycode
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 copycode:
   adr r0,startcode
@@ -62,7 +61,7 @@ Loop:
 
 
   add r1,1 ; Increment X Offset
-  cmp r1,WIDTH	 ; IF (X Offset >= WIDTH)
+  cmp r1,WIDTH   ; IF (X Offset >= WIDTH)
   subge r1,WIDTH ; X Offset -= WIDTH
 
   b Loop

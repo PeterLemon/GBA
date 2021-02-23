@@ -1,11 +1,13 @@
 ; Game Boy Advance 'Bare Metal' BIOS Functions Decompress BIT UnPack 2BPP demo by krom (Peter Lemon):
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\MEM.INC'
-include 'LIB\DMA.INC'
-include 'LIB\TIMER.INC'
+org $8000000
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_TIMER.INC' ; Include GBA Timer Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 macro PrintString Source, Destination, Length, Palette { ; Print String: Source Address, VRAM Destination, String Length, Palette Number
   local .LoopChar
@@ -51,10 +53,6 @@ macro PrintValue Source, Destination, Length, Palette { ; Print Value: Source Ad
     subs r9,1        ; Decrement Value Length, Compare Value Length To Zero
     bge .LoopChar    ; IF(Value Length >= 0) Loop Character
 }
-
-org $8000000
-b copycode
-times $80000C0-($-0) db 0
 
 copycode:
   adr r0,startcode
@@ -444,7 +442,7 @@ DATA8BPP:  file 'DATA8BPP.bin'  ; Include  8BPP Data (8192 Bytes)
 DATA16BPP: file 'DATA16BPP.bin' ; Include 16BPP Data (16384 Bytes)
 DATA32BPP: file 'DATA32BPP.bin' ; Include 16BPP Data (32768 Bytes)
 
-FONTIMG: file 'Font8x8.img'      ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
+FONTIMG: file 'Font8x8.img'    ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
 TitleTEXT:     db "GBA BIOS Decompress Functions"  ; Include BG Map Text Data (29 Bytes)
 LineBreakTEXT: db "------------------------------" ; Include BG Map Text Data (30 Bytes)
 BIT2BPPTEXT:   db "BIT $10 (UnPack 2BPP):"         ; Include BG Map Text Data (22 Bytes)

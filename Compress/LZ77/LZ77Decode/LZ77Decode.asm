@@ -2,11 +2,10 @@
 ; 1. Decode LZ77 Chunks To WRAM
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\MEM.INC'
 org $8000000
-b Start
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 Start:
   imm32 r0,LZ ; R0 = Source Address
@@ -32,22 +31,22 @@ Start:
       b LZBlockLoop
 
       LZDecode:
-	ldrb r5,[r0],1 ; R5 = Number Of Bytes To Copy & Disp MSB's
-	ldrb r6,[r0],1 ; R6 = Disp LSB's
-	add r6,r5,lsl 8
-	lsr r5,4 ; R5 = Number Of Bytes To Copy (Minus 3)
-	add r5,3 ; R5 = Number Of Bytes To Copy
-	mov r7,$1000
-	sub r7,1 ; R7 = $FFF
-	and r6,r7 ; R6 = Disp
-	add r6,1 ; R6 = Disp + 1
-	rsb r6,r1 ; R6 = Destination - Disp - 1
-	LZCopy:
-	  ldrb r7,[r6],1 ; R7 = Byte To Copy
-	  strb r7,[r1],1 ; Store Byte To WRAM
-	  subs r5,1 ; Number Of Bytes To Copy -= 1
-	  bne LZCopy ; IF (Number Of Bytes To Copy != 0) LZ Copy Bytes
-	  b LZBlockLoop
+        ldrb r5,[r0],1 ; R5 = Number Of Bytes To Copy & Disp MSB's
+        ldrb r6,[r0],1 ; R6 = Disp LSB's
+        add r6,r5,lsl 8
+        lsr r5,4 ; R5 = Number Of Bytes To Copy (Minus 3)
+        add r5,3 ; R5 = Number Of Bytes To Copy
+        mov r7,$1000
+        sub r7,1 ; R7 = $FFF
+        and r6,r7 ; R6 = Disp
+        add r6,1 ; R6 = Disp + 1
+        rsb r6,r1 ; R6 = Destination - Disp - 1
+        LZCopy:
+          ldrb r7,[r6],1 ; R7 = Byte To Copy
+          strb r7,[r1],1 ; Store Byte To WRAM
+          subs r5,1 ; Number Of Bytes To Copy -= 1
+          bne LZCopy ; IF (Number Of Bytes To Copy != 0) LZ Copy Bytes
+          b LZBlockLoop
     LZEnd:
 
   ; Skip Zero's At End Of LZ Compressed File

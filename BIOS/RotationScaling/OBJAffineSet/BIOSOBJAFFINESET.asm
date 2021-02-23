@@ -1,11 +1,13 @@
 ; Game Boy Advance 'Bare Metal' BIOS Functions Rotation/Scaling OBJAFFINESET demo by krom (Peter Lemon):
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\MEM.INC'
-include 'LIB\DMA.INC'
-include 'LIB\TIMER.INC'
+org $8000000
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_TIMER.INC' ; Include GBA Timer Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 macro PrintString Source, Destination, Length, Palette { ; Print String: Source Address, VRAM Destination, String Length, Palette Number
   local .LoopChar
@@ -51,10 +53,6 @@ macro PrintValue Source, Destination, Length, Palette { ; Print Value: Source Ad
     subs r9,1        ; Decrement Value Length, Compare Value Length To Zero
     bge .LoopChar    ; IF(Value Length >= 0) Loop Character
 }
-
-org $8000000
-b copycode
-times $80000C0-($-0) db 0
 
 copycode:
   adr r0,startcode
@@ -215,19 +213,19 @@ endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
 org startcode + (endcopy - start)
-FONTIMG: file 'Font8x8.img'      ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
+FONTIMG: file 'Font8x8.img'       ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
 TitleTEXT:        db "GBA BIOS Rotate/Scale Function" ; Include BG Map Text Data (30 Bytes)
 LineBreakTEXT:    db "------------------------------" ; Include BG Map Text Data (30 Bytes)
 OBJAffineSetTEXT: db "OBJAFFINESET $0F:"              ; Include BG Map Text Data (17 Bytes)
 
-InputTEXT:     db "INPUT"    ; Include BG Map Text Data (5 Bytes)
-OutputTEXT:    db "OUTPUT"   ; Include BG Map Text Data (6 Bytes)
-R0TEXT:        db "R0 ="     ; Include BG Map Text Data (4 Bytes)
-R1TEXT:        db "R1 ="     ; Include BG Map Text Data (4 Bytes)
-R2TEXT:        db "R2 ="     ; Include BG Map Text Data (4 Bytes)
-R3TEXT:        db "R3 ="     ; Include BG Map Text Data (4 Bytes)
-DATATEXT:      db "DATA"     ; Include BG Map Text Data (4 Bytes)
-TimerTEXT:     db "TIMER0 =" ; Include BG Map Text Data (8 Bytes)
+InputTEXT:  db "INPUT"    ; Include BG Map Text Data (5 Bytes)
+OutputTEXT: db "OUTPUT"   ; Include BG Map Text Data (6 Bytes)
+R0TEXT:     db "R0 ="     ; Include BG Map Text Data (4 Bytes)
+R1TEXT:     db "R1 ="     ; Include BG Map Text Data (4 Bytes)
+R2TEXT:     db "R2 ="     ; Include BG Map Text Data (4 Bytes)
+R3TEXT:     db "R3 ="     ; Include BG Map Text Data (4 Bytes)
+DATATEXT:   db "DATA"     ; Include BG Map Text Data (4 Bytes)
+TimerTEXT:  db "TIMER0 =" ; Include BG Map Text Data (8 Bytes)
 
 TestTEXT:   db "TEST" ; Include BG Map Text Data (4 Bytes)
 PassTEXT:   db "PASS" ; Include BG Map Text Data (4 Bytes)

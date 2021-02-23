@@ -1,11 +1,13 @@
 ; Game Boy Advance 'Bare Metal' BIOS Functions Memory Copy CPUFASTSET demo by krom (Peter Lemon):
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\MEM.INC'
-include 'LIB\DMA.INC'
-include 'LIB\TIMER.INC'
+org $8000000
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_TIMER.INC' ; Include GBA Timer Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 macro PrintString Source, Destination, Length, Palette { ; Print String: Source Address, VRAM Destination, String Length, Palette Number
   local .LoopChar
@@ -51,10 +53,6 @@ macro PrintValue Source, Destination, Length, Palette { ; Print Value: Source Ad
     subs r9,1        ; Decrement Value Length, Compare Value Length To Zero
     bge .LoopChar    ; IF(Value Length >= 0) Loop Character
 }
-
-org $8000000
-b copycode
-times $80000C0-($-0) db 0
 
 copycode:
   adr r0,startcode
@@ -257,7 +255,7 @@ endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
 org startcode + (endcopy - start)
-FONTIMG: file 'Font8x8.img'      ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
+FONTIMG: file 'Font8x8.img'     ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
 TitleTEXT:      db "GBA BIOS Memory Copy Functions" ; Include BG Map Text Data (30 Bytes)
 LineBreakTEXT:  db "------------------------------" ; Include BG Map Text Data (30 Bytes)
 CPUFastSetTEXT: db "CPUFASTSET $0C (Memory copy):"  ; Include BG Map Text Data (29 Bytes)

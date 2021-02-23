@@ -1,1 +1,0 @@
-gbafix BIOSCPUFASTSET.gba

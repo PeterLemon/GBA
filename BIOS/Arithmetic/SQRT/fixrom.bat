@@ -1,1 +1,0 @@
-gbafix BIOSSQRT.gba

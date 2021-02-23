@@ -6,15 +6,14 @@
 ; Select/Start Buttons Changes BG Mode7 FOV (Mode7 Distance)
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\MEM.INC'
-include 'LIB\KEYPAD.INC'
-include 'LIB\DMA.INC'
-include 'LIB\INTERRUPT.INC'
 org $8000000
-b copycode
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_INTERRUPT.INC' ; Include GBA Interrupt Macros
+include 'LIB\GBA_KEYPAD.INC' ; Include GBA Keypad Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 copycode:
   adr r0,startcode

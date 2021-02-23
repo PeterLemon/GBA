@@ -1,1 +1,0 @@
-gbafix BIOSCHECKSUM.gba

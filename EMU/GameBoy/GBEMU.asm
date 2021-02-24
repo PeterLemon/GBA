@@ -1,11 +1,17 @@
 ; GBA 'Bare Metal' Nintendo Game Boy Emulator by krom (Peter Lemon):
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\SOUND.INC'
-include 'LIB\MEM.INC'
-include 'LIB\DMA.INC'
+org $8000000
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_KEYPAD.INC' ; Include GBA Keypad Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_OBJ.INC' ; Include GBA Object Macros
+include 'LIB\GBA_SOUND.INC' ; Include GBA Sound Macros
+include 'LIB\GBA_TIMER.INC' ; Include GBA Timer Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
+
 include 'MEM.INC'
 
 ; F Register (CPU Flag Register ZNHC0000 Low 4 Bits Always Zero)
@@ -15,10 +21,6 @@ N_FLAG = $40 ; F Register Bit 6 Negative Flag
 Z_FLAG = $80 ; F Register Bit 7 Zero Flag
 
 MEM_MAP = WRAM ; Memory Map = $10000 Bytes
-
-org $8000000
-b copycode
-times $80000C0-($-0) db 0
 
 copycode:
   adr r0,startcode

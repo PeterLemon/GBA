@@ -5,15 +5,14 @@
 ; Select Button Resets To Default Settings
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\MEM.INC'
-include 'LIB\KEYPAD.INC'
-include 'LIB\DMA.INC'
-include 'LIB\OBJ.INC'
 org $8000000
-b copycode
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_KEYPAD.INC' ; Include GBA Keypad Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_OBJ.INC' ; Include GBA Object Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 macro Control { ; Macro To Handle Control Input
   mov r0,OBJAffineSource ; R0 = Address Of Parameter Table
@@ -101,38 +100,38 @@ start:
   ; Sprite 16x32
   imm32 r2,(TALL+COLOR_256+0+OBJ_MOSAIC+SIZE_DOUBLE+ROTATION_FLAG)+((SIZE_32+16) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
-  mov r2,0	; R2 = Attribute 2 (Tile Number 0)
+  mov r2,0      ; R2 = Attribute 2 (Tile Number 0)
   str r2,[r1],4 ; Store Attribute 2 To OAM
 
   ; Sprite 32x16
   imm32 r2,(WIDE+COLOR_256+16+OBJ_MOSAIC+SIZE_DOUBLE+ROTATION_FLAG)+((SIZE_32+88) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
-  mov r2,$10	; R2 = Attribute 2 (Tile Number 16)
+  mov r2,$10    ; R2 = Attribute 2 (Tile Number 16)
   str r2,[r1],4 ; Store Attribute 2 To OAM
 
   ; Sprite 32x32
   imm32 r2,(SQUARE+COLOR_256+0+OBJ_MOSAIC+SIZE_DOUBLE+ROTATION_FLAG)+((SIZE_32+176) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
-  mov r2,$20	; R2 = Attribute 2 (Tile Number 32)
+  mov r2,$20    ; R2 = Attribute 2 (Tile Number 32)
   str r2,[r1],4 ; Store Attribute 2 To OAM
 
   ; Sprite 32x64
   imm32 r2,(TALL+COLOR_256+32+OBJ_MOSAIC+SIZE_DOUBLE+ROTATION_FLAG)+((SIZE_64+0) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
-  mov r2,$40	; R2 = Attribute 2 (Tile Number 64)
+  mov r2,$40    ; R2 = Attribute 2 (Tile Number 64)
   str r2,[r1],4 ; Store Attribute 2 To OAM
 
   ; Sprite 64x32
   imm32 r2,(WIDE+COLOR_256+64+OBJ_MOSAIC+SIZE_DOUBLE+ROTATION_FLAG)+((SIZE_64+56) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
-  mov r2,$80	; R2 = Attribute 2 (Tile Number 128)
+  mov r2,$80    ; R2 = Attribute 2 (Tile Number 128)
   str r2,[r1],4 ; Store Attribute 2 To OAM
 
   ; Sprite 64x64
   imm32 r2,(SQUARE+COLOR_256+32+OBJ_MOSAIC+SIZE_DOUBLE+ROTATION_FLAG)+((SIZE_64+144) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
-  mov r2,$C0	; R2 = Attribute 2 (Tile Number 192)
-  str r2,[r1]	; Store Attribute 2 To OAM
+  mov r2,$C0    ; R2 = Attribute 2 (Tile Number 192)
+  str r2,[r1]   ; Store Attribute 2 To OAM
 
   imm16 r1,$4E73 ; R1 = BG Color (Gray)
   mov r2,VPAL ; Load BG Palette Address

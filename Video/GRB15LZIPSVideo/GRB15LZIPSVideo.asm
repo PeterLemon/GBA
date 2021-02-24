@@ -1,15 +1,14 @@
 ; GBA 'Bare Metal' GRB 15-Bit LZ Compressed IPS Video Decode Demo by krom (Peter Lemon):
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\MEM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\DMA.INC'
-include 'LIB\SOUND.INC'
-include 'LIB\TIMER.INC'
 org $8000000
-b copycode
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_SOUND.INC' ; Include GBA Sound Macros
+include 'LIB\GBA_TIMER.INC' ; Include GBA Timer Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 macro IPSDecode { ; Decode IPS Headerless & Footerless Data With 2 Byte (Word) Offsets, Little Endian Offset, Size, & RLE Size
   local .IPSLoop, .IPSData, .IPSRLE, .IPSRLELoop, .IPSEOF
@@ -229,22 +228,22 @@ LoopFrames:
       b LZBlockLoop
 
       LZDecode:
-	ldrb r5,[r0],1 ; R5 = Number Of Bytes To Copy & Disp MSB's
-	ldrb r6,[r0],1 ; R6 = Disp LSB's
-	add r6,r5,lsl 8
-	lsr r5,4 ; R5 = Number Of Bytes To Copy (Minus 3)
-	add r5,3 ; R5 = Number Of Bytes To Copy
-	mov r7,$1000
-	sub r7,1 ; R7 = $FFF
-	and r6,r7 ; R6 = Disp
-	add r6,1 ; R6 = Disp + 1
-	rsb r6,r1 ; R6 = Destination - Disp - 1
-	LZCopy:
-	  ldrb r7,[r6],1 ; R7 = Byte To Copy
-	  strb r7,[r1],1 ; Store Byte To WRAM
-	  subs r5,1 ; Number Of Bytes To Copy -= 1
-	  bne LZCopy ; IF (Number Of Bytes To Copy != 0) LZ Copy Bytes
-	  b LZBlockLoop
+        ldrb r5,[r0],1 ; R5 = Number Of Bytes To Copy & Disp MSB's
+        ldrb r6,[r0],1 ; R6 = Disp LSB's
+        add r6,r5,lsl 8
+        lsr r5,4 ; R5 = Number Of Bytes To Copy (Minus 3)
+        add r5,3 ; R5 = Number Of Bytes To Copy
+        mov r7,$1000
+        sub r7,1 ; R7 = $FFF
+        and r6,r7 ; R6 = Disp
+        add r6,1 ; R6 = Disp + 1
+        rsb r6,r1 ; R6 = Destination - Disp - 1
+        LZCopy:
+          ldrb r7,[r6],1 ; R7 = Byte To Copy
+          strb r7,[r1],1 ; Store Byte To WRAM
+          subs r5,1 ; Number Of Bytes To Copy -= 1
+          bne LZCopy ; IF (Number Of Bytes To Copy != 0) LZ Copy Bytes
+          b LZBlockLoop
     LZEnd:
 
   str r1,[IPSOffset] ; Store IPS WRAM End Offset

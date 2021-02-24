@@ -2,17 +2,16 @@
 ; Example of Compressed Video & Still Frame Decoding
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\MEM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\DMA.INC'
-include 'LIB\SOUND.INC'
-include 'LIB\TIMER.INC'
-include 'LIB\OBJ.INC'
-include 'LIB\KEYPAD.INC'
 org $8000000
-b copycode
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_KEYPAD.INC' ; Include GBA Keypad Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_OBJ.INC' ; Include GBA Object Macros
+include 'LIB\GBA_SOUND.INC' ; Include GBA Sound Macros
+include 'LIB\GBA_TIMER.INC' ; Include GBA Timer Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 macro IPSdecode { ; Decode IPS Headerless & Footerless data with 2 byte Offsets, Little Endian Offset, Size, & RLE Size
   local .IPSOffset, .IPSData, .IPSRLE, .IPSRLELoop, .IPSEOF
@@ -32,7 +31,7 @@ macro IPSdecode { ; Decode IPS Headerless & Footerless data with 2 byte Offsets,
   .IPSData: ; Decode IPS Data
     ldrb r4,[r0],1 ; Load Data Byte
     strb r4,[r1],1 ; Store Data Byte
-    subs r3,1	   ; Sub 1 From IPS Size
+    subs r3,1      ; Sub 1 From IPS Size
     bne .IPSData   ; Loop IPS Data If IPS Size Is Not Zero
     beq .IPSEOF    ; Run IPS EOF If IPS Size Is Zero
   .IPSRLE: ; Decode IPS RLE Data
@@ -45,15 +44,15 @@ macro IPSdecode { ; Decode IPS Headerless & Footerless data with 2 byte Offsets,
       subs r3,1
       bne .IPSRLELoop
   .IPSEOF: ; Decode IPS EOF
-    cmp r0,r6	   ; Compare WRAM Offset To IPS WRAM End Position
+    cmp r0,r6      ; Compare WRAM Offset To IPS WRAM End Position
     bne .IPSOffset ; Run IPS Offset If EOF Not Reached
 }
 
 macro GRBdecode { ; Decode GRB Frame
   local .decodeGRBLoop
-  mov r0,WRAM		  ; WRAM Offset
-  imm32 r1,$2012C00	  ; G Offset
-  add r2,r1,240 * 160	  ; R Offset
+  mov r0,WRAM             ; WRAM Offset
+  imm32 r1,$2012C00       ; G Offset
+  add r2,r1,240 * 160     ; R Offset
   add r3,r2,240 * 160 / 4 ; B Offset
 
   mov r4,240 * 160 / 16 ; Block Count
@@ -71,7 +70,7 @@ macro GRBdecode { ; Decode GRB Frame
 
     ; 1st 2x2 Block (4 Pixels)
     ldrb r7,[r2],1 ; Load R Byte
-    orr r12,r7	   ; Pack R Pixel
+    orr r12,r7     ; Pack R Pixel
     ; 1st Pixel
     ldrb r8,[r1],1 ; Load G Byte
     orr r12,r8,lsl 5 ; Pack G Pixel
@@ -79,26 +78,26 @@ macro GRBdecode { ; Decode GRB Frame
     ; 2nd Pixel
     ldrb r8,[r1],r9,lsr 1 ; Load G Byte
     mov r12,r6,lsl 10 ; Pack B Pixel
-    orr r12,r7	      ; Pack R Pixel
+    orr r12,r7        ; Pack R Pixel
     orr r12,r8,lsl 5  ; Pack G Pixel
     strh r12,[r0],r9  ; Store Decoded GRB Pixel Into WRAM
     ; 3rd Pixel
     ldrb r8,[r1],1 ; Load G Byte
     mov r12,r6,lsl 10 ; Pack B Pixel
-    orr r12,r7	      ; Pack R Pixel
+    orr r12,r7        ; Pack R Pixel
     orr r12,r8,lsl 5  ; Pack G Pixel
     strh r12,[r0],2   ; Store Decoded GRB Pixel Into WRAM
     ; 4th Pixel
     ldrb r8,[r1],-r9,lsr 1 ; Load G Byte
     mov r12,r6,lsl 10 ; Pack B Pixel
-    orr r12,r7	      ; Pack R Pixel
+    orr r12,r7        ; Pack R Pixel
     orr r12,r8,lsl 5  ; Pack G Pixel
     strh r12,[r0],-r9 ; Store Decoded GRB Pixel Into WRAM
 
     ; 2nd 2x2 Block (4 Pixels)
     mov r12,r6,lsl 10 ; Pack B Pixel
     ldrb r7,[r2],119  ; Load R Byte
-    orr r12,r7	      ; Pack R Pixel
+    orr r12,r7        ; Pack R Pixel
     ; 1st Pixel
     ldrb r8,[r1],1 ; Load G Byte
     orr r12,r8,lsl 5 ; Pack G Pixel
@@ -106,26 +105,26 @@ macro GRBdecode { ; Decode GRB Frame
     ; 2nd Pixel
     ldrb r8,[r1],r9,lsr 1 ; Load G Byte
     mov r12,r6,lsl 10 ; Pack B Pixel
-    orr r12,r7	      ; Pack R Pixel
+    orr r12,r7        ; Pack R Pixel
     orr r12,r8,lsl 5  ; Pack G Pixel
     strh r12,[r0],r9  ; Store Decoded GRB Pixel Into WRAM
     ; 3rd Pixel
     ldrb r8,[r1],1 ; Load G Byte
     mov r12,r6,lsl 10 ; Pack B Pixel
-    orr r12,r7	      ; Pack R Pixel
+    orr r12,r7        ; Pack R Pixel
     orr r12,r8,lsl 5  ; Pack G Pixel
     strh r12,[r0],2   ; Store Decoded GRB Pixel Into WRAM
     ; 4th Pixel
     ldrb r8,[r1],r10,lsr 1 ; Load G Byte
     mov r12,r6,lsl 10 ; Pack B Pixel
-    orr r12,r7	      ; Pack R Pixel
+    orr r12,r7        ; Pack R Pixel
     orr r12,r8,lsl 5  ; Pack G Pixel
     strh r12,[r0],r10 ; Store Decoded GRB Pixel Into WRAM
 
     ; 3rd 2x2 Block (4 Pixels)
     mov r12,r6,lsl 10 ; Pack B Pixel
     ldrb r7,[r2],1 ; Load R Byte
-    orr r12,r7	   ; Pack R Pixel
+    orr r12,r7     ; Pack R Pixel
     ; 1st Pixel
     ldrb r8,[r1],1 ; Load G Byte
     orr r12,r8,lsl 5 ; Pack G Pixel
@@ -133,19 +132,19 @@ macro GRBdecode { ; Decode GRB Frame
     ; 2nd Pixel
     ldrb r8,[r1],r9,lsr 1 ; Load G Byte
     mov r12,r6,lsl 10 ; Pack B Pixel
-    orr r12,r7	      ; Pack R Pixel
+    orr r12,r7        ; Pack R Pixel
     orr r12,r8,lsl 5  ; Pack G Pixel
     strh r12,[r0],r9  ; Store Decoded GRB Pixel Into WRAM
     ; 3rd Pixel
     ldrb r8,[r1],1 ; Load G Byte
     mov r12,r6,lsl 10 ; Pack B Pixel
-    orr r12,r7	      ; Pack R Pixel
+    orr r12,r7        ; Pack R Pixel
     orr r12,r8,lsl 5  ; Pack G Pixel
     strh r12,[r0],2   ; Store Decoded GRB Pixel Into WRAM
     ; 4th Pixel
     ldrb r8,[r1],-r9,lsr 1 ; Load G Byte
     mov r12,r6,lsl 10  ; Pack B Pixel
-    orr r12,r7	       ; Pack R Pixel
+    orr r12,r7         ; Pack R Pixel
     orr r12,r8,lsl 5   ; Pack G Pixel
     strh r12,[r0],-r9  ; Store Decoded GRB Pixel Into WRAM
 
@@ -153,9 +152,9 @@ macro GRBdecode { ; Decode GRB Frame
     subs r5,1 ; Decrement End Of Blue Scanline Counter
     moveq r5,60 ; End Of Blue Scanline
     mov r12,r6,lsl 10 ; Pack B Pixel
-    ldrbeq r7,[r2],1	; Load R Byte End Of Blue Scanline
+    ldrbeq r7,[r2],1    ; Load R Byte End Of Blue Scanline
     ldrbne r7,[r2],-119 ; Load R Byte
-    orr r12,r7		; Pack R Pixel
+    orr r12,r7          ; Pack R Pixel
     ; 1st Pixel
     ldrb r8,[r1],1 ; Load G Byte
     orr r12,r8,lsl 5 ; Pack G Pixel
@@ -163,22 +162,22 @@ macro GRBdecode { ; Decode GRB Frame
     ; 2nd Pixel
     ldrb r8,[r1],r9,lsr 1 ; Load G Byte
     mov r12,r6,lsl 10 ; Pack B Pixel
-    orr r12,r7	      ; Pack R Pixel
+    orr r12,r7        ; Pack R Pixel
     orr r12,r8,lsl 5  ; Pack G Pixel
     strh r12,[r0],r9  ; Store Decoded GRB Pixel Into WRAM
     ; 3rd Pixel
     ldrb r8,[r1],1 ; Load G Byte
     mov r12,r6,lsl 10 ; Pack B Pixel
-    orr r12,r7	      ; Pack R Pixel
+    orr r12,r7        ; Pack R Pixel
     orr r12,r8,lsl 5  ; Pack G Pixel
     strh r12,[r0],2   ; Store Decoded GRB Pixel Into WRAM
     ; 4th Pixel
     ldrbeq r8,[r1],1 ; Load G Byte End Of Blue Scanline
     ldrbne r8,[r1],-r11,lsr 1 ; Load G Byte
-    mov r12,r6,lsl 10	 ; Pack B Pixel
-    orr r12,r7		 ; Pack R Pixel
-    orr r12,r8,lsl 5	 ; Pack G Pixel
-    strheq r12,[r0],2	 ; Store Decoded GRB Pixel Into WRAM End Of Blue Scanline
+    mov r12,r6,lsl 10    ; Pack B Pixel
+    orr r12,r7           ; Pack R Pixel
+    orr r12,r8,lsl 5     ; Pack G Pixel
+    strheq r12,[r0],2    ; Store Decoded GRB Pixel Into WRAM End Of Blue Scanline
     strhne r12,[r0],-r11 ; Store Decoded GRB Pixel Into WRAM
 
     subs r4,1
@@ -205,34 +204,34 @@ local .Loop, .LZLoop, .LZBlockLoop, .LZDecode, .LZCopy, .LZEnd, .LZEOF
       ldrb r3,[r0],1 ; R3 = Flag Data For Next 8 Blocks (0 = Uncompressed Byte, 1 = Compressed Bytes)
       mov r4,10000000b ; R4 = Flag Data Block Type Shifter
       .LZBlockLoop:
-	cmp r1,r2 ; IF(Destination Address == Destination End Offset) LZEnd
-	beq .LZEnd
-	cmp r4,0 ; IF(Flag Data Block Type Shifter == 0) LZLoop
-	beq .LZLoop
-	tst r3,r4 ; Test Block Type
-	lsr r4,1 ; Shift R4 To Next Flag Data Block Type
-	bne .LZDecode ; IF(BlockType != 0) LZDecode Bytes
-	ldrb r5,[r0],1 ; ELSE Copy Uncompressed Byte
-	strb r5,[r1],1 ; Store Uncompressed Byte To Destination
-	b .LZBlockLoop
+        cmp r1,r2 ; IF(Destination Address == Destination End Offset) LZEnd
+        beq .LZEnd
+        cmp r4,0 ; IF(Flag Data Block Type Shifter == 0) LZLoop
+        beq .LZLoop
+        tst r3,r4 ; Test Block Type
+        lsr r4,1 ; Shift R4 To Next Flag Data Block Type
+        bne .LZDecode ; IF(BlockType != 0) LZDecode Bytes
+        ldrb r5,[r0],1 ; ELSE Copy Uncompressed Byte
+        strb r5,[r1],1 ; Store Uncompressed Byte To Destination
+        b .LZBlockLoop
 
-	.LZDecode:
-	  ldrb r5,[r0],1 ; R5 = Number Of Bytes To Copy & Disp MSB's
-	  ldrb r6,[r0],1 ; R6 = Disp LSB's
-	  add r6,r5,lsl 8
-	  lsr r5,4 ; R5 = Number Of Bytes To Copy (Minus 3)
-	  add r5,3 ; R5 = Number Of Bytes To Copy
-	  mov r7,$1000
-	  sub r7,1 ; R7 = $FFF
-	  and r6,r7 ; R6 = Disp
-	  add r6,1 ; R6 = Disp + 1
-	  rsb r6,r1 ; R6 = Destination - Disp - 1
-	  .LZCopy:
-	    ldrb r7,[r6],1
-	    strb r7,[r1],1
-	    subs r5,1
-	    bne .LZCopy
-	    b .LZBlockLoop
+        .LZDecode:
+          ldrb r5,[r0],1 ; R5 = Number Of Bytes To Copy & Disp MSB's
+          ldrb r6,[r0],1 ; R6 = Disp LSB's
+          add r6,r5,lsl 8
+          lsr r5,4 ; R5 = Number Of Bytes To Copy (Minus 3)
+          add r5,3 ; R5 = Number Of Bytes To Copy
+          mov r7,$1000
+          sub r7,1 ; R7 = $FFF
+          and r6,r7 ; R6 = Disp
+          add r6,1 ; R6 = Disp + 1
+          rsb r6,r1 ; R6 = Destination - Disp - 1
+          .LZCopy:
+            ldrb r7,[r6],1
+            strb r7,[r1],1
+            subs r5,1
+            bne .LZCopy
+            b .LZBlockLoop
     .LZEnd:
 
     imm32 r12,IPSWRAMPos
@@ -278,34 +277,34 @@ local .Loop, .LZLoop, .LZBlockLoop, .LZDecode, .LZCopy, .LZEnd, .LZEOF
       ldrb r3,[r0],1 ; R3 = Flag Data For Next 8 Blocks (0 = Uncompressed Byte, 1 = Compressed Bytes)
       mov r4,10000000b ; R4 = Flag Data Block Type Shifter
       .LZBlockLoop:
-	cmp r1,r2 ; IF(Destination Address == Destination End Offset) LZEnd
-	beq .LZEnd
-	cmp r4,0 ; IF(Flag Data Block Type Shifter == 0) LZLoop
-	beq .LZLoop
-	tst r3,r4 ; Test Block Type
-	lsr r4,1 ; Shift R4 To Next Flag Data Block Type
-	bne .LZDecode ; IF(BlockType != 0) LZDecode Bytes
-	ldrb r5,[r0],1 ; ELSE Copy Uncompressed Byte
-	strb r5,[r1],1 ; Store Uncompressed Byte To Destination
-	b .LZBlockLoop
+        cmp r1,r2 ; IF(Destination Address == Destination End Offset) LZEnd
+        beq .LZEnd
+        cmp r4,0 ; IF(Flag Data Block Type Shifter == 0) LZLoop
+        beq .LZLoop
+        tst r3,r4 ; Test Block Type
+        lsr r4,1 ; Shift R4 To Next Flag Data Block Type
+        bne .LZDecode ; IF(BlockType != 0) LZDecode Bytes
+        ldrb r5,[r0],1 ; ELSE Copy Uncompressed Byte
+        strb r5,[r1],1 ; Store Uncompressed Byte To Destination
+        b .LZBlockLoop
 
-	.LZDecode:
-	  ldrb r5,[r0],1 ; R5 = Number Of Bytes To Copy & Disp MSB's
-	  ldrb r6,[r0],1 ; R6 = Disp LSB's
-	  add r6,r5,lsl 8
-	  lsr r5,4 ; R5 = Number Of Bytes To Copy (Minus 3)
-	  add r5,3 ; R5 = Number Of Bytes To Copy
-	  mov r7,$1000
-	  sub r7,1 ; R7 = $FFF
-	  and r6,r7 ; R6 = Disp
-	  add r6,1 ; R6 = Disp + 1
-	  rsb r6,r1 ; R6 = Destination - Disp - 1
-	  .LZCopy:
-	    ldrb r7,[r6],1
-	    strb r7,[r1],1
-	    subs r5,1
-	    bne .LZCopy
-	    b .LZBlockLoop
+        .LZDecode:
+          ldrb r5,[r0],1 ; R5 = Number Of Bytes To Copy & Disp MSB's
+          ldrb r6,[r0],1 ; R6 = Disp LSB's
+          add r6,r5,lsl 8
+          lsr r5,4 ; R5 = Number Of Bytes To Copy (Minus 3)
+          add r5,3 ; R5 = Number Of Bytes To Copy
+          mov r7,$1000
+          sub r7,1 ; R7 = $FFF
+          and r6,r7 ; R6 = Disp
+          add r6,1 ; R6 = Disp + 1
+          rsb r6,r1 ; R6 = Destination - Disp - 1
+          .LZCopy:
+            ldrb r7,[r6],1
+            strb r7,[r1],1
+            subs r5,1
+            bne .LZCopy
+            b .LZBlockLoop
     .LZEnd:
 
     imm32 r12,LZPosition  ; Load LZPosition
@@ -334,7 +333,7 @@ macro LEFTRIGHT LZFrame, Audio, AudioHz, AudioVBLoop, Left, Right { ; Run Left, 
   local .Loop, .Resume, .VBLoop, .DOWN, .LEFT, .RIGHT, .MOVEOBJ, .MOVERIGHT, .MOVEEND
   imm32 r0,LZFrame ; Load LZPosition
   imm32 r1,$2012C00 ; Load LZ77 GRB File Output Offset
-  swi $110000	    ; Uncompress LZ77 32 Bits Bios Call
+  swi $110000       ; Uncompress LZ77 32 Bits Bios Call
   bl GRBdecoder ; Decode GRB Data
   DMA32 WRAM, VRAM, $4B00 ; DMA32 Copy Decoded Frame Into VRAM
   TimerWait TM1CNT, Second4th ; Wait 1/4 second on Timer 1
@@ -400,7 +399,7 @@ macro LEFTRIGHT LZFrame, Audio, AudioHz, AudioVBLoop, Left, Right { ; Run Left, 
       strb r1,[r3]
 
     imm32 r2,OAM + 4 ; Load Pointer To OAM 1st Tile Number (0x7000004)
-    mov r3,512	   ; Attribute 2: Tile Number 512 (Point Up)
+    mov r3,512     ; Attribute 2: Tile Number 512 (Point Up)
     cmp r0,56
     imm16lt r3,528 ; Attribute 2: Tile Number 528 (Point Left)
     bgt .MOVERIGHT
@@ -428,7 +427,7 @@ macro LEFTRIGHTBOUND LZFrame, Audio, AudioHz, AudioVBLoop, Left, Right, Bound, B
   local .Loop, .Resume, .VBLoop, .DOWN, .LEFT, .RIGHT, .MOVEOBJ, .MOVERIGHT, .MOVEEND
   imm32 r0,LZFrame ; Load LZPosition
   imm32 r1,$2012C00 ; Load LZ77 GRB File Output Offset
-  swi $110000	    ; Uncompress LZ77 32 Bits Bios Call
+  swi $110000       ; Uncompress LZ77 32 Bits Bios Call
   bl GRBdecoder ; Decode GRB Data
   DMA32 WRAM, VRAM, $4B00 ; DMA32 Copy Decoded Frame Into VRAM
   TimerWait TM1CNT, Second4th ; Wait 1/4 second on Timer 1
@@ -494,7 +493,7 @@ macro LEFTRIGHTBOUND LZFrame, Audio, AudioHz, AudioVBLoop, Left, Right, Bound, B
       strb r1,[r3]
 
     imm32 r2,OAM + 4 ; Load Pointer To OAM 1st Tile Number (0x7000004)
-    mov r3,512	   ; Attribute 2: Tile Number 512 (Point Up)
+    mov r3,512     ; Attribute 2: Tile Number 512 (Point Up)
     cmp r0,56
     imm16lt r3,528 ; Attribute 2: Tile Number 528 (Point Left)
     bgt .MOVERIGHT
@@ -538,7 +537,7 @@ macro UPLEFTRIGHT LZFrame, Audio, AudioHz, AudioVBLoop, Up, Left, Right { ; Run 
   local .Loop, .Resume, .VBLoop, .DOWN, .LEFT, .RIGHT, .MOVEOBJ, .MOVERIGHT, .MOVEEND
   imm32 r0,LZFrame ; Load LZPosition
   imm32 r1,$2012C00 ; Load LZ77 GRB File Output Offset
-  swi $110000	    ; Uncompress LZ77 32 Bits Bios Call
+  swi $110000       ; Uncompress LZ77 32 Bits Bios Call
   bl GRBdecoder ; Decode GRB Data
   DMA32 WRAM, VRAM, $4B00 ; DMA32 Copy Decoded Frame Into VRAM
   TimerWait TM1CNT, Second4th ; Wait 1/4 second on Timer 1
@@ -604,7 +603,7 @@ macro UPLEFTRIGHT LZFrame, Audio, AudioHz, AudioVBLoop, Up, Left, Right { ; Run 
       strb r1,[r3] ; Store POINTERY
 
     imm32 r2,OAM + 4 ; Load Pointer To OAM 1st Tile Number (0x7000004)
-    mov r3,512	   ; Attribute 2: Tile Number 512 (Point Up)
+    mov r3,512     ; Attribute 2: Tile Number 512 (Point Up)
     cmp r0,56
     imm16lt r3,528 ; Attribute 2: Tile Number 528 (Point Left)
     bgt .MOVERIGHT
@@ -636,7 +635,7 @@ macro UPLEFTRIGHTBOUND LZFrame, Audio, AudioHz, AudioVBLoop, Up, Left, Right, Bo
   local .Loop, .Resume, .VBLoop, .DOWN, .LEFT, .RIGHT, .MOVEOBJ, .MOVERIGHT, .MOVEEND
   imm32 r0,LZFrame ; Load LZPosition
   imm32 r1,$2012C00 ; Load LZ77 GRB File Output Offset
-  swi $110000	    ; Uncompress LZ77 32 Bits Bios Call
+  swi $110000       ; Uncompress LZ77 32 Bits Bios Call
   bl GRBdecoder ; Decode GRB Data
   DMA32 WRAM, VRAM, $4B00 ; DMA32 Copy Decoded Frame Into VRAM
   TimerWait TM1CNT, Second4th ; Wait 1/4 second on Timer 1
@@ -702,7 +701,7 @@ macro UPLEFTRIGHTBOUND LZFrame, Audio, AudioHz, AudioVBLoop, Up, Left, Right, Bo
       strb r1,[r3]
 
     imm32 r2,OAM + 4 ; Load Pointer To OAM 1st Tile Number (0x7000004)
-    mov r3,512	   ; Attribute 2: Tile Number 512 (Point Up)
+    mov r3,512     ; Attribute 2: Tile Number 512 (Point Up)
     cmp r0,56
     imm16lt r3,528 ; Attribute 2: Tile Number 528 (Point Left)
     bgt .MOVERIGHT
@@ -750,7 +749,7 @@ macro UPLEFTRIGHTIPS IPSFrame, Audio, AudioHz, AudioVBLoop, Up, Left, Right { ; 
   local .Loop, .Resume, .VBLoop, .DOWN, .LEFT, .RIGHT, .MOVEOBJ, .MOVERIGHT, .MOVEEND
   imm32 r0,IPSFrame ; Load IPSPosition
   imm32 r1,$201F0E0 ; Load LZ77 IPS File Output Offset
-  swi $110000	    ; Uncompress LZ77 32 Bits Bios Call
+  swi $110000       ; Uncompress LZ77 32 Bits Bios Call
   imm32 r12,IPSWRAMPos
   str r1,[r12] ; Store IPS WRAM End Position
   bl IPSdecoder ; Decode IPS Data
@@ -819,7 +818,7 @@ macro UPLEFTRIGHTIPS IPSFrame, Audio, AudioHz, AudioVBLoop, Up, Left, Right { ; 
       strb r1,[r3] ; Store POINTERY
 
     imm32 r2,OAM + 4 ; Load Pointer To OAM 1st Tile Number (0x7000004)
-    mov r3,512	   ; Attribute 2: Tile Number 512 (Point Up)
+    mov r3,512     ; Attribute 2: Tile Number 512 (Point Up)
     cmp r0,56
     imm16lt r3,528 ; Attribute 2: Tile Number 528 (Point Left)
     bgt .MOVERIGHT
@@ -851,7 +850,7 @@ macro UPLEFTRIGHTBOUNDIPS IPSFrame, Audio, AudioHz, AudioVBLoop, Up, Left, Right
   local .Loop, .Resume, .VBLoop, .DOWN, .LEFT, .RIGHT, .MOVEOBJ, .MOVERIGHT, .MOVEEND
   imm32 r0,IPSFrame ; Load IPSPosition
   imm32 r1,$201F0E0 ; Load LZ77 IPS File Output Offset
-  swi $110000	    ; Uncompress LZ77 32 Bits Bios Call
+  swi $110000       ; Uncompress LZ77 32 Bits Bios Call
   imm32 r12,IPSWRAMPos
   str r1,[r12] ; Store IPS WRAM End Position
   bl IPSdecoder ; Decode IPS Data
@@ -920,7 +919,7 @@ macro UPLEFTRIGHTBOUNDIPS IPSFrame, Audio, AudioHz, AudioVBLoop, Up, Left, Right
       strb r1,[r3]
 
     imm32 r2,OAM + 4 ; Load Pointer To OAM 1st Tile Number (0x7000004)
-    mov r3,512	   ; Attribute 2: Tile Number 512 (Point Up)
+    mov r3,512     ; Attribute 2: Tile Number 512 (Point Up)
     cmp r0,56
     imm16lt r3,528 ; Attribute 2: Tile Number 528 (Point Left)
     bgt .MOVERIGHT
@@ -988,7 +987,7 @@ start:
   mov r0,OAM ; Load Pointer To OAM ($7000000)
   imm32 r1,(SQUARE or COLOR_256 or 160) or ((SIZE_16 or 72) * 65536)
   str r1,[r0],4 ; Attributes 0 & 1 Into OAM, Pointer Set Attribute 2
-  mov r1,512	; Attribute 2: Tile Number 512
+  mov r1,512    ; Attribute 2: Tile Number 512
   str r1,[r0]
 
   DMA32 POINTERPAL, OBJPAL, 128   ; 1 * 256 Cols
@@ -1094,7 +1093,7 @@ STARTGAME:
 
   imm32 r0,INTRO2   ; Load LZPosition
   imm32 r1,$2012C00 ; Load LZ77 GRB File Output Offset
-  swi $110000	    ; Uncompress LZ77 32 Bits Bios Call
+  swi $110000       ; Uncompress LZ77 32 Bits Bios Call
 
   bl GRBdecoder ; Decode GRB Data
   DMA32 WRAM, VRAM, $4B00 ; DMA32 Copy Decoded Frame Into VRAM
@@ -1108,7 +1107,7 @@ MYSTStart:
 
   imm32 r0,MYST4134 ; Load LZPosition
   imm32 r1,$2012C00 ; Load LZ77 GRB File Output Offset
-  swi $110000	    ; Uncompress LZ77 32 Bits Bios Call
+  swi $110000       ; Uncompress LZ77 32 Bits Bios Call
   bl GRBdecoder ; Decode GRB Data
   DMA32 WRAM, VRAM, $4B00 ; DMA32 Copy Decoded Frame Into VRAM
   FadeIn Second16th

@@ -5,11 +5,14 @@
 ; Start/Select Buttons Z Rotate
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\MEM.INC'
-include 'LIB\KEYPAD.INC'
-include 'LIB\DMA.INC'
+org $8000000
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_KEYPAD.INC' ; Include GBA Keypad Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
+
 include 'LIB\2D.INC'
 include 'LIB\3D.INC'
 
@@ -21,10 +24,6 @@ BITS_PER_PIXEL = 16
 ; Setup 3D
 HALF_SCREEN_X = (SCREEN_X / 2)
 HALF_SCREEN_Y = (SCREEN_Y / 2)
-
-org $8000000
-b copycode
-times $80000C0-($-0) db 0
 
 macro Control {
   imm32 r0,Matrix3D+12 ; Load Matrix Translation Address To R0 (Starts Of X Translation)

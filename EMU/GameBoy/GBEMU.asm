@@ -5,11 +5,8 @@ org $8000000
 include 'LIB\FASMARM.INC' ; Include FASMARM Macros
 include 'LIB\GBA.INC' ; Include GBA Definitions
 include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
-include 'LIB\GBA_KEYPAD.INC' ; Include GBA Keypad Macros
 include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
-include 'LIB\GBA_OBJ.INC' ; Include GBA Object Macros
 include 'LIB\GBA_SOUND.INC' ; Include GBA Sound Macros
-include 'LIB\GBA_TIMER.INC' ; Include GBA Timer Macros
 include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 include 'MEM.INC'

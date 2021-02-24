@@ -115,7 +115,7 @@ macro DrawLine x1, y1, x2, y2, col { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X,
   subs r2,x2,x1 ; X2 - X1
   rsbmi r2,0 ; Convert R2 (DX) To ABS(DX)
   mvnlt r3,0 ; IF (X2 < X1), R3 (SX) = -1
-  movgt r3,1 ; IF (X2 > X1), R3 (SX) =	1
+  movgt r3,1 ; IF (X2 > X1), R3 (SX) =  1
   moveq r3,0 ; IF (X2 == X1), R3 (SX) = 0
 
   sub r4,y2,y1 ; Y2 - Y1 ABS(DY)
@@ -173,7 +173,7 @@ macro DrawLine x1, y1, x2, y2, col { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X,
 }
 
 macro DrawLineZBuf x1, y1, z1, x2, y2, z2, col { ; x1 = Point1X, y1 = Point1Y, z1 = Point1Z, x2 = Point2X, y2 = Point2Y, z2 = Point2Z, col = Colour
-  local .divZPos, .divZNeg, .endZ, .LoopX, .SkipPixelX, .LoopY, .SkipPixelY, .LineEnd
+  local .endZ, .LoopX, .SkipPixelX, .LoopY, .SkipPixelY, .LineEnd
   mov r0,WRAM ; R0 = WRAM Base Pointer
 
   cmp y2,y1 ; IF (Y2 < Y1) Swap Points
@@ -190,7 +190,7 @@ macro DrawLineZBuf x1, y1, z1, x2, y2, z2, col { ; x1 = Point1X, y1 = Point1Y, z
   subs r2,x2,x1 ; X2 - X1
   rsbmi r2,0 ; Convert R2 (DX) To ABS(DX)
   mvnlt r3,0 ; IF (X2 < X1), R3 (SX) = -1
-  movgt r3,1 ; IF (X2 > X1), R3 (SX) =	1
+  movgt r3,1 ; IF (X2 > X1), R3 (SX) =  1
   moveq r3,0 ; IF (X2 == X1), R3 (SX) = 0
 
   sub r4,y2,y1 ; Y2 - Y1 ABS(DY)
@@ -201,22 +201,15 @@ macro DrawLineZBuf x1, y1, z1, x2, y2, z2, col { ; x1 = Point1X, y1 = Point1Y, z
   adds r1,r2,r4 ; R1 = Amount Of Pixel To Draw (DXY)
   moveq z2,0 ; IF (DXY == 0) Z2 = 0 (SZ)
   beq .endZ
-  mov z2,0 ; Divide DZ By DXY
-  cmp r5,0 ; IF (DZ < 0) Negative Divide
-  blt .divZNeg
-  .divZPos:
-  subs r5,r1
-  addge z2,1
-  bgt .divZPos
-  b .endZ
-  .divZNeg:
-  adds r5,r1
-  suble z2,1
-  blt .divZNeg
+
+  imm32 z2,ReciprocalLUT ; Z2 = Reciprical LUT
+  lsl r1,2 ; DXY *= 4
+  ldr z2,[z2,r1]
+  smull r1,z2,r5,z2 ; Divide DZ By DXY
   .endZ: ; Z2 = Quotient (SZ)
 
   cmp r2,r4 ; Compare DX To DY
-  lsrgt y2,r2,1 ; IF (DX >	DY), Y2 = DX / 2 (X Error)
+  lsrgt y2,r2,1 ; IF (DX > DY), Y2 = DX / 2 (X Error)
   lsrle x2,r4,1 ; IF (DX <= DY), X2 = DY / 2 (Y Error)
   ble .LoopY
 
@@ -302,7 +295,7 @@ macro ScanLine x1, y1, x2, y2, side { ; x1 = Point1X, y1 = Point1Y, x2 = Point2X
   subs r1,x2,x1 ; X2 - X1
   rsbmi r1,0 ; Convert R1 (DX) To ABS(DX)
   mvnlt r2,0 ; IF (X2 < X1), R2 (SX) = -1
-  movgt r2,1 ; IF (X2 > X1), R2 (SX) =	1
+  movgt r2,1 ; IF (X2 > X1), R2 (SX) =  1
   moveq r2,0 ; IF (X2 == X1), R2 (SX) = 0
 
   sub r3,y2,y1 ; Y2 - Y1 ABS(DY)

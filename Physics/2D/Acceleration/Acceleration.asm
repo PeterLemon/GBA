@@ -4,15 +4,14 @@
 ; B Button Deccelerate Car OBJ
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\MEM.INC'
-include 'LIB\KEYPAD.INC'
-include 'LIB\DMA.INC'
-include 'LIB\OBJ.INC'
 org $8000000
-b copycode
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_KEYPAD.INC' ; Include GBA Keypad Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_OBJ.INC' ; Include GBA Object Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 macro Control { ; Macro To Handle Control Input
   mov r0,OBJAffineSource ; R0 = Address Of Parameter Table
@@ -93,8 +92,8 @@ start:
   mov r1,OAM ; R1 = OAM ($7000000)
   imm32 r2,(SQUARE+COLOR_256+48+ROTATION_FLAG)+((SIZE_64+88) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
-  mov r2,0	; R2 = Attribute 2 (Tile Number 0)
-  str r2,[r1]	; Store Attribute 2 To OAM
+  mov r2,0      ; R2 = Attribute 2 (Tile Number 0)
+  str r2,[r1]   ; Store Attribute 2 To OAM
 
   DMA32 CarPAL, OBJPAL, 16 ; DMA OBJ Palette To Color Mem
   DMA32 CarIMG, CHARMEM, 1024 ; DMA OBJ Image Data To VRAM

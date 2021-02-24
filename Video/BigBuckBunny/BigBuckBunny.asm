@@ -1,15 +1,14 @@
 ; GBA 'Bare Metal' GRB 12-Bit LZSS DIFF RLE Video Decode 120x80 Demo by krom (Peter Lemon):
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\MEM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\DMA.INC'
-include 'LIB\SOUND.INC'
-include 'LIB\TIMER.INC'
 org $8000000
-b copycode
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_SOUND.INC' ; Include GBA Sound Macros
+include 'LIB\GBA_TIMER.INC' ; Include GBA Timer Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 macro RLEDecode { ; Decode RLE DIFF Data
   local .RLELoop, .RLECopy, .RLEDecode, .RLEDecodeByte, .RLEEOF

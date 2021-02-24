@@ -1,13 +1,12 @@
 ; GBA 'Bare Metal' Sound 8-Bit Compressed BRR Mono Single Shot DMA Playback Demo by krom (Peter Lemon):
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\MEM.INC'
-include 'LIB\DMA.INC'
-include 'LIB\SOUND.INC'
-include 'LIB\TIMER.INC'
 org $8000000
-b copycode
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_SOUND.INC' ; Include GBA Sound Macros
+include 'LIB\GBA_TIMER.INC' ; Include GBA Timer Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 copycode:
   adr r0,startcode
@@ -41,9 +40,9 @@ start:
     BRRSampleDecode: ; Next 8 Bytes Contain 2 Signed 4-Bit Sample Nibbles Each (-8..+7) (Sample 1 = Bits 4..7 & Sample 2 = Bits 0..3)
       ldrb r9,[r0],1 ; R9  = Sample Byte, Sample Address++
       and r10,r9,$F  ; R10 = Sample 2 Unsigned Nibble
-      lsr r9,4	     ; R9  = Sample 1 Unsigned Nibble
+      lsr r9,4       ; R9  = Sample 1 Unsigned Nibble
 
-      cmp r9,7	; IF (Sample 1 > 7) Sample 1 -= 16 (Convert Sample 1 To Signed Nibble)
+      cmp r9,7  ; IF (Sample 1 > 7) Sample 1 -= 16 (Convert Sample 1 To Signed Nibble)
       subgt r9,16
       cmp r10,7 ; IF (Sample 2 > 7) Sample 2 -= 16 (Convert Sample 2 To Signed Nibble)
       subgt r10,16
@@ -52,13 +51,13 @@ start:
       cmp r7,12 ; IF (Shift Amount > 12) Use Default Shift For Reserved Shift Amount (13..15)
       ble SampleShift
       lsl r9,12  ; Sample 1 SHL 12
-      asr r9,3	 ; Sample 1 SAR 3
+      asr r9,3   ; Sample 1 SAR 3
       lsl r10,12 ; Sample 2 SHL 12
       asr r10,3  ; Sample 2 SAR 3
       b ShiftEnd
       SampleShift: ; ELSE Apply Shift Amount To Samples
       lsl r9,r7  ; Sample 1 SHL Shift Amount
-      asr r9,1	 ; Sample 1 SAR 1
+      asr r9,1   ; Sample 1 SAR 1
       lsl r10,r7 ; Sample 2 SHL Shift Amount
       asr r10,1  ; Sample 2 SAR 1
       ShiftEnd:

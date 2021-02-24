@@ -3,15 +3,14 @@
 ; B Button Fires Bullet OBJ
 
 format binary as 'gba'
-include 'LIB\FASMARM.INC'
-include 'LIB\LCD.INC'
-include 'LIB\MEM.INC'
-include 'LIB\KEYPAD.INC'
-include 'LIB\DMA.INC'
-include 'LIB\OBJ.INC'
 org $8000000
-b copycode
-times $80000C0-($-0) db 0
+include 'LIB\FASMARM.INC' ; Include FASMARM Macros
+include 'LIB\GBA.INC' ; Include GBA Definitions
+include 'LIB\GBA_DMA.INC' ; Include GBA DMA Macros
+include 'LIB\GBA_KEYPAD.INC' ; Include GBA Keypad Macros
+include 'LIB\GBA_LCD.INC' ; Include GBA LCD Macros
+include 'LIB\GBA_OBJ.INC' ; Include GBA Object Macros
+include 'LIB\GBA_HEADER.ASM' ; Include GBA Header & ROM Entry Point
 
 macro Control { ; Macro To Handle Control Input
   mov r0,OBJAffineSource ; R0 = Address Of Parameter Table
@@ -88,15 +87,15 @@ start:
   mov r1,OAM ; R1 = OAM ($7000000)
   imm32 r2,(TALL+COLOR_16+16+SIZE_DOUBLE+ROTATION_FLAG)+((SIZE_64+88) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
-  mov r2,0	; R2 = Attribute 2 (Tile Number 0)
+  mov r2,0      ; R2 = Attribute 2 (Tile Number 0)
   str r2,[r1],4 ; Store Attribute 2 To OAM
 
   ; Bullet Sprite
   imm32 r2,(SQUARE+COLOR_16+64+ROTATION_FLAG)+((SIZE_32+104) * 65536) ; R2 = Attributes 0 & 1
   str r2,[r1],4 ; Store Attributes 0 & 1 To OAM, Increment OAM Address To Attribute 2
-  mov r2,$20	; R2 = Attribute 2 (Tile Number 32)
+  mov r2,$20    ; R2 = Attribute 2 (Tile Number 32)
   orr r2,PALETTE_1 ; Attribute 2 |= Palette 1
-  str r2,[r1]	; Store Attribute 2 To OAM
+  str r2,[r1]   ; Store Attribute 2 To OAM
 
   DMA32 SpritePAL, OBJPAL, 16 ; DMA OBJ Palette To Color Mem
   DMA32 SpriteIMG, CHARMEM, 384 ; DMA OBJ Image Data To VRAM
@@ -166,24 +165,24 @@ Loop:
       b SetOBJXY
 
       ResetOBJXY:
-	mov r1,104*65536 ; Bullet X = 104 (Fixed Point 16.16)
-	mov r2,64*65536 ; Bullet Y = 64 (Fixed Point 16.16)
-	imm32 r0,BulletX ; Load Bullet X Address
-	str r1,[r0],4 ; Store Bullet X, Load Bullet Y Address
-	str r2,[r0] ; Store Bullet Y
-	lsr r2,16 ; Bullet Y >> 16
+        mov r1,104*65536 ; Bullet X = 104 (Fixed Point 16.16)
+        mov r2,64*65536 ; Bullet Y = 64 (Fixed Point 16.16)
+        imm32 r0,BulletX ; Load Bullet X Address
+        str r1,[r0],4 ; Store Bullet X, Load Bullet Y Address
+        str r2,[r0] ; Store Bullet Y
+        lsr r2,16 ; Bullet Y >> 16
 
-	imm32 r0,FireFlag
-	mov r3,0 ; Reset Fire Flag To 0 (Not Fired)
-	strb r3,[r0] ; Store Fire Flag
+        imm32 r0,FireFlag
+        mov r3,0 ; Reset Fire Flag To 0 (Not Fired)
+        strb r3,[r0] ; Store Fire Flag
 
       SetOBJXY:
-	mov r0,OAM ; R1 = OAM ($7000000)
-	add r0,8 ; Bullet OBJ
-	imm32 r3,(SQUARE+COLOR_16+ROTATION_FLAG)+((SIZE_32) * 65536) ; R3 = Attributes 0 & 1
-	orr r1,r3 ; Attributes 0 & 1 += Bullet X
-	orr r1,r2 ; Attributes 0 & 1 += Bullet Y
-	str r1,[r0] ; Store Attributes 0 & 1
+        mov r0,OAM ; R1 = OAM ($7000000)
+        add r0,8 ; Bullet OBJ
+        imm32 r3,(SQUARE+COLOR_16+ROTATION_FLAG)+((SIZE_32) * 65536) ; R3 = Attributes 0 & 1
+        orr r1,r3 ; Attributes 0 & 1 += Bullet X
+        orr r1,r2 ; Attributes 0 & 1 += Bullet Y
+        str r1,[r0] ; Store Attributes 0 & 1
 
     b Loop
 

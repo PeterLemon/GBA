@@ -2,7 +2,7 @@
 ; GBA Header
 ;============
 ; ROM Entry Point ($8000000..$8000003) (4 Bytes)
-b $80000C0
+b copycode
 
 ; NINTENDO LOGO ($8000004..$80000BF) (156 Bytes)
 db $24, $FF, $AE, $51, $69, $9A, $A2, $21, $3D, $84, $82, $0A, $84, $E4, $09, $AD

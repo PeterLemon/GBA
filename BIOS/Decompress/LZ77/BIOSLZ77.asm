@@ -224,7 +224,7 @@ start:
   str r1,[r0]
 
   imm16 r1,0000001000000000b ; BG Tile Offset = 0, Tiles 4BPP, BG Map Offset = 4096, Map Size = 32x32 Tiles
-  str r1,[r0,BG0CNT]
+  strh r1,[r0,BG0CNT]
 
   mov r0,VPAL        ; Load Color Mem Address
   imm32 r1,$7FFF7C00 ; Load  BG Font White Palette & Blue BG Color Zero
@@ -255,7 +255,7 @@ align 4
 endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
-org startcode + (endcopy - start)
+org startcode + (endcopy - IWRAM)
 FONTIMG: file 'Font8x8.img'    ; Include BG 4BPP 8x8 Tile Font Character Data (4096 Bytes)
 TitleTEXT:     db "GBA BIOS Decompress Functions"  ; Include BG Map Text Data (29 Bytes)
 LineBreakTEXT: db "------------------------------" ; Include BG Map Text Data (30 Bytes)

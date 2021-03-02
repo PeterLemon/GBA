@@ -460,7 +460,7 @@ start:
   str r1,[r0]
 
   imm16 r1,0000001000000000b ; BG Tile Offset = 0, Tiles 4BPP, BG Map Offset = 4096, Map Size = 32x32 Tiles
-  str r1,[r0,BG0CNT]
+  strh r1,[r0,BG0CNT]
 
   mov r0,VPAL        ; Load Color Mem Address
   imm32 r1,$7FFF7C00 ; Load  BG Font White Palette & Blue BG Color Zero
@@ -495,7 +495,7 @@ DATA1BPP: file 'DATA1BPP.bin' ; Include 1BPP Data (1024 Bytes)
 endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
-org startcode + (endcopy - start)
+org startcode + (endcopy - IWRAM)
 DATA2BPP:  file 'DATA2BPP.bin'  ; Include  2BPP Data (2048 Bytes)
 DATA4BPP:  file 'DATA4BPP.bin'  ; Include  4BPP Data (4096 Bytes)
 DATA8BPP:  file 'DATA8BPP.bin'  ; Include  8BPP Data (8192 Bytes)

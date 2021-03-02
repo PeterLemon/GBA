@@ -479,7 +479,7 @@ dw 0
 endcopy:
 
 ; Static Data (ROM)
-org startcode + (endcopy - start)
+org startcode + (endcopy - IWRAM)
 VIDEO:
 file 'INTRO2.lz'
 SOUND:

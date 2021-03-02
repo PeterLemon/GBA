@@ -274,7 +274,7 @@ dw 0
 endcopy:
 
 ; Static Data (ROM)
-org startcode + (endcopy - start)
+org startcode + (endcopy - IWRAM)
 CYANLOGO:
 file 'CYANLOGO.lz'
 CYANLOGOSND:

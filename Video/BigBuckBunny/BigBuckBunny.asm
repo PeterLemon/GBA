@@ -485,7 +485,7 @@ dw 0
 endcopy:
 
 ; Static Data (ROM)
-org startcode + (endcopy - start)
+org startcode + (endcopy - IWRAM)
 BGAffineSource: ; Memory Area Used To Set BG Affine Transformations Using BIOS Call
   ; Center Of Rotation In Original Image (Last 8-Bits Fractional)
   dw $00000000 ; X

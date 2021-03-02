@@ -233,7 +233,7 @@ dw 0
 endcopy:
 
 ; Static Data (ROM)
-org startcode + (endcopy - start)
+org startcode + (endcopy - IWRAM)
 INTRO2:
 file 'INTRO2.lz'
 INTRO2SND:

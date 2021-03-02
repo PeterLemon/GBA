@@ -189,7 +189,7 @@ dw 0
 endcopy:
 
 ; Static Data (ROM)
-org startcode + (endcopy - start)
+org startcode + (endcopy - IWRAM)
 Video:
 file 'video.lz'
 Audio:

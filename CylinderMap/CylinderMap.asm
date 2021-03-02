@@ -311,5 +311,5 @@ CylinderMap: ; 240 Bytes (Repeat For 160 Scanlines)
 endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
-org startcode + (endcopy - start)
+org startcode + (endcopy - IWRAM)
 BG: file 'BG.img' ; Include BG Image Data (76800 Bytes)

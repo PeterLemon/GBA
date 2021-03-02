@@ -170,7 +170,7 @@ start:
 endcopy: ; End Of Program Copy Code
 
 ; Static Data (ROM)
-org startcode + (endcopy - start)
+org startcode + (endcopy - IWRAM)
 SOUND: ; 16-Bit 32000Hz Signed Mono Compressed BRR Sound Sample
 file 'audio.brr'
 SOUNDEND:

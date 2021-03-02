@@ -86,7 +86,7 @@ start:
   str r1,[r0]
 
   imm16 r1,1100110111000000b ; BG Tile Offset = 0, Enable Mosaic, Tiles 8BPP, BG Map Offset = 26624, Map Size = 64x64 Tiles
-  str r1,[r0,BG2CNT]
+  strh r1,[r0,BG2CNT]
 
   DMA32 BGPAL, VPAL, 128 ; DMA BG Palette To Color Mem
   DMA32 BGIMG, VRAM, 6416 ; DMA BG Image To VRAM

@@ -124,7 +124,7 @@ start:
   str r1,[r0]
 
   mov r1,0000000001000000b ; Enable Mosaic
-  str r1,[r0,BG2CNT]
+  strh r1,[r0,BG2CNT]
 
   DMA32 BGPAL, VPAL, 8 ; DMA BG Palette To Color Mem
   DMA32 BGIMG, VRAM, 9600 ; DMA BG Image To VRAM

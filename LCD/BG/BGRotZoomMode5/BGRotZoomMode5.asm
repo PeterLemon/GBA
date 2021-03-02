@@ -124,7 +124,7 @@ start:
   str r1,[r0]
 
   mov r1,0000000001000000b ; Enable Mosaic
-  str r1,[r0,BG2CNT]
+  strh r1,[r0,BG2CNT]
 
   imm16 r1,$4E73 ; R1 = BG Color (Gray)
   mov r2,VPAL ; Load BG Palette Address

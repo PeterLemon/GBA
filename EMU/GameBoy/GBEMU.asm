@@ -83,7 +83,7 @@ CPU_INST:
 
 endcopy:
 
-org startcode + (endcopy - start)
+org startcode + (endcopy - IWRAM)
 GB_BIOS: file 'DMG_ROM.bin' ; Include Game Boy DMG BIOS ROM 
 
 ;GB_CART: file 'ROMS\Soukoban (J).gb'

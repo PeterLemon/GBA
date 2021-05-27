@@ -1,0 +1,2737 @@
+-----
+Misc
+-----
+Ｘ　　　　ひつよう
+X Necessary / X Needed / X Required
+$0696F8
+81 40	81 40	81 40	82 77	81 40	81 40	81 40	81 40	82 D0	82 C2	82 E6	82 A4	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  Ｘ	 #  	 #  	 #  	 #  	 #  ひ	 #  つ	 #  よ	 #  う	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  X	 #   	 #   	 #   	 #   	 #  N	 #  E	 #  E	 #  D	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 77	81 40	81 40	81 40	81 40	82 6D	82 64	82 64	82 63	81 40	00 00	| New English Hex
+
+なんだろう？？
+I wonder what?? / Unknown??
+$069714
+81 40	81 40	81 40	82 C8	82 F1	82 BE	82 EB	82 A4	81 48	81 48	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  な	 #  ん	 #  だ	 #  ろ	 #  う	 #  ？	 #  ？	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  U	 #  N	 #  K	 #  N	 #  O	 #  W	 #  N	 #  ？	 #  ？	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 74	82 6D	82 6A	82 6D	82 6E	82 76	82 6D	81 48	81 48	81 40	81 40	00 00	| New English Hex
+
+----------
+Rescue 01
+----------
+コマまわし
+Spinning Top
+$386C04
+81 40	81 40	81 40	81 40	83 52	83 7D	82 DC	82 ED	82 B5	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  コ	 #  マ	 #  ま	 #  わ	 #  し	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  S	 #  P	 #  I	 #  N	 #  N	 #  I	 #  N	 #  G	 #   	 #  T	 #  O	 #  P	 #   	 # LE	| New English Text
+81 40	82 72	82 6F	82 68	82 6D	82 6D	82 68	82 6D	82 66	81 40	82 73	82 6E	82 6F	81 40	00 00	| New English Hex
+
+はつが
+Hatsuga / Rice Plant
+$386C22
+81 40	81 40	81 40	81 40	81 40	82 CD	82 C2	82 AA	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  は	 #  つ	 #  が	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  R	 #  I	 #  C	 #  E	 #   	 #  P	 #  L	 #  A	 #  N	 #  T	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 71	82 68	82 62	82 64	81 40	82 6F	82 6B	82 60	82 6D	82 73	81 40	81 40	00 00	| New English Hex
+
+ワイングラス
+Wine Glass
+$386C40
+81 40	81 40	81 40	81 40	83 8F	83 43	83 93	83 4F	83 89	83 58	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ワ	 #  イ	 #  ン	 #  グ	 #  ラ	 #  ス	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  W	 #  I	 #  N	 #  E	 #   	 #  G	 #  L	 #  A	 #  S	 #  S	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 76	82 68	82 6D	82 64	81 40	82 66	82 6B	82 60	82 72	82 72	81 40	81 40	00 00	| New English Hex
+
+みかん
+Mandarin Orange
+$386C5E
+81 40	81 40	81 40	81 40	81 40	82 DD	82 A9	82 F1	81 40	81 40	81 40	81 40	81 40	81 40 	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  み	 #  か	 #  ん	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  M	 #  A	 #  N	 #  D	 #  A	 #  R	 #  I	 #  N	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6C	82 60	82 6D	82 63	82 60	82 71	82 68	82 6D	81 40	81 40	81 40	00 00	| New English Hex
+
+やきゅうのボール
+Baseball Ball
+$386C7C
+81 40	81 40	81 40	82 E2	82 AB	82 E3	82 A4	82 CC	83 7B	81 5B	83 8B	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  や	 #  き	 #  ゅ	 #  う	 #  の	 #  ボ	 #  ー	 #  ル	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  B	 #  A	 #  S	 #  E	 #  B	 #  A	 #  L	 #  L	 #   	 #  B	 #  A	 #  L	 #  L	 #   	 # LE	| New English Text
+82 61	82 60	82 72	82 64	82 61	82 60	82 6B	82 6B	81 40	82 61	82 60	82 6B	82 6B	81 40	00 00	| New English Hex
+
+いもむし
+Caterpillar / Hornworm 
+$386C9A
+81 40	81 40	81 40	81 40	81 40	82 A2	82 E0	82 DE	82 B5	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  い	 #  も	 #  む	 #  し	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  C	 #  A	 #  T	 #  E	 #  R	 #  P	 #  I	 #  L	 #  L	 #  A	 #  R	 #   	 #   	 # LE	| New English Text
+81 40	82 62	82 60	82 73	82 64	82 71	82 6F	82 68	82 6B	82 6B	82 60	82 71	81 40	81 40	00 00	| New English Hex
+
+プリン
+Pudding
+$386CB8
+81 40	81 40	81 40	81 40	81 40	83 76	83 8A	83 93	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  プ	 #  リ	 #  ン	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  P	 #  U	 #  D	 #  D	 #  I	 #  N	 #  G	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6F	82 74	82 63	82 63	82 68	82 6D	82 66	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+しゅりけん
+Shuriken
+$386CD6
+81 40	81 40	81 40	81 40	82 B5	82 E3	82 E8	82 AF	82 F1	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  し	 #  ゅ	 #  り	 #  け	 #  ん	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  S	 #  H	 #  U	 #  R	 #  I	 #  K	 #  E	 #  N	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 72	82 67	82 74	82 71	82 68	82 6A	82 64	82 6D	81 40	81 40	81 40	00 00	| New English Hex
+
+カラス
+Crow
+$386CF4
+81 40	81 40	81 40	81 40	81 40	83 4A	83 89	83 58	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  カ	 #  ラ	 #  ス	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  C	 #  R	 #  O	 #  W	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 62	82 71	82 6E	82 76	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+すいどうのハンドル
+Water Handle / Faucet Handle
+$386D12
+81 40	81 40	82 B7	82 A2	82 C7	82 A4	82 CC	83 6E	83 93	83 68	83 8B	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  す	 #  い	 #  ど	 #  う	 #  の	 #  ハ	 #  ン	 #  ド	 #  ル	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  W	 #  A	 #  T	 #  E	 #  R	 #   	 #  H	 #  A	 #  N	 #  D	 #  L	 #  E	 #   	 # LE	| New English Text
+81 40	82 76	82 60	82 73	82 64	82 71	81 40	82 67	82 60	82 6D	82 63	82 6B	82 64	81 40	00 00	| New English Hex
+
+----------
+Rescue 02
+----------
+ほうちょう
+Kitchen Knife
+$386D30
+81 40	81 40	81 40	81 40	82 D9	82 A4	82 BF	82 E5	82 A4	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ほ	 #  う	 #  ち	 #  ょ	 #  う	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  K	 #  I	 #  T	 #  C	 #  H	 #  E	 #  N	 #   	 #  K	 #  N	 #  I	 #  F	 #  E	 #   	 # LE	| New English Text
+82 6A	82 68	82 73	82 62	82 67	82 64	82 6D	81 40	82 6A	82 6D	82 68	82 65	82 64	81 40	00 00	| New English Hex
+
+しろいはな
+White Flower
+$386D4E
+81 40	81 40	81 40	81 40	82 B5	82 EB	82 A2	82 CD	82 C8	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  し	 #  ろ	 #  い	 #  は	 #  な	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  W	 #  H	 #  I	 #  T	 #  E	 #   	 #  F	 #  L	 #  O	 #  W	 #  E	 #  R	 #   	 # LE	| New English Text
+81 40	82 76	82 67	82 68	82 73	82 64	81 40	82 65	82 6B	82 6E	82 76	82 64	82 71	81 40	00 00	| New English Hex
+
+CD
+CD
+$386D6C
+82 40	82 40	82 40	82 40	82 40	82 40	82 62	82 63	82 40	82 40	82 40	82 40	82 40	82 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  C	 #  D	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #   	 #  C	 #  D	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+82 40	82 40	82 40	82 40	82 40	82 40	82 62	82 63	82 40	82 40	82 40	82 40	82 40	82 40	00 00	| New English Hex
+
+めがねをかけたひと
+A Person Wearing Glasses
+$386D8A
+81 40	81 40	82 DF	82 AA	82 CB	82 F0	82 A9	82 AF	82 BD	82 D0	82 C6	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  め	 #  が	 #  ね	 #  を	 #  か	 #  け	 #  た	 #  ひ	 #  と	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  W	 #  O	 #  R	 #  N	 #   	 #  G	 #  L	 #  A	 #  S	 #  S	 #  E	 #  S	 #   	 # LE	| New English Text
+81 40	82 76	82 6E	82 71	82 6D	81 40	82 66	82 6B	82 60	82 72	82 72	82 64	82 72	81 40	00 00	| New English Hex
+
+かたつむり
+Snail
+$386DA8
+81 40	81 40	81 40	81 40	82 A9	82 BD	82 C2	82 DE	82 E8	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  か	 #  た	 #  つ	 #  む	 #  り	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  N	 #  A	 #  I	 #  L	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 6D	82 60	82 68	82 6B	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+おんせんマーク
+Hot Spring Sign / Onsen Mark
+$386DC6
+81 40	81 40	81 40	82 A8	82 F1	82 B9	82 F1	83 7D	81 5B	83 4E	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  お	 #  ん	 #  せ	 #  ん	 #  マ	 #  ー	 #  ク	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  H	 #  O	 #  T	 #   	 #  S	 #  P	 #  R	 #  I	 #  N	 #  G	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 67	82 6E	82 73	81 40	82 72	82 6F	82 71	82 68	82 6D	82 66	81 40	81 40	00 00	| New English Hex
+
+ゴルフのグリーン
+Golf Green
+$386DE4
+81 40	81 40	81 40	83 53	83 8B	83 74	82 CC	83 4F	83 8A	81 5B	83 93	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ゴ	 #  ル	 #  フ	 #  の	 #  グ	 #  リ	 #  ー	 #  ン	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  G	 #  O	 #  L	 #  F	 #   	 #  G	 #  R	 #  E	 #  E	 #  N	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 66	82 6E	82 6B	82 65	81 40	82 66	82 71	82 64	82 64	82 6D	81 40	81 40	00 00	| New English Hex
+
+こうきゅうバッグ
+Luxury Bag
+$386E02
+81 40	81 40	81 40	82 B1	82 A4	82 AB	82 E3	82 A4	83 6F	83 62	83 4F	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  こ	 #  う	 #  き	 #  ゅ	 #  う	 #  バ	 #  ッ	 #  グ	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  L	 #  U	 #  X	 #  U	 #  R	 #  Y	 #   	 #  B	 #  A	 #  G	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 6B	82 74	82 77	82 74	82 71	82 78	81 40	82 61	82 60	82 66	81 40	81 40	00 00	| New English Hex
+
+オヤツのじかん
+Snack Time
+$386E20
+81 40	81 40	81 40	83 49	83 84	83 63	82 CC	82 B6	82 A9	82 F1	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  オ	 #  ヤ	 #  ツ	 #  の	 #  じ	 #  か	 #  ん	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  S	 #  N	 #  A	 #  C	 #  K	 #   	 #  T	 #  I	 #  M	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 72	82 6D	82 60	82 62	82 6A	81 40	82 73	82 68	82 6C	82 64	81 40	81 40	00 00	| New English Hex
+
+ママ　おおいそがし
+Busy Mama
+$386E3E
+81 40	81 40	83 7D	83 7D	81 40	82 A8	82 A8	82 A2	82 BB	82 AA	82 B5	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  マ	 #  マ	 #   	 #  お	 #  お	 #  い	 #  そ	 #  が	 #  し	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  B	 #  U	 #  S	 #  Y	 #   	 #  M	 #  A	 #  M	 #  A	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 61	82 74	82 72	82 78	81 40	82 6C	82 60	82 6C	82 60	81 40	81 40	81 40	00 00	| New English Hex
+
+チーズケーキ
+Cheesecake
+$386E5C
+81 40	81 40	81 40	81 40	83 60	81 5B	83 59	83 50	81 5B	83 4C	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  チ	 #  ー	 #  ズ	 #  ケ	 #  ー	 #  キ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  C	 #  H	 #  E	 #  E	 #  S	 #  E	 #  C	 #  A	 #  K	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 62	82 67	82 64	82 64	82 72	82 64	82 62	82 60	82 6A	82 64	81 40	81 40	00 00	| New English Hex
+
+わらうひと
+Laughing Person / Laughter
+$386E7A
+81 40	81 40	81 40	81 40	82 ED	82 E7	82 A4	82 D0	82 C6	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  わ	 #  ら	 #  う	 #  ひ	 #  と	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  L	 #  A	 #  U	 #  G	 #  H	 #  T	 #  E	 #  R	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6B	82 60	82 74	82 66	82 67	82 73	82 64	82 71	81 40	81 40	81 40	00 00	| New English Hex
+
+かざぐるま
+Kazaguruma / Pinwheel
+$386E98
+81 40	81 40	81 40	81 40	82 A9	82 B4	82 AE	82 E9	82 DC	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  か	 #  ざ	 #  ぐ	 #  る	 #  ま	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  P	 #  I	 #  N	 #  W	 #  H	 #  E	 #  E	 #  L	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6F	82 68	82 6D	82 76	82 67	82 64	82 64	82 6B	81 40	81 40	81 40	00 00	| New English Hex
+
+ピエロ
+Clown
+$386EB6
+81 40	81 40	81 40	81 40	81 40	83 73	83 47	83 8D	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ピ	 #  エ	 #  ロ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  C	 #  L	 #  O	 #  W	 #  N	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 62	82 6B	82 6E	82 76	82 6D	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+トイレのカギ
+Toilet Key
+$386ED4
+81 40	81 40	81 40	81 40	83 67	83 43	83 8C	82 CC	83 4A	83 4D	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ト	 #  イ	 #  レ	 #  の	 #  カ	 #  ギ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  T	 #  O	 #  I	 #  L	 #  E	 #  T	 #   	 #  K	 #  E	 #  Y	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 73	82 6E	82 68	82 6B	82 64	82 73	81 40	82 6A	82 64	82 78	81 40	81 40	00 00	| New English Hex
+
+----------
+Rescue 03
+----------
+ホネ
+Bone
+$386EF2
+81 40	81 40	81 40	81 40	81 40	81 40	83 7A	83 6C	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  ホ	 #  ネ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  B	 #  O	 #  N	 #  E	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 61	82 6E	82 6D	82 64	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+チーズはここにあったでチュー
+Cheese Was Here So Chew / House Mouse Eating Cheese
+$386F10
+83 60	81 5B	83 59	82 CD	82 B1	82 B1	82 C9	82 A0	82 C1	82 BD	82 C5	83 60	83 85	81 5B	00 00	| Original Japanese Hex
+ #  チ	 #  ー	 #  ズ	 #  は	 #  こ	 #  こ	 #  に	 #  あ	 #  っ	 #  た	 #  で	 #  チ	 #  ュ	 #  ー	 # LE	| Original Japanese Text
+ #   	 #  H	 #  O	 #  U	 #  S	 #  E	 #   	 #  M	 #  O	 #  U	 #  S	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	82 67	82 6E	82 74	82 72	82 64	81 40	82 6C	82 6E	82 74	82 72	82 64	81 40	81 40	00 00	| New English Hex
+
+ホルスタイン
+Holstein Friesian Cattle / Friesian Cow
+$386F2E
+81 40	81 40	81 40	81 40	83 7A	83 8B	83 58	83 5E	83 43	83 93	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ホ	 #  ル	 #  ス	 #  タ	 #  イ	 #  ン	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  F	 #  R	 #  I	 #  E	 #  S	 #  I	 #  A	 #  N	 #   	 #  C	 #  O	 #  W	 #   	 # LE	| New English Text
+81 40	82 65	82 71	82 68	82 64	82 72	82 68	82 60	82 6D	81 40	82 62	82 6E	82 76	81 40	00 00	| New English Hex
+
+とら
+Tiger
+$386F4C
+81 40	81 40	81 40	81 40	81 40	81 40	82 C6	82 E7	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  と	 #  ら	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  T	 #  I	 #  G	 #  E	 #  R	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 73	82 68	82 66	82 64	82 71	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+うさぎ
+Rabbit
+$386F6A
+81 40	81 40	81 40	81 40	81 40	82 A4	82 B3	82 AC	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  う	 #  さ	 #  ぎ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  R	 #  A	 #  B	 #  B	 #  I	 #  T	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 71	82 60	82 61	82 61	82 68	82 73	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+たつのおとしご
+Seahorse
+$386F88
+81 40	81 40	81 40	82 BD	82 C2	82 CC	82 A8	82 C6	82 B5	82 B2	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  た	 #  つ	 #  の	 #  お	 #  と	 #  し	 #  ご	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  S	 #  E	 #  A	 #  H	 #  O	 #  R	 #  S	 #  E	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 72	82 64	82 60	82 67	82 6E	82 71	82 72	82 64	81 40	81 40	81 40	00 00	| New English Hex
+
+へび
+Snake
+$386FA6
+81 40	81 40	81 40	81 40	81 40	81 40	82 D6	82 D1	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  へ	 #  び	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  N	 #  A	 #  K	 #  E	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 6D	82 60	82 6A	82 64	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+おウマのレース
+Race Horse
+$386FC4
+81 40	81 40	81 40	82 A8	83 45	83 7D	82 CC	83 8C	81 5B	83 58	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  お	 #  ウ	 #  マ	 #  の	 #  レ	 #  ー	 #  ス	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  R	 #  A	 #  C	 #  E	 #   	 #  H	 #  O	 #  R	 #  S	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 71	82 60	82 62	82 64	81 40	82 67	82 6E	82 71	82 72	82 64	81 40	81 40	00 00	| New English Hex
+
+ひつじ
+Sheep
+$386FE2
+81 40	81 40	81 40	81 40	81 40	82 D0	82 C2	82 B6	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ひ	 #  つ	 #  じ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  H	 #  E	 #  E	 #  P	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 67	82 64	82 64	82 6F	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+けづくろいするサル
+Monkey
+$387000
+81 40	81 40	82 AF	82 C3	82 AD	82 EB	82 A2	82 B7	82 E9	83 54	83 8B	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  け	 #  づ	 #  く	 #  ろ	 #  い	 #  す	 #  る	 #  サ	 #  ル	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  M	 #  O	 #  N	 #  K	 #  E	 #  Y	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 6C	82 6E	82 6D	82 6A	82 64	82 78	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+にわとり
+Chicken
+$38701E
+81 40	81 40	81 40	81 40	81 40	82 C9	82 ED	82 C6	82 E8	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  に	 #  わ	 #  と	 #  り	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  C	 #  H	 #  I	 #  C	 #  K	 #  E	 #  N	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 62	82 67	82 68	82 62	82 6A	82 64	82 6D	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+フリスビーをナイスキャッチ！
+Frisbee Nice Catch!
+$38703C
+83 74	83 8A	83 58	83 72	81 5B	82 F0	83 69	83 43	83 58	83 4C	83 83	83 62	83 60	81 49	00 00	| Original Japanese Hex
+ #  フ	 #  リ	 #  ス	 #  ビ	 #  ー	 #  を	 #  ナ 	 #  イ	 #  ス	 #  キ	 #  ャ	 #  ッ	 #  チ	 #  ！	 # LE	| Original Japanese Text
+ #  F	 #  R	 #  I	 #  S	 #  B	 #  E	 #  E	 #   	 #  C	 #  A	 #  T	 #  C	 #  H	 #  !	 # LE	| New English Text
+82 65	82 71	82 68	82 72	82 61	82 64	82 64	81 40	82 62	82 60	82 73	82 62	82 67	81 49	00 00	| New English Hex
+
+いのしし
+Wild Boar
+$38705A
+81 40	81 40	81 40	81 40	81 40	82 A2	82 CC	82 B5	82 B5	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  い	 #  の	 #  し	 #  し	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  W	 #  I	 #  L	 #  D	 #   	 #  B	 #  O	 #  A	 #  R	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 76	82 68	82 6B	82 63	81 40	82 61	82 6E	82 60	82 71	81 40	81 40	81 40	00 00	| New English Hex
+
+オフィスのイス
+Office Chair
+$387078
+81 40	81 40	81 40	83 49	83 74	83 42	83 58	82 CC	83 43	83 58	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  オ	 #  フ	 #  ィ	 #  ス	 #  の	 #  イ	 #  ス	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  O	 #  F	 #  F	 #  I	 #  C	 #  E	 #   	 #  C	 #  H	 #  A	 #  I	 #  R	 #   	 # LE	| New English Text
+81 40	82 6E	82 65	82 65	82 68	82 62	82 64	81 40	82 62	82 67	82 60	82 68	82 71	81 40	00 00	| New English Hex
+
+あかいハナのおじさん
+Red Nose Uncle
+$387096
+81 40	81 40	82 A0	82 A9	82 A2	83 6E	83 69	82 CC	82 A8	82 B6	82 B3	82 F1	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  あ	 #  か	 #  い	 #  ハ	 #  ナ	 #  の	 #  お	 #  じ	 #  さ	 #  ん	 #   	 #   	 # LE	| Original Japanese Text
+ #  R	 #  E	 #  D	 #   	 #  N	 #  O	 #  S	 #  E	 #   	 #  U	 #  N	 #  C	 #  L	 #  E	 # LE	| New English Text
+82 71	82 64	82 63	81 40	82 6D	82 6E	82 72	82 64	81 40	82 74	82 6D	82 62	82 6B	82 64	00 00	| New English Hex
+
+めざましどけい
+Alarm Clock
+$3870B4
+81 40	81 40	81 40	82 DF	82 B4	82 DC	82 B5	82 C7	82 AF	82 A2	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  め	 #  ざ	#  ま	 #  し	 #  ど	 #  け	 #  い	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  A	 #  L	 #  A	 #  R	 #  M	 #   	 #  C	 #  L	 #  O	 #  C	 #  K	 #   	 #   	 # LE	| New English Text
+81 40	82 60	82 6B	82 60	82 71	82 6C	81 40	82 62	82 6B	82 6E	82 62	82 6A	81 40	81 40	00 00	| New English Hex
+
+かるがも
+Spot-Billed Duck
+$3870D2
+81 40	81 40	81 40	81 40	81 40	82 A9	82 E9	82 AA	82 E0	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  か	 #  る	 #  が	 #  も	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  S	 #  P	 #  O	 #  T	 #  -	 #  B	 #  I	 #  L	 #  L	 #   	 #  D	 #  U	 #  C	 #  K	 # LE	| New English Text
+82 72	82 6F	82 6E	82 73	81 5B	82 61	82 68	82 6B	82 6B	81 40	82 63	82 74	82 62	82 6A	00 00	| New English Hex
+
+バンヴウコウ
+Bamboo Ko
+$3870F0
+81 40	81 40	81 40	81 40	83 6F	83 93	83 94	83 45	83 52	83 45	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  バ	 #  ン	 #  ヴ	 #  ウ	 #  コ	 #  ウ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  B	 #  A	 #  M	 #  B	 #  O	 #  O	 #   	 #  B	 #  O	 #  A	 #  T	 #   	 #   	 # LE	| New English Text
+81 40	82 61	82 60	82 6C	82 61	82 6E	82 6E	81 40	82 61	82 6E	82 60	82 73	81 40	81 40	00 00	| New English Hex
+
+つくえのうえにあるかびん
+Bottle On A Desk / Table Vase
+$38710E
+81 40	82 C2	82 AD	82 A6	82 CC	82 A4	82 A6	82 C9	82 A0	82 E9	82 A9	82 D1	82 F1	81 40	00 00	| Original Japanese Hex
+ #   	 #  つ	 #  く	 #  え	 #  の	 #  う	 #  え	 #  に	 #  あ	 #  る	 #  か	 #  び	 #  ん	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  T	 #  A	 #  B	 #  L	 #  E	 #   	 #  V	 #  A	 #  S	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 73	82 60	82 61	82 6B	82 64	81 40	82 75	82 60	82 72	82 64	81 40	81 40	00 00	| New English Hex
+
+でんげんプラグ
+Electrical Plug
+$38712C
+81 40	81 40	81 40	82 C5	82 F1	82 B0	82 F1	83 76	83 89	83 4F	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  で	 #  ん	 #  げ	 #  ん	 #  プ	 #  ラ	 #  グ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  E	 #  L	 #  E	 #  C	 #  T	 #  R	 #  I	 #  C	 #   	 #  P	 #  L	 #  U	 #  G	 #   	 # LE	| New English Text
+82 64	82 6B	82 64	82 62	82 73	82 71	82 68	82 62	81 40	82 6F	82 6B	82 74	82 66	81 40	00 00	| New English Hex
+
+----------
+Rescue 04
+----------
+けつえきけんさ
+Blood Test
+$38714A
+81 40	81 40	81 40	82 AF	82 C2	82 A6	82 AB	82 AF	82 F1	82 B3	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  け	 #  つ	 #  え	 #  き	 #  け	 #  ん	 #  さ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  B	 #  L	 #  O	 #  O	 #  D	 #   	 #  T	 #  E	 #  S	 #  T	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 61	82 6B	82 6E	82 6E	82 63	81 40	82 73	82 64	82 72	82 73	81 40	81 40	00 00	| New English Hex
+
+ラブレター
+Love Letter
+$387168
+81 40	81 40	81 40	81 40	83 89	83 75	83 8C	83 5E	81 5B	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ラ	 #  ブ	 #  レ	 #  タ	 #  ー	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  L	 #  O	 #  V	 #  E	 #   	 #  L	 #  E	 #  T	 #  T	 #  E	 #  R	 #   	 #   	 # LE	| New English Text
+81 40	82 6B	82 6E	82 75	82 64	81 40	82 6B	82 64	82 73	82 73	82 64	82 71	81 40	81 40	00 00	| New English Hex
+
+ヘッドライト
+Headlight
+$387186
+81 40	81 40	81 40	81 40	83 77	83 62	83 68	83 89	83 43	83 67	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ヘ	 #  ッ	 #  ド	 #  ラ	 #  イ	 #  ト	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  H	 #  E	 #  A	 #  D	 #  L	 #  I	 #  G	 #  H	 #  T	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 67	82 64	82 60	82 63	82 6B	82 68	82 66	82 67	82 73	81 40	81 40	81 40	00 00	| New English Hex
+
+こうえんのがいとう
+Street Lamp
+$3871A4
+81 40	81 40	82 B1	82 A4	82 A6	82 F1	82 CC	82 AA	82 A2	82 C6	82 A4	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  こ	 #  う	 #  え	 #  ん	 #  の	 #  が	 #  い	 #  と	 #  う	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  S	 #  T	 #  R	 #  E	 #  E	 #  T	 #   	 #  L	 #  A	 #  M	 #  P	 #   	 #   	 # LE	| New English Text
+81 40	82 72	82 73	82 71	82 64	82 64	82 73	81 40	82 6B	82 60	82 6C	82 6F	81 40	81 40	00 00	| New English Hex
+
+あつ～いおちゃ
+Hot～Youcha
+$3871C2
+81 40	81 40	81 40	82 A0	82 C2	81 60	82 A2	82 A8	82 BF	82 E1	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  あ	 #  つ	 #  ～	 #  い	 #  お	 #  ち	 #  ゃ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  H	 #  O	 #  T	 #  -	 #  Y	 #  O	 #  U	 #  C	 #  H	 #  A	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 67	82 6E	82 73	81 5B	82 78	82 6E	82 74	82 62	82 67	82 60	81 40	81 40	00 00	| New English Hex
+
+えものをねらうタカ
+Taka Hawk Aiming For Prey
+$3871E0
+81 40	81 40	82 A6	82 E0	82 CC	82 F0	82 CB	82 E7	82 A4	83 5E	83 4A	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  え	 #  も	 #  の	 #  を	 #  ね	 #  ら	 #  う	 #  タ	 #  カ	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  T	 #  A	 #  K	 #  A	 #   	 #  H	 #  A	 #  W	 #  K	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 73	82 60	82 6A	82 60	81 40	82 67	82 60	82 76	82 6A	81 40	81 40	81 40	00 00	| New English Hex
+
+ウエスタン
+Western / Wild West
+$3871FE
+81 40	81 40	81 40	81 40	83 45	83 47	83 58	83 5E	83 93	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ウ	 #  エ	 #  ス	 #  タ	 #  ン	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  W	 #  I	 #  L	 #  D	 #   	 #  W	 #  E	 #  S	 #  T	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 76	82 68	82 6B	82 63	81 40	82 76	82 64	82 72	82 73	81 40	81 40	81 40	00 00	| New English Hex
+
+がびょう
+Drawing-Pin / Pushpin / Thumb Tack
+$38721C
+81 40	81 40	81 40	81 40	81 40	82 AA	82 D1	82 E5	82 A4	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  が	 #  び	 #  ょ	 #  う	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text 
+ #   	 #   	 #  T	 #  H	 #  U	 #  M	 #  B	 #   	 #  T	 #  A	 #  C	 #  K	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 73	82 67	82 74	82 6C	82 61	81 40	82 73	82 60	82 62	82 6A	81 40	81 40	00 00	| New English Hex
+
+フロッピーディスク
+Floppy Disk
+$38723A
+81 40	81 40	83 74	83 8D	83 62	83 73	81 5B	83 66	83 42	83 58	83 4E	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  フ	 #  ロ	 #  ッ	 #  ピ	 #  ー	 #  デ	 #  ィ	 #  ス	 #  ク	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  F	 #  L	 #  O	 #  P	 #  P	 #  Y	 #   	 #  D	 #  I	 #  S	 #  K	 #   	 #   	 # LE	| New English Text
+81 40	82 65	82 6B	82 6E	82 6F	82 6F	82 78	81 40	82 63	82 68	82 72	82 6A	81 40	81 40	00 00	| New English Hex
+
+チェッカーフラッグ
+Checkered Flag
+$387258
+81 40	81 40	83 60	83 46	83 62	83 4A	81 5B	83 74	83 89	83 62	83 4F	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  チ	 #  ェ	 #  ッ	 #  カ	 #  ー	 #  フ	 #  ラ	 #  ッ	 #  グ	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  C	 #  H	 #  E	 #  C	 #  K	 #  E	 #  R	 #  E	 #  D	 #   	 #  F	 #  L	 #  A	 #  G	 # LE	| New English Text
+82 62	82 67	82 64	82 62	82 6A	82 64	82 71	82 64	82 63	81 40	82 65	82 6B	82 60	82 66	00 00	| New English Hex
+
+てじょう
+Handcuffs
+$387276
+81 40	81 40	81 40	81 40	81 40	82 C4	82 B6	82 E5	82 A4	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  て	 #  じ	 #  ょ	 #  う	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  H	 #  A	 #  N	 #  D	 #  C	 #  U	 #  F	 #  F	 #  S	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 67	82 60	82 6D	82 63	82 62	82 74	82 65	82 65	82 72	81 40	81 40	81 40	00 00	| New English Hex
+
+ちからもち
+Huge Power
+$387294
+81 40	81 40	81 40	81 40	82 BF	82 A9	82 E7	82 E0	82 BF	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ち	 #  か	 #  ら	 #  も	 #  ち	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  H	 #  U	 #  G	 #  E	 #   	 #  P	 #  O	 #  W	 #  E	 #  R	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 67	82 74	82 66	82 64	81 40	82 6F	82 6E	82 76	82 64	82 71	81 40	81 40	00 00	| New English Hex
+
+びっくりマーク
+Exclamation Mark / Warning Sign
+$3872B2
+81 40	81 40	81 40	82 D1	82 C1	82 AD	82 E8	83 7D	81 5B	83 4E	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  び	 #  っ	 #  く	 #  り	 #  マ	 #  ー	 #  ク	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  W	 #  A	 #  R	 #  N	 #  I	 #  N	 #  G	 #   	 #  S	 #  I	 #  G	 #  N	 #   	 # LE	| New English Text
+81 40	82 76	82 60	82 71	82 6D	82 68	82 6D	82 66	81 40	82 72	82 68	82 66	82 6D	81 40	00 00	| New English Hex
+
+かけどけい
+Wall Clock
+$3872D0
+81 40	81 40	81 40	81 40	82 A9	82 AF	82 C7	82 AF	82 A2	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  か	 #  け	 #  ど	 #  け	 #  い	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  W	 #  A	 #  L	 #  L	 #   	 #  C	 #  L	 #  O	 #  C	 #  K	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 76	82 60	82 6B	82 6B	81 40	82 62	82 6B	82 6E	82 62	82 6A	81 40	81 40	00 00	| New English Hex
+
+てつアレイ
+Dumb-Bell
+$3872EE
+81 40	81 40	81 40	81 40	82 C4	82 C2	83 41	83 8C	83 43	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  て	 #  つ	 #  ア	 #  レ	 #  イ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  D	 #  U	 #  M	 #  B	 #  -	 #  B	 #  E	 #  L	 #  L	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 63	82 74	82 6C	82 61	81 5B	82 61	82 64	82 6B	82 6B	81 40	81 40	81 40	00 00	| New English Hex
+
+----------
+Rescue 05
+----------
+どうろのひょうしき
+Road Sign
+$38730C
+81 40	81 40	82 C7	82 A4	82 EB	82 CC	82 D0	82 E5	82 A4	82 B5	82 AB	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  ど	 #  う	 #  ろ	 #  の	 #  ひ	 #  ょ	 #  う	 #  し	 #  き	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  R	 #  O	 #  A	 #  D	 #   	 #  S	 #  I	 #  G	 #  N	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 71	82 6E	82 60	82 63	81 40	82 72	82 68	82 66	82 6D	81 40	81 40	81 40	00 00	| New English Hex
+
+ティッシュペーパー
+Tissue Paper
+$38732A
+81 40	81 40	83 65	83 42	83 62	83 56	83 85	83 79	81 5B	83 70	81 5B	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  テ	 #  ィ	 #  ッ	 #  シ	 #  ュ	 #  ペ	 #  ー	 #  パ	 #  ー	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  T	 #  I	 #  S	 #  S	 #  U	 #  E	 #   	 #  P	 #  A	 #  P	 #  E	 #  R	 #   	 # LE	| New English Text
+81 40	82 73	82 68	82 72	82 72	82 74	82 64	81 40	82 6F	82 60	82 6F	82 64	82 71	81 40	00 00	| New English Hex
+
+ノルウェーの　こっき
+Norwegian Flag / Norway
+$387348
+81 40	81 40	83 6D	83 8B	83 45	83 46	81 5B	82 CC	81 40	82 B1	82 C1	82 AB	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  ノ	 #  ル	 #  ウ	 #  ェ	 #  ー	 #  の	 #   	 #  こ	 #  っ	 #  き	 #   	 #   	 # LE	| Original Japanese Text
+ #  N	 #  O	 #  R	 #  W	 #  E	 #  G	 #  I	 #  A	 #  N	 #   	 #  F	 #  L	 #  A	 #  G	 # LE	| New English Text
+82 6D	82 6E	82 71	82 76	82 64	82 66	82 68	82 60	82 6D	81 40	82 65	82 6B	82 60	82 66	00 00	| New English Hex
+
+だいもんじやき
+Daimonji Festival
+$387366
+81 40	81 40	81 40	82 BE	82 A2	82 E0	82 F1	82 B6	82 E2	82 AB	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  だ	 #  い	 #  も	 #  ん	 #  じ	 #  や	 #  き	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  D	 #  A	 #  I	 #  M	 #  O	 #  N	 #  J	 #  I	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 63	82 60	82 68	82 6C	82 6E	82 6D	82 69	82 68	81 40	81 40	81 40	00 00	| New English Hex
+
+ゆうしゃのつるぎ
+Hero's Sword
+$387384
+81 40	81 40	81 40	82 E4	82 A4	82 B5	82 E1	82 CC	82 C2	82 E9	82 AC	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ゆ	 #  う	 #  し	 #  ゃ	 #  の	 #  つ	 #  る	 #  ぎ	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  H	 #  E	 #  R	 #  O	 #  '	 #  S	 #   	 #  S	 #  W	 #  O	 #  R	 #  D	 #   	 # LE	| New English Text
+81 40	82 67	82 64	82 71	82 6E	81 66	82 72	81 40	82 72	82 76	82 6E	82 71	82 63	81 40	00 00	| New English Hex
+
+あかいくちべに
+Red Lipstick
+$3873A2
+81 40	81 40	81 40	82 A0	82 A9	82 A2	82 AD	82 BF	82 D7	82 C9	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  あ	 #  か	 #  い	 #  く	 #  ち	 #  べ	 #  に	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  R	 #  E	 #  D	 #   	 #  L	 #  I	 #  P	 #  S	 #  T	 #  I	 #  C	 #  K	 #   	 # LE	| New English Text
+81 40	82 71	82 64	82 63	81 40	82 6B	82 68	82 6F	82 72	82 73	82 68	82 62	82 6A	81 40	00 00	| New English Hex
+
+はつひので
+First Sunrise
+$3873C0
+81 40	81 40	81 40	81 40	82 CD	82 C2	82 D0	82 CC	82 C5	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  は	 #  つ	 #  ひ	 #  の	 #  で	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  F	 #  I	 #  R	 #  S	 #  T	 #   	 #  S	 #  U	 #  N	 #  R	 #  I	 #  S	 #  E	 #   	 # LE	| New English Text
+82 65	82 68	82 71	82 72	82 73	81 40	82 72	82 74	82 6D	82 71	82 68	82 72	82 64	81 40	00 00	| New English Hex
+
+オリンピック
+Olympic Rings
+$3873DE
+81 40	81 40	81 40	81 40	83 49	83 8A	83 93	83 73	83 62	83 4E	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  オ	 #  リ	 #  ン	 #  ピ	 #  ッ	 #  ク	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  O	 #  L	 #  Y	 #  M	 #  P	 #  I	 #  C	 #   	 #  R	 #  I	 #  N	 #  G	 #  S	 #   	 # LE	| New English Text
+82 6E	82 6B	82 78	82 6C	82 6F	82 68	82 62	81 40	82 71	82 68	82 6D	82 66	82 72	81 40	00 00	| New English Hex
+
+ヘッドホン
+Headphones
+$3873FC
+81 40	81 40	81 40	81 40	83 77	83 62	83 68	83 7A	83 93	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ヘ	 #  ッ	 #  ド	 #  ホ	 #  ン	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  H	 #  E	 #  A	 #  D	 #  P	 #  H	 #  O	 #  N	 #  E	 #  S	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 67	82 64	82 60	82 63	82 6F	82 67	82 6E	82 6D	82 64	82 72	81 40	81 40	00 00	| New English Hex
+
+しょしんしゃマーク
+Beginner Mark / Beginner Driver
+$38741A
+81 40	81 40	82 B5	82 E5	82 B5	82 F1	82 B5	82 E1	83 7D	81 5B	83 4E	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  し	 #  ょ	 #  し	 #  ん	 #  し	 #  ゃ	 #  マ	 #  ー	 #  ク	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  B	 #  E	 #  G	 #  I	 #  N	 #  N	 #  E	 #  R	 #   	 #  M	 #  A	 #  R	 #  K	 #   	 # LE	| New English Text
+82 61	82 64	82 66	82 68	82 6D	82 6D	82 64	82 71	81 40	82 6C	82 60	82 71	82 6A	81 40	00 00	| New English Hex
+
+もみじマーク
+Maple Mark / Maple Driver / Aged Driver Sign
+$387438
+81 40	81 40	81 40	81 40	82 E0	82 DD	82 B6	83 7D	81 5B	83 4E	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  も	 #  み	 #  じ	 #  マ	 #  ー	 #  ク	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  M	 #  A	 #  P	 #  L	 #  E	 #   	 #  M	 #  A	 #  R	 #  K	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 6C	82 60	82 6F	82 6B	82 64	81 40	82 6C	82 60	82 71	82 6A	81 40	81 40	00 00	| New English Hex
+
+ちょうせんはんとう
+Korea / Korean Peninsula
+$387456
+81 40	81 40	82 BF	82 E5	82 A4	82 B9	82 F1	82 CD	82 F1	82 C6	82 A4	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  ち	 #  ょ	 #  う	 #  せ	 #  ん	 #  は	 #  ん	 #  と	 #  う	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  K	 #  O	 #  R	 #  E	 #  A	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 6A	82 6E	82 71	82 64	82 60	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ベルトのバックル
+Belt Buckle
+$387474
+81 40	81 40	81 40	83 78	83 8B	83 67	82 CC	83 6F	83 62	83 4E	83 8B	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ベ	 #  ル	 #  ト	 #  の	 #  バ	 #  ッ	 #  ク	 #  ル	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  B	 #  E	 #  L	 #  T	 #   	 #  B	 #  U	 #  C	 #  K	 #  L	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	82 61	82 64	82 6B	82 73	81 40	82 61	82 74	82 62	82 6A	82 6B	82 64	81 40	81 40	00 00	| New English Hex
+
+サボテン
+Cactus Plant
+$387492
+81 40	81 40	81 40	81 40	81 40	83 54	83 7B	83 65	83 93	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  サ	 #  ボ	 #  テ	 #  ン	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  C	 #  A	 #  C	 #  T	 #  U	 #  S	 #   	 #  P	 #  L	 #  A	 #  N	 #  T	 #   	 # LE	| New English Text
+81 40	82 62	82 60	82 62	82 73	82 74	82 72	81 40	82 6F	82 6B	82 60	82 6D	82 73	81 40	00 00	| New English Hex
+
+シルクハット
+Silk Top Hat
+$3874B0
+81 40	81 40	81 40	81 40	83 56	83 8B	83 4E	83 6E	83 62	83 67	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  シ	 #  ル	 #  ク	 #  ハ	 #  ッ	 #  ト	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  S	 #  I	 #  L	 #  K	 #   	 #  T	 #  O	 #  P	 #   	 #  H	 #  A	 #  T	 #   	 # LE	| New English Text
+81 40	82 72	82 68	82 6B	82 6A	81 40	82 73	82 6E	82 6F	81 40	82 67	82 60	82 73	81 40	00 00	| New English Hex
+
+クリップ
+Paperclip
+$3874CE
+81 40	81 40	81 40	81 40	81 40	83 4E	83 8A	83 62	83 76	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ク	 #  リ	 #  ッ	 #  プ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  P	 #  A	 #  P	 #  E	 #  R	 #  C	 #  L	 #  I	 #  P	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 6F	82 60	82 6F	82 64	82 71	82 62	82 6B	82 68	82 6F	81 40	81 40	81 40	00 00	| New English Hex
+
+レモン
+Lemon
+$3874EC
+81 40	81 40	81 40	81 40	81 40	83 8C	83 82	83 93	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  レ	 #  モ	 #  ン	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  L	 #  E	 #  M	 #  O	 #  N	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 6B	82 64	82 6C	82 6E	82 6D	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+でんきポット
+Electronic Kettle / Electronic Pot
+$38750A
+81 40	81 40	81 40	81 40	82 C5	82 F1	82 AB	83 7C	83 62	83 67	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  で	 #  ん	 #  き	 #  ポ	 #  ッ	 #  ト	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  K	 #  E	 #  T	 #  T	 #  L	 #  E	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 6A	82 64	82 73	82 73	82 6B	82 64	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ササをたべるパンダ
+Panda Eating Bamboo Grass
+$387528
+81 40	81 40	83 54	83 54	82 F0	82 BD	82 D7	82 E9	83 70	83 93	83 5F	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  サ	 #  サ	 #  を	 #  た	 #  べ	 #  る	 #  パ	 #  ン	 #  ダ	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  P	 #  A	 #  N	 #  D	 #  A	 #   	 #  E	 #  A	 #  T	 #  I	 #  N	 #  G	 #   	 # LE	| New English Text
+81 40	82 6F	82 60	82 6D	82 63	82 60	81 40	82 64	82 60	82 73	82 68	82 6D	82 66	81 40	00 00	| New English Hex
+
+ヤスリ
+File Tool
+$387546
+81 40	81 40	81 40	81 40	81 40	83 84	83 58	83 8A	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ヤ	 #  ス	 #  リ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  F	 #  I	 #  L	 #  E	 #   	 #  T	 #  O	 #  O	 #  L	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 65	82 68	82 6B	82 64	81 40	82 73	82 6E	82 6E	82 6B	81 40	81 40	81 40	00 00	| New English Hex
+
+----------
+Rescue 06
+----------
+ドーナツ
+Donut / Doughnut
+$387564
+81 40	81 40	81 40	81 40	81 40	83 68	81 5B	83 69	83 63	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ド	 #  ー	 #  ナ	 #  ツ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  D	 #  O	 #  U	 #  G	 #  H	 #  N	 #  U	 #  T	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 63	82 6E	82 74	82 66	82 67	82 6D	82 74	82 73	81 40	81 40	81 40	00 00	| New English Hex
+
+せんしゃ
+Tank
+$387582
+81 40	81 40	81 40	81 40	81 40	82 B9	82 F1	82 B5	82 E1	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  せ	 #  ん	 #  し	 #  ゃ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  T	 #  A	 #  N	 #  K	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 73	82 60	82 6D	82 6A	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+とんぼ
+Dragonfly
+$3875A0
+81 40	81 40	81 40	81 40	81 40	82 C6	82 F1	82 DA	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  と	 #  ん	 #  ぼ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  D	 #  R	 #  A	 #  G	 #  O	 #  N	 #  F	 #  L	 #  Y	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 63	82 71	82 60	82 66	82 6E	82 6D	82 65	82 6B	82 78	81 40	81 40	81 40	00 00	| New English Hex
+
+ふうりん
+Wind Chimes
+$3875BE
+81 40	81 40	81 40	81 40	81 40	82 D3	82 A4	82 E8	82 F1	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ふ	 #  う	 #  り	 #  ん	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  W	 #  I	 #  N	 #  D	 #   	 #  C	 #  H	 #  I	 #  M	 #  E	 #  S	 #   	 #   	 # LE	| New English Text
+81 40	82 76	82 68	82 6D	82 63	81 40	82 62	82 67	82 68	82 6C	82 64	82 72	81 40	81 40	00 00	| New English Hex
+
+ハニワ
+Haniwa Clay Figure
+$3875DC
+81 40	81 40	81 40	81 40	81 40	83 6E	83 6A	83 8F	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ハ	 #  ニ	 #  ワ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  H	 #  A	 #  N	 #  I	 #  W	 #  A	 #   	 #  F	 #  I	 #  G	 #  U	 #  R	 #  E	 #   	 # LE	| New English Text
+82 67	82 60	82 6D	82 68	82 76	82 60	81 40	82 65	82 68	82 66	82 74	82 71	82 64	81 40	00 00	| New English Hex
+
+なつみかん
+Amanatsu Fruit
+$3875FA
+81 40	81 40	81 40	81 40	82 C8	82 C2	82 DD	82 A9	82 F1	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  な	 #  つ	 #  み	 #  か	 #  ん	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  A	 #  M	 #  A	 #  N	 #  A	 #  T	 #  S	 #  U	 #   	 #  F	 #  R	 #  U	 #  I	 #  T	 # LE	| New English Text
+82 60	82 6C	82 60	82 6D	82 60	82 73	82 72	82 74	81 40	82 65	82 71	82 74	82 68	82 73	00 00	| New English Hex
+
+しゃれこうべ
+Skull
+$387618
+81 40	81 40	81 40	81 40	82 B5	82 E1	82 EA	82 B1	82 A4	82 D7	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  し	 #  ゃ	 #  れ	 #  こ	 #  う	 #  べ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  K	 #  U	 #  L	 #  L	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 6A	82 74	82 6B	82 6B	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ストライク！
+Strike!
+$387636
+81 40	81 40	81 40	81 40	83 58	83 67	83 89	83 43	83 4E	81 49	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ス	 #  ト	 #  ラ	 #  イ	 #  ク	 #  ！	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  T	 #  R	 #  I	 #  K	 #  E	 #  !	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 73	82 71	82 68	82 6A	82 64	81 49	81 40	81 40	81 40	00 00	| New English Hex
+
+コアラ
+Koala
+$387654
+81 40	81 40	81 40	81 40	81 40	83 52	83 41	83 89	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  コ	 #  ア	 #  ラ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  K	 #  O	 #  A	 #  L	 #  A	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 6A	82 6E	82 60	82 6B	82 60	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+しゃもじ
+Rice Scoop / Rice Spoon
+$387672
+81 40	81 40	81 40	81 40	81 40	82 B5	82 E1	82 E0	82 B6	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  し	 #  ゃ	 #  も	 #  じ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  R	 #  I	 #  C	 #  E	 #   	 #  S	 #  P	 #  O	 #  O	 #  N	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 71	82 68	82 62	82 64	81 40	82 72	82 6F	82 6E	82 6E	82 6D	81 40	81 40	00 00	| New English Hex
+
+●バレンタインデー●
+● Valentine's Day ●
+$387690
+81 40	81 40	81 9C	83 6F	83 8C	83 93	83 5E	83 43	83 93	83 66	81 5B	81 9C	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  ●	 #  バ	 #  レ	 #  ン	 #  タ	 #  イ	 #  ン	 #  デ 	#  ー	 #  ●	 #   	 #   	 # LE	| Original Japanese Text
+ #  ●	 #  V	 #  A	 #  L	 #  E	 #  N	 #  T	 #  I	 #  N	 #  E	 #  '	 #  S	 #  ●	 #   	 # LE	| New English Text
+81 9C	82 75	82 60	82 6B	82 64	82 6D	82 73	82 68	82 6D	82 64	81 66	82 72	81 9C	81 40	00 00	| New English Hex
+
+ホームベース
+Home Base
+$3876AE
+81 40	81 40	81 40	81 40	83 7A	81 5B	83 80	83 78	81 5B	83 58	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ホ	 #  ー	 #  ム	 #  ベ	 #  ー	 #  ス	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  H	 #  O	 #  M	 #  E	 #   	 #  B	 #  A	 #  S	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 67	82 6E	82 6C	82 64	81 40	82 61	82 60	82 72	82 64	81 40	81 40	00 00	| New English Hex
+
+ねつききゅう
+Hot Air Balloon
+$3876CC
+81 40	81 40	81 40	81 40	82 CB	82 C2	82 AB	82 AB	82 E3	82 A4	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ね	 #  つ	 #  き	 #  き	 #  ゅ	 #  う	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  H	 #  O	 #  T	 #  A	 #  I	 #  R	 #   	 #  B	 #  A	 #  L	 #  L	 #  O	 #  O	 #  N	 # LE	| New English Text
+82 67	82 6E	82 73	82 60	82 68	82 71	81 40	82 61	82 60	82 6B	82 6B	82 6E	82 6E	82 6D	00 00	| New English Hex
+
+おおきくて　きになるき
+Big & Worrisome / Big Tree
+$3876EA
+81 40	82 A8	82 A8	82 AB	82 AD	82 C4	81 40	82 AB	82 C9	82 C8	82 E9	82 AB	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #  お	 #  お	 #  き	 #  く	 #  て	 #   	 #  き 	 #  に	 #  な	 #  る	 #  き	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  B	 #  I	 #  G	 #   	 #  T	 #  R	 #  E	 #  E	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 61	82 68	82 66	81 40	82 73	82 71	82 64	82 64	81 40	81 40	81 40	00 00	| New English Hex
+
+スズメバチ
+Wasp
+$387708
+81 40	81 40	81 40	81 40	83 58	83 59	83 81	83 6F	83 60	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ス	 #  ズ	 #  メ	 #  バ	 #  チ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  W	 #  A	 #  S	 #  P	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 76	82 60	82 72	82 6F	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ようふくのボタン
+Clothes Button
+$387726
+81 40	81 40	81 40	82 E6	82 A4	82 D3	82 AD	82 CC	83 7B	83 5E	83 93	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  よ	 #  う	 #  ふ	 #  く	 #  の	 #  ボ	 #  タ	 #  ン	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  C	 #  L	 #  O	 #  T	 #  H	 #  E	 #  S	 #   	 #  B	 #  U	 #  T	 #  T	 #  O	 #  N	 # LE	| New English Text
+82 62	82 6B	82 6E	82 73	82 67	82 64	82 72	81 40	82 61	82 74	82 73	82 73	82 6E	82 6D	00 00	| New English Hex
+
+あしたてんきにしておくれ
+Tomorrow's Weather / Teru Teru Bōzu Doll / Weather Doll / Weather Talisman
+$387744
+81 40	82 A0	82 B5	82 BD	82 C4	82 F1	82 AB	82 C9	82 B5	82 C4	82 A8	82 AD	82 EA	81 40	00 00	| Original Japanese Hex
+ #   	 #  あ	 #  し	 #  た	 #  て	 #  ん	 #  き	 #  に	 #  し	 #  て	 #  お	 #  く	 #  れ	 #   	 # LE	| Original Japanese Text
+ #   	 #  W	 #  E	 #  A	 #  T	 #  H	 #  E	 #  R	 #   	 #  D	 #  O	 #  L	 #  L	 #   	 # LE	| New English Text
+81 40	82 76	82 64	82 60	82 73	82 67	82 64	82 71	81 40	82 63	82 6E	82 6B	82 6B	81 40	00 00	| New English Hex
+
+ワイシャツ
+Shirt
+$387762
+81 40	81 40	81 40	81 40	83 8F	83 43	83 56	83 83	83 63	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ワ	 #  イ	 #  シ	 #  ャ	 #  ツ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  H	 #  I	 #  R	 #  T	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 67	82 68	82 71	82 73	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+おさんぽたのしいぞ～
+It's Fun To Walk / Elephant
+$387780
+81 40	81 40	82 A8	82 B3	82 F1	82 DB	82 BD	82 CC	82 B5	82 A2	82 BC	81 60	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  お	 #  さ	 #  ん	 #  ぽ	 #  た	 #  の	 #  し	 #  い	 #  ぞ	 #  ～	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  E	 #  L	 #  E	 #  P	 #  H	 #  A	 #  N	 #  T	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 64	82 6B	82 64	82 6F	82 67	82 60	82 6D	82 73	81 40	81 40	81 40	00 00	| New English Hex
+
+ひょうたん
+Bottle Gourd / Calabash
+$38779E
+81 40	81 40	81 40	81 40	82 D0	82 E5	82 A4	82 BD	82 F1	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ひ	 #  ょ	 #  う	 #  た	 #  ん	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  B	 #  O	 #  T	 #  T	 #  L	 #  E	 #   	 #  G	 #  O	 #  U	 #  R	 #  D	 #   	 # LE	| New English Text
+81 40	82 61	82 6E	82 73	82 73	82 6B	82 64	81 40	82 66	82 6E	82 74	82 71	82 63	81 40	00 00	| New English Hex
+
+こけし
+Kokeshi Doll / Limbless Wooden Doll
+$3877BC
+81 40	81 40	81 40	81 40	81 40	82 B1	82 AF	82 B5	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  こ	 #  け	 #  し	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  K	 #  O	 #  K	 #  E	 #  S	 #  H	 #  I	 #   	 #  D	 #  O	 #  L	 #  L	 #   	 # LE	| New English Text
+81 40	82 6A	82 6E	82 6A	82 64	82 72	82 67	82 68	81 40	82 63	82 6E	82 6B	82 6B	81 40	00 00	| New English Hex
+
+ゆうびんポスト
+Postbox
+$3877DA
+81 40	81 40	81 40	82 E4	82 A4	82 D1	82 F1	83 7C	83 58	83 67	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ゆ	 #  う	 #  び	 #  ん	 #  ポ	 #  ス	 #  ト	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  P	 #  O	 #  S	 #  T	 #  B	 #  O	 #  X	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6F	82 6E	82 72	82 73	82 61	82 6E	82 77	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ひとこぶらくだ
+Dromedary / Arabian Camel
+$3877F8
+81 40	81 40	81 40	82 D0	82 C6	82 B1	82 D4	82 E7	82 AD	82 BE	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ひ	 #  と	 #  こ	 #  ぶ	 #  ら	 #  く	 #  だ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  A	 #  R	 #  A	 #  B	 #  I	 #  A	 #  N	 #   	 #  C	 #  A	 #  M	 #  E	 #  L	 #   	 # LE	| New English Text
+82 60	82 71	82 60	82 61	82 68	82 60	82 6D	81 40	82 62	82 60	82 6C	82 64	82 6B	81 40	00 00	| New English Hex
+
+あかいかみの　おとこのこ
+Akakami's Man / Red Haired
+$387816
+81 40	82 A0	82 A9	82 A2	82 A9	82 DD	82 CC	81 40	82 A8	82 C6	82 B1	82 CC	82 B1	81 40	00 00	| Original Japanese Hex
+ #   	 #  あ	 #  か	 #  い	 #  か	 #  み	 #  の	 #   	 #  お	 #  と	 #  こ	 #  の	 #  こ	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  R	 #  E	 #  D	 #   	 #  H	 #  A	 #  I	 #  R	 #  E	 #  D	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 71	82 64	82 63	81 40	82 67	82 60	82 68	82 71	82 64	82 63	81 40	81 40	00 00	| New English Hex
+
+アイスクリーム
+Ice Cream
+$387834
+81 40	81 40	81 40	83 41	83 43	83 58	83 4E	83 8A	81 5B	83 80	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ア	 #  イ	 #  ス	 #  ク	 #  リ	 #  ー	 #  ム	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  I	 #  C	 #  E	 #   	 #  C	 #  R	 #  E	 #  A	 #  M	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 68	82 62	82 64	81 40	82 62	82 71	82 64	82 60	82 6C	81 40	81 40	81 40	00 00	| New English Hex
+
+はさみ
+Scissors
+$387852
+81 40	81 40	81 40	81 40	81 40	82 CD	82 B3	82 DD	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  は	 #  さ	 #  み	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  S	 #  C	 #  I	 #  S	 #  S	 #  O	 #  R	 #  S	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 72	82 62	82 68	82 72	82 72	82 6E	82 71	82 72	81 40	81 40	81 40	00 00	| New English Hex
+
+エビのてんぷら
+Shrimp Tempura
+$387870
+81 40	81 40	81 40	83 47	83 72	82 CC	82 C4	82 F1	82 D5	82 E7	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  エ	 #  ビ	 #  の	 #  て	 #  ん	 #  ぷ	 #  ら	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  S	 #  H	 #  R	 #  I	 #  M	 #  P	 #   	 #  T	 #  E	 #  M	 #  P	 #  U	 #  R	 #  A	 # LE	| New English Text
+82 72	82 67	82 71	82 68	82 6C	82 6F	81 40	82 73	82 64	82 6C	82 6F	82 74	82 71	82 60	00 00	| New English Hex
+
+ステンレスのすいとう
+Stainless Steel Water Bottle / Steel Flask
+$38788E
+81 40	81 40	83 58	83 65	83 93	83 8C	83 58	82 CC	82 B7	82 A2	82 C6	82 A4	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  ス	 #  テ	 #  ン	 #  レ	 #  ス	 #  の	 #  す	 #  い	 #  と	 #  う	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  S	 #  T	 #  E	 #  E	 #  L	 #   	 #  F	 #  L	 #  A	 #  S	 #  K	 #   	 #   	 # LE	| New English Text
+81 40	82 72	82 73	82 64	82 64	82 6B	81 40	82 65	82 6B	82 60	82 72	82 6A	81 40	81 40	00 00	| New English Hex
+
+ブランデーグラス
+Brandy Glass
+$3878AC
+81 40	81 40	81 40	83 75	83 89	83 93	83 66	81 5B	83 4F	83 89	83 58	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ブ	 #  ラ	 #  ン	 #  デ	 #  ー	 #  グ	 #  ラ	 #  ス	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  B	 #  R	 #  A	 #  N	 #  D	 #  Y	 #   	 #  G	 #  L	 #  A	 #  S	 #  S	 #   	 # LE	| New English Text
+81 40	82 61	82 71	82 60	82 6D	82 63	82 78	81 40	82 66	82 6B	82 60	82 72	82 72	81 40	00 00	| New English Hex
+
+スパナ
+Spanner
+$3878CA
+81 40	81 40	81 40	81 40	81 40	81 40	83 58	83 70	83 69	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  ス	 #  パ	 #  ナ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  S	 #  P	 #  A	 #  N	 #  N	 #  E	 #  R	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 72	82 6F	82 60	82 6D	82 6D	82 64	82 71	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+----------
+Rescue 07
+----------
+アルミかん
+Aluminum Can
+$3878E8
+81 40	81 40	81 40	81 40	83 41	83 8B	83 7E	82 A9	82 F1	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ア	 #  ル	 #  ミ	 #  か	 #  ん	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  A	 #  L	 #  U	 #  M	 #  I	 #  N	 #  U	 #  M	 #   	 #  C	 #  A	 #  N	 #   	 # LE	| New English Text
+81 40	82 60	82 6B	82 74	82 6C	82 68	82 6D	82 74	82 6C	81 40	82 62	82 60	82 6D	81 40	00 00	| New English Hex
+
+すずのついたくびわ
+Tin Collar / Collar Bell
+$387906
+81 40	81 40	82 B7	82 B8	82 CC	82 C2	82 A2	82 BD	82 AD	82 D1	82 ED	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  す	 #  ず	 #  の	 #  つ	 #  い	 #  た	 #  く	 #  び	 #  わ	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  C	 #  O	 #  L	 #  L	 #  A	 #  R	 #   	 #  B	 #  E	 #  L	 #  L	 #   	 #   	 # LE	| New English Text
+81 40	82 62	82 6E	82 6B	82 6B	82 60	82 71	81 40	82 61	82 64	82 6B	82 6B	81 40	81 40	00 00	| New English Hex
+
+とうだい
+Lighthouse
+$387924
+81 40	81 40	81 40	81 40	81 40	82 C6	82 A4	82 BE	82 A2	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  と	 #  う	 #  だ	 #  い	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  ?	 #  ?	 #  ?	 #  ?	 #  ?	 #  ?	 #  ?	 #  ?	 #  ?	 #  ?	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 6B	82 68	82 66	82 67	82 73	82 67	82 6E	82 74	82 72	82 64	81 40	81 40	00 00	| New English Hex
+
+ハシをわたるこども
+Children Crossing The Bridge
+$387942
+81 40	81 40	83 6E	83 56	82 F0	82 ED	82 BD	82 E9	82 B1	82 C7	82 E0	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  ハ	 #  シ	 #  を	 #  わ	 #  た	 #  る	 #  こ	 #  ど	 #  も	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  B	 #  R	 #  I	 #  D	 #  G	 #  E	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 61	82 71	82 68	82 63	82 66	82 64	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ネジ
+Screw
+$387960
+81 40	81 40	81 40	81 40	81 40	81 40	83 6C	83 57	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  ネ	 #  ジ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  C	 #  R	 #  E	 #  W	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 62	82 71	82 64	82 76	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+おとしもの
+Lost & Found
+$38797E
+81 40	81 40	81 40	81 40	82 A8	82 C6	82 B5	82 E0	82 CC	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  お	 #  と	 #  し	 #  も	 #  の	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  L	 #  O	 #  S	 #  T	 #   	 #  &	 #   	 #  F	 #  O	 #  U	 #  N	 #  D	 #   	 # LE	| New English Text
+81 40	82 6B	82 6E	82 72	82 73	81 40	81 95	81 40	82 65	82 6E	82 74	82 6D	82 63	81 40	00 00	| New English Hex
+
+トリのヒナ
+Bird Chicks
+$38799C
+81 40	81 40	81 40	81 40	83 67	83 8A	82 CC	83 71	83 69	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ト	 #  リ	 #  の	 #  ヒ	 #  ナ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  B	 #  I	 #  R	 #  D	 #   	 #  C	 #  H	 #  I	 #  C	 #  K	 #  S	 #   	 #   	 # LE	| New English Text
+81 40	82 61	82 68	82 71	82 63	81 40	82 62	82 67	82 68	82 62	82 6A	82 72	81 40	81 40	00 00	| New English Hex
+
+ワニ
+Crocodile
+$3879BA
+81 40	81 40	81 40	81 40	81 40	81 40	83 8F	83 6A	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  ワ	 #  ニ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  C	 #  R	 #  O	 #  C	 #  O	 #  D	 #  I	 #  L	 #  E	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 62	82 71	82 6E	82 62	82 6E	82 63	82 68	82 6B	82 64	81 40	81 40	81 40	00 00	| New English Hex
+
+ねぼうしたサラリーマン
+Neboi Office Worker / Salary Man
+$3879D8
+81 40	82 CB	82 DA	82 A4	82 B5	82 BD	83 54	83 89	83 8A	81 5B	83 7D	83 93	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #  ね	 #  ぼ	 #  う	 #  し	 #  た	 #  サ	 #  ラ	 #  リ	 #  ー	 #  マ	 #  ン	 #   	 #   	 # LE	| Original Japanese Text
+ #  O	 #  F	 #  F	 #  I	 #  C	 #  E	 #   	 #  W	 #  O	 #  R	 #  K	 #  E	 #  R	 #   	 # LE	| New English Text
+82 6E	82 65	82 65	82 68	82 62	82 64	81 40	82 76	82 6E	82 71	82 6A	82 64	82 71	81 40	00 00	| New English Hex
+
+ほしがき
+Dried Persimmon / Hoshigaki
+$3879F6
+81 40	81 40	81 40	81 40	81 40	82 D9	82 B5	82 AA	82 AB	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ほ	 #  し	 #  が	 #  き	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  H	 #  O	 #  S	 #  H	 #  I	 #  G	 #  A	 #  K	 #  I	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 67	82 6E	82 72	82 67	82 68	82 66	82 60	82 6A	82 68	81 40	81 40	81 40	00 00	| New English Hex
+
+オムツ
+Diaper
+$387A14
+81 40	81 40	81 40	81 40	81 40	83 49	83 80	83 63	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  オ	 #  ム	 #  ツ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  D	 #  I	 #  A	 #  P	 #  E	 #  R	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 63	82 68	82 60	82 6F	82 64	82 71	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+えんぴつ
+Pencil
+$387A32
+81 40	81 40	81 40	81 40	81 40	82 A6	82 F1	82 D2	82 C2	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  え	 #  ん	 #  ぴ	 #  つ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  P	 #  E	 #  N	 #  C	 #  I	 #  L	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 6F	82 64	82 6D	82 62	82 68	82 6B	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+なみのり
+Surfing
+$387A50
+81 40	81 40	81 40	81 40	81 40	82 C8	82 DD	82 CC	82 E8	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  な	 #  み	 #  の	 #  り	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  S	 #  U	 #  R	 #  F	 #  I	 #  N	 #  G	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 72	82 74	82 71	82 65	82 68	82 6D	82 66	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+くし
+Comb
+$387A6E
+81 40	81 40	81 40	81 40	81 40	81 40	82 AD	82 B5	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  く	 #  し	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  C	 #  O	 #  M	 #  B	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 62	82 6E	82 6C	82 61	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+バクダン
+Bomb
+$387A8C
+81 40	81 40	81 40	81 40	81 40	83 6F	83 4E	83 5F	83 93	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  バ	 #  ク	 #  ダ	 #  ン	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  B	 #  O	 #  M	 #  B	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 61	82 6E	82 6C	82 61	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+----------
+Rescue 08
+----------
+ペンギン
+Penguin
+$387AAA
+81 40	81 40	81 40	81 40	81 40	83 79	83 93	83 4D	83 93	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ペ	 #  ン	 #  ギ	 #  ン	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  P	 #  E	 #  N	 #  G	 #  U	 #  I	 #  N	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6F	82 64	82 6D	82 66	82 74	82 68	82 6D	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+おもちゃのハンマー
+Toy Hammer
+$387AC8
+81 40	81 40	82 A8	82 E0	82 BF	82 E1	82 CC	83 6E	83 93	83 7D	81 5B	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  お	 #  も	 #  ち	 #  ゃ	 #  の	 #  ハ	 #  ン	 #  マ	 #  ー	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  T	 #  O	 #  Y	 #   	 #  H	 #  A	 #  M	 #  M	 #  E	 #  R	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 73	82 6E	82 78	81 40	82 67	82 60	82 6C	82 6C	82 64	82 71	81 40	81 40	00 00	| New English Hex
+
+ボウリングのピン
+Bowling Pin
+$387AE6
+81 40	81 40	81 40	83 7B	83 45	83 8A	83 93	83 4F	82 CC	83 73	83 93	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ボ	 #  ウ	 #  リ	 #  ン	 #  グ	 #  の	 #  ピ	 #  ン	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  B	 #  O	 #  W	 #  L	 #  I	 #  N	 #  G	 #   	 #  P	 #  I	 #  N	 #   	 #   	 # LE	| New English Text
+81 40	82 61	82 6E	82 76	82 6B	82 68	82 6D	82 66	81 40	82 6F	82 68	82 6D	81 40	81 40	00 00	| New English Hex
+
+ぶどう
+Grapes
+$387B04
+81 40	81 40	81 40	81 40	81 40	82 D4	82 C7	82 A4	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ぶ	 #  ど	 #  う	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  G	 #  R	 #  A	 #  P	 #  E	 #  S	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 66	82 71	82 60	82 6F	82 64	82 72	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+アイスキャンディー
+Popsicle
+$387B22
+81 40	81 40	83 41	83 43	83 58	83 4C	83 83	83 93	83 66	83 42	81 5B	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  ア	 #  イ	 #  ス	 #  キ	 #  ャ	 #  ン	 #  デ	 #  ィ	 #  ー	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  P	 #  O	 #  P	 #  S	 #  I	 #  C	 #  L	 #  E	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6F	82 6E	82 6F	82 72	82 68	82 62	82 6B	82 64	81 40	81 40	81 40	00 00	| New English Hex
+
+イルカ
+Dolphin
+$387B40
+81 40	81 40	81 40	81 40	81 40	83 43	83 8B	83 4A	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  イ	 #  ル	 #  カ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  D	 #  O	 #  L	 #  P	 #  H	 #  I	 #  N	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 63	82 6E	82 6B	82 6F	82 67	82 68	82 6D	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ふすま
+Fusuma / Sliding Door
+$387B5E
+81 40	81 40	81 40	81 40	81 40	82 D3	82 B7	82 DC	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ふ	 #  す	 #  ま	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  S	 #  L	 #  I	 #  D	 #  I	 #  N	 #  G	 #   	 #  D	 #  O	 #  O	 #  R	 #   	 # LE	| New English Text
+81 40	82 72	82 6B	82 68	82 63	82 68	82 6D	82 66	81 40	82 63	82 6E	82 6E	82 71	81 40	00 00	| New English Hex
+
+ホタルのひかり
+Hotaru No Hikari / Glow Of A Firefly
+$387B7C
+81 40	81 40	81 40	83 7A	83 5E	83 8B	82 CC	82 D0	82 A9	82 E8	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ホ	 #  タ	 #  ル	 #  の	 #  ひ	 #  か	 #  り	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  F	 #  I	 #  R	 #  E	 #  F	 #  L	 #  Y	 #   	 #  G	 #  L	 #  O	 #  W	 #   	 # LE	| New English Text
+81 40	82 65	82 68	82 71	82 64	82 65	82 6B	82 78	81 40	82 66	82 6B	82 6E	82 76	81 40	00 00	| New English Hex
+
+１えんだま
+1 Endama Coin
+$387B9A
+81 40	81 40	81 40	81 40	82 50	82 A6	82 F1	82 BE	82 DC	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  １	 #  え	 #  ん	 #  だ	 #  ま	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  1	 #   	 #  E	 #  N	 #  D	 #  A	 #  M	 #  A	 #   	 #  C	 #  O	 #  I	 #  N	 #   	 # LE	| New English Text
+82 50	81 40	82 64	82 6D	82 63	82 60	82 6C	82 60	81 40	82 62	82 6E	82 68	82 6D	81 40	00 00	| New English Hex
+
+くり
+Chestnut
+$387BB8
+81 40	81 40	81 40	81 40	81 40	81 40	82 AD	82 E8	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  く	 #  り	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  C	 #  H	 #  E	 #  S	 #  T	 #  N	 #  U	 #  T	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 62	82 67	82 64	82 72	82 73	82 6D	82 74	82 73	81 40	81 40	81 40	00 00	| New English Hex
+
+あおいふくをきた　おんなのこ
+Girl Dressed In Blue / Girl In Blue Dress
+$387BD6
+82 A0	82 A8	82 A2	82 D3	82 AD	82 F0	82 AB	82 BD	81 40	82 A8	82 F1	82 C8	82 CC	82 B1	00 00	| Original Japanese Hex
+ #  あ	 #  お	 #  い	 #  ふ	 #  く	 #  を	 #  き	 #  た	 #   	 #  お	 #  ん	 #  な	 #  の	 #  こ	 # LE	| Original Japanese Text
+ #   	 #   	 #  B	 #  L	 #  U	 #  E	 #   	 #  D	 #  R	 #  E	 #  S	 #  S	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 61	82 6B	82 74	82 64	81 40	82 63	82 71	82 64	82 72	82 72	81 40	81 40	00 00	| New English Hex
+
+かんせいハガキ
+Official Postcard
+$387BF4
+81 40	81 40	81 40	82 A9	82 F1	82 B9	82 A2	83 6E	83 4B	83 4C	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  か	 #  ん	 #  せ	 #  い	 #  ハ	 #  ガ	 #  キ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  P	 #  O	 #  S	 #  T	 #  C	 #  A	 #  R	 #  D	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6F	82 6E	82 72	82 73	82 62	82 60	82 71	82 63	81 40	81 40	81 40	00 00	| New English Hex
+
+さかなのホネ
+Fish Bone
+$387C12
+81 40	81 40	81 40	81 40	82 B3	82 A9	82 C8	82 CC	83 7A	83 6C	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  さ	 #  か	 #  な	 #  の	 #  ホ	 #  ネ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  F	 #  I	 #  S	 #  H	 #   	 #  B	 #  O	 #  N	 #  E	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 65	82 68	82 72	82 67	81 40	82 61	82 6E	82 6D	82 64	81 40	81 40	81 40	00 00	| New English Hex
+
+サッカーボール
+Soccer Ball
+$387C30
+81 40	81 40	81 40	83 54	83 62	83 4A	81 5B	83 7B	81 5B	83 8B	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  サ	 #  ッ	 #  カ	 #  ー	 #  ボ	 #  ー	 #  ル	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  S	 #  O	 #  C	 #  C	 #  E	 #  R	 #   	 #  B	 #  A	 #  L	 #  L	 #   	 #   	 # LE	| New English Text
+81 40	82 72	82 6E	82 62	82 62	82 64	82 71	81 40	82 61	82 60	82 6B	82 6B	81 40	81 40	00 00	| New English Hex
+
+とびこみだい
+Diving
+$387C4E
+81 40	81 40	81 40	81 40	82 C6	82 D1	82 B1	82 DD	82 BE	82 A2	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  と	 #  び	 #  こ	 #  み	 #  だ	 #  い	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  D	 #  I	 #  V	 #  I	 #  N	 #  G	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 63	82 68	82 75	82 68	82 6D	82 66	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+かき
+Diospyros Kaki / Oriental Persimmon / Japanese Persimmon / Kaki Persimmon / Kaki Fruit
+$387C6C
+81 40	81 40	81 40	81 40	81 40	81 40	82 A9	82 AB	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  か	 #  き	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  K	 #  A	 #  K	 #  I	 #   	 #  F	 #  R	 #  U	 #  I	 #  T	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 6A	82 60	82 6A	82 68	81 40	82 65	82 71	82 74	82 68	82 73	81 40	81 40	00 00	| New English Hex
+
+すなどけい
+Hourglass
+$387C8A
+81 40	81 40	81 40	81 40	82 B7	82 C8	82 C7	82 AF	82 A2	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  す	 #  な	 #  ど	 #  け	 #  い	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  H	 #  O	 #  U	 #  R	 #  G	 #  L	 #  A	 #  S	 #  S	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 67	82 6E	82 74	82 71	82 66	82 6B	82 60	82 72	82 72	81 40	81 40	81 40	00 00	| New English Hex
+
+ワイドテレビ
+Wide-Screen TV
+$387CA8
+81 40	81 40	81 40	81 40	83 8F	83 43	83 68	83 65	83 8C	83 72	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ワ	 #  イ	 #  ド	 #  テ	 #  レ	 #  ビ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  W	 #  I	 #  D	 #  E	 #  -	 #  S	 #  C	 #  R	 #  E	 #  E	 #  N	 #   	 #  T	 #  V	 # LE	| New English Text
+82 76	82 68	82 63	82 64	81 5B	82 72	82 62	82 71	82 64	82 64	82 6D	81 40	82 73	82 75	00 00	| New English Hex
+
+どせい
+Saturn
+$387CC6
+81 40	81 40	81 40	81 40	81 40	82 C7	82 B9	82 A2	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ど	 #  せ	 #  い	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  A	 #  T	 #  U	 #  R	 #  N	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 60	82 73	82 74	82 71	82 6D	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+きりだんす
+Chest Of Drawers / Wooden Drawers
+$387CE4
+81 40	81 40	81 40	81 40	82 AB	82 E8	82 BE	82 F1	82 B7	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  き	 #  り	 #  だ	 #  ん	 #  す	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  W	 #  O	 #  O	 #  D	 #  E	 #  N	 #   	 #  D	 #  R	 #  A	 #  W	 #  E	 #  R	 #  S	 # LE	| New English Text
+82 76	82 6E	82 6E	82 63	82 64	82 6D	81 40	82 63	82 71	82 60	82 76	82 64	82 71	82 72	00 00	| New English Hex
+
+サイコロ
+Dice
+$387D02
+81 40	81 40	81 40	81 40	81 40	83 54	83 43	83 52	83 8D	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  サ	 #  イ	 #  コ	 #  ロ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  D	 #  I	 #  C	 #  E	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 63	82 68	82 62	82 64	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+すいかわり
+Watermelon Fruit
+$387D20
+81 40	81 40	81 40	81 40	82 B7	82 A2	82 A9	82 ED	82 E8	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  す	 #  い	 #  か	 #  わ	 #  り	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  W	 #  A	 #  T	 #  E	 #  R	 #  M	 #  E	 #  L	 #  O	 #  N	 #   	 #   	 # LE	 # LE	| New English Text
+81 40	81 40	82 76	82 60	82 73	82 64	82 71	82 6C	82 64	82 6B	82 6E	82 6D	81 40	81 40	00 00	| New English Hex
+
+めもり
+Memory
+$387D3E
+81 40	81 40	81 40	81 40	81 40	82 DF	82 E0	82 E8	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  め	 #  も	 #  り	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  M	 #  E	 #  M	 #  O	 #  R	 #  Y	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 6C	82 64	82 6C	82 6E	82 71	82 78	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ギター
+Guitar
+$387D5C
+81 40	81 40	81 40	81 40	81 40	83 4D	83 5E	81 5B	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ギ	 #  タ	 #  ー	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  G	 #  U	 #  I	 #  T	 #  A	 #  R	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 66	82 74	82 68	82 73	82 60	82 71	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+タバスコ
+Tabasco Sauce
+$387D7A
+81 40	81 40	81 40	81 40	81 40	83 5E	83 6F	83 58	83 52	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  タ	 #  バ	 #  ス	 #  コ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  T	 #  A	 #  B	 #  A	 #  S	 #  C	 #  O	 #   	 #  S	 #  A	 #  U	 #  C	 #  E	 #   	 # LE	| New English Text
+82 73	82 60	82 61	82 60	82 72	82 62	82 6E	81 40	82 72	82 60	82 74	82 62	82 64	81 40	00 00	| New English Hex
+
+----------
+Rescue 09
+----------
+ぶた
+Pig
+$387D98
+81 40	81 40	81 40	81 40	81 40	81 40	82 D4	82 BD	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  ぶ	 #  た	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  P	 #  I	 #  G	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 6F	82 68	82 66	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+たいきょくず
+Taijitu / Yin-Yang Symbol
+$387DB6
+81 40	81 40	81 40	81 40	82 BD	82 A2	82 AB	82 E5	82 AD	82 B8	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  た	 #  い	 #  き	 #  ょ	 #  く	 #  ず	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  Y	 #  I	 #  N	 #  -	 #  Y	 #  A	 #  N	 #  G	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 78	82 68	82 6D	81 5B	82 78	82 60	82 6D	82 66	81 40	81 40	81 40	00 00	| New English Hex
+
+しんごうき
+Traffic Lights
+$387DD4
+81 40	81 40	81 40	81 40	82 B5	82 F1	82 B2	82 A4	82 AB	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  し	 #  ん	 #  ご	 #  う	 #  き	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  T	 #  R	 #  A	 #  F	 #  F	 #  I	 #  C	 #   	 #  L	 #  I	 #  G	 #  H	 #  T	 #  S	 # LE	| New English Text
+82 73	82 71	82 60	82 65	82 65	82 68	82 62	81 40	82 6B	82 68	82 66	82 67	82 73	82 72	00 00	| New English Hex
+
+ノートパヴコン
+Laptop Computer
+$387DF2
+81 40	81 40	81 40	83 6D	81 5B	83 67	83 70	83 94	83 52	83 93	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ノ	 #  ー	 #  ト	 #  パ	 #  ヴ	 #  コ	 #  ン	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  L	 #  A	 #  P	 #  T	 #  O	 #  P	 #   	 #  P	 #  C	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6B	82 60	82 6F	82 73	82 6E	82 6F	81 40	82 6F	82 62	81 40	81 40	00 00	| New English Hex
+
+シングルベッド
+Single Bed
+$387E10
+81 40	81 40	81 40	83 56	83 93	83 4F	83 8B	83 78	83 62	83 68	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  シ	 #  ン	 #  グ	 #  ル	 #  ベ	 #  ッ	 #  ド	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  S	 #  I	 #  N	 #  G	 #  L	 #  E	 #   	 #  B	 #  E	 #  D	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 72	82 68	82 6D	82 66	82 6B	82 64	81 40	82 61	82 64	82 63	81 40	81 40	00 00	| New English Hex
+
+にぎりずし
+Nigiri Sushi
+$387E2E
+81 40	81 40	81 40	81 40	82 C9	82 AC	82 E8	82 B8	82 B5	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  に	 #  ぎ	 #  り	 #  ず	 #  し	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  N	 #  I	 #  G	 #  I	 #  R	 #  I	 #   	 #  S	 #  U	 #  S	 #  H	 #  I	 #   	 # LE	| New English Text
+81 40	82 6D	82 68	82 66	82 68	82 71	82 68	81 40	82 72	82 74	82 72	82 67	82 68	81 40	00 00	| New English Hex
+
+バスケットボール
+Basketball
+$387E4C
+81 40	81 40	81 40	83 6F	83 58	83 50	83 62	83 67	83 7B	81 5B	83 8B	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  バ	 #  ス	 #  ケ	 #  ッ	 #  ト	 #  ボ	 #  ー	 #  ル	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  B	 #  A	 #  S	 #  K	 #  E	 #  T	 #  B	 #  A	 #  L	 #  L	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 61	82 60	82 72	82 6A	82 64	82 73	82 61	82 60	82 6B	82 6B	81 40	81 40	00 00	| New English Hex
+
+１００えんだま
+100 Yen Coin
+$387E6A
+81 40	81 40	81 40	82 50	82 4F	82 4F	82 A6	82 F1	82 BE	82 DC	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  １	 #  ０	 #  ０	 #  え	 #  ん	 #  だ	 #  ま	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  1	 #  0	 #  0	 #   	 #  Y	 #  E	 #  N	 #   	 #  C	 #  O	 #  I	 #  N	 #   	 # LE	| New English Text
+81 40	82 50	82 4F	82 4F	81 40	82 78	82 64	82 6D	81 40	82 62	82 6E	82 68	82 6D	81 40	00 00	| New English Hex
+
+けいたいストラップ
+Cell Phone Strap
+$387E88
+81 40	81 40	82 AF	82 A2	82 BD	82 A2	83 58	83 67	83 89	83 62	83 76	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  け	 #  い	 #  た	 #  い	 #  ス	 #  ト	 #  ラ	 #  ッ	 #  プ	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  P	 #  H	 #  O	 #  N	 #  E	 #   	 #  S	 #  T	 #  R	 #  A	 #  P	 #   	 #   	 # LE	| New English Text
+81 40	82 6F	82 67	82 6E	82 6D	82 64	81 40	82 72	82 73	82 71	82 60	82 6F	81 40	81 40	00 00	| New English Hex
+
+ヴファー
+Lofa Sofa
+$387EA6
+81 40	81 40	81 40	81 40	81 40	83 94	83 74	83 40	81 5B	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ヴ	 #  フ	 #  ァ	 #  ー	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  L	 #  O	 #  F	 #  A	 #   	 #  S	 #  O	 #  F	 #  A	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 6B	82 6E	82 65	82 60	81 40	82 72	82 6E	82 65	82 60	81 40	81 40	81 40	00 00	| New English Hex
+
+マンボウ
+Sunfish
+$387EC4
+81 40	81 40	81 40	81 40	81 40	83 7D	83 93	83 7B	83 45	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  マ	 #  ン	 #  ボ	 #  ウ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  S	 #  U	 #  N	 #  F	 #  I	 #  S	 #  H	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 72	82 74	82 6D	82 65	82 68	82 72	82 67	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+りんご
+Apple
+$387EE2
+81 40	81 40	81 40	81 40	81 40	82 E8	82 F1	82 B2	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  り	 #  ん	 #  ご	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  A	 #  P	 #  P	 #  L	 #  E	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 60	82 6F	82 6F	82 6B	82 64	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+コーヒーカップ
+Coffee Cup / Mug
+$387F00
+81 40	81 40	81 40	83 52	81 5B	83 71	81 5B	83 4A	83 62	83 76	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  コ	 #  ー	 #  ヒ	 #  ー	 #  カ	 #  ッ	 #  プ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  C	 #  O	 #  F	 #  F	 #  E	 #  E	 #   	 #  C	 #  U	 #  P	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 62	82 6E	82 65	82 65	82 64	82 64	81 40	82 62	82 74	82 6F	81 40	81 40	00 00	| New English Hex
+
+かわぐつ
+Leather Shoes
+$387F1E
+81 40	81 40	81 40	81 40	81 40	82 A9	82 ED	82 AE	82 C2	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  か	 #  わ	 #  ぐ	 #  つ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  L	 #  E	 #  A	 #  T	 #  H	 #  E	 #  R	 #   	 #  S	 #  H	 #  O	 #  E	 #  S	 #   	 # LE	| New English Text
+82 6B	82 64	82 60	82 73	82 67	82 64	82 71	81 40	82 72	82 67	82 6E	82 64	82 72	81 40	00 00	| New English Hex
+
+あかいはな
+Red Flower
+$387F3C
+81 40	81 40	81 40	81 40	82 A0	82 A9	82 A2	82 CD	82 C8	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  あ	 #  か	 #  い	 #  は	 #  な	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  R	 #  E	 #  D	 #   	 #  F	 #  L	 #  O	 #  W	 #  E	 #  R	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 71	82 64	82 63	81 40	82 65	82 6B	82 6E	82 76	82 64	82 71	81 40	81 40	00 00	| New English Hex
+
+そうじき
+Vacuum Cleaner
+$387F5A
+81 40	81 40	81 40	81 40	81 40	82 BB	82 A4	82 B6	82 AB	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  そ	 #  う	 #  じ	 #  き	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  V	 #  A	 #  C	 #  U	 #  U	 #  M	 #   	 #  C	 #  L	 #  E	 #  A	 #  N	 #  E	 #  R	 # LE	| New English Text
+82 75	82 60	82 62	82 74	82 74	82 6C	81 40	82 62	82 6B	82 64	82 60	82 6D	82 64	82 71	00 00	| New English Hex
+
+フライパン
+Frying Pan
+$387F78
+81 40	81 40	81 40	81 40	83 74	83 89	83 43	83 70	83 93	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  フ	 #  ラ	 #  イ	 #  パ	 #  ン	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  F	 #  R	 #  Y	 #  I	 #  N	 #  G	 #   	 #  P	 #  A	 #  N	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 65	82 71	82 78	82 68	82 6D	82 66	81 40	82 6F	82 60	82 6D	81 40	81 40	00 00	| New English Hex
+
+たいほう
+Iron Cannon
+$387F96
+81 40	81 40	81 40	81 40	81 40	82 BD	82 A2	82 D9	82 A4	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  た	 #  い	 #  ほ	 #  う	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  I	 #  R	 #  O	 #  N	 #   	 #   C	 #  A	 #  N	 #  N	 #  O	 #  N	 #   	 #   	 # LE	| New English Text
+81 40	82 68	82 71	82 6E	82 6D	81 40	82 62	82 60	82 6D	82 6D	82 6E	82 6D	81 40	81 40	00 00	| New English Hex
+
+ちりとり
+Dustpan
+$387FB4
+81 40	81 40	81 40	81 40	81 40	82 BF	82 E8	82 C6	82 E8	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ち	 #  り	 #  と	 #  り	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  D	 #  U	 #  S	 #  T	 #  B	 #  I	 #  N	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 63	82 74	82 72	82 73	82 6F	82 60	82 6D	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+るすばんでんわ
+Answering Machine / Answerphone / Message Machine / Telephone Messaging Machine / Ansaphone / Ansafone / Telephone Answering Device
+$387FD2
+81 40	81 40	81 40	82 E9	82 B7	82 CE	82 F1	82 C5	82 F1	82 ED	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  る	 #  す	 #  ば	 #  ん	 #  で	 #  ん	 #  わ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  A	 #  N	 #  S	 #  W	 #  E	 #  R	 #  P	 #  H	 #  O	 #  N	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	82 60	82 6D	82 72	82 76	82 64	82 71	82 6F	82 67	82 6E	82 6D	82 64	81 40	81 40	00 00	| New English Hex
+
+ストーブ
+Stove
+$387FF0
+81 40	81 40	81 40	81 40	81 40	83 58	83 67	81 5B	83 75	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ス	 #  ト	 #  ー	 #  ブ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  T	 #  O	 #  V	 #  E	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 73	82 6E	82 75	82 64	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+カヌー
+Canoe
+$38800E
+81 40	81 40	81 40	81 40	81 40	83 4A	83 6B	81 5B	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  カ	 #  ヌ	 #  ー	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  C	 #  A	 #  N	 #  O	 #  E	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 62	82 60	82 6D	82 6E	82 64	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+スーパーファミコンで　あそぶ
+Playing On Super Nintendo
+$38802C
+83 58	81 5B	83 70	81 5B	83 74	83 40	83 7E	83 52	83 93	82 C5	81 40	82 A0	82 BB	82 D4	00 00	| Original Japanese Hex
+ #  ス	 #  ー	 #  パ	 #  ー	 #  フ	 #  ァ	 #  ミ	 #  コ	 #  ン	 #  で	 #   	 #  あ	 #  そ	 #  ぶ	 # LE	| Original Japanese Text
+ #   	 #  P	 #  L	 #  A	 #  Y	 #  I	 #  N	 #  G	 #   	 #  S	 #  N	 #  E	 #  S	 #   	 # LE	| New English Text
+81 40	82 6F	82 6B	82 60	82 78	82 68	82 6D	82 66	81 40	82 72	82 6D	82 64	82 72	81 40	00 00	| New English Hex
+
+はみがき
+Toothpaste
+$38804A
+81 40	81 40	81 40	81 40	81 40	82 CD	82 DD	82 AA	82 AB	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  は	 #  み	 #  が	 #  き	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  T	 #  O	 #  O	 #  T	 #  H	 #  P	 #  A	 #  S	 #  T	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 73	82 6E	82 6E	82 73	82 67	82 6F	82 60	82 72	82 73	82 64	81 40	81 40	00 00	| New English Hex
+
+チューリップ
+Tulip
+$388068
+81 40	81 40	81 40	81 40	83 60	83 85	81 5B	83 8A	83 62	83 76	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  チ	 #  ュ	 #  ー	 #  リ	 #  ッ	 #  プ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  T	 #  U	 #  L	 #  I	 #  P	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 73	82 74	82 6B	82 68	82 6F	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+の～みそコネコネ　コンパイル
+Compile Station / Studio
+$388086
+82 CC	81 60	82 DD	82 BB	83 52	83 6C	83 52	83 6C	81 40	83 52	83 93	83 70	83 43	83 8B	00 00	| Original Japanese Hex
+ #  の	 #  ～	 #  み	 #  そ	 #  コ	 #  ネ	 #  コ	 #  ネ	 #   	 #  コ	 #  ン	 #  パ	 #  イ	 #  ル	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  C	 #  O	 #  M	 #  P	 #  I	 #  L	 #  E	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 62	82 6E	82 6C	82 6F	82 68	82 6B	82 64	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+スカイダイビング
+Sky Diving
+$3880A4
+81 40	81 40	81 40	83 58	83 4A	83 43	83 5F	83 43	83 72	83 93	83 4F	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ス	 #  カ	 #  イ	 #  ダ	 #  イ	 #  ビ	 #  ン	 #  グ	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  S	 #  K	 #  Y	 #   	 #  D	 #  I	 #  V	 #  I	 #  N	 #  G	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 72	82 6A	82 78	81 40	82 63	82 68	82 75	82 68	82 6D	82 66	81 40	81 40	00 00	| New English Hex
+
+スロットマシン
+Slot Machine
+$3880C2
+81 40	81 40	81 40	83 58	83 8D	83 62	83 67	83 7D	83 56	83 93	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ス	 #  ロ	 #  ッ	 #  ト	 #  マ	 #  シ	 #  ン	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  S	 #  L	 #  O	 #  T	 #   	 #  M	 #  A	 #  C	 #  H	 #  I	 #  N	 #  E	 #   	 # LE	| New English Text
+81 40	82 72	82 6B	82 6E	82 73	81 40	82 6C	82 60	82 62	82 67	82 68	82 6D	82 64	81 40	00 00	| New English Hex
+
+ぶらさがるヒト
+Hanging Person / Bar Hang
+$3880E0
+81 40	81 40	81 40	82 D4	82 E7	82 B3	82 AA	82 E9	83 71	83 67	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ぶ	 #  ら	 #  さ	 #  が	 #  る	 #  ヒ	 #  ト	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  B	 #  A	 #  R	 #   	 #  H	 #  A	 #  N	 #  G	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 61	82 60	82 71	81 40	82 67	82 60	82 6D	82 66	81 40	81 40	81 40	00 00	| New English Hex
+
+しお
+Salt
+$3880FE
+81 40	81 40	81 40	81 40	81 40	81 40	82 B5	82 A8	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  し	 #  お	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  S	 #  A	 #  L	 #  T	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 72	82 60	82 6B	82 73	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+----------
+Rescue 10
+----------
+あおりんご
+Green Apple
+$38811C
+81 40	81 40	81 40	81 40	82 A0	82 A8	82 E8	82 F1	82 B2	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  あ	 #  お	 #  り	 #  ん	 #  ご	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  G	 #  R	 #  E	 #  E	 #  N	 #   	 #  A	 #  P	 #  P	 #  L	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	82 66	82 71	82 64	82 64	82 6D	81 40	82 60	82 6F	82 6F	82 6B	82 64	81 40	81 40	00 00	| New English Hex
+
+アサガオ
+Morning Glory
+$38813A
+81 40	81 40	81 40	81 40	81 40	83 41	83 54	83 4B	83 49	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ア	 #  サ	 #  ガ	 #  オ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  M	 #  O	 #  R	 #  N	 #  I	 #  N	 #  G	 #   	 #  G	 #  L	 #  O	 #  R	 #  Y	 #   	 # LE	| New English Text
+82 6C	82 6E	82 71	82 6D	82 68	82 6D	82 66	81 40	82 66	82 6B	82 6E	82 71	82 78	81 40	00 00	| New English Hex
+
+せんこうはなび
+Senko Hanabi / Sparkler / Incense-Stick Fireworks
+$388158
+81 40	81 40	81 40	82 B9	82 F1	82 B1	82 A4	82 CD	82 C8	82 D1	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  せ	 #  ん	 #  こ	 #  う	 #  は	 #  な	 #  び	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  S	 #  P	 #  A	 #  R	 #  K	 #  L	 #  E	 #  R	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 72	82 6F	82 60	82 71	82 6A	82 6B	82 64	82 71	81 40	81 40	81 40	00 00	| New English Hex
+
+ちきゅう
+Planet Earth
+$388176
+81 40	81 40	81 40	81 40	81 40	82 BF	82 AB	82 E3	82 A4	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ち	 #  き	 #  ゅ	 #  う	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  E	 #  A	 #  R	 #  T	 #  H	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 64	82 60	82 71	82 73	82 67	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+かぎ
+Key
+$388194
+81 40	81 40	81 40	81 40	81 40	81 40	82 A9	82 AC	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  か	 #  ぎ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  K	 #  E	 #  Y	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 6A	82 64	82 78	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+くろでんわ
+Black Phone / Black Telephone
+$3881B2
+81 40	81 40	81 40	81 40	82 AD	82 EB	82 C5	82 F1	82 ED	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  く	 #  ろ	 #  で	 #  ん	 #  わ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  B	 #  L	 #  A	 #  C	 #  K	 #   	 #  P	 #  H	 #  O	 #  N	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	82 61	82 6B	82 60	82 62	82 6A	81 40	82 6F	82 67	82 6E	82 6D	82 64	81 40	81 40	00 00	| New English Hex
+
+けいさんき
+Calculator
+$3881D0
+81 40	81 40	81 40	81 40	82 AF	82 A2	82 B3	82 F1	82 AB	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  け	 #  い	 #  さ	 #  ん	 #  き	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  C	 #  A	 #  L	 #  C	 #  U	 #  L	 #  A	 #  T	 #  O	 #  R	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 62	82 60	82 6B	82 62	82 74	82 6B	82 60	82 73	82 6E	82 71	81 40	81 40	00 00	| New English Hex
+
+かいしゃのエライひと
+Head Of The Company / Company President / Company CEO / Company Boss
+$3881EE
+81 40	81 40	82 A9	82 A2	82 B5	82 E1	82 CC	83 47	83 89	83 43	82 D0	82 C6	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  か	 #  い	 #  し	 #  ゃ	 #  の	 #  エ	 #  ラ	 #  イ	 #  ひ	 #  と	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  C	 #  O	 #  M	 #  P	 #  A	 #  N	 #  Y	 #   	 #  H	 #  E	 #  A	 #  D	 #   	 # LE	| New English Text
+81 40	82 62	82 6E	82 6C	82 6F	82 60	82 6D	82 78	81 40	82 67	82 64	82 60	82 63	81 40	00 00	| New English Hex
+
+ピザ
+Pizza
+$38820C
+81 40	81 40	81 40	81 40	81 40	81 40	83 73	83 55	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  ピ	 #  ザ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  P	 #  I	 #  Z	 #  Z	 #  A	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 6F	82 68	82 79	82 79	82 60	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ドライヤー
+Hairdryer
+$38822A
+81 40	81 40	81 40	81 40	83 68	83 89	83 43	83 84	81 5B	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ド	 #  ラ	 #  イ	 #  ヤ	 #  ー	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  H	 #  A	 #  I	 #  R	 #  D	 #  R	 #  Y	 #  E	 #  R	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 67	82 60	82 68	82 71	82 63	82 71	82 78	82 64	82 71	81 40	81 40	81 40	00 00	| New English Hex
+
+ほにゅうびん
+Baby Bottle
+$388248
+81 40	81 40	81 40	81 40	82 D9	82 C9	82 E3	82 A4	82 D1	82 F1	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ほ	 #  に	 #  ゅ	 #  う	 #  び	 #  ん	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  B	 #  A	 #  B	 #  Y	 #   	 #  B	 #  O	 #  T	 #  T	 #  L	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	82 61	82 60	82 61	82 78	81 40	82 61	82 6E	82 73	82 73	82 6B	82 64	81 40	81 40	00 00	| New English Hex
+
+ファミリーコンピューター
+Family Computer / Famicom / NES
+$388266
+81 40	83 74	83 40	83 7E	83 8A	81 5B	83 52	83 93	83 73	83 85	81 5B	83 5E	81 5B	81 40	00 00	| Original Japanese Hex
+ #   	 #  フ	 #  ァ	 #  ミ	 #  リ	 #  ー	 #  コ	 #  ン	 #  ピ	 #  ュ	 #  ー	 #  タ	 #  ー	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  F	 #  A	 #  M	 #  I	 #  C	 #  O	 #  M	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 65	82 60	82 6C	82 68	82 62	82 6E	82 6C	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+カブトムシ
+Beetle
+$388284
+81 40	81 40	81 40	81 40	83 4A	83 75	83 67	83 80	83 56	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  カ	 #  ブ	 #  ト	 #  ム	 #  シ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  B	 #  E	 #  E	 #  T	 #  L	 #  E	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 61	82 64	82 64	82 73	82 6B	82 64	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+かみひこうき
+Paper Airplane / Paper Plane / Origami Plane
+$3882A2
+81 40	81 40	81 40	81 40	82 A9	82 DD	82 D0	82 B1	82 A4	82 AB	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  か	 #  み	 #  ひ	 #  こ	 #  う	 #  き	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  P	 #  A	 #  P	 #  E	 #  R	 #   	 #  A	 #  I	 #  R	 #  P	 #  L	 #  A	 #  N	 #  E	 # LE	| New English Text
+82 6F	82 60	82 6F	82 64	82 71	81 40	82 60	82 68	82 71	82 6F	82 6B	82 60	82 6D	82 64	00 00	| New English Hex
+
+じしょ
+Dictionary
+$3882C0
+81 40	81 40	81 40	81 40	81 40	82 B6	82 B5	82 E5	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  じ	 #  し	 #  ょ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  D	 #  I	 #  C	 #  T	 #  I	 #  O	 #  N	 #  A	 #  R	 #  Y	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 63	82 68	82 62	82 73	82 68	82 6E	82 6D	82 60	82 71	82 78	81 40	81 40	00 00	| New English Hex
+
+ボールボーイ
+Ball Boy
+$3882DE
+81 40	81 40	81 40	81 40	83 7B	81 5B	83 8B	83 7B	81 5B	83 43	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ボ	 #  ー	 #  ル	 #  ボ	 #  ー	 #  イ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  B	 #  A	 #  L	 #  L	 #   	 #  B	 #  O	 #  Y	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 61	82 60	82 6B	82 6B	81 40	82 61	82 6E	82 78	81 40	81 40	81 40	00 00	| New English Hex
+
+はつでんしょのマーク
+Power Plant Mark
+$3882FC
+81 40	81 40	82 CD	82 C2	82 C5	82 F1	82 B5	82 E5	82 CC	83 7D	81 5B	83 4E	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  は	 #  つ	 #  で	 #  ん	 #  し	 #  ょ	 #  の	 #  マ	 #  ー	 #  ク	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  P	 #  O	 #  W	 #  E	 #  R	 #   	 #  P	 #  L	 #  A	 #  N	 #  T	 #   	 #   	 # LE	| New English Text
+81 40	82 6F	82 6E	82 76	82 64	82 71	81 40	82 6F	82 6B	82 60	82 6D	82 73	81 40	81 40	00 00	| New English Hex
+
+ハンガー
+Clothes Hanger
+$38831A
+81 40	81 40	81 40	81 40	81 40	83 6E	83 93	83 4B	81 5B	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ハ	 #  ン	 #  ガ	 #  ー	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  C	 #  L	 #  O	 #  T	 #  H	 #  E	 #  S	 #   	 #  H	 #  A	 #  N	 #  G	 #  E	 #  R	 # LE	| New English Text
+82 62	82 6B	82 6E	82 73	82 67	82 64	82 72	81 40	82 67	82 60	82 6D	82 66	82 64	82 71	00 00	| New English Hex
+
+あおとうがらし
+Chili Pepper
+$388338
+81 40	81 40	81 40	82 A0	82 A8	82 C6	82 A4	82 AA	82 E7	82 B5	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  あ	 #  お	 #  と	 #  う	 #  が	 #  ら	 #  し	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  C	 #  H	 #  I	 #  L	 #  I	 #   	 #  P	 #  E	 #  P	 #  P	 #  E	 #  R	 #   	 # LE	| New English Text
+81 40	82 62	82 67	82 68	82 6B	82 68	81 40	82 6F	82 64	82 6F	82 6F	82 64	82 71	81 40	00 00	| New English Hex
+
+ミシン
+Sewing Machine
+$388356
+81 40	81 40	81 40	81 40	81 40	83 7E	83 56	83 93	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ミ	 #  シ	 #  ン	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  S	 #  E	 #  W	 #  I	 #  N	 #  G	 #   	 #  M	 #  A	 #  C	 #  H	 #  I	 #  N	 #  E	 # LE	| New English Text
+82 72	82 64	82 76	82 68	82 6D	82 66	81 40	82 6C	82 60	82 62	82 67	82 68	82 6D	82 64	00 00	| New English Hex
+
+カブトガニ
+Horseshoe Crab
+$388374
+81 40	81 40	81 40	81 40	83 4A	83 75	83 67	83 4B	83 6A	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  カ	 #  ブ	 #  ト	 #  ガ	 #  ニ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  H	 #  O	 #  R	 #  S	 #  E	 #  S	 #  H	 #  O	 #  E	 #   	 #  C	 #  R	 #  A	 #  B	 # LE	| New English Text
+82 67	82 6E	82 71	82 72	82 64	82 72	82 67	82 6E	82 64	81 40	82 62	82 71	82 60	82 61	00 00	| New English Hex
+
+カモ
+Duck
+$388392
+81 40	81 40	81 40	81 40	81 40	81 40	83 4A	83 82	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  カ	 #  モ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  D	 #  U	 #  C	 #  K	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 63	82 74	82 62	82 6A	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+あいかぎ
+Spare Key / Duplicate Key / Master Key / Lock Pick / Skeleton Key
+$3883B0
+81 40	81 40	81 40	81 40	81 40	82 A0	82 A2	82 A9	82 AC	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  あ	 #  い	 #  か	 #  ぎ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  S	 #  P	 #  A	 #  R	 #  E	 #   	 #  K	 #  E	 #  Y	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 72	82 6F	82 60	82 71	82 64	81 40	82 6A	82 64	82 78	81 40	81 40	81 40	00 00	| New English Hex
+
+てるてるぼうず
+Teru Teru Bōzu / Rainy Weather
+$3883CE
+81 40	81 40	81 40	82 C4	82 E9	82 C4	82 E9	82 DA	82 A4	82 B8	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  て	 #  る	 #  て	 #  る	 #  ぼ	 #  う	 #  ず	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  R	 #  A	 #  I	 #  N	 #  Y	 #   	 #  W	 #  E	 #  A	 #  T	 #  H	 #  E	 #  R	 #   	 # LE	| New English Text
+82 71	82 60	82 68	82 6D	82 78	81 40	82 76	82 64	82 60	82 73	82 67	82 64	82 71	81 40	00 00	| New English Hex
+
+ダーツ
+Darts
+$3883EC
+81 40	81 40	81 40	81 40	81 40	83 5F	81 5B	83 63	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ダ	 #  ー	 #  ツ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  D	 #  A	 #  R	 #  T	 #  S	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 63	82 60	82 71	82 73	82 72	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ハートの２
+2 Of Hearts
+$38840A
+81 40	81 40	81 40	81 40	83 6E	81 5B	83 67	82 CC	82 51	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ハ	 #  ー	 #  ト	 #  の	 #  ２	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  2	 #   	 #  O	 #  F	 #   	 #  H	 #  E	 #  A	 #  R	 #  T	 #  S	 #   	 #   	 # LE	| New English Text
+81 40	82 51	81 40	82 6E	82 65	81 40	82 67	82 64	82 60	82 71	82 73	82 72	81 40	81 40	00 00	| New English Hex
+
+トースト
+Toast
+$388428
+81 40	81 40	81 40	81 40	81 40	83 67	81 5B	83 58	83 67	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ト	 #  ー	 #  ス	 #  ト	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  T	 #  O	 #  A	 #  S	 #  T	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 73	82 6E	82 60	82 72	82 73	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+あきかん
+Red Can
+$388446
+81 40	81 40	81 40	81 40	81 40	82 A0	82 AB	82 A9	82 F1	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  あ	 #  き	 #  か	 #  ん	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  R	 #  E	 #  D	 #   	 #  C	 #  A	 #  N	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 71	82 64	82 63	81 40	82 62	82 60	82 6D	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+しょうじょ
+Girl
+$388464
+81 40	81 40	81 40	81 40	82 B5	82 E5	82 A4	82 B6	82 E5	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  し	 #  ょ	 #  う	 #  じ	 #  ょ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  G	 #  I	 #  R	 #  L	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 66	82 68	82 71	82 6B	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+にゅうどうぐも
+Cumulonimbus Cloud
+$388482
+81 40	81 40	81 40	82 C9	82 E3	82 A4	82 C7	82 A4	82 AE	82 E0	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  に	 #  ゅ	 #  う	 #  ど	 #  う	 #  ぐ	 #  も	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  C	 #  U	 #  M	 #  U	 #  L	 #  O	 #  N	 #  I	 #  M	 #  B	 #  U	 #  S	 #   	 # LE	| New English Text
+81 40	82 62	82 74	82 6C	82 74	82 6B	82 6E	82 6D	82 68	82 6C	82 61	82 74	82 72	81 40	00 00	| New English Hex
+
+しょうゆ
+Soy Sauce
+$3884A0
+81 40	81 40	81 40	81 40	81 40	82 B5	82 E5	82 A4	82 E4	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  し	 #  ょ	 #  う	 #  ゆ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  S	 #  O	 #  Y	 #   	 #  S	 #  A	 #  U	 #  C	 #  E	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 72	82 6E	82 78	81 40	82 72	82 60	82 74	82 62	82 64	81 40	81 40	81 40	00 00	| New English Hex
+
+ぎゅうにゅう
+Milk
+$3884BE
+81 40	81 40	81 40	81 40	82 AC	82 E3	82 A4	82 C9	82 E3	82 A4	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ぎ	 #  ゅ	 #  う	 #  に	 #  ゅ	 #  う	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  M	 #  I	 #  L	 #  K	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 6C	82 68	82 6B	82 6A	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ふくろ
+Bag
+$3884DC
+81 40	81 40	81 40	81 40	81 40	82 D3	82 AD	82 EB	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ふ	 #  く	 #  ろ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  B	 #  A	 #  G	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 61	82 60	82 66	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+くろぶた
+Black Pig
+$3884FA
+81 40	81 40	81 40	81 40	81 40	82 AD	82 EB	82 D4	82 BD	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  く	 #  ろ	 #  ぶ	 #  た	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  B	 #  L	 #  A	 #  C	 #  K	 #   	 #  P	 #  I	 #  G	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 61	82 6B	82 60	82 62	82 6A	81 40	82 6F	82 68	82 66	81 40	81 40	81 40	00 00	| New English Hex
+
+おとうと
+Younger Brother
+$388518
+81 40	81 40	81 40	81 40	81 40	82 A8	82 C6	82 A4	82 C6	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  お	 #  と	 #  う	 #  と	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  Y	 #  O	 #  U	 #  N	 #  G	 #   	 #  B	 #  R	 #  O	 #  T	 #  H	 #  E	 #  R	 #   	 # LE	| New English Text
+82 78	82 6E	82 74	82 6D	82 66	81 40	82 61	82 71	82 6E	82 73	82 67	82 64	82 71	81 40	00 00	| New English Hex
+
+まるばつゲーム
+Tic-Tac-Toe Game
+$388536
+81 40	81 40	81 40	82 DC	82 E9	82 CE	82 C2	83 51	81 5B	83 80	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ま	 #  る	 #  ば	 #  つ	 #  ゲ	 #  ー	 #  ム	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  T	 #  I	 #  C	 #  -	 #  T	 #  A	 #  C	 #  -	 #  T	 #  O	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	82 73	82 68	82 62	81 5B	82 73	82 60	82 62	81 5B	82 73	82 6E	82 64	81 40	81 40	00 00	| New English Hex
+
+カメラ
+Camera
+$388554
+81 40	81 40	81 40	81 40	81 40	83 4A	83 81	83 89	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  カ	 #  メ	 #  ラ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  C	 #  A	 #  M	 #  E	 #  R	 #  A	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 62	82 60	82 6C	82 64	82 71	82 60	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+テニスボール
+Tennis Ball
+$388572
+81 40	81 40	81 40	81 40	83 65	83 6A	83 58	83 7B	81 5B	83 8B	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  テ	 #  ニ	 #  ス	 #  ボ	 #  ー	 #  ル	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  T	 #  E	 #  N	 #  N	 #  I	 #  S	 #   	 #  B	 #  A	 #  L	 #  L	 #   	 #   	 # LE	| New English Text
+81 40	82 73	82 64	82 6D	82 6D	82 68	82 72	81 40	82 61	82 60	82 6B	82 6B	81 40	81 40	00 00	| New English Hex
+
+いちご
+Strawberry
+$388590
+81 40	81 40	81 40	81 40	81 40	82 A2	82 BF	82 B2	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  い	 #  ち	 #  ご	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  S	 #  T	 #  R	 #  A	 #  W	 #  B	 #  E	 #  R	 #  R	 #  Y	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 72	82 73	82 71	82 60	82 76	82 61	82 64	82 71	82 71	82 78	81 40	81 40	00 00	| New English Hex
+
+マッチ
+Match
+$3885AE
+81 40	81 40	81 40	81 40	81 40	83 7D	83 62	83 60	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  マ	 #  ッ	 #  チ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  M	 #  A	 #  T	 #  C	 #  H	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 6C	82 60	82 73	82 62	82 67	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+----------
+Rescue 11
+----------
+せんぬき
+Bottle Opener
+$3885CC
+81 40	81 40	81 40	81 40	81 40	82 B9	82 F1	82 CA	82 AB	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  せ	 #  ん	 #  ぬ	 #  き	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  B	 #  O	 #  T	 #  T	 #  L	 #  E	 #   	 #  O	 #  P	 #  E	 #  N	 #  E	 #  R	 #   	 # LE	| New English Text
+82 61	82 6E	82 73	82 73	82 6B	82 64	81 40	82 6E	82 6F	82 64	82 6D	82 64	82 71	81 40	00 00	| New English Hex
+
+たすけてくれ～！
+Please Help Me ~!
+$3885EA
+81 40	81 40	81 40	82 BD	82 B7	82 AF	82 C4	82 AD	82 EA	81 60	81 49	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  た	 #  す	 #  け	 #  て	 #  く	 #  れ	 #  ～	 #  ！	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  P	 #  L	 #  E	 #  A	 #  S	 #  E	 #   	 #  H	 #  E	 #  L	 #  P	 #  !	 #   	 # LE	| New English Text
+81 40	82 6F	82 6B	82 64	82 60	82 72	82 64	81 40	82 67	82 64	82 6B	82 6F	81 49	81 40	00 00	| New English Hex
+
+ビリヤード
+Billiards
+$388608
+81 40	81 40	81 40	81 40	83 72	83 8A	83 84	81 5B	83 68	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ビ	 #  リ	 #  ヤ	 #  ー	 #  ド	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  B	 #  I	 #  L	 #  L	 #  I	 #  A	 #  R	 #  D	 #  S	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 61	82 68	82 6B	82 6B	82 68	82 60	82 71	82 63	82 72	81 40	81 40	81 40	00 00	| New English Hex
+
+わりばし
+Disposable Chopsticks
+$388626
+81 40	81 40	81 40	81 40	81 40	82 ED	82 E8	82 CE	82 B5	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  わ	 #  り	 #  ば	 #  し	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  C	 #  H	 #  O	 #  P	 #  S	 #  T	 #  I	 #  C	 #  K	 #  S	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 62	82 67	82 6E	82 6F	82 72	82 73	82 68	82 62	82 6A	82 72	81 40	81 40	00 00	| New English Hex
+
+おでん
+Oden
+$388644
+81 40	81 40	81 40	81 40	81 40	82 A8	82 C5	82 F1	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  お	 #  で	 #  ん	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  O	 #  D	 #  E	 #  N	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 6E	82 63	82 64	82 6D	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+あひる
+Domestic Duck
+$388662
+81 40	81 40	81 40	81 40	81 40	82 A0	82 D0	82 E9	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  あ	 #  ひ	 #  る	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  D	 #  O	 #  M	 #  E	 #  S	 #  T	 #  I	 #  C	 #   	 #  D	 #  U	 #  C	 #  K	 #   	 # LE	| New English Text
+82 63	82 6E	82 6C	82 64	82 72	82 73	82 68	82 62	81 40	82 63	82 74	82 62	82 6A	81 40	00 00	| New English Hex
+
+あいさいべんとう
+Beloved Wife Lunch / Lunch From Wife
+$388680
+81 40	81 40	81 40	82 A0	82 A2	82 B3	82 A2	82 D7	82 F1	82 C6	82 A4	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  あ	 #  い	 #  さ	 #  い	 #  べ	 #  ん	 #  と	 #  う	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  ●	 #  W	 #  I	 #  F	 #  E	 #  '	 #  S	 #   	 #  L	 #  U	 #  N	 #  C	 #  H	 #  ●	 # LE	| New English Text
+81 9C	82 76	82 68	82 65	82 64	81 66	82 72	81 40	82 6B	82 74	82 6D	82 62	82 67	81 9C	00 00	| New English Hex
+
+フォーク
+Fork
+$38869E
+81 40	81 40	81 40	81 40	81 40	83 74	83 48	81 5B	83 4E	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  フ	 #  ォ	 #  ー	 #  ク	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  F	 #  O	 #  R	 #  K	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 65	82 6E	82 71	82 6A	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+きんぎょ
+Goldfish
+$3886BC
+81 40	81 40	81 40	81 40	81 40	82 AB	82 F1	82 AC	82 E5	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  き	 #  ん	 #  ぎ	 #  ょ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  G	 #  O	 #  L	 #  D	 #  F	 #  I	 #  S	 #  H	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 66	82 6E	82 6B	82 63	82 65	82 68	82 72	82 67	81 40	81 40	81 40	00 00	| New English Hex
+
+オコジョ
+Stoat
+$3886DA
+81 40	81 40	81 40	81 40	81 40	83 49	83 52	83 57	83 87	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  オ	 #  コ	 #  ジ	 #  ョ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  T	 #  O	 #  A	 #  T	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 73	82 6E	82 60	82 73	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+まめ
+Bean
+$3886F8
+81 40	81 40	81 40	81 40	81 40	81 40	82 DC	82 DF	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  ま	 #  め	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  B	 #  E	 #  A	 #  N	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 61	82 64	82 60	82 6D	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+しいたけ
+Shiitake Mushroom
+$388716
+81 40	81 40	81 40	81 40	81 40	82 B5	82 A2	82 BD	82 AF	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  し	 #  い	 #  た	 #  け	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  M	 #  U	 #  S	 #  H	 #  R	 #  O	 #  O	 #  M	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6C	82 74	82 72	82 67	82 71	82 6E	82 6E	82 6C	81 40	81 40	81 40	00 00	| New English Hex
+
+ゆうやけの　アカトンボ
+Red Dragonfly At Sunset
+$388734
+81 40	82 E4	82 A4	82 E2	82 AF	82 CC	81 40	83 41	83 4A	83 67	83 93	83 7B	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #  ゆ	 #  う	 #  や	 #  け	 #  の	 #   	 #  ア	 #  カ	 #  ト	 #  ン	 #  ボ	 #   	 #   	 # LE	| Original Japanese Text
+ #  R	 #  E	 #  D	 #   	 #  D	 #  R	 #  A	 #  G	 #  O	 #  N	 #  F	 #  L	 #  Y	 #   	 # LE	| New English Text
+82 71	82 64	82 63	81 40	82 63	82 71	82 60	82 66	82 6E	82 6D	82 65	82 6B	82 78	81 40	00 00	| New English Hex
+
+おなかがすいたぞ～
+I'm Hungry~
+$388752
+81 40	81 40	82 A8	82 C8	82 A9	82 AA	82 B7	82 A2	82 BD	82 BC	81 60	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  お	 #  な	 #  か	 #  が	 #  す	 #  い	 #  た	 #  ぞ	 #  ～	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  I	 #  '	 #  M	 #   	 #  H	 #  U	 #  N	 #  G	 #  R	 #  Y	 #  ~	 #   	 #   	 # LE	| New English Text
+81 40	82 68	81 66	82 6C	81 40	82 67	82 74	82 6D	82 66	82 71	82 78	81 60	81 40	81 40	00 00	| New English Hex
+
+ぼうえんきょう
+Telescope
+$388770
+81 40	81 40	81 40	82 DA	82 A4	82 A6	82 F1	82 AB	82 E5	82 A4	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ぼ	 #  う	 #  え	 #  ん	 #  き	 #  ょ	 #  う	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  T	 #  E	 #  L	 #  E	 #  S	 #  C	 #  O	 #  P	 #  E	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 73	82 64	82 6B	82 64	82 72	82 62	82 6E	82 6F	82 64	81 40	81 40	81 40	00 00	| New English Hex
+
+うなぎ
+freshwater Eel
+$38878E
+81 40	81 40	81 40	81 40	81 40	82 A4	82 C8	82 AC	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  う	 #  な	 #  ぎ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  F	 #  R	 #  E	 #  S	 #  H	 #  W	 #  A	 #  T	 #  E	 #  R	 #   	 #  E	 #  E	 #  L	 # LE	| New English Text
+82 65	82 71	82 64	82 72	82 67	82 76	82 60	82 73	82 64	82 71	81 40	82 64	82 64	82 6B	00 00	| New English Hex
+
+ダルマおとし
+Daruma Doll Drop
+$3887AC
+81 40	81 40	81 40	81 40	83 5F	83 8B	83 7D	82 A8	82 C6	82 B5	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ダ	 #  ル	 #  マ	 #  お	 #  と	 #  し	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  D	 #  A	 #  R	 #  U	 #  M	 #  A	 #   	 #  D	 #  O	 #  L	 #  L	 #   	 #   	 # LE	| New English Text
+81 40	82 63	82 60	82 71	82 74	82 6C	82 60	81 40	82 63	82 6E	82 6B	82 6B	81 40	81 40	00 00	| New English Hex
+
+バナナ
+Banana
+$3887CA
+81 40	81 40	81 40	81 40	81 40	83 6F	83 69	83 69	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  バ	 #  ナ	 #  ナ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  B	 #  A	 #  N	 #  A	 #  N	 #  A	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 61	82 60	82 6D	82 60	82 6D	82 60	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+つき
+The Moon
+$3887E8
+81 40	81 40	81 40	81 40	81 40	81 40	82 C2	82 AB	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  つ	 #  き	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  T	 #  H	 #  E	 #   	 #  M	 #  O	 #  O	 #  N	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 73	82 67	82 64	81 40	82 6C	82 6E	82 6E	82 6D	81 40	81 40	81 40	00 00	| New English Hex
+
+ギョウザ
+Gyoza Dish
+$388806
+81 40	81 40	81 40	81 40	81 40	83 4D	83 87	83 45	83 55	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ギ	 #  ョ	 #  ウ	 #  ザ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  G	 #  Y	 #  O	 #  Z	 #  A	 #   	 #  D	 #  I	 #  S	 #  H	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 66	82 78	82 6E	82 79	82 60	81 40	82 63	82 68	82 72	82 67	81 40	81 40	00 00	| New English Hex
+
+いとでんわ
+Tin Can Phone
+$388824
+81 40	81 40	81 40	81 40	82 A2	82 C6	82 C5	82 F1	82 ED	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  い	 #  と	 #  で	 #  ん	 #  わ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  T	 #  I	 #  N	 #   	 #  C	 #  A	 #  N	 #   	 #  P	 #  H	 #  O	 #  N	 #  E	 #   	 # LE	| New English Text
+82 73	82 68	82 6D	81 40	82 62	82 60	82 6D	81 40	82 6F	82 67	82 6E	82 6D	82 64	81 40	00 00	| New English Hex
+
+ステルス
+Stealth Fighter / Stealth Plane
+$388842
+81 40	81 40	81 40	81 40	81 40	83 58	83 65	83 8B	83 58	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ス	 #  テ	 #  ル	 #  ス	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  S	 #  T	 #  E	 #  A	 #  L	 #  T	 #  H	 #   	 #  P	 #  L	 #  A	 #  N	 #  E	 #   	 # LE	| New English Text
+82 72	82 73	82 64	82 60	82 6B	82 73	82 67	81 40	82 6F	82 6B	82 60	82 6D	82 64	81 40	00 00	| New English Hex
+
+みみかき
+Ear Pick / Earpick / Ear Scoop / Ear Spoon
+$388860
+81 40	81 40	81 40	81 40	81 40	82 DD	82 DD	82 A9	82 AB	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  み	 #  み	 #  か	 #  き	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  E	 #  A	 #  R	 #   	 #  P	 #  I	 #  C	 #  K	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 64	82 60	82 71	81 40	82 6F	82 68	82 62	82 6A	81 40	81 40	81 40	00 00	| New English Hex
+
+ニューファミコン
+New Famicom / New NES 
+$38887E
+81 40	81 40	81 40	83 6A	83 85	81 5B	83 74	83 40	83 7E	83 52	83 93	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ニ	 #  ュ	 #  ー	 #  フ	 #  ァ	 #  ミ	 #  コ	 #  ン	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  N	 #  E	 #  W	 #   	 #  F	 #  A	 #  M	 #  I	 #  C	 #  O	 #  M	 #   	 #   	 # LE	| New English Text
+81 40	82 6D	82 64	82 76	81 40	82 65	82 60	82 6C	82 68	82 62	82 6E	82 6C	81 40	81 40	00 00	| New English Hex
+
+いちごのショートケーキ
+Strawberry Shortcake
+$38889C
+81 40	82 A2	82 BF	82 B2	82 CC	83 56	83 87	81 5B	83 67	83 50	81 5B	83 4C	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #  い	 #  ち	 #  ご	 #  の	 #  シ	 #  ョ	 #  ー	 #  ト	 #  ケ	 #  ー	 #  キ	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  S	 #  H	 #  O	 #  R	 #  T	 #  C	 #  A	 #  K	 #  E	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 72	82 67	82 6E	82 71	82 73	82 62	82 60	82 6A	82 64	81 40	81 40	81 40	00 00	| New English Hex
+
+サバ
+Mackerel
+$3888BA
+81 40	81 40	81 40	81 40	81 40	81 40	83 54	83 6F	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  サ	 #  バ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  M	 #  A	 #  C	 #  K	 #  E	 #  R	 #  E	 #  L	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6C	82 60	82 62	82 6A	82 64	82 71	82 64	82 6B	81 40	81 40	81 40	00 00	| New English Hex
+
+しんかんせん
+Bullet Train
+$3888D8
+81 40	81 40	81 40	81 40	82 B5	82 F1	82 A9	82 F1	82 B9	82 F1	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  し	 #  ん	 #  か	 #  ん	 #  せ	 #  ん	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  B	 #  U	 #  L	 #  L	 #  E	 #  T	 #   	 #  T	 #  R	 #  A	 #  I	 #  N	 #   	 # LE	| New English Text
+81 40	82 61	82 74	82 6B	82 6B	82 64	82 73	81 40	82 73	82 71	82 60	82 68	82 6D	81 40	00 00	| New English Hex
+
+つかまった　うちゅうじん
+Captured Alien
+$3888F6
+81 40	82 C2	82 A9	82 DC	82 C1	82 BD	81 40	82 A4	82 BF	82 E3	82 A4	82 B6	82 F1	81 40	00 00	| Original Japanese Hex
+ #   	 #  つ	 #  か	 #  ま	 #  っ	 #  た	 #   	 #  う	 #  ち	 #  ゅ	 #  う	 #  じ	 #  ん	 #   	 # LE	| Original Japanese Text
+ #  C	 #  A	 #  P	 #  T	 #  U	 #  R	 #  E	 #  D	 #   	 #  A	 #  L	 #  I	 #  E	 #  N	 # LE	| New English Text
+82 62	82 60	82 6F	82 73	82 74	82 71	82 64	82 63	81 40	82 60	82 6B	82 68	82 64	82 6D	00 00	| New English Hex
+
+ゲートボール
+Gateball
+$388914
+81 40	81 40	81 40	81 40	83 51	81 5B	83 67	83 7B	81 5B	83 8B	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ゲ	 #  ー	 #  ト	 #  ボ	 #  ー	 #  ル	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  G	 #  A	 #  T	 #  E	 #  B	 #  A	 #  L	 #  L	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 66	82 60	82 73	82 64	82 61	82 60	82 6B	82 6B	81 40	81 40	81 40	00 00	| New English Hex
+
+ド♪
+Do ♪
+$388932
+81 40	81 40	81 40	81 40	81 40	81 40	83 68	81 F4	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  ド	 #  ♪	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  D	 #  O	 #   	 #  ♪	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 63	82 6E	81 40	81 F4	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+インクビン
+Ink Bottle
+$388950
+81 40	81 40	81 40	81 40	83 43	83 93	83 4E	83 72	83 93	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  イ	 #  ン	 #  ク	 #  ビ	 #  ン	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  I	 #  N	 #  K	 #   	 #  B	 #  O	 #  T	 #  T	 #  L	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 68	82 6D	82 6A	81 40	82 61	82 6E	82 73	82 73	82 6B	82 64	81 40	81 40	00 00	| New English Hex
+
+ちょうちょう
+Butterfly
+$38896E
+81 40	81 40	81 40	81 40	82 BF	82 E5	82 A4	82 BF	82 E5	82 A4	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ち	 #  ょ	 #  う	 #  ち	 #  ょ	 #  う	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  B	 #  U	 #  T	 #  T	 #  E	 #  R	 #  F	 #  L	 #  Y	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 61	82 74	82 73	82 73	82 64	82 71	82 65	82 6B	82 78	81 40	81 40	81 40	00 00	| New English Hex
+
+じゅうどう
+Judo
+$38898C
+81 40	81 40	81 40	81 40	82 B6	82 E3	82 A4	82 C7	82 A4	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  じ	 #  ゅ	 #  う	 #  ど	 #  う	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  J	 #  U	 #  D	 #  O	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 69	82 74	82 63	82 6E	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+たいようのとう
+Tower Of The Sun
+$3889AA
+81 40	81 40	81 40	82 BD	82 A2	82 E6	82 A4	82 CC	82 C6	82 A4	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  た	 #  い	 #  よ	 #  う	 #  の	 #  と	 #  う	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  T	 #  O	 #  W	 #  E	 #  R	 #   	 #  O	 #  F	 #   	 #  S	 #  U	 #  N	 #   	 # LE	| New English Text
+81 40	82 73	82 6E	82 76	82 64	82 71	81 40	82 6E	82 65	81 40	82 72	82 74	82 6D	81 40	00 00	| New English Hex
+
+せんぷうき
+Electric Fan
+$3889C8
+81 40	81 40	81 40	81 40	82 B9	82 F1	82 D5	82 A4	82 AB	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  せ	 #  ん	 #  ぷ	 #  う	 #  き	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  E	 #  L	 #  E	 #  C	 #  T	 #  R	 #  I	 #  C	 #   	 #  F	 #  A	 #  N	 #   	 # LE	| New English Text
+81 40	82 64	82 6B	82 64	82 62	82 73	82 71	82 68	82 62	81 40	82 65	82 60	82 6D	81 40	00 00	| New English Hex
+
+じてんしゃ
+Bicycle
+$3889E6
+81 40	81 40	81 40	81 40	82 B6	82 C4	82 F1	82 B5	82 E1	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  じ	 #  て	 #  ん	 #  し	 #  ゃ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  B	 #  I	 #  C	 #  Y	 #  C	 #  L	 #  E	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 61	82 68	82 62	82 78	82 62	82 6B	82 64	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+パレット
+Artist Palette
+$388A04
+81 40	81 40	81 40	81 40	81 40	83 70	83 8C	83 62	83 67	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  パ	 #  レ	 #  ッ	 #  ト	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  A	 #  R	 #  T	 #  I	 #  S	 #  T	 #   	 #  P	 #  A	 #  L	 #  E	 #  T	 #  T	 #  E	 # LE	| New English Text
+82 60	82 71	82 73	82 68	82 72	82 73	81 40	82 6F	82 60	82 6B	82 64	82 73	82 73	82 64	00 00	| New English Hex
+
+あまがえる
+Japanese Tree Frog
+$388A22
+81 40	81 40	81 40	81 40	82 A0	82 DC	82 AA	82 A6	82 E9	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  あ	 #  ま	 #  が	 #  え	 #  る	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  T	 #  R	 #  E	 #  E	 #   	 #  F	 #  R	 #  O	 #  G	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 73	82 71	82 64	82 64	81 40	82 65	82 71	82 6E	82 66	81 40	81 40	81 40	00 00	| New English Hex
+
+ヘリコプター
+Helicopter
+$388A40
+81 40	81 40	81 40	81 40	83 77	83 8A	83 52	83 76	83 5E	81 5B	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ヘ	 #  リ	 #  コ	 #  プ	 #  タ	 #  ー	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  H	 #  E	 #  L	 #  I	 #  C	 #  O	 #  P	 #  T	 #  E	 #  R	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 67	82 64	82 6B	82 68	82 62	82 6E	82 6F	82 73	82 64	82 71	81 40	81 40	00 00	| New English Hex
+
+ぎゅうにゅうパック
+Milk Carton
+$388A5E
+81 40	81 40	82 AC	82 E3	82 A4	82 C9	82 E3	82 A4	83 70	83 62	83 4E	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  ぎ	 #  ゅ	 #  う	 #  に	 #  ゅ	 #  う	 #  パ	 #  ッ	 #  ク	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  M	 #  I	 #  L	 #  K	 #   	 #  C	 #  A	 #  R	 #  T	 #  O	 #  N	 #   	 #   	 # LE	| New English Text
+81 40	82 6C	82 68	82 6B	82 6A	81 40	82 62	82 60	82 71	82 73	82 6E	82 6D	81 40	81 40	00 00	| New English Hex
+
+にっぽん
+Japan
+$388A7C
+81 40	81 40	81 40	81 40	81 40	82 C9	82 C1	82 DB	82 F1	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  に	 #  っ	 #  ぽ	 #  ん	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  J	 #  A	 #  P	 #  A	 #  N	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 69	82 60	82 6F	82 60	82 6D	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+はなのながいひと
+A Person With A Long Nose
+$388A9A
+81 40	81 40	81 40	82 CD	82 C8	82 CC	82 C8	82 AA	82 A2	82 D0	82 C6	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  は	 #  な	 #  の	 #  な	 #  が	 #  い	 #  ひ	 #  と	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  L	 #  O	 #  N	 #  G	 #   	 #  N	 #  O	 #  S	 #  E	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 6B	82 6E	82 6D	82 66	81 40	82 6D	82 6E	82 72	82 64	81 40	81 40	81 40	00 00	| New English Hex
+
+ビデオテープ
+Video Tape
+$388AB8
+81 40	81 40	81 40	81 40	83 72	83 66	83 49	83 65	81 5B	83 76	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ビ	 #  デ	 #  オ	 #  テ	 #  ー	 #  プ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  V	 #  I	 #  D	 #  E	 #  O	 #   	 #  T	 #  A	 #  P	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 75	82 68	82 63	82 64	82 6E	81 40	82 73	82 60	82 6F	82 64	81 40	81 40	00 00	| New English Hex
+
+マウス
+Computer Mouse
+$388AD6
+81 40	81 40	81 40	81 40	81 40	83 7D	83 45	83 58	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  マ	 #  ウ	 #  ス	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  C	 #  O	 #  M	 #  P	 #  U	 #  T	 #  E	 #  R	 #   	 #  M	 #  O	 #  U	 #  S	 #  E	 # LE	| New English Text
+82 62	82 6E	82 6C	82 6F	82 74	82 73	82 64	82 71	81 40	82 6C	82 6E	82 74	82 72	82 64	00 00	| New English Hex
+
+かんでんち
+Battery
+$388AF4
+81 40	81 40	81 40	81 40	82 A9	82 F1	82 C5	82 F1	82 BF	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  か	 #  ん	 #  で	 #  ん	 #  ち	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  B	 #  A	 #  T	 #  T	 #  E	 #  R	 #  Y	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 61	82 60	82 73	82 73	82 64	82 71	82 78	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+----------
+Rescue 12
+----------
+めだまやき
+Fried Egg
+$388B12
+81 40	81 40	81 40	81 40	82 DF	82 BE	82 DC	82 E2	82 AB	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  め	 #  だ	 #  ま	 #  や	 #  き	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  F	 #  R	 #  I	 #  E	 #  D	 #   	 #  E	 #  G	 #  G	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 65	82 71	82 68	82 64	82 63	81 40	82 64	82 66	82 66	81 40	81 40	81 40	00 00	| New English Hex
+
+ゆびわ
+Gold Ring
+$388B30
+81 40	81 40	81 40	81 40	81 40	82 E4	82 D1	82 ED	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ゆ	 #  び	 #  わ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  G	 #  O	 #  L	 #  D	 #   	 #  R	 #  I	 #  N	 #  G	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 66	82 6E	82 6B	82 63	81 40	82 71	82 68	82 6D	82 66	81 40	81 40	81 40	00 00	| New English Hex
+
+バス
+Bus
+$388B4E
+81 40	81 40	81 40	81 40	81 40	81 40	83 6F	83 58	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  バ	 #  ス	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  B	 #  U	 #  S	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 61	82 74	82 72	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+つくし
+Horsetail Fern
+$388B6C
+81 40	81 40	81 40	81 40	81 40	82 C2	82 AD	82 B5	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  つ	 #  く	 #  し	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  H	 #  O	 #  R	 #  S	 #  E	 #  T	 #  A	 #  I	 #  L	 #   	 #  F	 #  E	 #  R	 #  N	 # LE	| New English Text
+82 67	82 6E	82 71	82 72	82 64	82 73	82 60	82 68	82 6B	81 40	82 65	82 64	82 71	82 6D	00 00	| New English Hex
+
+しましまパンツ
+Shimashima Pants / Underwear
+$388B8A
+81 40	81 40	81 40	82 B5	82 DC	82 B5	82 DC	83 70	83 93	83 63	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  し	 #  ま	 #  し	 #  ま	 #  パ	 #  ン	 #  ツ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  U	 #  N	 #  D	 #  E	 #  R	 #  W	 #  E	 #  A	 #  R	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 74	82 6D	82 63	82 64	82 71	82 76	82 64	82 60	82 71	81 40	81 40	81 40	00 00	| New English Hex
+
+トキ
+Crested Ibis
+$388BA8
+81 40	81 40	81 40	81 40	81 40	81 40	83 67	83 4C	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  ト	 #  キ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  C	 #  R	 #  E	 #  S	 #  T	 #  E	 #  D	 #   	 #  I	 #  B	 #  I	 #  S	 #   	 # LE	| New English Text
+81 40	82 62	82 71	82 64	82 72	82 73	82 64	82 63	81 40	82 68	82 61	82 68	82 72	81 40	00 00	| New English Hex
+
+ゲームボーイ　アドバンス
+Gameboy Advance / GBA
+$388BC6
+81 40	83 51	81 5B	83 80	83 7B	81 5B	83 43	81 40	83 41	83 68	83 6F	83 93	83 58	81 40	00 00	| Original Japanese Hex
+ #   	 #  ゲ	 #  ー	 #  ム	 #  ボ	 #  ー	 #  イ	 #   	 #  ア	 #  ド	 #  バ	 #  ン	 #  ス	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  G	 #  B	 #  A	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 66	82 61	82 60	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ゴルファー
+Golfer
+$388BE4
+81 40	81 40	81 40	81 40	83 53	83 8B	83 74	83 40	81 5B	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ゴ	 #  ル	 #  フ	 #  ァ	 #  ー	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  G	 #  O	 #  L	 #  F	 #  E	 #  R	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 66	82 6E	82 6B	82 65	82 64	82 71	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+オノ
+Axe
+$388C02
+81 40	81 40	81 40	81 40	81 40	81 40	83 49	83 6D	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  オ	 #  ノ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  A	 #  X	 #  E	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 60	82 77	82 64	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+セイウチ
+Walrus
+$388C20
+81 40	81 40	81 40	81 40	81 40	83 5A	83 43	83 45	83 60	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  セ	 #  イ	 #  ウ	 #  チ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  W	 #  A	 #  L	 #  R	 #  U	 #  S	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 76	82 60	82 6B	82 71	82 74	82 72	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ジャンパー
+Ski Jumper
+$388C3E
+81 40	81 40	81 40	81 40	83 57	83 83	83 93	83 70	81 5B	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ジ	 #  ャ	 #  ン	 #  パ	 #  ー	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  S	 #  K	 #  I	 #   	 #  J	 #  U	 #  M	 #  P	 #  E	 #  R	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 72	82 6A	82 68	81 40	82 69	82 74	82 6C	82 6F	82 64	82 71	81 40	81 40	00 00	| New English Hex
+
+アフリカ
+Africa
+$388C5C
+81 40	81 40	81 40	81 40	81 40	83 41	83 74	83 8A	83 4A	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ア	 #  フ	 #  リ	 #  カ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  A	 #  F	 #  R	 #  I	 #  C	 #  A	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 60	82 65	82 71	82 68	82 62	82 60	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+こいのぼり
+Carp Streamer / Carp Banner
+$388C7A
+81 40	81 40	81 40	81 40	82 B1	82 A2	82 CC	82 DA	82 E8	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  こ	 #  い	 #  の	 #  ぼ	 #  り	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  C	 #  A	 #  R	 #  P	 #   	 #  S	 #  T	 #  R	 #  E	 #  A	 #  M	 #  E	 #  R	 #   	 # LE	| New English Text
+82 62	82 60	82 71	82 6F	81 40	82 72	82 73	82 71	82 64	82 60	82 6C	82 64	82 71	81 40	00 00	| New English Hex
+
+スペードのＡ
+Ace Of Spades
+$388C98
+81 40	81 40	81 40	81 40	83 58	83 79	81 5B	83 68	82 CC	82 60	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ス	 #  ペ	 #  ー	 #  ド	 #  の	 #  Ａ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  A	 #  C	 #  E	 #   	 #  O	 #  F	 #   	 #  S	 #  P	 #  A	 #  D	 #  E	 #  S	 #   	 # LE	| New English Text
+82 60	82 62	82 64	81 40	82 6E	82 65	81 40	82 72	82 6F	82 60	82 63	82 64	82 72	81 40	00 00	| New English Hex
+
+ニホンザル
+Japanese Macaque / Snow Monkey
+$388CB6
+81 40	81 40	81 40	81 40	83 6A	83 7A	83 93	83 55	83 8B	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ニ	 #  ホ	 #  ン	 #  ザ	 #  ル	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  S	 #  N	 #  O	 #  W	 #   	 #  M	 #  O	 #  N	 #  K	 #  E	 #  Y	 #   	 #   	 # LE	| New English Text
+81 40	82 72	82 6D	82 6E	82 76	81 40	82 6C	82 6E	82 6D	82 6A	82 64	82 78	81 40	81 40	00 00	| New English Hex
+
+ゆうしゃのたて
+Crusader Shield
+$388CD4
+81 40	81 40	81 40	82 E4	82 A4	82 B5	82 E1	82 CC	82 BD	82 C4	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ゆ	 #  う	 #  し	 #  ゃ	 #  の	 #  た	 #  て	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  H	 #  I	 #  E	 #  L	 #  D	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 67	82 68	82 64	82 6B	82 63	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+おたまじゃくし
+Tadpole
+$388CF2
+81 40	81 40	81 40	82 A8	82 BD	82 DC	82 B6	82 E1	82 AD	82 B5	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  お	 #  た	 #  ま	 #  じ	 #  ゃ	 #  く	 #  し	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  T	 #  A	 #  D	 #  P	 #  O	 #  L	 #  E	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 73	82 60	82 63	82 6F	82 6E	82 6B	82 64	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+モアイ
+Moai Statue
+$388D10
+81 40	81 40	81 40	81 40	81 40	83 82	83 41	83 43	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  モ	 #  ア	 #  イ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  M	 #  O	 #  A	 #  I	 #   	 #  S	 #  T	 #  A	 #  T	 #  U	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	82 6C	82 6E	82 60	82 68	81 40	82 72	82 73	82 60	82 73	82 74	82 64	81 40	81 40	00 00	| New English Hex
+
+ラブラブ
+Love Love
+$388D2E
+81 40	81 40	81 40	81 40	81 40	83 89	83 75	83 89	83 75	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ラ	 #  ブ	 #  ラ	 #  ブ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  ●	 #  L	 #  O	 #  V	 #  E	 #   	 #  L	 #  O	 #  V	 #  E	 #  ●	 #   	 #   	 # LE	| New English Text
+81 40	81 9C	82 6B	82 6E	82 75	82 64	81 40	82 6B	82 6E	82 75	82 64	81 9C	81 40	81 40	00 00	| New English Hex
+
+ニンテンドー　ゲームキューブ
+Nintendo GameCube
+$388D4C
+83 6A	83 93	83 65	83 93	83 68	81 5B	81 40	83 51	81 5B	83 80	83 4C	83 85	81 5B	83 75	00 00	| Original Japanese Hex
+ #  ニ	 #  ン	 #  テ	 #  ン	 #  ド	 #  ー	 #   	 #  ゲ	 #  ー	 #  ム	 #  キ	 #  ュ	 #  ー	 #  ブ	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  G	 #  A	 #  M	 #  E	 #  C	 #  U	 #  B	 #  E	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 66	82 60	82 6C	82 64	82 62	82 74	82 61	82 64	81 40	81 40	81 40	00 00	| New English Hex
+
+にんぎょ
+Mermaid
+$388D6A
+81 40	81 40	81 40	81 40	81 40	82 C9	82 F1	82 AC	82 E5	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  に	 #  ん	 #  ぎ	 #  ょ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  M	 #  E	 #  R	 #  M	 #  A	 #  I	 #  D	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6C	82 64	82 71	82 6C	82 60	82 68	82 63	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+モンキーバナナ
+Monkey Banana
+$388D88
+81 40	81 40	81 40	83 82	83 93	83 4C	81 5B	83 6F	83 69	83 69	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  モ	 #  ン	 #  キ	 #  ー	 #  バ	 #  ナ	 #  ナ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  M	 #  O	 #  N	 #  K	 #  E	 #  Y	 #   	 #  B	 #  A	 #  N	 #  A	 #  N	 #  A	 #   	 # LE	| New English Text
+82 6C	82 6E	82 6D	82 6A	82 64	82 78	81 40	82 61	82 60	82 6D	82 60	82 6D	82 60	81 40	00 00	| New English Hex
+
+どひょういり
+Entering The Ground / Sumo Wrestler
+$388DA6
+81 40	81 40	81 40	81 40	82 C7	82 D0	82 E5	82 A4	82 A2	82 E8	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ど	 #  ひ	 #  ょ	 #  う	 #  い	 #  り	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  S	 #  U	 #  M	 #  O	 #   	 #  W	 #  R	 #  E	 #  S	 #  T	 #  L	 #  E	 #  R	 #   	 # LE	| New English Text
+82 72	82 74	82 6C	82 6E	81 40	82 76	82 71	82 64	82 72	82 73	82 6B	82 64	82 71	81 40	00 00	| New English Hex
+
+ヒゲのにあう　しんし
+A Gentleman Who Looks Good With A Beard / Charlie Chaplin
+$388DC4
+81 40	81 40	83 71	83 51	82 CC	82 C9	82 A0	82 A4	81 40	82 B5	82 F1	82 B5	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  ヒ	 #  ゲ	 #  の	 #  に	 #  あ	 #  う	 #   	 #  し	 #  ん	 #  し	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  G	 #  E	 #  N	 #  T	 #  L	 #  E	 #  M	 #  A	 #  N	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 66	82 64	82 6D	82 73	82 6B	82 64	82 6C	82 60	82 6D	81 40	81 40	81 40	00 00	| New English Hex
+
+いろっぽい　じょせい
+Pretty Woman / Sexy Woman / Marilyn Monroe
+$388DE2
+81 40	81 40	82 A2	82 EB	82 C1	82 DB	82 A2	81 40	82 B6	82 E5	82 B9	82 A2	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  い	 #  ろ	 #  っ	 #  ぽ	 #  い	 #   	 #  じ	 #  ょ	 #  せ	 #  い	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  P	 #  R	 #  E	 #  T	 #  T	 #  Y	 #   	 #  W	 #  O	 #  M	 #  A	 #  N	 #   	 # LE	| New English Text
+81 40	82 6F	82 71	82 64	82 73	82 73	82 78	81 40	82 76	82 6E	82 6C	82 60	82 6D	81 40	00 00	| New English Hex
+
+アゲハチョウ
+Swallowtail Butterfly
+$388E00
+81 40	81 40	81 40	81 40	83 41	83 51	83 6E	83 60	83 87	83 45	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ア	 #  ゲ	 #  ハ	 #  チ	 #  ョ	 #  ウ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  S	 #  W	 #  A	 #  L	 #  L	 #  O	 #  W	 #  T	 #  A	 #  I	 #  L	 #   	 #   	 # LE	| New English Text
+81 40	82 72	82 76	82 60	82 6B	82 6B	82 6E	82 76	82 73	82 60	82 68	82 6B	81 40	81 40	00 00	| New English Hex
+
+でんきゅう
+Light Bulb
+$388E1E
+81 40	81 40	81 40	81 40	82 C5	82 F1	82 AB	82 E3	82 A4	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  で	 #  ん	 #  き	 #  ゅ	 #  う	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  L	 #  I	 #  G	 #  H	 #  T	 #   	 #  B	 #  U	 #  L	 #  B	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 6B	82 68	82 66	82 67	82 73	81 40	82 61	82 74	82 6B	82 61	81 40	81 40	00 00	| New English Hex
+
+ドラムカン
+Drum Can / Steel Drum / Oil Drum
+$388E3C
+81 40	81 40	81 40	81 40	83 68	83 89	83 80	83 4A	83 93	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ド	 #  ラ	 #  ム	 #  カ	 #  ン	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  S	 #  T	 #  E	 #  E	 #  L	 #   	 #  D	 #  R	 #  U	 #  M	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 72	82 73	82 64	82 64	82 6B	81 40	82 63	82 71	82 74	82 6C	81 40	81 40	00 00	| New English Hex
+
+ピラミッド
+Pyramid
+$388E5A
+81 40	81 40	81 40	81 40	83 73	83 89	83 7E	83 62	83 68	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ピ	 #  ラ	 #  ミ	 #  ッ	 #  ド	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  P	 #  Y	 #  R	 #  A	 #  M	 #  I	 #  D	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6F	82 78	82 71	82 60	82 6C	82 68	82 63	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+シュート！
+Shoot!
+$388E78
+81 40	81 40	81 40	81 40	83 56	83 85	81 5B	83 67	81 49	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  シ	 #  ュ	 #  ー	 #  ト	 #  ！	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  S	 #  H	 #  O	 #  O	 #  T	 #  !	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 72	82 67	82 6E	82 6E	82 73	81 49	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+きんかくじ
+Kinkaku-ji / Temple Of The Golden Pavilion / Deer Garden Temple / Kyoto Temple
+$388E96
+81 40	81 40	81 40	81 40	82 AB	82 F1	82 A9	82 AD	82 B6	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  き	 #  ん	 #  か	 #  く	 #  じ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  K	 #  Y	 #  O	 #  T	 #  O	 #   	 #  T	 #  E	 #  M	 #  P	 #  L	 #  E	 #   	 # LE	| New English Text
+81 40	82 6A	82 78	82 6E	82 73	82 6E	81 40	82 73	82 64	82 6C	82 6F	82 6B	82 64	81 40	00 00	| New English Hex
+
+たっきゅう
+Table Tennis
+$388EB4
+81 40	81 40	81 40	81 40	82 BD	82 C1	82 AB	82 E3	82 A4	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  た	 #  っ	 #  き	 #  ゅ	 #  う	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  T	 #  A	 #  B	 #  L	 #  E	 #   	 #  T	 #  E	 #  N	 #  N	 #  I	 #  S	 #   	 # LE	| New English Text
+81 40	82 73	82 60	82 61	82 6B	82 64	81 40	82 73	82 64	82 6D	82 6D	82 68	82 72	81 40	00 00	| New English Hex
+
+わらうマダム
+Laughing Madam
+$388ED2
+81 40	81 40	81 40	81 40	82 ED	82 E7	82 A4	83 7D	83 5F	83 80	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  わ	 #  ら	 #  う	 #  マ	 #  ダ	 #  ム	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  L	 #  A	 #  U	 #  G	 #  H	 #  I	 #  N	 #  G	 #   	 #  W	 #  O	 #  M	 #  A	 #  N	 # LE	| New English Text
+82 6B	82 60	82 74	82 66	82 67	82 68	82 6D	82 66	81 40	82 76	82 6E	82 6C	82 60	82 6D	00 00	| New English Hex
+
+き
+Tree
+$388EF0
+81 40	81 40	81 40	81 40	81 40	81 40	82 AB	81 40	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  き	 #   	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  T	 #  R	 #  E	 #  E	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 73	82 71	82 64	82 64	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+やかん
+Kettle
+$388F0E
+81 40	81 40	81 40	81 40	81 40	82 E2	82 A9	82 F1	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  や	 #  か	 #  ん	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  K	 #  E	 #  T	 #  T	 #  L	 #  E	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 6A	82 64	82 73	82 73	82 6B	82 64	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ピース
+Peace
+$388F2C
+81 40	81 40	81 40	81 40	81 40	83 73	81 5B	83 58	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ピ	 #  ー	 #  ス	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  P	 #  E	 #  A	 #  C	 #  E	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 6F	82 64	82 60	82 62	82 64	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+デジタルカメラ
+Digital Camera
+$388F4A
+81 40	81 40	81 40	83 66	83 57	83 5E	83 8B	83 4A	83 81	83 89	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  デ	 #  ジ	 #  タ	 #  ル	 #  カ	 #  メ	 #  ラ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  D	 #  I	 #  G	 #  I	 #  T	 #  A	 #  L	 #   	 #  C	 #  A	 #  M	 #  E	 #  R	 #  A	 # LE	| New English Text
+82 63	82 68	82 66	82 68	82 73	82 60	82 6B	81 40	82 62	82 60	82 6C	82 64	82 71	82 60	00 00	| New English Hex
+
+ゲームボーイ
+Game Boy
+$388F68
+81 40	81 40	81 40	81 40	83 51	81 5B	83 80	83 7B	81 5B	83 43	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ゲ	 #  ー	 #  ム	 #  ボ	 #  ー	 #  イ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  G	 #  A	 #  M	 #  E	 #   	 #  B	 #  O	 #  Y	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 66	82 60	82 6C	82 64	81 40	82 61	82 6E	82 78	81 40	81 40	81 40	00 00	| New English Hex
+
+うちわ
+Japanese Fan / Uchiwa
+$388F86
+81 40	81 40	81 40	81 40	81 40	82 A4	82 BF	82 ED	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  う	 #  ち	 #  わ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  J	 #  A	 #  P	 #  A	 #  N	 #  E	 #  S	 #  E	 #   	 #  F	 #  A	 #  N	 #   	 # LE	| New English Text
+81 40	82 69	82 60	82 6F	82 60	82 6D	82 64	82 72	82 64	81 40	82 65	82 60	82 6D	81 40	00 00	| New English Hex
+
+にぎりこぶし
+Clenched Fist
+$388FA4
+81 40	81 40	81 40	81 40	82 C9	82 AC	82 E8	82 B1	82 D4	82 B5	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  に	 #  ぎ	 #  り	 #  こ	 #  ぶ	 #  し	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  C	 #  L	 #  E	 #  N	 #  C	 #  H	 #  E	 #  D	 #   	 #  F	 #  I	 #  S	 #  T	 #   	 # LE	| New English Text
+82 62	82 6B	82 64	82 6D	82 62	82 67	82 64	82 63	81 40	82 65	82 68	82 72	82 73	81 40	00 00	| New English Hex
+
+ブリーフ
+Briefs / Underpants
+$388FC2
+81 40	81 40	81 40	81 40	81 40	83 75	83 8A	81 5B	83 74	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ブ	 #  リ	 #  ー	 #  フ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  B	 #  R	 #  I	 #  E	 #  F	 #  S	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 61	82 71	82 68	82 64	82 65	82 72	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+にいさん
+Buddy / Fella / Laddie / Brother / Older Brother / Elder Brother / Big Bro / Young Man
+$388FE0
+81 40	81 40	81 40	81 40	81 40	82 C9	82 A2	82 B3	82 F1	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  に	 #  い	 #  さ	 #  ん	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  B	 #  I	 #  G	 #   	 #  B	 #  R	 #  O	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 61	82 68	82 66	81 40	82 61	82 71	82 6E	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+やさしそうなおじさん
+Kind-Looking Uncle
+$388FFE
+81 40	81 40	82 E2	82 B3	82 B5	82 BB	82 A4	82 C8	82 A8	82 B6	82 B3	82 F1	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  や	 #  さ	 #  し	 #  そ	 #  う	 #  な	 #  お	 #  じ	 #  さ	 #  ん	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  K	 #  I	 #  N	 #  D	 #   	 #  U	 #  N	 #  C	 #  L	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 6A	82 68	82 6D	82 63	81 40	82 74	82 6D	82 62	82 6B	82 64	81 40	81 40	00 00	| New English Hex
+
+コンセント
+Electrical Outlet / Plug Socket
+$38901C
+81 40	81 40	81 40	81 40	83 52	83 93	83 5A	83 93	83 67	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  コ	 #  ン	 #  セ	 #  ン	 #  ト	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  P	 #  L	 #  U	 #  G	 #   	 #  S	 #  O	 #  C	 #  K	 #  E	 #  T	 #   	 #   	 # LE	| New English Text
+81 40	82 6F	82 6B	82 74	82 66	81 40	82 72	82 6E	82 62	82 6A	82 64	82 73	81 40	81 40	00 00	| New English Hex
+
+てそう
+Palmistry / Palm Reading / Open Palm
+$38903A
+81 40	81 40	81 40	81 40	81 40	82 C4	82 BB	82 A4	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  て	 #  そ	 #  う	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  O	 #  P	 #  E	 #  N	 #   	 #  P	 #  A	 #  L	 #  M	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 6E	82 6F	82 64	82 6D	81 40	82 6F	82 60	82 6B	82 6C	81 40	81 40	81 40	00 00	| New English Hex
+
+あきのみやじま
+Aki Miyajima / Aki's Miyajima / Miyajima Of Aki
+$389058
+81 40	81 40	81 40	82 A0	82 AB	82 CC	82 DD	82 E2	82 B6	82 DC	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  あ	 #  き	 #  の	 #  み	 #  や	 #  じ	 #  ま	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  A	 #  K	 #  I	 #   	 #  M	 #  I	 #  Y	 #  A	 #  J	 #  I	 #  M	 #  A	 #   	 # LE	| New English Text
+81 40	82 60	82 6A	82 68	81 40	82 6C	82 68	82 78	82 60	82 69	82 68	82 6C	82 60	81 40	00 00	| New English Hex
+
+ハンバーガー
+Hamburger
+$389076
+81 40	81 40	81 40	81 40	83 6E	83 93	83 6F	81 5B	83 4B	81 5B	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ハ	 #  ン	 #  バ	 #  ー	 #  ガ	 #  ー	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  H	 #  A	 #  M	 #  B	 #  U	 #  R	 #  G	 #  E	 #  R	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 67	82 60	82 6C	82 61	82 74	82 71	82 66	82 64	82 71	81 40	81 40	81 40	00 00	| New English Hex
+
+ボクシング
+Boxing
+$389094
+81 40	81 40	81 40	81 40	83 7B	83 4E	83 56	83 93	83 4F	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  ボ	 #  ク	 #  シ	 #  ン	 #  グ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  B	 #  O	 #  X	 #  I	 #  N	 #  G	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 61	82 6E	82 77	82 68	82 6D	82 66	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+けいたいでんわ
+Cell Phone / Mobile Phone
+$3890B2
+81 40	81 40	81 40	82 AF	82 A2	82 BD	82 A2	82 C5	82 F1	82 ED	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  け	 #  い	 #  た	 #  い	 #  で	 #  ん	 #  わ	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  C	 #  E	 #  L	 #  L	 #   	 #  P	 #  H	 #  O	 #  N	 #  E	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 62	82 64	82 6B	82 6B	81 40	82 6F	82 67	82 6E	82 6D	82 64	81 40	81 40	00 00	| New English Hex
+
+くぎぬき
+Nail Puller
+$3890D0
+81 40	81 40	81 40	81 40	81 40	82 AD	82 AC	82 CA	82 AB	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  く	 #  ぎ	 #  ぬ	 #  き	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  N	 #  A	 #  I	 #  L	 #   	 #  P	 #  U	 #  L	 #  L	 #  E	 #  R	 #   	 #   	 # LE	| New English Text
+81 40	82 6D	82 60	82 68	82 6B	81 40	82 6F	82 74	82 6B	82 6B	82 64	82 71	81 40	81 40	00 00	| New English Hex
+
+----------
+Rescue EX
+----------
+チャンプ（おとうと）
+Champ (Dad)
+$3890EE
+81 40	81 40	83 60	83 83	83 93	83 76	81 69	82 A8	82 C6	82 A4	82 C6	81 6A	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  チ	 #  ャ	 #  ン	 #  プ	 #  （	 #  お	 #  と	 #  う	 #  と	 #  ）	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  C	 #  H	 #  A	 #  M	 #  P	 #   	 #  (	 #  D	 #  A	 #  D	 #  )	 #   	 #   	 # LE	| New English Text
+81 40	82 62	82 67	82 60	82 6C	82 6F	81 40	81 69	82 63	82 60	82 63	81 6A	81 40	81 40	00 00	| New English Hex
+
+イカスつぼ
+Squid Pot / Blue Pot
+$38910C
+81 40	81 40	81 40	81 40	83 43	83 4A	83 58	82 C2	82 DA	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #  イ	 #  カ	 #  ス	 #  つ	 #  ぼ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  B	 #  L	 #  U	 #  E	 #   	 #  P	 #  O	 #  T	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 61	82 6B	82 74	82 64	81 40	82 6F	82 6E	82 73	81 40	81 40	81 40	00 00	| New English Hex
+
+チャンプ（にいさん）
+Champ (Buddy / Fella / Laddie / Brother / Older Brother / Elder Brother / Big Bro / Young Man)
+$38912A
+81 40	81 40	83 60	83 83	83 93	83 76	81 69	82 C9	82 A2	82 B3	82 F1	81 6A	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  チ	 #  ャ	 #  ン	 #  プ	 #  （	 #  に	 #  い	 #  さ	 #  ん	 #  ）	 #   	 #   	 # LE	| Original Japanese Text
+ #  C	 #  H	 #  A	 #  M	 #  P	 #  (	 #  B	 #  I	 #  G	 #   	 #  B	 #  R	 #  O	 #  )	 # LE	| New English Text
+82 62	82 67	82 60	82 6C	82 6F	81 69	82 61	82 68	82 66	81 40	82 61	82 71	82 6E	81 6A	00 00	| New English Hex
+
+ジョギングマン
+Jogging Man
+$389148
+81 40	81 40	81 40	83 57	83 87	83 4D	83 93	83 4F	83 7D	83 93	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ジ	 #  ョ	 #  ギ	 #  ン	 #  グ	 #  マ	 #  ン	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  J	 #  O	 #  G	 #  G	 #  I	 #  N	 #  G	 #   	 #  M	 #  A	 #  N	 #   	 #   	 # LE	| New English Text
+81 40	82 69	82 6E	82 66	82 66	82 68	82 6D	82 66	81 40	82 6C	82 60	82 6D	81 40	81 40	00 00	| New English Hex
+
+ポムくん
+Pomu-kun
+$389166
+81 40	81 40	81 40	81 40	81 40	83 7C	83 80	82 AD	82 F1	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ポ	 #  ム	 #  く	 #  ん	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  P	 #  O	 #  M	 #  U	 #  K	 #  U	 #  N	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6F	82 6E	82 6C	82 74	82 6A	82 74	82 6D	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ヘレン
+Helen
+$389184
+81 40	81 40	81 40	81 40	81 40	83 77	83 8C	83 93	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ヘ	 #  レ	 #  ン	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  H	 #  E	 #  L	 #  E	 #  N	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 67	82 64	82 6B	82 64	82 6D	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ひんじゃくマン
+Poor Man
+$3891A2
+81 40	81 40	81 40	82 D0	82 F1	82 B6	82 E1	82 AD	83 7D	83 93	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ひ	 #  ん	 #  じ	 #  ゃ	 #  く	 #  マ	 #  ン	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  P	 #  O	 #  O	 #  R	 #   	 #  M	 #  A	 #  N	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 6F	82 6E	82 6E	82 71	81 40	82 6C	82 60	82 6D	81 40	81 40	81 40	00 00	| New English Hex
+
+サビマン（ＢＥＦＯＲＥ）
+Sabiman / Rust Man (BEFORE)
+$3891C0
+81 40	81 40	83 54	83 72	83 7D	83 93	81 69	82 61	82 64	82 65	82 6E	82 71	82 64	81 6A	00 00	| Original Japanese Hex
+ #   	 #   	 #  サ	 #  ビ	 #  マ	 #  ン	 #  （	 #  Ｂ	 #  Ｅ	 #  Ｆ	 #  Ｏ	 #  Ｒ	 #  Ｅ	 #  ）	 # LE	| Original Japanese Text
+ #  R	 #  U	 #  S	 #  T	 #   	 #  M	 #  A	 #  N	 #   	 #  (	 #  O	 #  L	 #  D	 #  )	 # LE	| New English Text
+82 71	82 74	82 72	82 73	81 40	82 6C	82 60	82 6D	81 40	81 69	82 6E	82 6B	82 63	81 6A	00 00	| New English Hex
+
+サビマン（ＡＦＴＥＲ）
+Sabiman / Rust Man (AFTER)
+$3891DE
+81 40	81 40	83 54	83 72	83 7D	83 93	81 69	82 60	82 65	82 73	82 64	82 71	81 6A	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  サ	 #  ビ	 #  マ	 #  ン	 #  （	 #  Ａ	 #  Ｆ	 #  Ｔ	 #  Ｅ	 #  Ｒ	 #  ）	 #   	 # LE	| Original Japanese Text
+ #  R	 #  U	 #  S	 #  T	 #   	 #  M	 #  A	 #  N	 #   	 #  (	 #  N	 #  E	 #  W	 #  )	 # LE	| New English Text
+82 71	82 74	82 72	82 73	81 40	82 6C	82 60	82 6D	81 40	81 69	82 6D	82 64	82 76	81 6A	00 00	| New English Hex
+
+ハムスターマン
+Hamster Man
+$3891FC
+81 40	81 40	81 40	83 6E	83 80	83 58	83 5E	81 5B	83 7D	83 93	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ハ	 #  ム	 #  ス	 #  タ	 #  ー	 #  マ	 #  ン	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  H	 #  A	 #  M	 #  S	 #  T	 #  E	 #  R	 #   	 #  M	 #  A	 #  N	 #   	 #   	 # LE	| New English Text
+81 40	82 67	82 60	82 6C	82 72	82 73	82 64	82 71	81 40	82 6C	82 60	82 6D	81 40	81 40	00 00	| New English Hex
+
+うっちゃりマン（あにでし）
+Chubby Man (Brother / Senior Apprentice / Senior Schoolmate)
+$38921A
+81 40	82 A4	82 C1	82 BF	82 E1	82 E8	83 7D	83 93	81 69	82 A0	82 C9	82 C5	82 B5	81 6A	00 00	| Original Japanese Hex
+ #   	 #  う	 #  っ	 #  ち	 #  ゃ	 #  り	 #  マ	 #  ン	 #  （	 #  あ	 #  に	 #  で	 #  し	 #  ）	 # LE	| Original Japanese Text
+ #   	 #   	 #  C	 #  H	 #  U	 #  B	 #  B	 #  Y	 #   	 #  M	 #  A	 #  N	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 62	82 67	82 74	82 61	82 61	82 78	81 40	82 6C	82 60	82 6D	81 40	81 40	00 00	| New English Hex
+
+ダムマン
+Dam / Damu / Dumb Man
+$389238
+81 40	81 40	81 40	81 40	81 40	83 5F	83 80	83 7D	83 93	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ダ	 #  ム	 #  マ	 #  ン	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #  D	 #  U	 #  M	 #  B	 #   	 #  M	 #  A	 #  N	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	82 63	82 74	82 6C	82 61	81 40	82 6C	82 60	82 6D	81 40	81 40	81 40	00 00	| New English Hex
+
+うちゅうナメクジ
+Space Slug
+$389256
+81 40	81 40	81 40	82 A4	82 BF	82 E3	82 A4	83 69	83 81	83 4E	83 57	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  う	 #  ち	 #  ゅ	 #  う	 #  ナ	 #  メ	 #  ク	 #  ジ	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  S	 #  P	 #  A	 #  C	 #  E	 #   	 #  S	 #  L	 #  U	 #  G	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 72	82 6F	82 60	82 62	82 64	81 40	82 72	82 6B	82 74	82 66	81 40	81 40	00 00	| New English Hex
+
+みんなだいすき　コッコーマン
+Everyone Loves Kokko Man
+$389274
+82 DD	82 F1	82 C8	82 BE	82 A2	82 B7	82 AB	81 40	83 52	83 62	83 52	81 5B	83 7D	83 93	00 00	| Original Japanese Hex
+ #  み	 #  ん	 #  な	 #  だ	 #  い	 #  す	 #  き	 #   	 #  コ	 #  ッ	 #  コ	 #  ー	 #  マ	 #  ン	 # LE	| Original Japanese Text
+ #   	 #   	 #  K	 #  O	 #  K	 #  K	 #  O	 #   	 #  M	 #  A	 #  N	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 6A	82 6E	82 6A	82 6A	82 6E	81 40	82 6C	82 60	82 6D	81 40	81 40	81 40	00 00	| New English Hex
+
+ロボットはいしゃ
+Robot Dentist
+$389292
+81 40	81 40	81 40	83 8D	83 7B	83 62	83 67	82 CD	82 A2	82 B5	82 E1	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ロ	 #  ボ	 #  ッ	 #  ト	 #  は	 #  い	 #  し	 #  ゃ	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #  R	 #  O	 #  B	 #  O	 #  T	 #   	 #  D	 #  E	 #  N	 #  T	 #  I	 #  S	 #  T	 #   	 # LE	| New English Text
+82 71	82 6E	82 61	82 6E	82 73	81 40	82 63	82 64	82 6D	82 73	82 68	82 72	82 73	81 40	00 00	| New English Hex
+
+トップブリーダー
+Top Breeder
+$3892B0
+81 40	81 40	81 40	83 67	83 62	83 76	83 75	83 8A	81 5B	83 5F	81 5B	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #  ト	 #  ッ	 #  プ	 #  ブ	 #  リ	 #  ー	 #  ダ	 #  ー	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #  T	 #  O	 #  P	 #   	 #  B	 #  R	 #  E	 #  E	 #  D	 #  E	 #  R	 #   	 #   	 # LE	| New English Text
+81 40	82 73	82 6E	82 6F	81 40	82 61	82 71	82 64	82 64	82 63	82 64	82 71	81 40	81 40	00 00	| New English Hex
+
+バトルマン（レッド）
+Battleman (Red)
+$3892CE
+81 40	81 40	83 6F	83 67	83 8B	83 7D	83 93	81 69	83 8C	83 62	83 68	81 6A	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #  バ	 #  ト	 #  ル	 #  マ	 #  ン	 #  （	 #  レ	 #  ッ	 #  ド	 #  ）	 #   	 #   	 # LE	| Original Japanese Text
+ #  B	 #  A	 #  T	 #  T	 #  L	 #  E	 #  M	 #  A	 #  N	 #  (	 #  R	 #  E	 #  D	 #  )	 # LE	| New English Text
+82 61	82 60	82 73	82 73	82 6B	82 64	82 6C	82 60	82 6D	81 69	82 71	82 64	82 63	81 6A	00 00	| New English Hex
+
+したっぱ
+Underling
+$3892EC
+81 40	81 40	81 40	81 40	81 40	82 B5	82 BD	82 C1	82 CF	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  し	 #  た	 #  っ	 #  ぱ	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #  U	 #  N	 #  D	 #  E	 #  R	 #  L	 #  I	 #  N	 #  G	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	82 74	82 6D	82 63	82 64	82 71	82 6B	82 68	82 6D	82 66	81 40	81 40	81 40	00 00	| New English Hex
+
+ボス
+Boss
+$38930A
+81 40	81 40	81 40	81 40	81 40	81 40	83 7B	83 58	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #   	 #  ボ	 #  ス	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #   	 #  B	 #  O	 #  S	 #  S	 #   	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	81 40	82 61	82 6E	82 72	82 72	81 40	81 40	81 40	81 40	81 40	00 00	| New English Hex
+
+ハカセ
+Hakase
+$389328
+81 40	81 40	81 40	81 40	81 40	83 6E	83 4A	83 5A	81 40	81 40	81 40	81 40	81 40	81 40	00 00	| Original Japanese Hex
+ #   	 #   	 #   	 #   	 #   	 #  ハ	 #  カ	 #  セ	 #   	 #   	 #   	 #   	 #   	 #   	 # LE	| Original Japanese Text
+ #   	 #   	 #   	 #   	 #  H	 #  A	 #  K	 #  A	 #  S	 #  E	 #   	 #   	 #   	 #   	 # LE	| New English Text
+81 40	81 40	81 40	81 40	82 67	82 60	82 6A	82 60	82 72	82 64	81 40	81 40	81 40	81 40	00 00	| New English Hex
